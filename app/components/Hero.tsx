@@ -29,7 +29,6 @@ export default function Hero() {
   const handleMouseMove = (e: any) => {
     mouseX.set(e.clientX - 310);
   };
-
   return (
     <motion.section
       id="hero"
@@ -47,9 +46,9 @@ export default function Hero() {
           Desenvolvedor Fullstack
         </div>
         <h1
-          onMouseEnter={() => setShowImage(true)}
-          onMouseLeave={() => setShowImage(false)}
-          onMouseMove={handleMouseMove} // 4. Add mouse move handler
+          // onMouseEnter={() => setShowImage(true)}
+          // onMouseLeave={() => setShowImage(false)}
+          // onMouseMove={handleMouseMove} // 4. Add mouse move handler
           className={`text-8xl font-bold text-primary-accent mt-4 `}
         >
           Witor Tenã
