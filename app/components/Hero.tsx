@@ -32,7 +32,7 @@ export default function Hero() {
   return (
     <motion.section
       id="hero"
-      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen flex flex-col justify-center items-center`}
+      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen overflow-hidden flex flex-col justify-center sm:items-center items-start sm:text-left`}
     >
       <div className="translate-y-14 absolute saturate-100 opacity-25 -z-10">
         <Image alt="Computer Picture" width={900} src={old_computer} />
@@ -42,14 +42,14 @@ export default function Hero() {
         animate={{ y: 0 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
       >
-        <div className="border-3 w-fit mx-auto rounded-2xl border-primary-accent px-4 py-2 text-primary-accent text-2xl">
+        <div className="border-3 w-fit sm:mx-auto rounded-2xl border-primary-accent px-4 py-2 text-primary-accent sm:text-2xl">
           Desenvolvedor Fullstack
         </div>
         <h1
           // onMouseEnter={() => setShowImage(true)}
           // onMouseLeave={() => setShowImage(false)}
           // onMouseMove={handleMouseMove} // 4. Add mouse move handler
-          className={`text-8xl font-bold text-primary-accent mt-4 `}
+          className={`text-6xl sm:text-8xl font-bold text-primary-accent mt-4 `}
         >
           Witor Tenã
         </h1>
@@ -70,7 +70,7 @@ export default function Hero() {
         initial={{ y: +100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="text-6xl text-terciary-bg mt-4 w-150 text-center"
+        className="text-2xl sm:text-6xl text-left text-terciary-bg mt-4 sm:w-150 sm:text-center"
       >
         Estudante de Ciência da Computação
       </motion.h2>

@@ -27,31 +27,57 @@ export default function TextCard({
       viewport={{ once: true, amount: 0.4 }}
       className="border relative border-primary-accent bg-primary-bg p-8 pb-12 group"
     >
-      <div
-        className={`${
-          link && "hover:cursor-pointer"
-        } flex flex-col gap-6 justify-between h-full`}
-      >
-        <div>
-          <div className="flex gap-4 mb-6 flex-col">
-            <h1 className="text-4xl">{title}</h1>
-            <p className="text-2xl text-terciary-bg">{status}</p>
-          </div>
-          <div className="flex gap-4 flex-col">
-            <p className="text-2xl">{description}</p>
-          </div>
-        </div>
-        <div>
-          <p className="text-xl text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
-            {info}
-          </p>
-        </div>
-      </div>
-      {link && (
-        <div className="absolute top-8 right-8 text-white group-hover:text-green-500 transition-colors">
+      {link ? (
+        <>
           <a href={link} target="_blank">
-            <RiExternalLinkLine size={35} />
+            <div
+              className={`${
+                link && "hover:cursor-pointer"
+              } flex flex-col gap-6 justify-between h-full`}
+            >
+              <div>
+                <div className="flex gap-4 mb-6 flex-col">
+                  <h1 className="text-4xl">{title}</h1>
+                  <p className="text-2xl text-terciary-bg">{status}</p>
+                </div>
+                <div className="flex gap-4 flex-col">
+                  <p className="text-2xl">{description}</p>
+                </div>
+              </div>
+              <div>
+                <p className="text-xl text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
+                  {info}
+                </p>
+              </div>
+            </div>
           </a>
+
+          <div className="absolute top-8 right-8 text-white group-hover:text-green-500 transition-colors">
+            <a href={link} target="_blank">
+              <RiExternalLinkLine size={35} />
+            </a>
+          </div>
+        </>
+      ) : (
+        <div
+          className={`${
+            link && "hover:cursor-pointer"
+          } flex flex-col gap-6 justify-between h-full`}
+        >
+          <div>
+            <div className="flex gap-4 mb-6 flex-col">
+              <h1 className="text-4xl">{title}</h1>
+              <p className="text-2xl text-terciary-bg">{status}</p>
+            </div>
+            <div className="flex gap-4 flex-col">
+              <p className="text-2xl">{description}</p>
+            </div>
+          </div>
+          <div>
+            <p className="text-lg sm:text-xl text-terciary-bg border border-terciary-bg rounded-2xl py-2 sm:py-0 sm:w-max px-4">
+              {info}
+            </p>
+          </div>
         </div>
       )}
     </motion.div>

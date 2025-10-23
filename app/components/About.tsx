@@ -59,12 +59,12 @@ export default function About() {
         <div className="flex gap-8 lg:pl-150 flex-col justify-start items-left w-full">
           <motion.h1
             id="name"
-            className={`${ubuntuSansMonoFont.className} text-4xl text-left`}
+            className={`${ubuntuSansMonoFont.className} text-3xl sm:text-4xl text-left`}
           ></motion.h1>
           <motion.p
             id="paragraph"
             ref={typeRef}
-            className={`${ubuntuSansMonoFont.className} text-justify leading-loose text-2xl`}
+            className={`${ubuntuSansMonoFont.className} text-justify leading-loose text-lg sm:text-2xl`}
           ></motion.p>
           <motion.div className="flex gap-4 items-center">
             {isVisible && <FaGithubSquare size={35} />}
@@ -72,7 +72,7 @@ export default function About() {
               id="github"
               href="https://github.com/WitorDev/"
               target="_blank"
-              className="text-primary-accent text-xl hover:cursor-pointer hover:text-secondary-accent"
+              className="text-primary-accent text-lg sm:text-xl hover:cursor-pointer hover:text-secondary-accent"
             ></a>
           </motion.div>
         </div>

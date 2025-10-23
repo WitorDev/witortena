@@ -22,7 +22,7 @@ export default function Tech() {
         <div className="grid w-full grid-cols-1 grid-rows-2 py-20">
           <div className="">
             <h1 className="text-2xl font-bold mb-2">Frontend</h1>
-            <div className="grid grid-cols-2 grid-rows-3">
+            <div className="grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
               <IconAndName icon="Html5" text="HTML" />
               <IconAndName icon="React" text="React" />
               <IconAndName icon="Css3" text="CSS" />
@@ -33,7 +33,7 @@ export default function Tech() {
           </div>
           <div className="">
             <h1 className="text-2xl font-bold mt-8 mb-2">Backend</h1>
-            <div className="grid grid-cols-2 grid-rows-3">
+            <div className="grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
               <IconAndName icon="Nodedotjs" text="Node.js" />
               <IconAndName icon="Postgresql" text="PostgreSQL" />
               <IconAndName icon="Express" text="Express" />

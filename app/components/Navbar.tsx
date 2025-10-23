@@ -4,6 +4,7 @@ import { Ubuntu_Mono } from "next/font/google";
 
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -40,7 +41,7 @@ export default function Navbar() {
         <div className="w-full flex justify-between border rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
           <div className="flex gap-8 items-center">
             <div className="text-4xl font-bold text-primary-accent">WT_</div>
-            <ul className="flex gap-4">
+            <ul className="gap-4 sm:flex hidden">
               {/* Sobre mim */}
               <Dropdown
                 pageUrl="/"
@@ -72,9 +73,11 @@ export default function Navbar() {
             </ul>
           </div>
           <div>
-            <button className="font-bold hover:cursor-pointer translate-x-4 text-2xl py-2 px-8 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
-              Contato
-            </button>
+            <ScrollLink to="contact" smooth={true} duration={300}>
+              <button className="font-bold hover:cursor-pointer translate-x-4 text-2xl py-2 px-8 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
+                Contato
+              </button>
+            </ScrollLink>
           </div>
         </div>
       </nav>

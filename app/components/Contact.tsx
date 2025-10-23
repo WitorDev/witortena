@@ -19,7 +19,7 @@ export default function Hero() {
 
         {/* Contact Box */}
         <div className="bg-primary-bg border-t-5 border-t-primary-accent">
-          <form className="flex px-20 pt-12 pb-8 flex-col gap-6">
+          <form className="flex px-5 sm:px-20 pt-6 sm:pt-12 pb-8 flex-col gap-6">
             {/* email */}
             <h1 className="text-2xl">Email</h1>
             <input
@@ -47,7 +47,7 @@ export default function Hero() {
         </div>
 
         {/* Contacts */}
-        <div className="flex gap-8 flex-nowrap">
+        <div className="flex sm:gap-8 flex-wrap sm:flex-nowrap">
           <IconAndTitle title="Whatsapp" />
           <IconAndTitle title="Linkedin" />
           <IconAndTitle title="Github" />

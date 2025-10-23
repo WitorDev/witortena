@@ -19,7 +19,7 @@ export default function IconAndName({ icon, text }: IconAndNameProps) {
         transition: { duration: 0.3 },
       }}
       viewport={{ once: true, amount: 0.3 }}
-      className="flex items-center gap-2 my-4"
+      className="flex items-center gap-4 my-4"
     >
       {IconComponent ? (
         <div style={{ color: getColorForTech(icon) }}>

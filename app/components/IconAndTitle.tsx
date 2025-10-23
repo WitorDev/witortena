@@ -14,7 +14,7 @@ export default function IconAndTitle({ title }: IconAndTitleProps) {
   const IconComponent: IconType = iconSet[iconName as keyof typeof iconSet];
 
   return (
-    <div className="p-4 w-full flex gap-4 items-center bg-primary-bg mt-8">
+    <div className="p-4 w-full flex gap-4 items-center bg-primary-bg mt-4 sm:mt-8">
       {/* This will now work correctly */}
       {IconComponent && <IconComponent size={50} />}
       <h2 className="text-2xl font-bold">{title}</h2>

@@ -24,7 +24,7 @@ export default function Hero() {
       className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen items-center flex flex-col gap-80 pt-20`}
     >
       <div className="flex flex-col w-full">
-        <div className="flex w-full justify-between">
+        <div className="flex sm:flex-row gap-10 sm:gap-0 flex-col w-full justify-between">
           <div className="flex flex-col">
             <div className="text-6xl font-bold text-primary-accent mb-6">
               WT_
@@ -38,7 +38,7 @@ export default function Hero() {
               <h2>Monitor do Pensamento Computacional</h2>
             </div>
           </div>
-          <div className="flex gap-8 text-2xl text-terciary-bg">
+          <div className="flex flex-col sm:flex-row gap-8 text-2xl text-terciary-bg">
             <div className="flex flex-col gap-3 text-2xl text-terciary-bg">
               <h3 className="">Home</h3>
               {pathname === "/" ? (
@@ -104,7 +104,7 @@ export default function Hero() {
           </div>
         </div>
         {/* Contact */}
-        <div className="flex flex-col gap-4 text-2xl text-terciary-bg mt-20">
+        <div className="flex flex-col gap-4 text-lg sm:text-2xl text-terciary-bg mt-20">
           <div className="flex gap-2">
             <h3>Email:</h3>
             <p className="text-white">witortena@gmail.com</p>

@@ -17,7 +17,7 @@ export default function Contributions() {
       </div>
 
       {/* grid de 2x2 */}
-      <div className="grid grid-cols-2 gap-8 grid-rows-1 mb-20">
+      <div className="grid grid-cols-1 grid-rows-3 sm:grid-cols-2 gap-8 sm:grid-rows-1 mb-20">
         <TextCard
           title="NPI - Núcleo de Práticas de Informática"
           status="Integrante ativo"
@@ -31,7 +31,7 @@ export default function Contributions() {
           info="Monitoria de alunos"
           link="https://github.com"
         />
-        <div className="col-span-2">
+        <div className="sm:col-span-2">
           <TextCard
             title="Grupo de Inteligência Artificial"
             status="Integrante ativo"
