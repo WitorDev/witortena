@@ -63,9 +63,9 @@ const projectsData = [
 ];
 
 export default function Projects() {
-  const scrollRef = useRef(null);
-  const stickyRef = useRef(null);
-  const trackRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const stickyRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   const [scrollDistance, setScrollDistance] = useState(0);
 
@@ -74,7 +74,7 @@ export default function Projects() {
     const sticky = stickyRef.current;
     if (!track || !sticky) return;
 
-    const distance = track.scrollWidth - sticky.clientWidth;
+    const distance: any = track.scrollWidth - sticky.clientWidth;
     setScrollDistance(distance);
   }, []);
 
