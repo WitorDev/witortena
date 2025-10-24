@@ -11,6 +11,7 @@ type MobileDropdownProps = {
   links?: string[];
   pageUrl?: string;
   final?: boolean;
+  setMobileNavbar?: any;
 };
 
 export default function MobileDropdown({
@@ -19,6 +20,7 @@ export default function MobileDropdown({
   links,
   pageUrl,
   final,
+  setMobileNavbar,
 }: MobileDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,14 +45,16 @@ export default function MobileDropdown({
         className={`flex py-4 w-full bg-background gap-2 text-center hover:cursor-pointer justify-center hover:text-terciary-bg ${
           isOpen && "text-terciary-bg"
         }`}
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={() => {
+          setIsOpen((prev) => !prev);
+        }}
       >
         <h1 className="text-center">{title}</h1>
         <SlArrowDown size={15} strokeWidth={40} className="translate-y-2.5" />
       </div>
 
       {isOpen && (
-        <div className=" flex flex-col gap-1  w-full items-center justify-between bg-background p-4">
+        <div className="flex flex-col gap-1  w-full items-center justify-between bg-background p-4">
           {options.map((option, id) => {
             // in case is not in this page, link to the right page
             if (links && pageUrl !== pathname) {
@@ -58,7 +62,10 @@ export default function MobileDropdown({
                 return (
                   <Link
                     href={pageUrl + "/" + links[id] || "/"}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false);
+                      setMobileNavbar(false);
+                    }}
                     key={id}
                     className="hover:text-terciary-bg mt-1 text-center hover:cursor-pointer"
                   >

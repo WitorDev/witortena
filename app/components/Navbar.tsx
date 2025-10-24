@@ -108,6 +108,7 @@ export default function Navbar() {
         }`}
       >
         <MobileDropdown
+          setMobileNavbar={setMobileNavActive}
           pageUrl="/"
           title="Home"
           options={[
@@ -128,6 +129,7 @@ export default function Navbar() {
           ]}
         />
         <MobileDropdown
+          setMobileNavbar={setMobileNavActive}
           pageUrl="/reports"
           title="Relatórios"
           options={["NPI", "Pensamento Computacional"]}
