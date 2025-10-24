@@ -64,7 +64,7 @@ export default function About() {
           <motion.p
             id="paragraph"
             ref={typeRef}
-            className={`${ubuntuSansMonoFont.className} text-justify leading-loose text-lg sm:text-2xl`}
+            className={`${ubuntuSansMonoFont.className} text-justify min-h-[500px] leading-loose text-lg sm:text-2xl`}
           ></motion.p>
           <motion.div className="flex gap-4 items-center">
             {isVisible && <FaGithubSquare size={35} />}

@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <footer
       id="footer"
-      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen items-center flex flex-col gap-80 pt-20`}
+      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen items-center flex flex-col gap-20 sm:gap-80 pt-20`}
     >
       <div className="flex flex-col w-full">
         <div className="flex sm:flex-row gap-10 sm:gap-0 flex-col w-full justify-between">
@@ -104,18 +104,18 @@ export default function Hero() {
           </div>
         </div>
         {/* Contact */}
-        <div className="flex flex-col gap-4 text-lg sm:text-2xl text-terciary-bg mt-20">
-          <div className="flex gap-2">
+        <div className="flex flex-col gap-4 text-2xl text-terciary-bg mt-20">
+          <div className="flex flex-col sm:flex-row gap-2">
             <h3>Email:</h3>
             <p className="text-white">witortena@gmail.com</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <h3>Celular:</h3>
             <p className="text-white">+55 43 9 8413-8592</p>
           </div>
         </div>
       </div>
-      <h1 className="text-2xl text-terciary-bg">
+      <h1 className="text-2xl sm:mb-0 mb-8 text-terciary-bg">
         &copy; Witor Tenã {new Date().getFullYear()}
       </h1>
     </footer>
