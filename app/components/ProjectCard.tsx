@@ -19,7 +19,7 @@ export default function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="flex relative max-w-[500px] flex-col bg-primary-bg text-white">
+    <div className="flex relative w-[300px] sm:w-[500px] flex-col bg-primary-bg text-white">
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
           <Image alt="Project Picture" src={imageSrc} />
@@ -28,7 +28,7 @@ export default function ProjectCard({
           <RiExternalLinkLine size={35} />
         </div>
 
-        <div className="p-8 w-[500px]">
+        <div className="p-8">
           <div className="mt-2 flex gap-2 overflow-hidden">
             {tech.map((name, index) => {
               const IconComponent =
