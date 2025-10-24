@@ -54,7 +54,7 @@ export default function About() {
   return (
     <div id="about" className="bg-secondary-bg">
       <motion.section
-        className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen flex flex-col justify-center items-center`}
+        className={`sm:${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen flex flex-col justify-center items-center`}
       >
         <div className="flex gap-8 lg:pl-150 flex-col justify-start items-left w-full">
           <motion.h1
@@ -64,7 +64,7 @@ export default function About() {
           <motion.p
             id="paragraph"
             ref={typeRef}
-            className={`${ubuntuSansMonoFont.className} z-100 text-justify min-h-[500px] leading-loose text-lg sm:text-2xl`}
+            className={`${ubuntuSansMonoFont.className} z-100 md:text-justify min-h-[500px] leading-loose text-lg sm:text-2xl`}
           ></motion.p>
           <motion.div className="flex gap-4 items-center">
             {isVisible && <FaGithubSquare size={35} />}
