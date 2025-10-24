@@ -64,7 +64,7 @@ export default function About() {
           <motion.p
             id="paragraph"
             ref={typeRef}
-            className={`${ubuntuSansMonoFont.className} text-justify min-h-[500px] leading-loose text-lg sm:text-2xl`}
+            className={`${ubuntuSansMonoFont.className} z-100 text-justify min-h-[500px] leading-loose text-lg sm:text-2xl`}
           ></motion.p>
           <motion.div className="flex gap-4 items-center">
             {isVisible && <FaGithubSquare size={35} />}
@@ -76,7 +76,7 @@ export default function About() {
             ></a>
           </motion.div>
         </div>
-        <div className="-saturate-200 scale-x-[-1] -translate-x-20 absolute opacity-25 left-0">
+        <div className="-saturate-200 z-10 scale-x-[-1] -translate-x-20 absolute opacity-15 sm:opacity-25 left-0">
           <Image alt="Computer Picture" width={600} src={old_computer_2} />
         </div>
       </motion.section>
