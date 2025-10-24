@@ -77,7 +77,10 @@ export default function MobileDropdown({
                 <Link
                   //href={`/#${link.to}`}
                   href={pageUrl + "#" + links[id] || "/"}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    setMobileNavbar(false);
+                  }}
                   key={id}
                   className="hover:text-terciary-bg mt-1 hover:cursor-pointer"
                 >
@@ -90,7 +93,10 @@ export default function MobileDropdown({
             if (links && pageUrl === pathname) {
               return (
                 <ScrollLink
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    setMobileNavbar(false);
+                  }}
                   to={links[id]}
                   smooth={true}
                   duration={300}
