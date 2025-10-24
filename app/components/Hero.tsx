@@ -56,7 +56,9 @@ export default function Hero() {
           // onMouseLeave={() => setShowImage(false)}
           // onMouseMove={handleMouseMove} // 4. Add mouse move handler
           className={`text-6xl sm:text-8xl font-bold text-primary-accent mt-4 `}
-        ></h1>
+        >
+          Witor Tenã
+        </h1>
         {showImage && (
           // 5. Convert to motion.div and apply style
           <motion.div
