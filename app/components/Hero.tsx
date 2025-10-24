@@ -2,13 +2,15 @@
 
 import old_computer from "@/public/old_computer.png";
 import fun from "@/public/fun.gif";
+import typeWriter from "@/util/typeAnimationSlow";
+
 // 1. Updated imports for framer-motion
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import Image from "next/image";
 import { SlArrowDown } from "react-icons/sl";
 import { Ubuntu_Mono } from "next/font/google";
 // 4. Removed unused imports (useActionState, useEffect) and kept useState
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -29,6 +31,9 @@ export default function Hero() {
   const handleMouseMove = (e: any) => {
     mouseX.set(e.clientX - 310);
   };
+  useEffect(() => {
+    typeWriter(`Witor Tenã`, "title", 100);
+  }, []);
   return (
     <motion.section
       id="hero"
@@ -46,13 +51,12 @@ export default function Hero() {
           Desenvolvedor Fullstack
         </div>
         <h1
+          id="title"
           // onMouseEnter={() => setShowImage(true)}
           // onMouseLeave={() => setShowImage(false)}
           // onMouseMove={handleMouseMove} // 4. Add mouse move handler
           className={`text-6xl sm:text-8xl font-bold text-primary-accent mt-4 `}
-        >
-          Witor Tenã
-        </h1>
+        ></h1>
         {showImage && (
           // 5. Convert to motion.div and apply style
           <motion.div
