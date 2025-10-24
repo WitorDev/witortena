@@ -28,7 +28,7 @@ export default function ProjectCard({
           <RiExternalLinkLine size={35} />
         </div>
 
-        <div className="p-2 py-4 sm:p-8">
+        <div className="p-4 py-4 sm:p-8">
           <div className="mt-2 flex gap-2 overflow-hidden">
             {tech.map((name, index) => {
               const IconComponent =
@@ -44,7 +44,7 @@ export default function ProjectCard({
               );
             })}
           </div>
-          <p className="mt-4 text-xl sm:text-2xl">{description}</p>
+          <p className="mt-4 text-xl sm:text-2xl ">{description}</p>
           <p className="mt-8 text-xl text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
             {tag}
           </p>
