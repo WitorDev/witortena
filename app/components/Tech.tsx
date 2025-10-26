@@ -16,7 +16,7 @@ export default function Tech() {
       className={`${ubuntuMonoFont.className} justify-center max-w-screen-xl px-4 mx-auto relative min-h-screen flex flex-col `}
     >
       <div className="flex w-full">
-        <h1 className="text-5xl font-bold">Tech Stack</h1>
+        <h1 className="text-3xl font-bold">Tech Stack</h1>
       </div>
       <div className="flex flex-col sm:flex-row">
         <div className="grid w-full grid-cols-1 grid-rows-2 py-20">
@@ -42,7 +42,7 @@ export default function Tech() {
           </div>
         </div>
         <Image
-          className="-z-10 hidden sm:block -translate-y-20 translate-x-16"
+          className="-z-10 hidden lg:block -translate-y-20 translate-x-16"
           src={cableImage}
           alt="Cable figure"
           width={900}

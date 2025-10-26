@@ -30,7 +30,7 @@ export default function Hero() {
               WT_
             </div>
             <div
-              className={`${UbuntuSansMonoFont.className} flex flex-col gap-6 text-2xl text-terciary-bg`}
+              className={`${UbuntuSansMonoFont.className} flex flex-col gap-6 text-lg text-terciary-bg`}
             >
               <h2>Desenvolvedor Fullstack</h2>
               <h2>Estudante de Ciência da Computação</h2>
@@ -38,8 +38,8 @@ export default function Hero() {
               <h2>Monitor do Pensamento Computacional</h2>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-8 text-2xl text-terciary-bg">
-            <div className="flex flex-col gap-3 text-2xl text-terciary-bg">
+          <div className="flex flex-col sm:flex-row gap-8 text-lg text-terciary-bg">
+            <div className="flex flex-col gap-3 text-lg text-terciary-bg">
               <h3 className="">Home</h3>
               {pathname === "/" ? (
                 <>
@@ -83,7 +83,7 @@ export default function Hero() {
                 </>
               )}
             </div>
-            <div className="flex flex-col gap-3 text-2xl text-terciary-bg">
+            <div className="flex flex-col gap-3 text-lg text-terciary-bg">
               <h3 className="">Relatórios</h3>
               {[
                 { href: "/reports/NPI", label: "NPI" },
@@ -104,7 +104,7 @@ export default function Hero() {
           </div>
         </div>
         {/* Contact */}
-        <div className="flex flex-col gap-4 text-2xl text-terciary-bg mt-20">
+        <div className="flex flex-col gap-4 text-lg text-terciary-bg mt-20">
           <div className="flex flex-col sm:flex-row gap-2">
             <h3>Email:</h3>
             <p className="text-white">witortena@gmail.com</p>
@@ -115,7 +115,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <h1 className="text-2xl sm:mb-0 mb-8 text-terciary-bg">
+      <h1 className="text-lg sm:mb-0 mb-8 text-terciary-bg">
         &copy; Witor Tenã {new Date().getFullYear()}
       </h1>
     </footer>

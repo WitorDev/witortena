@@ -19,7 +19,7 @@ export default function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="flex relative w-[300px] sm:w-[500px] flex-col bg-primary-bg text-white">
+    <div className="flex relative flex-col bg-primary-bg text-white">
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
           <Image alt="Project Picture" src={imageSrc} />
@@ -44,8 +44,8 @@ export default function ProjectCard({
               );
             })}
           </div>
-          <p className="mt-4 text-xl sm:text-2xl ">{description}</p>
-          <p className="mt-8 text-xl text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
+          <p className="mt-4 text-lg ">{description}</p>
+          <p className="mt-8 text-lg text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
             {tag}
           </p>
         </div>

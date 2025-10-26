@@ -31,9 +31,7 @@ export default function Hero() {
   const handleMouseMove = (e: any) => {
     mouseX.set(e.clientX - 310);
   };
-  useEffect(() => {
-    typeWriter(`Witor Tenã`, "title", 100);
-  }, []);
+
   return (
     <motion.section
       id="hero"
@@ -47,7 +45,7 @@ export default function Hero() {
         animate={{ y: 0 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
       >
-        <div className="border-3 w-fit sm:mx-auto rounded-2xl border-primary-accent px-4 py-2 text-primary-accent sm:text-2xl">
+        <div className="border-3 w-fit sm:mx-auto rounded-2xl border-primary-accent px-4 py-2 text-primary-accent text-lg">
           Desenvolvedor Fullstack
         </div>
         <h1
@@ -55,7 +53,7 @@ export default function Hero() {
           // onMouseEnter={() => setShowImage(true)}
           // onMouseLeave={() => setShowImage(false)}
           // onMouseMove={handleMouseMove} // 4. Add mouse move handler
-          className={`text-6xl sm:text-8xl font-bold text-primary-accent mt-4 `}
+          className={`text-5xl sm:text-7xl font-bold text-primary-accent mt-4 `}
         >
           Witor Tenã
         </h1>
@@ -76,7 +74,7 @@ export default function Hero() {
         initial={{ y: +100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="text-2xl sm:text-6xl text-left text-terciary-bg mt-4 sm:w-150 sm:text-center"
+        className="text-lg sm:text-5xl text-left text-terciary-bg mt-4 sm:w-150 sm:text-center"
       >
         Estudante de Ciência da Computação
       </motion.h2>

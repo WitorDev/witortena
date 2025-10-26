@@ -6,7 +6,7 @@ import { Ubuntu_Mono } from "next/font/google";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { CiMenuBurger, CiMenuKebab } from "react-icons/ci";
+import { CiMenuBurger } from "react-icons/ci";
 import { CgClose } from "react-icons/cg";
 
 const ubuntuMonoFont = Ubuntu_Mono({
@@ -41,15 +41,15 @@ export default function Navbar() {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className={`${ubuntuMonoFont.className} my-8 z-200 fixed mx-auto px-4 w-full`}
     >
-      <nav className="max-w-screen-xl mx-auto flex justify-between align-middle text-2xl sm:px-4">
+      <nav className="max-w-screen-xl mx-auto flex justify-between align-middle text-lg sm:px-4">
         <div className="w-full flex justify-between border rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
-          <div className="flex gap-8 justify-between w-full items-center">
+          <div className="flex gap-8 sm:justify-start justify-between w-full items-center">
             <div className="text-4xl font-bold text-primary-accent">WT_</div>
 
             {/* Mobile Nav */}
             <div
               onClick={() => setMobileNavActive(!mobileNavActive)}
-              className="sm:hidden block font-bold hover:cursor-pointer translate-x-8 text-2xl py-2 px-8"
+              className="sm:hidden block font-bold hover:cursor-pointer translate-x-8 text-lg py-2 px-8"
             >
               {mobileNavActive ? <CgClose /> : <CiMenuBurger />}
             </div>
@@ -95,7 +95,7 @@ export default function Navbar() {
           </div>
           <div>
             <ScrollLink to="contact" smooth={true} duration={300}>
-              <button className="hidden sm:block font-bold hover:cursor-pointer translate-x-4 text-2xl py-2 px-8 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
+              <button className="hidden sm:block font-bold hover:cursor-pointer translate-x-4 text-lg py-2 px-8 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
                 Contato
               </button>
             </ScrollLink>
@@ -103,7 +103,7 @@ export default function Navbar() {
         </div>
       </nav>
       <nav
-        className={` border border-primary-accent 2xl mt-8 max-w-screen-xl mx-auto flex-col justify-between align-middle text-2xl sm:px-4 ${
+        className={` border border-primary-accent 2xl mt-8 max-w-screen-xl mx-auto flex-col justify-between align-middle text-lg sm:px-4 ${
           mobileNavActive ? "flex" : "hidden"
         }`}
       >

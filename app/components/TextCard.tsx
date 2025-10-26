@@ -37,11 +37,11 @@ export default function TextCard({
             >
               <div>
                 <div className="flex gap-4 mb-6 flex-col">
-                  <h1 className="text-4xl">{title}</h1>
-                  <p className="text-2xl text-terciary-bg">{status}</p>
+                  <h1 className="text-2xl">{title}</h1>
+                  <p className="text-lg text-terciary-bg">{status}</p>
                 </div>
                 <div className="flex gap-4 flex-col">
-                  <p className="text-2xl">{description}</p>
+                  <p className="text-lg">{description}</p>
                 </div>
               </div>
               <div>
@@ -66,11 +66,11 @@ export default function TextCard({
         >
           <div>
             <div className="flex gap-4 mb-6 flex-col">
-              <h1 className="text-4xl">{title}</h1>
-              <p className="text-2xl text-terciary-bg">{status}</p>
+              <h1 className="text-2xl">{title}</h1>
+              <p className="text-lg text-terciary-bg">{status}</p>
             </div>
             <div className="flex gap-4 flex-col">
-              <p className="text-2xl">{description}</p>
+              <p className="text-lg">{description}</p>
             </div>
           </div>
           <div>

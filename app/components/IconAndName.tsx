@@ -23,10 +23,10 @@ export default function IconAndName({ icon, text }: IconAndNameProps) {
     >
       {IconComponent ? (
         <div style={{ color: getColorForTech(icon) }}>
-          <IconComponent size={45} />
+          <IconComponent size={40} />
         </div>
       ) : null}
-      <h1 className="text-2xl">{text}</h1>
+      <h1 className="text-xl">{text}</h1>
     </motion.div>
   );
 }

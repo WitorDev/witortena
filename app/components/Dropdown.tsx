@@ -46,11 +46,11 @@ export default function Dropdown({
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <h1>{title}</h1>
-        <SlArrowDown size={15} strokeWidth={40} className="translate-y-2.5" />
+        <SlArrowDown size={10} strokeWidth={40} className="translate-y-2.5" />
       </div>
 
       {isOpen && (
-        <div className="absolute top-full flex flex-col gap-1 mt-8 border border-terciary-bg rounded-2xl bg-background p-4">
+        <div className="absolute top-full flex flex-col gap-1 mt-10 border border-terciary-bg rounded-lg bg-background p-4">
           {options.map((option, id) => {
             // in case is not in this page, link to the right page
             if (links && pageUrl !== pathname) {

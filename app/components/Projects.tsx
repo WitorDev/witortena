@@ -2,16 +2,15 @@
 import { Ubuntu_Mono } from "next/font/google";
 import ProjectCard from "@/app/components/ProjectCard";
 import project1 from "@/public/project1.png";
-import { useRef, useState, useLayoutEffect } from "react";
-import { HiArrowUpRight } from "react-icons/hi2";
-import { motion, useScroll, useTransform } from "motion/react";
+import { useRef, useState, useEffect, useCallback } from "react"; // Added useCallback
+import {
+  HiArrowUpRight,
+  HiArrowLeft,
+  HiArrowRight,
+  HiXMark,
+} from "react-icons/hi2";
 
-const ubuntuMonoFont = Ubuntu_Mono({
-  subsets: ["latin"],
-  weight: "400",
-});
-
-const projectsData = [
+export const projectsData = [
   {
     imageSrc: project1,
     tech: ["Javascript", "React"],
@@ -62,88 +61,172 @@ const projectsData = [
   },
 ];
 
+const ubuntuMonoFont = Ubuntu_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export default function Projects() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const stickyRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
-  const [scrollDistance, setScrollDistance] = useState(0);
-
-  useLayoutEffect(() => {
-    const track = trackRef.current;
-    const sticky = stickyRef.current;
-    if (!track || !sticky) return;
-
-    const distance: any = track.scrollWidth - sticky.clientWidth;
-    setScrollDistance(distance);
-  }, []);
-
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-    offset: ["start start", "end end"],
-  });
-
-  const scrollX = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, -scrollDistance * 1.465]
+  // --- ADDED: Escape key handler ---
+  const handleEscapeKey = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsOverlayOpen(false);
+      }
+    },
+    [setIsOverlayOpen] // Dependency is stable but good practice
   );
+
+  // --- MODIFIED: Effect to lock body scroll AND listen for Esc key ---
+  useEffect(() => {
+    if (isOverlayOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleEscapeKey);
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to restore scroll and remove listener
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [isOverlayOpen, handleEscapeKey]); // Added handleEscapeKey to dependency array
+  // ------------------------------------------------------------------
+
+  const mobileProjects = projectsData.slice(0, 5);
+
+  const handleScroll = (scrollAmount: number) => {
+    trackRef.current?.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
+  const getScrollAmount = () => {
+    if (trackRef.current) {
+      return trackRef.current.clientWidth * 0.6;
+    }
+    return 300;
+  };
 
   return (
     <section
       id="projects"
-      // Layout classes are removed from here...
-      className={`${ubuntuMonoFont.className} relative`}
+      className={`${ubuntuMonoFont.className} relative w-full`}
     >
-      {/* === SCROLLY STRUCTURE START === */}
-      {/* 1. The tall trigger section (300vh) */}
-      <div ref={scrollRef} className="relative h-[300vh]">
-        {/* 2. The sticky container (h-screen) */}
+      <div className="w-full max-w-screen-xl mx-auto px-4 py-16 md:py-24">
+        <div className="flex justify-between items-center">
+          <h1 className="text-3xl font-bold">Projetos</h1>
+          <div className="hidden md:flex items-center gap-2">
+            <button
+              onClick={() => handleScroll(-getScrollAmount())}
+              aria-label="Scroll left"
+              className="p-2 rounded-full border border-gray-600 hover:bg-gray-800 transition-colors"
+            >
+              <HiArrowLeft size={20} />
+            </button>
+            <button
+              onClick={() => handleScroll(getScrollAmount())}
+              aria-label="Scroll right"
+              className="p-2 rounded-full border border-gray-600 hover:bg-gray-800 transition-colors"
+            >
+              <HiArrowRight size={20} />
+            </button>
+          </div>
+        </div>
+
         <div
-          ref={stickyRef}
-          // Changed to flex items-center to vertically center the content block
-          className="sticky top-0 h-screen w-full overflow-hidden flex items-center"
+          ref={trackRef}
+          className="hidden md:flex flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide"
         >
-          {/* 3. Inner wrapper for all content (Title, Cards, Link) */}
-          {/* ...and applied here, inside the sticky container */}
-          <div className="flex flex-col w-full max-w-screen-xl mx-auto px-4">
-            {/* Title (now inside sticky container) */}
-            <div className="flex w-full">
-              <h1 className="text-5xl font-bold">Projetos</h1>
+          {projectsData.map((project, index) => (
+            <div key={index} className="w-96 max-w-full md:flex-shrink-0">
+              <ProjectCard
+                imageSrc={project.imageSrc}
+                tech={project.tech}
+                description={project.description}
+                tag={project.tag}
+                link={project.link}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-col items-center gap-8 mt-10 md:hidden">
+          {mobileProjects.map((project, index) => (
+            <div key={index} className="w-96 max-w-full">
+              <ProjectCard
+                imageSrc={project.imageSrc}
+                tech={project.tech}
+                description={project.description}
+                tag={project.tag}
+                link={project.link}
+              />
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => setIsOverlayOpen(true)}
+          className="flex md:hidden gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer text-xl mx-auto"
+        >
+          <p>Ver mais</p>
+          <div className="translate-y-1.5">
+            <HiArrowUpRight strokeWidth={1} size={18} />
+          </div>
+        </button>
+
+        <button
+          onClick={() => setIsOverlayOpen(true)}
+          className="hidden md:flex gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer text-xl"
+        >
+          <p>Ver mais</p>
+          <div className="translate-y-1.5">
+            <HiArrowUpRight strokeWidth={1} size={18} />
+          </div>
+        </button>
+      </div>
+
+      {/* --- MODIFIED: Fullscreen Project Overlay --- */}
+      {isOverlayOpen && (
+        <div
+          className="fixed inset-0 z-50 scrollbar-hide flex items-center justify-center sm:p-6 md:p-8 bg-black bg-opacity-90 backdrop-blur-sm" // Changed bg-transparent to bg-black
+        >
+          <div className="relative w-full scrollbar-hide max-w-6xl h-[90vh] translate-y-20 bg-background rounded-lg shadow-xl flex flex-col">
+            {/* Overlay Header */}
+            <div className="flex justify-between scrollbar-hide items-center p-6 border-b border-primary-accent">
+              <h2 className="text-2xl  font-bold">Todos os Projetos</h2>
+              <button
+                onClick={() => setIsOverlayOpen(false)}
+                className="p-1 rounded-2xl"
+                aria-label="Close"
+              >
+                <HiXMark size={28} />
+              </button>
             </div>
 
-            {/* 3. The moving track */}
-            <motion.div
-              ref={trackRef}
-              style={{ x: scrollX }}
-              className="flex gap-16 mt-10" // Original margin-top
-            >
-              {projectsData.map((project, index) => (
-                <div key={index} className="flex-shrink-0">
+            {/* Overlay Grid (Scrollable) */}
+            <div className="flex-1 scrollbar-hide overflow-y-auto p-4 sm:p-8 md:p-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {projectsData.map((project, index) => (
                   <ProjectCard
+                    key={index}
                     imageSrc={project.imageSrc}
                     tech={project.tech}
                     description={project.description}
                     tag={project.tag}
                     link={project.link}
                   />
-                </div>
-              ))}
-            </motion.div>
-
-            {/* "Ver mais" Link (now inside sticky container) */}
-            <div className="flex gap-2 mt-4 text-primary-accent hover:text-secondary-accent hover:cursor-pointer text-xl">
-              <p>Ver mais</p>
-              <div className="translate-y-1.5">
-                <HiArrowUpRight strokeWidth={1} size={18} />
+                ))}
               </div>
             </div>
           </div>
-          {/* End inner content wrapper */}
         </div>
-        {/* End sticky container */}
-      </div>
-      {/* === SCROLLY STRUCTURE END === */}
+      )}
     </section>
   );
 }

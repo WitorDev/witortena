@@ -17,7 +17,7 @@ export default function IconAndTitle({ title }: IconAndTitleProps) {
     <div className="p-4 w-full flex gap-4 items-center bg-primary-bg mt-4 sm:mt-8">
       {/* This will now work correctly */}
       {IconComponent && <IconComponent size={50} />}
-      <h2 className="text-2xl font-bold">{title}</h2>
+      <h2 className="text-lg font-bold">{title}</h2>
     </div>
   );
 }
