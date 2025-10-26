@@ -16,8 +16,6 @@ const ubuntuMonoFont = Ubuntu_Mono({
 });
 
 export default function Hero() {
-  const [showImage, setShowImage] = useState(false);
-
   // 2. Add motion values to track and smooth the mouse's X position
   const mouseX = useMotionValue(0);
   const smoothMouseX = useSpring(mouseX, {
@@ -55,18 +53,6 @@ export default function Hero() {
         >
           Witor Tenã
         </h1>
-        {showImage && (
-          // 5. Convert to motion.div and apply style
-          <motion.div
-            className="-translate-y-60 absolute"
-            style={{
-              left: smoothMouseX, // Use the smoothed X value
-              transform: "translateX(-50%)", // Center the image on the cursor
-            }}
-          >
-            <Image alt="Funny Picture" width={60} src={fun} />
-          </motion.div>
-        )}
       </motion.div>
       <motion.h2
         initial={{ y: +100 }}
