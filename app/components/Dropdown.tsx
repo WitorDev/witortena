@@ -40,7 +40,7 @@ export default function Dropdown({
   return (
     <div ref={containerRef} className="transition-all relative inline-block">
       <div
-        className={`flex gap-2 hover:cursor-pointer hover:text-terciary-bg ${
+        className={`flex text-xl gap-2 hover:cursor-pointer hover:text-terciary-bg ${
           isOpen && "text-terciary-bg"
         }`}
         onClick={() => setIsOpen((prev) => !prev)}

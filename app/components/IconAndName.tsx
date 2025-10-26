@@ -12,13 +12,13 @@ export default function IconAndName({ icon, text }: IconAndNameProps) {
 
   return (
     <motion.div
+      viewport={{ amount: 1, once: true }}
       initial={{ opacity: 0.1, x: 20 }}
       whileInView={{
         opacity: 1,
         x: 0,
         transition: { duration: 0.3 },
       }}
-      viewport={{ once: true, amount: 0.3 }}
       className="flex items-center gap-4 my-4"
     >
       {IconComponent ? (

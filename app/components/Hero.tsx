@@ -1,8 +1,6 @@
 "use client";
 
 import old_computer from "@/public/old_computer.png";
-import fun from "@/public/fun.gif";
-import typeWriter from "@/util/typeAnimationSlow";
 
 // 1. Updated imports for framer-motion
 import { motion, useMotionValue, useSpring } from "framer-motion";
@@ -10,7 +8,7 @@ import Image from "next/image";
 import { SlArrowDown } from "react-icons/sl";
 import { Ubuntu_Mono } from "next/font/google";
 // 4. Removed unused imports (useActionState, useEffect) and kept useState
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],

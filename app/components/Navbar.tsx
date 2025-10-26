@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { CiMenuBurger } from "react-icons/ci";
 import { CgClose } from "react-icons/cg";
+import Link from "next/link";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -83,19 +84,29 @@ export default function Navbar() {
                   "contact",
                 ]}
               />
-              <Dropdown
+              <Link
+                href={"https://portfolio-unifil.onrender.com"}
+                className="transition-all relative inline-block"
+              >
+                <div
+                  className={`flex gap-2 text-xl hover:cursor-pointer hover:text-terciary-bg`}
+                >
+                  <h1>Relatórios UniFil</h1>
+                </div>
+              </Link>
+              {/* <Dropdown
                 pageUrl="/reports"
                 title="Relatórios"
                 options={["NPI", "Pensamento Computacional"]}
                 links={["NPI", "pensamento-computacional"]}
                 final={true}
-              />
+              /> */}
             </ul>
             {/* End Desktop Nav */}
           </div>
           <div>
             <ScrollLink to="contact" smooth={true} duration={300}>
-              <button className="hidden sm:block font-bold hover:cursor-pointer translate-x-4 text-lg py-2 px-8 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
+              <button className="hidden sm:block font-bold hover:cursor-pointer translate-x-4 text-xl py-2 px-8 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
                 Contato
               </button>
             </ScrollLink>
