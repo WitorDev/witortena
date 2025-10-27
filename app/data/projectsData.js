@@ -5,6 +5,7 @@ export const projectsData = [
     description:
       "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
     tag: "Frontend",
+    imgSrc: "/projectImg/barrel.png",
     link: "https://google.com",
   },
   {

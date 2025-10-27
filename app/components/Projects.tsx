@@ -2,6 +2,11 @@
 import { Ubuntu_Mono } from "next/font/google";
 import ProjectCard from "@/app/components/ProjectCard";
 import project1 from "@/public/project1.png";
+import portfoliounifil from "@/public/projectImg/portfolio-unifil.png";
+import barrel from "@/public/projectImg/barrel.png";
+import notetaker from "@/public/projectImg/notetaker.png";
+import bleedout from "@/public/projectImg/bleedout.png";
+import symbion from "@/public/projectImg/symbion.png";
 import { useRef, useState, useEffect, useCallback } from "react"; // Added useCallback
 import {
   HiArrowUpRight,
@@ -9,54 +14,47 @@ import {
   HiArrowRight,
   HiXMark,
 } from "react-icons/hi2";
+import { SiThreedotjs } from "react-icons/si";
 
 export const projectsData = [
   {
-    imageSrc: project1,
-    tech: ["Javascript", "React"],
+    imageSrc: barrel,
+    tech: ["Javascript", "Html5", "Css3", "Tailwind", "React", "Framer"],
     description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
+      "A self-defense teaching facility focused on teaching urban survival and other skills.",
     tag: "Frontend",
     link: "https://google.com",
   },
   {
-    imageSrc: project1,
-    tech: ["Typescript", "Nextdotjs"],
+    imageSrc: symbion,
+    tech: ["Javascript", "Html5", "Css3", "Tailwind", "React", "Threedotjs"],
     description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
+      "A B2B company specializing in software development, IT consulting, and digital transformation.",
     tag: "Frontend",
     link: "https://google.com",
   },
   {
-    imageSrc: project1,
-    tech: ["Python", "Django"],
+    imageSrc: notetaker,
+    tech: ["Javascript", "Html5", "Css3"],
     description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
+      "A simple and efficient task manager built with Vanilla WEB (JS, HTML and CSS).",
     tag: "Frontend",
     link: "https://google.com",
   },
   {
-    imageSrc: project1,
-    tech: ["Javascript", "Springboot"],
+    imageSrc: portfoliounifil,
+    tech: ["Javascript", "Html5", "Css3", "Express", "Nodedotjs", "Ejs"],
     description:
       "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
-    tag: "Frontend",
+    tag: "Frontend | Backend",
     link: "https://google.com",
   },
   {
-    imageSrc: project1,
-    tech: ["C", "Dotnet"],
+    imageSrc: bleedout,
+    tech: ["Godotengine"],
     description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
-    tag: "Frontend",
-    link: "https://google.com",
-  },
-  {
-    imageSrc: project1,
-    tech: ["Php", "Laravel"],
-    description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
-    tag: "Frontend",
+      "A 2D top-down shooter game where you must advance to the top of the map. Developed using GDScript in the Godot Engine.",
+    tag: "Game Dev",
     link: "https://google.com",
   },
 ];
@@ -108,7 +106,7 @@ export default function Projects() {
 
   const getScrollAmount = () => {
     if (trackRef.current) {
-      return trackRef.current.clientWidth * 0.6;
+      return trackRef.current.clientWidth * 0.8;
     }
     return 300;
   };
@@ -196,7 +194,7 @@ export default function Projects() {
         <div
           className="fixed inset-0 z-50 scrollbar-hide flex items-center justify-center sm:p-6 md:p-8 bg-black bg-opacity-90 backdrop-blur-sm" // Changed bg-transparent to bg-black
         >
-          <div className="relative w-full scrollbar-hide max-w-6xl h-[90vh] translate-y-20 bg-background rounded-lg shadow-xl flex flex-col">
+          <div className="relative w-full scrollbar-hide max-w-6xl h-[90vh] z-50 bg-background rounded-lg shadow-xl flex flex-col">
             {/* Overlay Header */}
             <div className="flex justify-between scrollbar-hide items-center p-6 border-b border-primary-accent">
               <h2 className="text-2xl  font-bold">Todos os Projetos</h2>

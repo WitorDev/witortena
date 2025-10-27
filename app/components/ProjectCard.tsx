@@ -19,7 +19,7 @@ export default function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="flex relative flex-col bg-primary-bg text-white">
+    <div className="flex relative flex-col sm:h-125 bg-primary-bg text-white">
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
           <Image alt="Project Picture" src={imageSrc} />
@@ -28,7 +28,7 @@ export default function ProjectCard({
           <RiExternalLinkLine size={35} />
         </div>
 
-        <div className="p-4 py-4 sm:p-8">
+        <div className="p-4 h-min py-4 sm:p-8">
           <div className="mt-2 flex gap-2 overflow-hidden">
             {tech.map((name, index) => {
               const IconComponent =
@@ -44,10 +44,12 @@ export default function ProjectCard({
               );
             })}
           </div>
-          <p className="mt-4 text-lg ">{description}</p>
-          <p className="mt-8 text-lg text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
-            {tag}
-          </p>
+          <div className="flex flex-col justify-between">
+            <p className="mt-4 text-lg ">{description}</p>
+            <p className="mt-8 text-lg text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
+              {tag}
+            </p>
+          </div>
         </div>
       </a>
     </div>

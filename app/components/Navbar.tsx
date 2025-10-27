@@ -40,7 +40,7 @@ export default function Navbar() {
       initial={{ opacity: 0 }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`${ubuntuMonoFont.className} my-8 z-200 fixed mx-auto px-4 w-full`}
+      className={`${ubuntuMonoFont.className} my-8 z-40 fixed mx-auto px-4 w-full`}
     >
       <nav className="max-w-screen-xl mx-auto flex justify-between align-middle text-lg sm:px-4">
         <div className="w-full flex justify-between border rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
