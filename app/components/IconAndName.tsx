@@ -12,7 +12,7 @@ export default function IconAndName({ icon, text }: IconAndNameProps) {
 
   return (
     <motion.div
-      viewport={{ amount: 1, once: true }}
+      viewport={{ once: true }}
       initial={{ opacity: 0.1, x: 20 }}
       whileInView={{
         opacity: 1,

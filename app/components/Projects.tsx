@@ -114,7 +114,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className={`${ubuntuMonoFont.className} relative w-full`}
+      className={`${ubuntuMonoFont.className} sm:mb-0 mb-20 relative w-full`}
     >
       <div className="w-full max-w-screen-xl mx-auto px-4 py-16 md:py-24">
         <div className="flex justify-between items-center">
