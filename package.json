@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "emailjs": "^4.0.3",
     "motion": "^12.23.22",
     "next": "15.5.4",
     "react": "19.1.0",
