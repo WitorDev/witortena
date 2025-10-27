@@ -24,8 +24,10 @@ export default function Navbar() {
     const previous = scrollY.getPrevious();
     if (previous !== undefined && latest > previous) {
       setHidden(true);
+      setMobileNavActive(false);
     } else {
       setHidden(false);
+      setMobileNavActive(false);
     }
   });
 
