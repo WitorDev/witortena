@@ -21,7 +21,7 @@ export const projectsData = [
     imageSrc: barrel,
     tech: ["Javascript", "Html5", "Css3", "Tailwind", "React", "Framer"],
     description:
-      "A self-defense teaching facility focused on teaching urban survival and other skills.",
+      "Uma instalação de ensino de defesa pessoal focada no ensino de sobrevivência urbana e outras habilidades.",
     tag: "Frontend",
     link: "https://google.com",
   },
@@ -29,7 +29,7 @@ export const projectsData = [
     imageSrc: symbion,
     tech: ["Javascript", "Html5", "Css3", "Tailwind", "React", "Threedotjs"],
     description:
-      "A B2B company specializing in software development, IT consulting, and digital transformation.",
+      "Uma empresa B2B especializada em desenvolvimento de software, consultoria de TI e transformação digital.",
     tag: "Frontend",
     link: "https://google.com",
   },
@@ -37,7 +37,7 @@ export const projectsData = [
     imageSrc: notetaker,
     tech: ["Javascript", "Html5", "Css3"],
     description:
-      "A simple and efficient task manager built with Vanilla WEB (JS, HTML and CSS).",
+      "Um gerenciador de tarefas simples e eficiente construído com Vanilla WEB (JS, HTML e CSS).",
     tag: "Frontend",
     link: "https://google.com",
   },
@@ -53,7 +53,7 @@ export const projectsData = [
     imageSrc: bleedout,
     tech: ["Godotengine"],
     description:
-      "A 2D top-down shooter game where you must advance to the top of the map. Developed using GDScript in the Godot Engine.",
+      "Um jogo de tiro 2D top-down onde você deve avançar até o topo do mapa. Desenvolvido usando GDScript na Godot Engine.",
     tag: "Game Dev",
     link: "https://google.com",
   },
