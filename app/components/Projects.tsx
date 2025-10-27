@@ -23,7 +23,7 @@ export const projectsData = [
     description:
       "Uma instalação de ensino de defesa pessoal focada no ensino de sobrevivência urbana e outras habilidades.",
     tag: "Frontend",
-    link: "https://google.com",
+    link: "https://barrelorganization.netlify.app/home",
   },
   {
     imageSrc: symbion,
@@ -31,7 +31,7 @@ export const projectsData = [
     description:
       "Uma empresa B2B especializada em desenvolvimento de software, consultoria de TI e transformação digital.",
     tag: "Frontend",
-    link: "https://google.com",
+    link: "https://symbion.netlify.app/",
   },
   {
     imageSrc: notetaker,
@@ -39,7 +39,7 @@ export const projectsData = [
     description:
       "Um gerenciador de tarefas simples e eficiente construído com Vanilla WEB (JS, HTML e CSS).",
     tag: "Frontend",
-    link: "https://google.com",
+    link: "https://witordev.github.io/Note-Taker/",
   },
   {
     imageSrc: portfoliounifil,
@@ -47,7 +47,7 @@ export const projectsData = [
     description:
       "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
     tag: "Frontend | Backend",
-    link: "https://google.com",
+    link: "https://portfolio-unifil.onrender.com/",
   },
   {
     imageSrc: bleedout,
@@ -55,7 +55,7 @@ export const projectsData = [
     description:
       "Um jogo de tiro 2D top-down onde você deve avançar até o topo do mapa. Desenvolvido usando GDScript na Godot Engine.",
     tag: "Game Dev",
-    link: "https://google.com",
+    link: "https://witordev.github.io/BleedOUT/",
   },
 ];
 
