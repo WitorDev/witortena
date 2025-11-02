@@ -200,7 +200,7 @@ export default function Projects() {
               <h2 className="text-2xl  font-bold">Todos os Projetos</h2>
               <button
                 onClick={() => setIsOverlayOpen(false)}
-                className="p-1 rounded-2xl"
+                className="p-1 rounded-2xl cursor-pointer"
                 aria-label="Close"
               >
                 <HiXMark size={28} />
