@@ -32,7 +32,7 @@ export default function IconAndTitle({
         viewport={{ once: true }}
         transition={{ duration: 0.3 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        className="p-4 w-full flex gap-4 hover:bg-terciary-bg cursor-pointer items-center bg-primary-bg mt-4 sm:mt-8"
+        className="p-4 w-full flex gap-4 rounded-lg hover:bg-terciary-bg cursor-pointer items-center bg-primary-bg mt-4 sm:mt-8"
       >
         {IconComponent && <IconComponent size={50} />}
         <h2 className="text-lg font-bold">{title}</h2>

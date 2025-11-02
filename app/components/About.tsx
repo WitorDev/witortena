@@ -23,10 +23,10 @@ export default function About() {
         className={`sm:${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen py-8 sm:py-0 sm:flex-row-reverse flex-col-reverse flex gap-8 sm:gap-0 sm:justify-between items-center`}
       >
         <motion.div
-          initial={{ y: 200, scale: 0.8 }}
+          initial={{ opacity: 0.2 }}
           viewport={{ amount: 0.3, once: true }}
           transition={{ duration: 0.3 }}
-          whileInView={{ y: 0, scale: 1 }}
+          whileInView={{ opacity: 1 }}
           className="z-10 left-0"
         >
           <Image
@@ -37,10 +37,10 @@ export default function About() {
           />
         </motion.div>
         <motion.div
-          initial={{ y: 200, scale: 0.8 }}
+          initial={{ opacity: 0.2 }}
           viewport={{ amount: 0.3, once: true }}
           transition={{ duration: 0.3 }}
-          whileInView={{ y: 0, scale: 1 }}
+          whileInView={{ opacity: 1 }}
           className="flex gap-8 flex-col justify-start items-left"
         >
           <motion.h1
@@ -51,7 +51,7 @@ export default function About() {
           </motion.h1>
           <motion.p
             id="paragraph"
-            className={`${ubuntuSansMonoFont.className} z-100 sm:max-w-140 md:text-justify leading-loose text-lg`}
+            className={`${ubuntuSansMonoFont.className} sm:max-w-140 md:text-justify leading-loose text-lg`}
           >
             Sou um curioso sobre tecnologia que teve o primeiro contato com a
             programação ainda pequeno. Tudo começou com Python, e até hoje me

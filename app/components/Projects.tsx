@@ -123,14 +123,14 @@ export default function Projects() {
             <button
               onClick={() => handleScroll(-getScrollAmount())}
               aria-label="Scroll left"
-              className="p-2 rounded-full border border-gray-600 hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-full cursor-pointer border border-terciary-bg hover:bg-terciary-accent transition-colors"
             >
               <HiArrowLeft size={20} />
             </button>
             <button
               onClick={() => handleScroll(getScrollAmount())}
               aria-label="Scroll right"
-              className="p-2 rounded-full border border-gray-600 hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-full cursor-pointer border border-terciary-bg hover:bg-terciary-accent transition-colors"
             >
               <HiArrowRight size={20} />
             </button>

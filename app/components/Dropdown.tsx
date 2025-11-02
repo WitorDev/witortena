@@ -38,7 +38,10 @@ export default function Dropdown({
 
   const pathname = usePathname();
   return (
-    <div ref={containerRef} className="transition-all relative inline-block">
+    <div
+      ref={containerRef}
+      className="z-40 transition-all relative inline-block"
+    >
       <div
         className={`flex text-xl gap-2 hover:cursor-pointer hover:text-terciary-bg ${
           isOpen && "text-terciary-bg"

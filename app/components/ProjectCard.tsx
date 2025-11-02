@@ -19,12 +19,16 @@ export default function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="flex relative flex-col sm:h-125 bg-primary-bg text-white">
+    <div className="flex relative hover:border-secondary-accent hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:h-125 bg-primary-bg text-white">
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
-          <Image alt="Project Picture" src={imageSrc} />
+          <Image
+            alt="Project Picture"
+            className="rounded-t-lg"
+            src={imageSrc}
+          />
         </div>
-        <div className="absolute right-4 top-4 hover:cursor-pointer group-hover:text-green-500 transition-colors">
+        <div className="absolute right-4 top-4 hover:cursor-pointer  group-hover:text-green-500 transition-colors">
           <RiExternalLinkLine size={35} />
         </div>
 

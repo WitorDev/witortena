@@ -29,7 +29,7 @@ export default function Contributions() {
           status="Integrante ativo"
           description="Projeto que permite estudantes de escolas públicas estudar tecnologia de forma gratuita na UniFil. Participei como monitor no projeto."
           info="Monitoria de alunos"
-          link="https://github.com"
+          link="https://portfolio-unifil.onrender.com"
         />
         <div className="sm:col-span-2">
           <TextCard

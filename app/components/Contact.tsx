@@ -51,7 +51,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Box */}
-          <div className="bg-primary-bg border-t-5 border-t-primary-accent">
+          <div className="bg-primary-bg rounded-b-lg border-t-5 border-t-primary-accent">
             <form
               ref={form}
               onSubmit={sendEmail}
