@@ -38,7 +38,7 @@ export default function About() {
           className="flex gap-8 flex-col justify-start items-left"
         >
           <div className="flex w-full mb-16">
-            <h1 className="text-3xl font-bold w-full text-center sm:text-left">
+            <h1 className="text-3xl font-bold w-full sm:text-left">
               Sobre Mim
             </h1>
           </div>
