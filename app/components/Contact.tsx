@@ -17,13 +17,12 @@ export default function Contact() {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // 👇 Add this check
     if (form.current) {
       emailjs
         .sendForm(
           "service_808osig",
           "template_cb9ayi3",
-          form.current, // TypeScript now knows this is safe
+          form.current,
           "3rkGoqHD5pWIP2q3C"
         )
         .then(

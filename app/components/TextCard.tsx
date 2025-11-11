@@ -20,9 +20,9 @@ export default function TextCard({
 }: TextCardProps) {
   return (
     <motion.div
-      initial={{ y: 100, scale: 0.9 }}
+      initial={{ scale: 0.9 }}
       transition={{ duration: 0.35 }}
-      whileInView={{ y: 0, scale: 1 }}
+      whileInView={{ scale: 1 }}
       viewport={{ once: true, amount: 0.4 }}
       className={`${
         link && "hover:border-secondary-accent hover:bg-secondary-bg"

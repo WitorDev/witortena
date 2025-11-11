@@ -22,13 +22,7 @@ export default function About() {
       <motion.section
         className={`sm:${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen py-20 sm:py-0 sm:flex-row-reverse flex-col-reverse flex gap-8 sm:gap-0 sm:justify-between items-center`}
       >
-        <motion.div
-          initial={{ opacity: 0.2 }}
-          viewport={{ amount: 0.3, once: true }}
-          transition={{ duration: 0.3 }}
-          whileInView={{ opacity: 1 }}
-          className="z-10 left-0"
-        >
+        <motion.div className="z-10 left-0">
           <Image
             alt="Witor Tenã"
             className="rounded-2xl"
@@ -36,20 +30,14 @@ export default function About() {
             src={photo}
           />
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0.2 }}
-          viewport={{ amount: 0.3, once: true }}
-          transition={{ duration: 0.3 }}
-          whileInView={{ opacity: 1 }}
-          className="flex gap-8 flex-col justify-start items-left"
-        >
+        <motion.div className="flex gap-8 flex-col justify-start items-left">
           <motion.h1
             id="name"
             className={`${ubuntuSansMonoFont.className} text-xl sm:text-4xl text-left`}
           >
             Witor Tenã
           </motion.h1>
-          <motion.p
+          <p
             id="paragraph"
             className={`${ubuntuSansMonoFont.className} sm:max-w-140 md:text-justify leading-loose text-lg`}
           >
@@ -60,7 +48,7 @@ export default function About() {
             transformou em um hábito, e agora é minha missão: programar, evoluir
             constantemente e absorver o máximo de conhecimento possível nesse
             universo em constante expansão que é o mundo da tecnologia.
-          </motion.p>
+          </p>
           <motion.div className="flex gap-4 items-center">
             <FaGithubSquare size={35} />
             <a

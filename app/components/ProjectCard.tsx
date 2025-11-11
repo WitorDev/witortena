@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import * as SiIcons from "react-icons/si";
 import { RiExternalLinkLine } from "react-icons/ri";
 import getColorForTech from "@/util/getColorForTech";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 type ProjectCardProps = {
   imageSrc: StaticImageData;
@@ -19,7 +20,13 @@ export default function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="flex relative hover:border-secondary-accent hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:h-125 bg-primary-bg text-white">
+    <motion.div
+      initial={{ scale: 0.9 }}
+      transition={{ duration: 0.35 }}
+      whileInView={{ scale: 1 }}
+      viewport={{ once: true, amount: 0.4 }}
+      className="flex relative hover:border-secondary-accent hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:h-125 bg-primary-bg text-white"
+    >
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
           <Image
@@ -56,6 +63,6 @@ export default function ProjectCard({
           </div>
         </div>
       </a>
-    </div>
+    </motion.div>
   );
 }

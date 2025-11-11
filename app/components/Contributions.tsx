@@ -18,7 +18,6 @@ export default function Contributions() {
         </h1>
       </div>
 
-      {/* grid de 2x2 */}
       <div className="grid grid-cols-1 grid-rows-3 sm:grid-cols-2 gap-8 sm:grid-rows-1 mb-20">
         <TextCard
           title="NPI - Núcleo de Práticas de Informática"
