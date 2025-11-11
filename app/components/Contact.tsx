@@ -47,7 +47,9 @@ export default function Contact() {
       >
         <div className="w-full">
           <div className="flex w-full mb-16">
-            <h1 className="text-3xl font-bold">Entre em Contato</h1>
+            <h1 className="text-3xl font-bold w-full text-center sm:text-left">
+              Entre em Contato
+            </h1>
           </div>
 
           {/* Contact Box */}

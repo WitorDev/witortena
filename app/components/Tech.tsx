@@ -16,12 +16,16 @@ export default function Tech() {
       className={`${ubuntuMonoFont.className} justify-center max-w-screen-xl px-4 mx-auto relative min-h-screen flex flex-col `}
     >
       <div className="flex w-full">
-        <h1 className="text-3xl font-bold">Tech Stack</h1>
+        <h1 className="text-3xl font-bold w-full text-center sm:text-left">
+          Tech Stack
+        </h1>
       </div>
       <div className="flex flex-col sm:flex-row">
-        <div className="grid w-full grid-cols-1 grid-rows-2 py-20">
+        <div className="grid w-full justify-items-center sm:justify-items-normal grid-cols-1 grid-rows-2 pt-20">
           <div className="">
-            <h1 className="text-2xl font-bold mb-2">Frontend</h1>
+            <h1 className="text-2xl font-bold mb-2 w-full text-center sm:text-left">
+              Frontend
+            </h1>
             <div className="grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
               <IconAndName icon="Html5" text="HTML" />
               <IconAndName icon="React" text="React" />
@@ -31,8 +35,10 @@ export default function Tech() {
               <IconAndName icon="Nextdotjs" text="Next.js" />
             </div>
           </div>
-          <div className="">
-            <h1 className="text-2xl font-bold mt-8 mb-2">Backend</h1>
+          <div>
+            <h1 className="text-2xl font-bold mt-8 mb-2 w-full text-center sm:text-left">
+              Backend
+            </h1>
             <div className="grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
               <IconAndName icon="Nodedotjs" text="Node.js" />
               <IconAndName icon="Postgresql" text="PostgreSQL" />
@@ -42,7 +48,7 @@ export default function Tech() {
           </div>
         </div>
         <Image
-          className="-z-10 hidden lg:block -translate-y-20 translate-x-16"
+          className="-z-10 hidden lg:block -translate-y-12 "
           src={cableImage}
           alt="Cable figure"
           width={900}

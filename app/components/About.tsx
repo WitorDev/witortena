@@ -20,7 +20,7 @@ export default function About() {
   return (
     <div id="about" className="bg-secondary-bg">
       <motion.section
-        className={`sm:${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen py-8 sm:py-0 sm:flex-row-reverse flex-col-reverse flex gap-8 sm:gap-0 sm:justify-between items-center`}
+        className={`sm:${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen py-20 sm:py-0 sm:flex-row-reverse flex-col-reverse flex gap-8 sm:gap-0 sm:justify-between items-center`}
       >
         <motion.div
           initial={{ opacity: 0.2 }}
