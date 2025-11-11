@@ -31,7 +31,7 @@ export default function Hero() {
   return (
     <motion.section
       id="hero"
-      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative h-[75vh] sm:min-h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       <div className="hidden sm:block translate-y-14 absolute saturate-100 opacity-25 -z-10">
         <Image alt="Computer Picture" width={900} src={old_computer} />
