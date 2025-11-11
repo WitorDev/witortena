@@ -19,7 +19,7 @@ export default function IconAndName({ icon, text }: IconAndNameProps) {
         x: 0,
         transition: { duration: 0.3 },
       }}
-      className="flex items-center gap-4 my-4 bg-primary-bg p-4 rounded-lg sm:p-0 sm:bg-none"
+      className="flex items-center gap-4 my-4 bg-primary-bg p-4 rounded-lg sm:p-0 sm:bg-background"
     >
       {IconComponent ? (
         <div style={{ color: getColorForTech(icon) }}>
