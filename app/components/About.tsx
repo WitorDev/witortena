@@ -30,13 +30,7 @@ export default function About() {
             src={photo}
           />
         </motion.div>
-        <motion.div
-          // initial={{ opacity: 0.2 }}
-          // viewport={{ amount: 0.3, once: true }}
-          // transition={{ duration: 0.3 }}
-          // whileInView={{ opacity: 1 }}
-          className="flex gap-8 flex-col justify-start items-left"
-        >
+        <motion.div className="flex gap-8 flex-col justify-start items-left">
           <div className="flex w-full mb-16">
             <h1 className="text-3xl font-bold w-full sm:text-left">
               Sobre Mim
