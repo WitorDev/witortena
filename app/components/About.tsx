@@ -30,9 +30,6 @@ export default function About() {
             src={photo}
           />
         </motion.div>
-        <div className="flex w-full mb-16">
-          <h1 className="text-3xl font-bold w-full sm:text-left">Sobre Mim</h1>
-        </div>
         <motion.div
           // initial={{ opacity: 0.2 }}
           // viewport={{ amount: 0.3, once: true }}
@@ -40,6 +37,11 @@ export default function About() {
           // whileInView={{ opacity: 1 }}
           className="flex gap-8 flex-col justify-start items-left"
         >
+          <div className="flex w-full mb-16">
+            <h1 className="text-3xl font-bold w-full sm:text-left">
+              Sobre Mim
+            </h1>
+          </div>
           {/* <motion.h1
             id="name"
             className={`${ubuntuSansMonoFont.className} text-xl sm:text-4xl text-left`}
