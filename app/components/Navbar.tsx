@@ -55,7 +55,7 @@ export default function Navbar() {
         } z-40  mx-auto px-4 w-full`}
       >
         <nav className="max-w-screen-xl mx-auto flex justify-between align-middle text-lg sm:px-4">
-          <div className="w-full flex justify-between border rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
+          <div className="w-full flex justify-between border-2 shadow-lg shadow-black/20 transition rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
             <div className="flex gap-8 sm:justify-start justify-between w-full items-center">
               <div className="text-4xl font-bold text-primary-accent">WT_</div>
 

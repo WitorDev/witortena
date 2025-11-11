@@ -26,7 +26,7 @@ export default function TextCard({
       viewport={{ once: true, amount: 0.4 }}
       className={`${
         link && "hover:border-secondary-accent hover:bg-secondary-bg"
-      } border relative transition-all border-primary-accent rounded-lg bg-primary-bg group`}
+      } shadow-black/20 shadow-md border relative transition-all border-primary-accent rounded-lg bg-primary-bg group`}
     >
       {link ? (
         <a href={link} target="_blank">
