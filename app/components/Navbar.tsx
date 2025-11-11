@@ -67,15 +67,7 @@ export default function Navbar() {
                 {mobileNavActive ? <CgClose /> : <CiMenuBurger />}
               </div>
 
-              {/* <nav className="flex flex-col">
-
-            </nav> */}
-
-              {/* End Mobile Nav */}
-
-              {/* Desktop Nav */}
               <ul className="gap-4 sm:flex hidden">
-                {/* Sobre mim */}
                 <Dropdown
                   pageUrl="/"
                   title="Home"
@@ -114,7 +106,6 @@ export default function Navbar() {
                 final={true}
               /> */}
               </ul>
-              {/* End Desktop Nav */}
             </div>
             <div>
               <ScrollLink to="contact" smooth={true} duration={300}>
@@ -126,7 +117,7 @@ export default function Navbar() {
           </div>
         </nav>
         <nav
-          className={` border border-primary-accent 2xl mt-8 max-w-screen-xl mx-auto flex-col justify-between align-middle text-lg sm:px-4 ${
+          className={` border-2 rounded-lg border-primary-accent mt-4 max-w-screen-xl mx-auto flex-col justify-between align-middle text-lg sm:px-4 ${
             mobileNavActive ? "flex" : "hidden"
           }`}
         >
@@ -151,7 +142,7 @@ export default function Navbar() {
               "contact",
             ]}
           />
-          <div className="w-full flex justify-center align-middle bg-background">
+          <div className="w-full rounded-lg flex justify-center align-middle bg-background">
             <Link
               href={"https://portfolio-unifil.onrender.com"}
               className="transition-all relative inline-block"

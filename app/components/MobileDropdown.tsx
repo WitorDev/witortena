@@ -42,7 +42,7 @@ export default function MobileDropdown({
   return (
     <div ref={containerRef} className="transition-all inline-block w-full">
       <div
-        className={`flex py-4 w-full bg-background gap-2 text-center hover:cursor-pointer justify-center hover:text-terciary-bg ${
+        className={`flex rounded-lg py-4 w-full bg-background gap-2 text-center hover:cursor-pointer justify-center hover:text-terciary-bg ${
           isOpen && "text-terciary-bg"
         }`}
         onClick={() => {
@@ -54,7 +54,7 @@ export default function MobileDropdown({
       </div>
 
       {isOpen && (
-        <div className="flex flex-col gap-1  w-full items-center justify-between bg-background p-4">
+        <div className="flex flex-col gap-1 pt-0 w-full items-center justify-between bg-background p-4">
           {options.map((option, id) => {
             // in case is not in this page, link to the right page
             if (links && pageUrl !== pathname) {
