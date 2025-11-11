@@ -64,7 +64,19 @@ export default function Navbar() {
                 onClick={() => setMobileNavActive(!mobileNavActive)}
                 className="sm:hidden block font-bold hover:cursor-pointer translate-x-8 text-lg py-2 px-8"
               >
-                {mobileNavActive ? <CgClose /> : <CiMenuBurger />}
+                {mobileNavActive ? (
+                  <CgClose
+                    size={25}
+                    strokeWidth={1.5}
+                    className="text-primary-accent"
+                  />
+                ) : (
+                  <CiMenuBurger
+                    size={25}
+                    strokeWidth={1.5}
+                    className="text-primary-accent"
+                  />
+                )}
               </div>
 
               <ul className="gap-4 sm:flex hidden">

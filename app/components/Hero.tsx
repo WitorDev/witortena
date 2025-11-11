@@ -31,7 +31,7 @@ export default function Hero() {
   return (
     <motion.section
       id="hero"
-      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative min-h-screen overflow-hidden flex flex-col justify-center sm:items-center items-start sm:text-left`}
+      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative h-[60vh] sm:min-h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       <div className="translate-y-14 absolute saturate-100 opacity-25 -z-10">
         <Image alt="Computer Picture" width={900} src={old_computer} />
@@ -41,7 +41,7 @@ export default function Hero() {
         animate={{ y: 0 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
       >
-        <div className="border-3 w-fit sm:mx-auto rounded-2xl border-primary-accent px-4 py-2 text-primary-accent text-lg">
+        <div className="border-3 w-fit mx-auto rounded-2xl border-primary-accent px-4 py-2 text-primary-accent text-lg">
           Desenvolvedor Fullstack
         </div>
         <h1
@@ -58,7 +58,7 @@ export default function Hero() {
         initial={{ y: +100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="text-lg sm:text-5xl text-left text-terciary-bg mt-4 sm:w-150 sm:text-center"
+        className="text-xl sm:text-5xl w-50 text-terciary-bg mt-4 sm:w-150 text-center"
       >
         Estudante de Ciência da Computação
       </motion.h2>
@@ -66,7 +66,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 1 } }}
-        className="absolute right-0 bottom-20 pr-8 animate-bounce"
+        className="absolute hidden sm:block right-0 bottom-20 pr-8 animate-bounce"
       >
         <SlArrowDown
           size={30}
