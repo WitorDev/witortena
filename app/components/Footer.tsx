@@ -86,18 +86,10 @@ export default function Hero() {
             <div className="flex flex-col gap-3  text-terciary-bg">
               <h3 className="">Relatórios</h3>
               {[
-                // { href: "/reports/NPI", label: "NPI" },
-                // {
-                //   href: "/reports/pensamento-computacional",
-                //   label: "Pensamento Computacional",
-                // },
+                { href: "/reports/NPI", label: "NPI" },
                 {
-                  href: "https://portfolio-unifil.onrender.com/pensamento-computacional",
+                  href: "/reports/pensamento-computacional",
                   label: "Pensamento Computacional",
-                },
-                {
-                  href: "https://portfolio-unifil.onrender.com/NPI",
-                  label: "NPI",
                 },
               ].map((link, index) => (
                 <Link

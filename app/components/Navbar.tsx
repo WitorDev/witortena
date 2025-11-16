@@ -147,18 +147,16 @@ export default function Navbar() {
               "contact",
             ]}
           />
-          <div className="w-full rounded-lg flex justify-center align-middle bg-background">
-            <Link
-              href={"https://portfolio-unifil.onrender.com"}
-              className="transition-all relative inline-block"
-            >
-              <div
-                className={`flex gap-2 text-lg pb-4 hover:cursor-pointer hover:text-terciary-bg`}
-              >
-                <h1>Relatórios UniFil</h1>
-              </div>
-            </Link>
-          </div>
+          <MobileDropdown
+            pageUrl="/reports"
+            title="Relatórios"
+            options={[
+              "NPI - Núcleo de Práticas de Informática",
+              "Pensamento Computacional",
+            ]}
+            links={["/NPI", "/pensamento-computacional"]}
+            final={true}
+          />
         </nav>
       </motion.header>
     </div>
