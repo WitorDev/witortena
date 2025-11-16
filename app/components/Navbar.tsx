@@ -129,7 +129,7 @@ export default function Navbar() {
           </div>
         </nav>
         <nav
-          className={` border-2 rounded-lg border-primary-accent mt-4 max-w-screen-xl mx-auto flex-col justify-between align-middle text-lg sm:px-4 ${
+          className={` border-2 bg-primary-bg rounded-lg border-primary-accent mt-4 max-w-screen-xl mx-auto flex-col justify-between align-middle text-lg sm:px-4 ${
             mobileNavActive ? "flex" : "hidden"
           }`}
         >
