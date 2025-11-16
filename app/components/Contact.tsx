@@ -61,7 +61,7 @@ export default function Contact() {
               {/* email */}
               <h1 className="text-lg">Nome</h1>
               <input
-                className="text-xl bg-quaternary-bg p-2 w-full h-12"
+                className="bg-quaternary-bg p-2 w-full h-12"
                 type="text"
                 name="user_name"
                 id="user_name"
@@ -72,7 +72,7 @@ export default function Contact() {
               {/* email */}
               <h1 className="text-lg">Email</h1>
               <input
-                className="text-xl bg-quaternary-bg p-2 w-full h-12"
+                className=" bg-quaternary-bg p-2 w-full h-12"
                 type="email"
                 name="email"
                 id="email"
@@ -83,7 +83,7 @@ export default function Contact() {
               {/* assunto */}
               <h1 className="text-lg">Assunto</h1>
               <input
-                className="text-xl bg-quaternary-bg p-2 w-full h-12"
+                className=" bg-quaternary-bg p-2 w-full h-12"
                 type="text"
                 name="subject"
                 id="subject"
@@ -94,7 +94,7 @@ export default function Contact() {
               {/* message */}
               <h1 className="text-lg">Mensagem</h1>
               <textarea
-                className="p-2 text-xl bg-quaternary-bg w-full h-72"
+                className="p-2  bg-quaternary-bg w-full h-72"
                 name="message"
                 id="message"
                 required

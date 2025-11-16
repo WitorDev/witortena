@@ -43,7 +43,7 @@ export default function Dropdown({
       className="z-40 transition-all relative inline-block"
     >
       <div
-        className={`flex text-xl gap-2 hover:cursor-pointer hover:text-terciary-bg ${
+        className={`flex text-lg gap-2 hover:cursor-pointer hover:text-terciary-bg ${
           isOpen && "text-terciary-bg"
         }`}
         onClick={() => setIsOpen((prev) => !prev)}
@@ -89,7 +89,7 @@ export default function Dropdown({
                   onClick={() => setIsOpen(false)}
                   to={links[id]}
                   smooth={true}
-                  duration={300}
+                  duration={600}
                   key={id}
                   className="hover:text-terciary-bg mt-1 hover:cursor-pointer"
                 >

@@ -37,22 +37,22 @@ export default function TextCard({
           >
             <div>
               <div className="flex gap-4 mb-6 flex-col">
-                <h1 className="text-2xl">{title}</h1>
-                <p className="text-lg text-terciary-bg">{status}</p>
+                <h1 className="text-lg">{title}</h1>
+                <p className="text-terciary-bg">{status}</p>
               </div>
               <div className="flex gap-4 flex-col">
                 <p className="text-lg">{description}</p>
               </div>
             </div>
             <div>
-              <p className="text-xl text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
+              <p className="text-terciary-bg border w-fit border-terciary-bg rounded-2xl px-4">
                 {info}
               </p>
             </div>
           </div>
 
           <div className="absolute top-8 right-8 text-white group-hover:text-green-500 transition-colors">
-            <RiExternalLinkLine size={35} />
+            <RiExternalLinkLine size={25} />
           </div>
         </a>
       ) : (
@@ -63,15 +63,15 @@ export default function TextCard({
         >
           <div>
             <div className="flex gap-4 mb-6 flex-col">
-              <h1 className="text-2xl">{title}</h1>
-              <p className="text-lg text-terciary-bg">{status}</p>
+              <h1 className="text-lg">{title}</h1>
+              <p className="text-terciary-bg">{status}</p>
             </div>
             <div className="flex gap-4 flex-col">
               <p className="text-lg">{description}</p>
             </div>
           </div>
           <div>
-            <p className="text-lg sm:text-xl text-terciary-bg border border-terciary-bg rounded-2xl py-2 sm:py-0 sm:w-max px-4">
+            <p className="sm:text-md text-terciary-bg border w-fit border-terciary-bg rounded-2xl py-2 sm:py-0 sm:w-max px-4">
               {info}
             </p>
           </div>

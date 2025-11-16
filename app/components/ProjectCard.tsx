@@ -25,7 +25,7 @@ export default function ProjectCard({
       transition={{ duration: 0.35 }}
       whileInView={{ scale: 1 }}
       viewport={{ once: true, amount: 0.4 }}
-      className="flex relative hover:border-secondary-accent hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:h-125 bg-primary-bg text-white"
+      className="flex relative hover:border-secondary-accent hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:h-110 bg-primary-bg text-white"
     >
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
@@ -36,10 +36,10 @@ export default function ProjectCard({
           />
         </div>
         <div className="absolute right-4 top-4 hover:cursor-pointer  group-hover:text-green-500 transition-colors">
-          <RiExternalLinkLine size={35} />
+          <RiExternalLinkLine size={25} />
         </div>
 
-        <div className="p-4 h-min py-4 sm:p-8">
+        <div className="p-4 h-min py-4 sm:p-4">
           <div className="mt-2 flex gap-2 overflow-hidden">
             {tech.map((name, index) => {
               const IconComponent =
@@ -48,7 +48,7 @@ export default function ProjectCard({
                 <div key={index}>
                   {IconComponent ? (
                     <div style={{ color: getColorForTech(name) }}>
-                      <IconComponent size={40} />
+                      <IconComponent size={30} />
                     </div>
                   ) : null}
                 </div>
@@ -56,8 +56,8 @@ export default function ProjectCard({
             })}
           </div>
           <div className="flex flex-col justify-between">
-            <p className="mt-4 text-lg ">{description}</p>
-            <p className="mt-8 text-lg text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
+            <p className="mt-4 ">{description}</p>
+            <p className="mt-8 text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4">
               {tag}
             </p>
           </div>

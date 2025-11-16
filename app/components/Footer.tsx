@@ -30,7 +30,7 @@ export default function Hero() {
               WT_
             </div>
             <div
-              className={`${UbuntuSansMonoFont.className} flex flex-col gap-6 text-lg text-terciary-bg`}
+              className={`${UbuntuSansMonoFont.className} flex flex-col gap-6 text-terciary-bg`}
             >
               <h2>Desenvolvedor Fullstack</h2>
               <h2>Estudante de Ciência da Computação</h2>
@@ -83,7 +83,7 @@ export default function Hero() {
                 </>
               )}
             </div>
-            <div className="flex flex-col gap-3 text-lg text-terciary-bg">
+            <div className="flex flex-col gap-3  text-terciary-bg">
               <h3 className="">Relatórios</h3>
               {[
                 // { href: "/reports/NPI", label: "NPI" },
@@ -103,7 +103,7 @@ export default function Hero() {
                 <Link
                   key={index}
                   href={link.href}
-                  className="text-white  hover:text-terciary-bg"
+                  className="text-white hover:text-terciary-bg"
                 >
                   {link.label}
                 </Link>
@@ -112,14 +112,34 @@ export default function Hero() {
           </div>
         </div>
         {/* Contact */}
-        <div className="flex flex-col gap-4 text-lg text-terciary-bg mt-20">
+        <div className="flex flex-col gap-4 text-terciary-bg mt-20">
           <div className="flex flex-col sm:flex-row gap-2">
             <h3>Email:</h3>
-            <p className="text-white">witortena@gmail.com</p>
+            <p className="text-white ">witortena@gmail.com</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-2">
             <h3>Celular:</h3>
-            <p className="text-white">+55 43 9 8413-8592</p>
+            <p className="text-white ">+55 43 9 8413-8592</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <h3>Linkedin:</h3>
+            <Link
+              href="https://www.linkedin.com/in/witortena"
+              target="_blank"
+              className="text-white "
+            >
+              linkedin.com/in/witortena
+            </Link>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <h3>Github:</h3>
+            <Link
+              href="https://github.com/witordev"
+              target="_blank"
+              className="text-white "
+            >
+              github.com/witordev
+            </Link>
           </div>
         </div>
       </div>

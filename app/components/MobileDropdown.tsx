@@ -99,7 +99,7 @@ export default function MobileDropdown({
                   }}
                   to={links[id]}
                   smooth={true}
-                  duration={300}
+                  duration={600}
                   key={id}
                   className="hover:text-terciary-bg mt-1 hover:cursor-pointer"
                 >

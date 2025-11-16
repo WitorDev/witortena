@@ -54,15 +54,15 @@ export default function Navbar() {
           hidden && "-translate-y-24 "
         } z-40  mx-auto px-4 w-full`}
       >
-        <nav className="max-w-screen-xl mx-auto flex justify-between align-middle text-lg sm:px-4">
+        <nav className="max-w-screen-xl mx-auto flex justify-between align-middle sm:px-4">
           <div className="w-full flex justify-between border-2 shadow-lg shadow-black/20 transition rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
             <div className="flex gap-8 sm:justify-start justify-between w-full items-center">
-              <div className="text-4xl font-bold text-primary-accent">WT_</div>
+              <div className="text-3xl font-bold text-primary-accent">WT_</div>
 
               {/* Mobile Nav */}
               <div
                 onClick={() => setMobileNavActive(!mobileNavActive)}
-                className="sm:hidden block font-bold hover:cursor-pointer translate-x-8 text-lg py-2 px-8"
+                className="sm:hidden block font-bold hover:cursor-pointer translate-x-8 py-2 px-8"
               >
                 {mobileNavActive ? (
                   <CgClose
@@ -105,7 +105,7 @@ export default function Navbar() {
                   className="transition-all relative inline-block"
                 >
                   <div
-                    className={`flex gap-2 text-xl hover:cursor-pointer hover:text-terciary-bg`}
+                    className={`flex gap-2 text-lg hover:cursor-pointer hover:text-terciary-bg`}
                   >
                     <h1>Relatórios UniFil</h1>
                   </div>
@@ -120,8 +120,8 @@ export default function Navbar() {
               </ul>
             </div>
             <div>
-              <ScrollLink to="contact" smooth={true} duration={300}>
-                <button className="hidden sm:block font-bold hover:cursor-pointer translate-x-4 text-xl py-2 px-8 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
+              <ScrollLink to="contact" smooth={true} duration={600}>
+                <button className="hidden sm:block font-bold hover:cursor-pointer translate-x-4 text-lg py-1 px-5 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
                   Contato
                 </button>
               </ScrollLink>

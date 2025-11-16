@@ -118,7 +118,7 @@ export default function Projects() {
     >
       <div className="w-full max-w-screen-xl mx-auto px-4 pb-16 md:py-24">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold w-full text-center sm:text-left">
+          <h1 className="text-3xl font-bold w-full text-center md:text-left">
             Projetos
           </h1>
           <div className="hidden md:flex items-center gap-2">
@@ -127,14 +127,14 @@ export default function Projects() {
               aria-label="Scroll left"
               className="p-2 rounded-full cursor-pointer border border-terciary-bg hover:bg-terciary-accent transition-colors"
             >
-              <HiArrowLeft size={20} />
+              <HiArrowLeft size={25} />
             </button>
             <button
               onClick={() => handleScroll(getScrollAmount())}
               aria-label="Scroll right"
               className="p-2 rounded-full cursor-pointer border border-terciary-bg hover:bg-terciary-accent transition-colors"
             >
-              <HiArrowRight size={20} />
+              <HiArrowRight size={25} />
             </button>
           </div>
         </div>
@@ -172,21 +172,21 @@ export default function Projects() {
 
         <button
           onClick={() => setIsOverlayOpen(true)}
-          className="flex md:hidden gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer text-xl mx-auto"
+          className="flex md:hidden gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer mx-auto"
         >
-          <p>Ver mais</p>
+          <p className="">Ver mais</p>
           <div className="translate-y-1.5">
-            <HiArrowUpRight strokeWidth={1} size={18} />
+            <HiArrowUpRight strokeWidth={1} size={15} />
           </div>
         </button>
 
         <button
           onClick={() => setIsOverlayOpen(true)}
-          className="hidden md:flex gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer text-xl"
+          className="hidden md:flex gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer"
         >
           <p>Ver mais</p>
           <div className="translate-y-1.5">
-            <HiArrowUpRight strokeWidth={1} size={18} />
+            <HiArrowUpRight strokeWidth={1} size={15} />
           </div>
         </button>
       </div>
