@@ -54,7 +54,7 @@ export default async function Page({
             <ReportCard
               key={reportItem.folder}
               date={reportItem.folder}
-              title={reportItem.folder}
+              title={reportItem.markdown}
               paragraph={reportItem.markdown}
               reportType={reportItem.reportCategory}
               image={

@@ -27,7 +27,7 @@ export default function ReportCard({
 }: ReportCardProps) {
   return (
     <Link
-      href={reportType + "/" + title.trim().toLowerCase()}
+      href={reportType + "/" + date.trim().toLowerCase()}
       className="min-w-[300px] max-w-[400px]"
     >
       <div className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent transition-all flex flex-col h-[500px]">
@@ -44,17 +44,25 @@ export default function ReportCard({
               className="h-full w-full object-cover group-hover:opacity-50 transition-all"
             />
           ) : (
-            <p className="text-neutral-50 text-2xl">{title.split("_")[1]}</p>
+            <p className="text-neutral-50 text-2xl">{date.split("_")[1]}</p>
           )}
         </div>
 
         <div className="px-4 py-6 flex flex-col flex-1">
           <div className="flex justify-between items-start mb-3">
-            <h1 className="text-lg">{title.split("_")[1]}</h1>
-            <RiExternalLinkLine
-              className="group-hover:text-green-500 transition-all"
-              size={25}
-            />
+            {/* pushes the button area to bottom to keep same size */}
+            <div className="flex justify-between w-full h-10">
+              <div className="text-lg leading-relaxed z-1">
+                <MarkdownSection
+                  style={false}
+                  text={paragraph.split("`")[0].substring(0, 37)}
+                />
+              </div>
+              <RiExternalLinkLine
+                className="group-hover:text-green-500 z-10 transition-all"
+                size={25}
+              />
+            </div>
           </div>
 
           <p className="text-terciary-bg mb-3">{date.split("_")[1]}</p>

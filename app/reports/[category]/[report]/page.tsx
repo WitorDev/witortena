@@ -46,7 +46,7 @@ export default async function Page({
         <>
           {reportImages.length > 0 && <ImageGallery images={reportImages} />}
 
-          <MarkdownSection text={report.markdown} />
+          <MarkdownSection text={report.markdown} style={true} />
         </>
       ) : (
         <p>No report found</p>
