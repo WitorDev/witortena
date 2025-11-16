@@ -22,6 +22,7 @@ export default async function Page({
   params: { category: string };
 }) {
   const reports = getReports(await params.category);
+
   console.log(await params.category);
 
   return (
@@ -48,7 +49,7 @@ export default async function Page({
           </p>
         </div>
 
-        <section className="flex max-w-screen-xl px-4 sm:px-0 mb-20 flex-wrap justify-center align-middle gap-6 w-full">
+        <section className="flex max-w-screen-xl px-4 sm:px-0 mb-20 flex-row flex-wrap justify-center align-middle gap-6 w-full">
           {reports.map((reportItem) => (
             <ReportCard
               key={reportItem.folder}
