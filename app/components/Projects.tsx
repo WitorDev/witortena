@@ -194,18 +194,18 @@ export default function Projects() {
       {/* --- MODIFIED: Fullscreen Project Overlay --- */}
       {isOverlayOpen && (
         <div
-          className="fixed inset-0 z-50 scrollbar-hide flex items-center justify-center sm:p-6 md:p-8 bg-black bg-opacity-90 backdrop-blur-sm" // Changed bg-transparent to bg-black
+          className="fixed inset-0 z-50 scrollbar-hide h-full w-full flex items-center justify-center sm:p-6 md:p-8 bg-black bg-opacity-90 backdrop-blur-sm" // Changed bg-transparent to bg-black
         >
-          <div className="relative w-full scrollbar-hide max-w-6xl h-[90vh] z-50 bg-background rounded-lg shadow-xl flex flex-col">
+          <div className="relative w-full scrollbar-hide h-full z-50 bg-background sm:rounded-lg shadow-xl flex flex-col">
             {/* Overlay Header */}
-            <div className="flex justify-between scrollbar-hide items-center p-6 border-b border-primary-accent">
+            <div className="flex justify-between scrollbar-hide items-center p-4 border-b border-primary-accent">
               <h2 className="text-2xl  font-bold">Todos os Projetos</h2>
               <button
                 onClick={() => setIsOverlayOpen(false)}
                 className="p-1 rounded-2xl cursor-pointer"
                 aria-label="Close"
               >
-                <HiXMark size={28} />
+                <HiXMark size={25} />
               </button>
             </div>
 

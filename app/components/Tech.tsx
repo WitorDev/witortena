@@ -26,7 +26,7 @@ export default function Tech() {
             <h1 className="text-lg font-bold mb-2 w-full text-center sm:text-left">
               Frontend
             </h1>
-            <div className="grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
+            <div className="justify-center align-middle flex flex-wrap gap-4 sm:gap-0 sm:grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
               <IconAndName icon="Html5" text="HTML" />
               <IconAndName icon="React" text="React" />
               <IconAndName icon="Css3" text="CSS" />
@@ -39,7 +39,7 @@ export default function Tech() {
             <h1 className="text-lg font-bold mt-8 mb-2 w-full text-center sm:text-left">
               Backend
             </h1>
-            <div className="grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
+            <div className="justify-center align-middle flex flex-wrap gap-4 sm:gap-0 sm:grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
               <IconAndName icon="Nodedotjs" text="Node.js" />
               <IconAndName icon="Postgresql" text="PostgreSQL" />
               <IconAndName icon="Express" text="Express" />
