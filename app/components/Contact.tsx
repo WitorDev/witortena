@@ -42,7 +42,7 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-secondary-bg ">
       <div
-        className={`${ubuntuMonoFont.className} pb-20 max-w-screen-xl px-4 mx-auto sm:gap-8 relative min-h-screen flex flex-col sm:flex-row pt-20`}
+        className={`${ubuntuMonoFont.className} pb-20 max-w-screen-xl px-4 mx-auto sm:gap-8 relative flex flex-col sm:flex-row pt-20`}
       >
         <div className="w-full">
           <div className="flex w-full mb-16">

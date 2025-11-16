@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "node_modules/page.tsx"
+    "node_modules/page.tsx",
+    "app/components/MarkdownRenderer.jsx"
   ],
   "exclude": ["node_modules"]
 }

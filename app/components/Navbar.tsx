@@ -55,7 +55,7 @@ export default function Navbar() {
         } z-40  mx-auto px-4 w-full`}
       >
         <nav className="max-w-screen-xl mx-auto flex justify-between align-middle sm:px-4">
-          <div className="w-full flex justify-between border-2 shadow-lg shadow-black/20 transition rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
+          <div className="w-full flex justify-between border-2 transition rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
             <div className="flex gap-8 sm:justify-start justify-between w-full items-center">
               <div className="text-3xl font-bold text-primary-accent">WT_</div>
 
@@ -100,23 +100,16 @@ export default function Navbar() {
                     "contact",
                   ]}
                 />
-                <Link
-                  href={"https://portfolio-unifil.onrender.com"}
-                  className="transition-all relative inline-block"
-                >
-                  <div
-                    className={`flex gap-2 text-lg hover:cursor-pointer hover:text-terciary-bg`}
-                  >
-                    <h1>Relatórios UniFil</h1>
-                  </div>
-                </Link>
-                {/* <Dropdown
-                pageUrl="/reports"
-                title="Relatórios"
-                options={["NPI", "Pensamento Computacional"]}
-                links={["NPI", "pensamento-computacional"]}
-                final={true}
-              /> */}
+                <Dropdown
+                  pageUrl="/reports"
+                  title="Relatórios"
+                  options={[
+                    "NPI - Núcleo de Práticas de Informática",
+                    "Pensamento Computacional",
+                  ]}
+                  links={["/NPI", "/pensamento-computacional"]}
+                  final={true}
+                />
               </ul>
             </div>
             <div>

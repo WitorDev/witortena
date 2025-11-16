@@ -1,0 +1,141 @@
+/* Scoped CSS Styles for .markdown content
+  Applying a clean, modern style to common markdown elements.
+*/
+
+/* 1. Box Model & General Reset */
+.markdown *,
+.markdown *::before,
+.markdown *::after {
+  box-sizing: border-box;
+}
+
+.markdown * {
+  margin: 0;
+}
+
+/* 3. Block Element Defaults */
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote,
+.markdown pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+/* 4. Headings Styling (H1, H2, H3, etc.) */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.markdown h1 {
+  font-size: 2.25rem; /* Large size */
+  border-bottom: 2px solid #e5e7eb; /* Subtle line under H1 */
+  padding-bottom: 0.5rem;
+}
+.markdown h2 {
+  font-size: 1.875rem;
+}
+.markdown h3 {
+  font-size: 1.5rem;
+}
+.markdown h4 {
+  font-size: 1.25rem;
+}
+
+/* 5. Links */
+.markdown a {
+  color: #3b82f6; /* Bright blue link */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.markdown a:hover {
+  color: #1d4ed8; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* 6. Lists */
+.markdown ul,
+.markdown ol {
+  padding-left: 1.5rem;
+}
+.markdown ul li {
+  list-style-type: disc;
+}
+.markdown ol li {
+  list-style-type: decimal;
+}
+
+/* 7. Code Blocks (pre) */
+.markdown pre {
+  background-color: #f3f4f6; /* Light gray background */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: monospace;
+}
+
+/* 8. Inline Code (code) */
+.markdown p code,
+.markdown li code,
+.markdown pre code {
+  background-color: #252525; /* Slightly darker light gray for inline */
+  padding: 0.4em 0.8em;
+  font-family: monospace;
+  color: white;
+}
+.markdown pre code {
+  padding: 0; /* Remove extra padding inside <pre> */
+  background: none;
+  font-size: 100%;
+}
+
+/* 9. Blockquotes */
+.markdown blockquote {
+  border-left: 4px solid #9ca3af; /* Medium gray accent border on the left */
+  padding-left: 1rem;
+  margin-left: 0;
+  color: #6b7280; /* Subdued text color */
+  font-style: italic;
+}
+
+/* 10. Horizontal Rule */
+.markdown hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid #d1d5db; /* Light separator line */
+}
+
+/* 11. Media Defaults (Responsiveness and Style) */
+.markdown img,
+.markdown picture,
+.markdown video,
+.markdown canvas,
+.markdown svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem; /* Rounded corners for images/media */
+  margin: 1.5rem 0;
+}
+
+/* 12. Inherit fonts for form controls */
+.markdown input,
+.markdown button,
+.markdown textarea,
+.markdown select {
+  font: inherit;
+}

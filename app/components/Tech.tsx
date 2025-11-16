@@ -13,7 +13,7 @@ export default function Tech() {
   return (
     <section
       id="tech"
-      className={`${ubuntuMonoFont.className} justify-center max-w-screen-xl px-4 mx-auto relative min-h-screen flex flex-col `}
+      className={`${ubuntuMonoFont.className} justify-center max-w-screen-xl px-4 mx-auto relative flex flex-col `}
     >
       <div className="flex w-full">
         <h1 className="text-3xl font-bold w-full text-center sm:text-left">

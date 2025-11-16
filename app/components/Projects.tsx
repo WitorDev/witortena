@@ -45,7 +45,7 @@ export const projectsData = [
     imageSrc: portfoliounifil,
     tech: ["Javascript", "Html5", "Css3", "Express", "Nodedotjs", "Ejs"],
     description:
-      "O meu portfolio da UniFil, com relatórios de estudo e informações sobre mim e o curso de Ciência da Computação.",
+      "O meu antigo portfolio da UniFil, com relatórios de estudo e informações sobre mim e o curso de Ciência da Computação.",
     tag: "Frontend | Backend",
     link: "https://portfolio-unifil.onrender.com/",
   },

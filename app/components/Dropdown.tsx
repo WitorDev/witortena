@@ -53,7 +53,7 @@ export default function Dropdown({
       </div>
 
       {isOpen && (
-        <div className="absolute top-full flex flex-col gap-1 mt-10 border border-terciary-bg rounded-lg bg-background p-4">
+        <div className="absolute top-full flex w-max flex-col gap-1 mt-10 border border-terciary-bg rounded-lg bg-background p-4">
           {options.map((option, id) => {
             // in case is not in this page, link to the right page
             if (links && pageUrl !== pathname) {
