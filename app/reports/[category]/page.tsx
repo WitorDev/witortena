@@ -39,7 +39,7 @@ export default async function Page({
         />
 
         {/* relatorios */}
-        <div className="flex gap-4 mt-20 mb-20 w-full max-w-screen-xl px-4">
+        <div className="flex gap-4 mt-20 mb-20 w-full sm:flex-row flex-col max-w-screen-xl px-4">
           <h1 className="text-3xl font-bold">Relatórios </h1>
           <p className={`${ubuntuFont.className} text-3xl text-terciary-bg`}>
             {(await params.category) == "NPI"
