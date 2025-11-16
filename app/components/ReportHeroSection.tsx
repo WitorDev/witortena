@@ -21,7 +21,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} bg-background w-full mx-auto sm:bg-none px-4 relative min-h-[900px] sm:min-h-[1000px] overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} bg-background w-full mx-auto sm:bg-none px-4 relative h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       <div className="hidden sm:block translate-y-8 absolute saturate-100 opacity-25 z-0">
         <Image
