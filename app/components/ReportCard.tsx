@@ -1,9 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { report } from "process";
 import { RiExternalLinkLine } from "react-icons/ri";
 import MarkdownSection from "@/app/components/MarkdownSection";
 import ReactMarkdown from "react-markdown";
+import { motion } from "motion/react";
 
 import { PiParagraphThin } from "react-icons/pi";
 
@@ -30,7 +33,13 @@ export default function ReportCard({
       href={reportType + "/" + date.trim().toLowerCase()}
       className="min-w-[300px] max-w-[400px]"
     >
-      <div className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent transition-all flex flex-col h-[500px]">
+      <motion.div
+        initial={{ scale: 0.9 }}
+        transition={{ duration: 0.15 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true, amount: 0.4 }}
+        className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent transition-all flex flex-col h-[500px]"
+      >
         {/* fixed image container height so the layout stays aligned */}
         <div
           className={`h-[200px] w-full bg-background flex items-center justify-center overflow-hidden`}
@@ -72,7 +81,7 @@ export default function ReportCard({
             <ReactMarkdown>{paragraph}</ReactMarkdown>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }
