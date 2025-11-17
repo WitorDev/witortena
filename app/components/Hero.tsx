@@ -31,10 +31,15 @@ export default function Hero() {
   return (
     <motion.section
       id="hero"
-      className={`${ubuntuMonoFont.className} bg-background border-primary-bg mx-auto sm:bg-none  px-4  relative h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} bg-background border-primary-bg mx-auto sm:bg-none relative px-4  h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       <div className="hidden sm:block translate-y-14 absolute saturate-100 opacity-25 -z-0">
-        <Image alt="Computer Picture" width={900} src={old_computer} />
+        <Image
+          alt="Computer Picture"
+          className="nodrag"
+          width={900}
+          src={old_computer}
+        />
       </div>
       <motion.div
         initial={{ y: -100 }}
@@ -63,7 +68,7 @@ export default function Hero() {
         Estudante de Ciência da Computação
       </motion.h2>
       {/* Arrow down icon */}
-      <div className="absolute hidden sm:block right-0 bottom-20 pr-8 animate-bounce">
+      <div className="absolute hidden sm:block bottom-20 pr-8 animate-bounce">
         <SlArrowDown
           size={30}
           strokeWidth={25}

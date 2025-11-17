@@ -12,7 +12,7 @@ export default function DescriptionSection({
     <section className="max-w-screen-xl px-4 mt-20">
       <div className="bg-background p-4 border border-terciary-bg rounded-lg flex flex-col sm:flex-row justify-between w-full gap-8">
         <div className="w-25 sm:w-100">
-          <Image alt="Logo UniFil" src={unifil_logo} />
+          <Image alt="Logo UniFil" className="nodrag" src={unifil_logo} />
         </div>
         {category == "NPI" ? (
           <div className="">

@@ -44,6 +44,16 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+.nodrag {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

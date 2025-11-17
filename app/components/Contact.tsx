@@ -102,7 +102,7 @@ export default function Contact() {
               ></textarea>
 
               <button
-                className="w-fit cursor-pointer hover:bg-secondary-accent hover:text-black text-lg bg-primary-accent px-6 py-3 mt-2 rounded-sm place-self-end"
+                className="w-fit cursor-pointer hover:bg-secondary-accent hover:text-black text-lg bg-primary-accent px-4 py-2 mt-2 rounded-sm place-self-end"
                 type="submit"
               >
                 Enviar

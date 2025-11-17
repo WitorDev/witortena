@@ -6,6 +6,8 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { Ubuntu_Mono } from "next/font/google";
 import { FaGithubSquare } from "react-icons/fa";
+import { BsGithub } from "react-icons/bs";
+import { LiaGithubSquare } from "react-icons/lia";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -25,7 +27,7 @@ export default function About() {
         <motion.div className="z-10 mt-20 left-0 sm:mx-0 mx-auto">
           <Image
             alt="Witor Tenã"
-            className="rounded-lg"
+            className="rounded-lg nodrag"
             width={500}
             src={photo}
           />
@@ -61,9 +63,10 @@ export default function About() {
               id="github"
               href="https://github.com/WitorDev/"
               target="_blank"
-              className="text-primary-accent border-2 border-primary-accent hover:bg-primary-accent rounded-md py-1 px-2 hover:cursor-pointer hover:text-secondary-bg font-bold"
+              className="text-primary-accent flex items-center justify-between border-2 border-primary-accent hover:bg-primary-accent rounded-md hover:cursor-pointer hover:text-secondary-bg font-bold"
             >
-              Github
+              <FaGithubSquare size={34} className="scale-115" />
+              <p className="py-1 px-2">Github</p>
             </a>
           </motion.div>
         </motion.div>
