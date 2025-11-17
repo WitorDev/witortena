@@ -113,7 +113,10 @@ export default function Contact() {
 
         {/* Contacts */}
         <div className="flex sm:flex-col sm:pt-16 pt-0 flex-wrap sm:flex-nowrap">
-          <IconAndTitle title="Whatsapp" linkUrl="https://w.app/witortena" />
+          <IconAndTitle
+            title="Whatsapp"
+            linkUrl="https://wa.me/5543984138592"
+          />
           <IconAndTitle
             title="Linkedin"
             linkUrl="https://www.linkedin.com/in/witortena"
