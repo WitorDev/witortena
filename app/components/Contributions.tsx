@@ -24,13 +24,14 @@ export default function Contributions() {
           status="Integrante ativo"
           description="Ambiente de estudos e colaboração entre alunos de Ciência da Computação e Engenharia de Software da UniFil. Promove atividades práticas e troca de conhecimentos na área de tecnologia."
           info="Pesquisas e estudos em grupo"
+          link="/reports/NPI"
         />
         <TextCard
           title="Pensamento Computacional"
           status="Integrante ativo"
           description="Projeto que permite estudantes de escolas públicas estudar tecnologia de forma gratuita na UniFil. Participei como monitor no projeto."
           info="Monitoria de alunos"
-          link="https://portfolio-unifil.onrender.com"
+          link="/reports/pensamento-computacional"
         />
         <div className="sm:col-span-2">
           <TextCard

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { motion } from "motion/react";
 
@@ -29,7 +30,7 @@ export default function TextCard({
       } shadow-black/20 shadow-md border relative transition-all border-primary-accent rounded-lg bg-primary-bg group`}
     >
       {link ? (
-        <a href={link} target="_blank">
+        <Link href={link}>
           <div
             className={`${
               link && "hover:cursor-pointer"
@@ -54,7 +55,7 @@ export default function TextCard({
           <div className="absolute top-8 right-8 text-white group-hover:text-green-500 transition-colors">
             <RiExternalLinkLine size={25} />
           </div>
-        </a>
+        </Link>
       ) : (
         <div
           className={`${

@@ -6,6 +6,7 @@ import Image from "next/image";
 import hero_image from "@/public/disk.png";
 import { SlArrowDown } from "react-icons/sl";
 import ReportHeroSection from "@/app/components/ReportHeroSection";
+import DescriptionSection from "@/app/components/DescriptionSection";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -38,6 +39,8 @@ export default async function Page({
               : "Pensamento Computacional"
           }
         />
+
+        <DescriptionSection category={await params.category} />
 
         {/* relatorios */}
         <div className="flex gap-4 mt-20 mb-20 w-full sm:flex-row flex-col max-w-screen-xl px-4">

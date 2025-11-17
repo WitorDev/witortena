@@ -51,7 +51,7 @@ export default function ReportCard({
         <div className="px-4 py-6 flex flex-col flex-1">
           <div className="flex justify-between items-start mb-3">
             {/* pushes the button area to bottom to keep same size */}
-            <div className="flex justify-between w-full h-10">
+            <div className="flex justify-between w-full">
               <div className="text-lg leading-relaxed z-1">
                 <MarkdownSection
                   style={false}
