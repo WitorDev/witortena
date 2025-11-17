@@ -46,8 +46,8 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
       {/* Currently displayed image */}
       <div className="border-background mb-4 overflow-hidden w-full z-10 rounded-xl border-5 h-[700px]">
         <Image
-          width={600}
-          height={400}
+          width={1280}
+          height={700}
           src={currentImage.url}
           alt={currentImage.name}
           className="h-full w-full object-cover z-1"
