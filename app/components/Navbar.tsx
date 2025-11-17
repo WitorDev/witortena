@@ -113,11 +113,11 @@ export default function Navbar() {
               </ul>
             </div>
             <div>
-              <ScrollLink to="contact" smooth={true} duration={600}>
+              <Link href="/#contact">
                 <button className="hidden sm:block font-bold hover:cursor-pointer translate-x-4 text-lg py-1 px-5 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
                   Contato
                 </button>
-              </ScrollLink>
+              </Link>
             </div>
           </div>
         </nav>
