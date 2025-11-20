@@ -12,7 +12,7 @@ const ubuntuMonoFont = Ubuntu_Mono({
 });
 
 export default function Contact() {
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,6 +28,9 @@ export default function Contact() {
         .then(
           (result) => {
             console.log(result.text);
+            if (form.current) {
+              form.current.reset();
+            }
             alert("Mensagem enviada. " + result.text);
           },
           (error) => {

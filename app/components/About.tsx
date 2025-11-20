@@ -5,9 +5,8 @@ import photo from "@/public/photo.jpg";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { Ubuntu_Mono } from "next/font/google";
-import { FaGithubSquare } from "react-icons/fa";
-import { BsGithub } from "react-icons/bs";
-import { LiaGithubSquare } from "react-icons/lia";
+import { FaGithub, FaGithubSquare } from "react-icons/fa";
+import { HiDocument, HiDocumentDownload } from "react-icons/hi";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -58,15 +57,30 @@ export default function About() {
               mundo da tecnologia.
             </p>
           </div>
-          <motion.div className="flex gap-4 items-center w-fit">
+          <motion.div className="flex gap-4 p-0 m-0 -translate-x-5 sm:translate-0 items-center flex-col sm:flex-row  w-fit">
             <a
               id="github"
               href="https://github.com/WitorDev/"
               target="_blank"
-              className="text-primary-accent flex items-center justify-between border-2 border-primary-accent hover:bg-primary-accent rounded-md hover:cursor-pointer hover:text-secondary-bg font-bold"
+              className="text-primary-accent flex items-center justify-between hover:cursor-pointer hover:text-secondary-accent font-bold"
             >
-              <FaGithubSquare size={34} className="scale-115" />
+              <div className="flex justify-center align-middle">
+                <FaGithub size={30} className="" />
+              </div>
               <p className="py-1 px-2">Github</p>
+            </a>
+            <a
+              id="curriculum_vitae"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="/curriculum.pdf"
+              download={"Curriculum_Witor_Tenã"}
+              className="text-primary-accent flex ml-4 sm:ml-0 items-center justify-between hover:cursor-pointer hover:text-secondary-accent font-bold"
+            >
+              <div className="flex justify-center align-middle">
+                <HiDocumentDownload size={36} className="" />
+              </div>
+              <p className="py-1 px-2">Currículo</p>
             </a>
           </motion.div>
         </motion.div>
