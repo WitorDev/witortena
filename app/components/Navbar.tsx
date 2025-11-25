@@ -107,7 +107,7 @@ export default function Navbar() {
                     "NPI - Núcleo de Práticas de Informática",
                     "Pensamento Computacional",
                   ]}
-                  links={["/NPI", "/pensamento-computacional"]}
+                  links={["NPI", "pensamento-computacional"]}
                   final={true}
                 />
               </ul>
@@ -154,7 +154,7 @@ export default function Navbar() {
               "NPI - Núcleo de Práticas de Informática",
               "Pensamento Computacional",
             ]}
-            links={["/NPI", "/pensamento-computacional"]}
+            links={["NPI", "pensamento-computacional"]}
             final={true}
           />
         </nav>
