@@ -44,8 +44,8 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
         </h1>
       </div>
       <h2 className="text-xl sm:text-5xl w-50 text-terciary-bg mt-4 sm:w-150 text-center relative z-10">
-        title == "Pensamento Computacional" ? "Monitoria de alunos" : "Pesquisas
-        e estudos em grupo"
+        {title == "Pensamento Computacional" ? "Monitoria de alunos" : "Pesquisas
+        e estudos em grupo"}
       </h2>
       <div className="absolute hidden sm:block bottom-20 pr-8 animate-bounce z-10">
         <SlArrowDown
