@@ -68,7 +68,7 @@ export default function Hero() {
         Estudante de Ciência da Computação
       </motion.h2>
       {/* Arrow down icon */}
-      <div className="absolute sm:block bottom-10 sm:bottom-20 sm:pr-8 animate-bounce">
+      <div className="absolute sm:block bottom-20 sm:pr-8 animate-bounce">
         <SlArrowDown
           size={30}
           strokeWidth={25}
