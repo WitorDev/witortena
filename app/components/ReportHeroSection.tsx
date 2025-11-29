@@ -48,7 +48,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
           ? "Monitoria de alunos"
           : "Pesquisas e estudos em grupo"}
       </h2>
-      <div className="absolute hidden sm:block bottom-20 pr-8 animate-bounce z-10">
+      <div className="absolute sm:block bottom-10 sm:bottom-20 sm:pr-8 animate-bounce">
         <SlArrowDown
           size={30}
           strokeWidth={25}

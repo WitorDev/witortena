@@ -21,9 +21,9 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <motion.div
-      initial={{ scale: 0.9 }}
+      initial={{ scale: 0.95, opacity: 0.5 }}
       transition={{ duration: 0.35 }}
-      whileInView={{ scale: 1 }}
+      whileInView={{ scale: 1, opacity: 1 }}
       viewport={{ once: true, amount: 0.4 }}
       className="flex relative hover:border-secondary-accent max-w-160 hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:min-h-110 bg-primary-bg text-white"
     >

@@ -43,7 +43,10 @@ export default function Contact() {
     }
   };
   return (
-    <section id="contact" className="bg-secondary-bg ">
+    <section
+      id="contact"
+      className="bg-secondary-bg border-b-2 border-t-2 border-primary-bg "
+    >
       <div
         className={`${ubuntuMonoFont.className} pb-20 max-w-screen-xl px-4 mx-auto sm:gap-8 relative flex flex-col sm:flex-row pt-20`}
       >

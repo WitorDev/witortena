@@ -19,7 +19,10 @@ const ubuntuSansMonoFont = Ubuntu_Mono({
 
 export default function About() {
   return (
-    <div id="about" className="bg-secondary-bg">
+    <div
+      id="about"
+      className="sm:bg-gradient-to-br bg-gradient-to-b sm:to-primary-accent/10 to-primary-accent/15 from-secondary-bg border-b-2 border-t-2 border-primary-bg"
+    >
       <motion.section
         className={`sm:${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative pb-20 md:flex-row-reverse flex-col-reverse flex gap-8 sm:justify-between`}
       >

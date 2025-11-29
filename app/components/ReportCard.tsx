@@ -34,9 +34,9 @@ export default function ReportCard({
       className="min-w-[300px] max-w-[400px]"
     >
       <motion.div
-        initial={{ scale: 0.9 }}
+        initial={{ scale: 0.98, opacity: 0.5 }}
         transition={{ duration: 0.35 }}
-        whileInView={{ scale: 1 }}
+        whileInView={{ scale: 1, opacity: 1 }}
         viewport={{ once: true, amount: 0.4 }}
         className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent transition-all flex flex-col h-[500px]"
       >
