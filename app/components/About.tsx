@@ -60,7 +60,7 @@ export default function About() {
               mundo da tecnologia.
             </p>
           </div>
-          <motion.div className="flex gap-4 p-0 m-0 w-full md:mx-0 md:justify-normal justify-center mx-auto -translate-x-5 sm:translate-0 items-center flex-col sm:flex-row md:w-fit">
+          <motion.div className="flex gap-4 p-0 m-0 w-full md:mx-0 md:justify-normal max-w-140 flex-row mx-auto sm:translate-0 items-center sm:flex-row md:w-fit">
             <a
               id="github"
               href="https://github.com/WitorDev/"
