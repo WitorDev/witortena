@@ -38,7 +38,7 @@ export default function TextCard({
           >
             <div>
               <div className="flex gap-4 mb-6 flex-col">
-                <h1 className="text-lg">{title}</h1>
+                <h1 className="text-lg pr-8">{title}</h1>
                 <p className="text-terciary-bg">{status}</p>
               </div>
               <div className="flex gap-4 flex-col">
