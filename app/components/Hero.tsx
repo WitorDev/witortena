@@ -63,7 +63,7 @@ export default function Hero() {
         initial={{ y: +100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="text-xl sm:text-5xl w-50 text-terciary-bg mt-4 sm:w-150 text-center"
+        className="text-xl sm:text-5xl w-50 text-terciary-bg mt-4 sm:w-150 text-center relative z-10"
       >
         Estudante de Ciência da Computação
       </motion.h2>
