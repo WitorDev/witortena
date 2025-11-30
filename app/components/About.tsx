@@ -21,34 +21,34 @@ export default function About() {
   return (
     <div
       id="about"
-      className="sm:bg-gradient-to-br bg-gradient-to-b sm:to-primary-accent/10 to-primary-accent/15 from-secondary-bg border-b-2 border-t-2 border-primary-bg"
+      className="sm:bg-gradient-to-br bg-gradient-to-b sm:to-primary-accent/10 to-primary-accent/15 from-secondary-bg border-b-2 border-b-secondary-bg border-t-2 border-primary-bg"
     >
       <motion.section
         className={`sm:${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative pb-20 md:flex-row-reverse flex-col-reverse flex gap-8 sm:justify-between`}
       >
-        <motion.div className="z-10 mt-20 left-0 sm:mx-0 mx-auto">
+        <motion.div className="z-10 mt-20 left-0 sm:mx-0 md:mx-0 md:w-fit mx-auto w-full">
           <Image
             alt="Witor Tenã"
-            className="rounded-lg nodrag"
+            className="rounded-lg nodrag mx-auto"
             width={500}
             src={photo}
           />
         </motion.div>
         <motion.div className="mx-auto sm:mx-0 flex flex-col justify-between items-left">
           <div className="">
-            <h1 className="text-3xl font-bold w-full sm:text-left max-w-screen-xl pt-20 mx-auto">
+            <h1 className="text-3xl font-bold w-full text-center md:text-left max-w-screen-xl pt-20 mx-auto">
               Sobre Mim
             </h1>
 
             <motion.h1
               id="name"
-              className={`${ubuntuSansMonoFont.className} mt-4 mb-4 text-terciary-bg text-lg sm:text-4xl text-left`}
+              className={`${ubuntuSansMonoFont.className} mt-4 mb-4 text-terciary-bg w-full mx-auto text-lg  sm:text-4xl text-center md:text-left`}
             >
               Witor Tenã
             </motion.h1>
             <p
               id="paragraph"
-              className={`${ubuntuSansMonoFont.className} sm:max-w-140 md:text-justify leading-loose mb-4 lg:mb-0`}
+              className={`${ubuntuSansMonoFont.className} sm:max-w-140 text-justify leading-loose mb-4 lg:mb-0 w-full mx-auto`}
             >
               Sou um curioso sobre tecnologia que teve o primeiro contato com a
               programação ainda pequeno. Tudo começou com Python, e até hoje me
@@ -60,7 +60,7 @@ export default function About() {
               mundo da tecnologia.
             </p>
           </div>
-          <motion.div className="flex gap-4 p-0 m-0 -translate-x-5 sm:translate-0 items-center flex-col sm:flex-row  w-fit">
+          <motion.div className="flex gap-4 p-0 m-0 w-full md:mx-0 md:justify-normal justify-center mx-auto -translate-x-5 sm:translate-0 items-center flex-col sm:flex-row md:w-fit">
             <a
               id="github"
               href="https://github.com/WitorDev/"

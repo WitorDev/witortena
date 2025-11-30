@@ -21,7 +21,7 @@ export default function Tech() {
         </h1>
       </div>
       <div className="flex flex-col sm:flex-row">
-        <div className="grid w-full justify-items-center sm:justify-items-normal grid-cols-1 grid-rows-2 pt-20">
+        <div className="grid w-full justify-items-center gap-10 sm:mb-20 lg:mb-0 sm:justify-items-normal sm:grid-cols-2 sm:grid-rows-1 lg:grid-cols-1 lg:grid-rows-2 grid-cols-1 grid-rows-1 pt-20">
           <div className="">
             <h1 className="text-lg font-bold mb-2 w-full text-center sm:text-left">
               Frontend
@@ -36,7 +36,7 @@ export default function Tech() {
             </div>
           </div>
           <div>
-            <h1 className="text-lg font-bold mt-8 mb-2 w-full text-center sm:text-left">
+            <h1 className="text-lg font-bold mt-8 sm:mt-0 mb-2 w-full text-center sm:text-left">
               Backend
             </h1>
             <div className="justify-center align-middle flex flex-wrap gap-4 sm:gap-0 sm:grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
