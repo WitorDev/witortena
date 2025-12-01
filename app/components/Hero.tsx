@@ -1,6 +1,7 @@
 "use client";
 
-import old_computer from "@/public/old_computer.png";
+// import old_computer from "@/public/old_computer.png";
+import old_computer from "@/public/forest.jpg";
 
 // 1. Updated imports for framer-motion
 import { motion, useMotionValue, useSpring } from "framer-motion";
@@ -31,12 +32,12 @@ export default function Hero() {
   return (
     <motion.section
       id="hero"
-      className={`${ubuntuMonoFont.className} bg-background mx-auto  relative px-4  h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} mx-auto  relative px-4  h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
     >
-      <div className="hidden sm:block translate-y-14 absolute saturate-100 opacity-25 -z-0">
+      <div className="w-full h-full absolute -z-1">
         <Image
           alt="Computer Picture"
-          className="nodrag"
+          className="nodrag w-full h-full opacity-35 object-cover"
           width={900}
           src={old_computer}
         />
@@ -63,7 +64,7 @@ export default function Hero() {
         initial={{ y: +100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="text-xl sm:text-5xl w-50 text-terciary-bg mt-4 sm:w-150 text-center relative z-10"
+        className="text-xl sm:text-5xl w-50 text-terciary-bg text-shadow-lg mt-4 sm:w-150 text-center relative z-10"
       >
         Estudante de Ciência da Computação
       </motion.h2>
