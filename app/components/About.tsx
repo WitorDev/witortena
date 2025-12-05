@@ -2,6 +2,7 @@
 
 import old_computer_2 from "@/public/old_computer_2.png";
 import photo from "@/public/photo.jpg";
+// import photo from "@/public/mug_shot.jpg";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { Ubuntu_Mono } from "next/font/google";

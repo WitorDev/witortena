@@ -8,10 +8,15 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import Image from "next/image";
 import { SlArrowDown } from "react-icons/sl";
 import { Ubuntu_Mono } from "next/font/google";
+import { Sixtyfour_Convergence } from "next/font/google";
 // 4. Removed unused imports (useActionState, useEffect) and kept useState
 import { useState } from "react";
 
 const ubuntuMonoFont = Ubuntu_Mono({
+  subsets: ["latin"],
+  weight: "400",
+});
+const novaFonte = Sixtyfour_Convergence({
   subsets: ["latin"],
   weight: "400",
 });
