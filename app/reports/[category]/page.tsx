@@ -60,7 +60,7 @@ export default async function Page({
               date={reportItem.folder}
               title={reportItem.markdown}
               paragraph={reportItem.markdown}
-              reportType={reportItem.reportreportTypeURL}
+              type={reportTypeURL.category}
               image={
                 reportItem.files.find(
                   (file: any) =>

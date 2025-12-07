@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { report } from "process";
 import { RiExternalLinkLine } from "react-icons/ri";
 import MarkdownSection from "@/app/components/MarkdownSection";
 import ReactMarkdown from "react-markdown";
 import { motion } from "motion/react";
+
 import { PiParagraphThin } from "react-icons/pi";
 
 type ReportCardProps = {
@@ -16,54 +18,21 @@ type ReportCardProps = {
     name: string;
     url: string;
   };
-  reportType: any; // be permissive: can be string or object
+  type: string;
 };
-
-function slugify(value: string) {
-  return value
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^a-z0-9-_/]/g, "");
-}
 
 export default function ReportCard({
   title,
   date,
   paragraph,
   image,
-  reportType,
+  type,
 }: ReportCardProps) {
-  // normalize reportType (supports string or object with common keys)
-  let typeStr = "";
-
-  if (typeof reportType === "string") {
-    typeStr = reportType;
-  } else if (reportType && typeof reportType === "object") {
-    // try common fields
-    typeStr =
-      (reportType.slug as string) ||
-      (reportType.name as string) ||
-      (reportType.type as string) ||
-      JSON.stringify(reportType);
-  } else {
-    typeStr = "";
-  }
-
-  const dateStr = String(date ?? "");
-  const typeSlug = slugify(typeStr || "unknown");
-  const dateSlug = slugify(dateStr || "");
-
-  // build href safely; use a fallback if something is missing
-  const href =
-    typeSlug && dateSlug
-      ? `/reports/${encodeURIComponent(typeSlug)}/${encodeURIComponent(
-          dateSlug
-        )}`
-      : `/reports/${encodeURIComponent(typeSlug || "unknown")}`;
-
   return (
-    <Link href={href} className="min-w-[300px] max-w-[400px]">
+    <Link
+      href={type + "/" + date.trim().toLowerCase()}
+      className="min-w-[300px] max-w-[400px]"
+    >
       <motion.div
         initial={{ opacity: 0.5 }}
         transition={{ duration: 0.35 }}
