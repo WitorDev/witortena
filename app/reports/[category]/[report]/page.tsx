@@ -1,9 +1,7 @@
 // app/reports/[category]/[report]/page.tsx
 import { Ubuntu_Mono } from "next/font/google";
-// Removed unused 'Ubuntu' import
 
 import { getReports } from "@/util/getReports";
-// Removed unused 'Image' import
 
 import MarkdownRenderer from "@/app/components/MarkdownRenderer";
 import MarkdownSection from "@/app/components/MarkdownSection";
@@ -25,6 +23,7 @@ export default async function Page({
 }) {
   const pageParams = await params;
   const reports = getReports(pageParams.category);
+  console.log(pageParams.category);
 
   const report = reports.find((r) => r.folder == pageParams.report);
 

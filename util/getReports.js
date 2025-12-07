@@ -79,7 +79,7 @@ export function getReports(category) {
       markdown,
       files: files.map((file) => ({
         name: file,
-        url: `/reports/${category}/${folderName}/${file}`,
+        url: `/reports/${path.basename(reportsPath)}/${folderName}/${file}`,
       })),
     });
   });

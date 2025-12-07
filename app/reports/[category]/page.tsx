@@ -22,9 +22,10 @@ export default async function Page({
 }: {
   params: { category: string };
 }) {
-  const reports = getReports(await params.category);
+  const reportTypeURL = await params;
+  const reports = getReports(reportTypeURL.category);
 
-  console.log(await params.category);
+  console.log(reportTypeURL);
 
   return (
     <div className="bg-secondary-bg">
@@ -34,19 +35,19 @@ export default async function Page({
       >
         <ReportHeroSection
           title={
-            (await params.category) == "NPI"
+            reportTypeURL.category == "NPI"
               ? "Núcleo de Práticas de Informática"
               : "Pensamento Computacional"
           }
         />
 
-        <DescriptionSection category={await params.category} />
+        <DescriptionSection category={reportTypeURL.category} />
 
         {/* relatorios */}
         <div className="flex gap-4 mt-20 mb-20 w-full sm:flex-row flex-col max-w-screen-xl px-4">
           <h1 className="text-3xl font-bold">Relatórios </h1>
           <p className={`${ubuntuFont.className} text-3xl text-terciary-bg`}>
-            {(await params.category) == "NPI"
+            {reportTypeURL.category == "NPI"
               ? "NPI - Núcleo de Práticas de Informática"
               : "Pensamento Computacional"}
           </p>
@@ -59,7 +60,7 @@ export default async function Page({
               date={reportItem.folder}
               title={reportItem.markdown}
               paragraph={reportItem.markdown}
-              reportType={reportItem.reportCategory}
+              reportType={reportItem.reportreportTypeURL}
               image={
                 reportItem.files.find(
                   (file: any) =>
