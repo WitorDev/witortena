@@ -1,6 +1,6 @@
 ## Fim!
 
-`Professor(a): Marianni e Kawan`
+`Professor(a): Mariane e Kawan`
 
 Hoje tivemos a conclusão do pensamento computacional, um evento que encheu o teatro do colégio Londrinense com todos os alunos, seus responsáveis, professores e monitores do pensamento computacional. Para a cerimônia de entrega dos certificados de conclusão.
 O clima era de celebração. Foi um momento para celebrar não apenas o fim do curso, mas todo o esforço e desenvolvimento de novas habilidades ao longo do projeto, junto dos monitores e professores.

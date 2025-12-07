@@ -1,6 +1,6 @@
 ## Hackathon, o Pitch dos alunos!
 
-`Professor(a): Marianni e Kawan`
+`Professor(a): Mariane e Kawan`
 
 Na aula de hoje os alunos apresentaram as suas soluções desenvolvidas no hackathon na sala maker na UniFil, para os monitores o dia começou com a preparação à chegada dos alunos, ficamos posicionados em pontos estratégicos a fim de instruir os alunos à onde ir.
 Assim, todos os alunos foram direcionados até a sala maker, onde as apresentações das soluções seriam feitas, ao chegar lá e esperarmos um pouco mais de tempo para todos os alunos chegarem, pudemos iniciar as apresentações, ou nesse caso, um pitch da solução sobre o problema a ser resolvido, que nesse hackathon era um problema relacionado à educação.

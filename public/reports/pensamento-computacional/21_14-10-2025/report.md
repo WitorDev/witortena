@@ -1,6 +1,6 @@
 ## Hackathon, o que é e como participar?
 
-`Professor(a): Marianni e Kawan`
+`Professor(a): Mariane e Kawan`
 
 Na aula de hoje, os alunos aprenderam sobre hackathons, atividade na qual eles mesmos irão participar nas próximas aulas. Nesta primeira aula introdutória, a professora Marianni apresentou o conceito de hackathon, explicando o que é, como funciona e qual o seu propósito.
 Após a explicação, os alunos receberam um modelo de negócio, que deveriam preencher de acordo com suas próprias ideias. Foi ressaltado que o primeiro passo é identificar um problema e, a partir dele, propor uma solução inovadora e viável. O tema central deste hackathon será “educação”.

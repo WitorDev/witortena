@@ -1,6 +1,6 @@
 ## Iniciando Tabelas em HTML
 
-`Professor(a): Marianni e Kawan`
+`Professor(a): Mariane e Kawan`
 
 Na aula de hoje o professor Kawan iniciou pedindo que os alunos preenchessem um formulário de satisfação nas aulas do Pensamento Computacional, assim como realizar o seu registro no novo portal de aulas do pensamento feito pela Unifil, o **Moodle**, onde os conteúdos das aulas serão passados para os alunos.
 

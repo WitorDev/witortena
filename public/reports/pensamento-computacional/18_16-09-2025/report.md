@@ -1,6 +1,6 @@
 ## Lógica de Programação com Portugol - Escolha Caso
 
-`Professor(a): Marianni e Kawan`
+`Professor(a): Mariane e Kawan`
 
 Seguindo o que os alunos tem aprendido sobre condicionais em Portugol, os alunos hoje tiveram uma aula sobre escolha caso, onde realizaram algumas atividades após a explicação do professor.
 No início da aula o professor Kawan introduziu os alunos ao "Escolha Caso", onde por meio dele pode determinar diferentes saídas de acordo com um certo resultado de uma variável. Logo após isso demos início às atividades, que envolviam realizar 2 atividades com "Se Senão" e 1 última atividade com o uso de "Escolha Caso".

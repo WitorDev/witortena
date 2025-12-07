@@ -1,6 +1,6 @@
 ## Lógica de Programação com Portugol - Para e Enquanto
 
-`Professor(a): Marianni e Kawan`
+`Professor(a): Mariane e Kawan`
 
 Na aula de hoje os alunos aprenderam sobre os blocos de repetição "para" e "enquanto", por meio das atividades passadas em sala pela professora.
 No início da aula a professora mostrou aos alunos como a estrutura de repetição para funcionava, e logo após mostrou a eles um exemplo prático fazendo o uso desse bloco de repetição.

@@ -1,6 +1,6 @@
 ## Lógica de Programação com Portugol - Repetição
 
-`Professor(a): Marianni e Kawan`
+`Professor(a): Mariane e Kawan`
 
 Na aula de hoje os alunos realizaram uma atividade de portugol, onde precisavam desenvolver um algoritmo que permitisse que um usuário tivesse acesso apenas caso ele digite a senha correta.
 

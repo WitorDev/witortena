@@ -1,6 +1,6 @@
 ## Conclusão e Tira Dúvidas
 
-`Professor(a): Marianni e Kawan`
+`Professor(a): Mariane e Kawan`
 
 Hoje, os monitores e professores ficaram a postos para tirar quaisquer dúvidas que os alunos tivessem após a conclusão do seu curso.
 Ficamos aguardando na sala até os alunos chegarem, apenas 3 alunos vieram para tirar suas dúvidas, um dos alunos estava com dúvidas pois ainda não havia recebido seu certificado.
