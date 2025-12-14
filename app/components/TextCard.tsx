@@ -21,13 +21,13 @@ export default function TextCard({
 }: TextCardProps) {
   return (
     <motion.div
-      initial={{ scale: 0.95, opacity: 0.5 }}
-      transition={{ duration: 0.35 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      viewport={{ once: true, amount: 0.4 }}
+    initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
       className={`${
         link && "hover:border-secondary-accent hover:bg-secondary-bg"
-      } shadow-black/20 shadow-md border relative transition-all border-primary-accent rounded-lg bg-primary-bg group`}
+      } shadow-black/20 shadow-md border relative border-primary-accent rounded-lg bg-primary-bg group`}
     >
       {link ? (
         <Link href={link}>
@@ -52,7 +52,7 @@ export default function TextCard({
             </div>
           </div>
 
-          <div className="absolute top-8 right-8 text-white group-hover:text-green-500 transition-colors">
+          <div className="absolute top-8 right-8 text-white group-hover:text-green-500">
             <RiExternalLinkLine size={25} />
           </div>
         </Link>

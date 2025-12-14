@@ -3,6 +3,7 @@ import { Ubuntu_Mono } from "next/font/google";
 import IconAndName from "@/app/components/IconAndName";
 import Image from "next/image";
 import cableImage from "@/public/cable.png";
+import { motion } from "framer-motion";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -16,16 +17,28 @@ export default function Tech() {
       className={`${ubuntuMonoFont.className} justify-center max-w-screen-xl px-4 mx-auto relative pt-40 flex flex-col `}
     >
       <div className="flex w-full">
-        <h1 className="text-3xl font-bold w-full text-center sm:text-left">
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-3xl font-bold w-full text-center sm:text-left"
+        >
           Tech Stack
-        </h1>
+        </motion.h1>
       </div>
       <div className="flex flex-col sm:flex-row mb-20 sm:mb-0">
         <div className="grid w-full justify-items-center gap-10 sm:mb-20 lg:mb-0 sm:justify-items-normal sm:grid-cols-2 sm:grid-rows-1 lg:grid-cols-1 lg:grid-rows-2 grid-cols-1 grid-rows-1 pt-20">
           <div className="">
-            <h1 className="text-lg font-bold mb-2 w-full text-center sm:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-lg font-bold mb-2 w-full text-center sm:text-left"
+            >
               Frontend
-            </h1>
+            </motion.h1>
             <div className="justify-center align-middle flex flex-wrap gap-4 sm:gap-0 sm:grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
               <IconAndName icon="Html5" text="HTML" />
               <IconAndName icon="React" text="React" />
@@ -36,9 +49,15 @@ export default function Tech() {
             </div>
           </div>
           <div>
-            <h1 className="text-lg font-bold mt-8 sm:mt-0 mb-2 w-full text-center sm:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-lg font-bold mt-8 sm:mt-0 mb-2 w-full text-center sm:text-left"
+            >
               Backend
-            </h1>
+            </motion.h1>
             <div className="justify-center align-middle flex flex-wrap gap-4 sm:gap-0 sm:grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
               <IconAndName icon="Nodedotjs" text="Node.js" />
               <IconAndName icon="Postgresql" text="PostgreSQL" />

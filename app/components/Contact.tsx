@@ -5,6 +5,7 @@ import { Ubuntu_Mono } from "next/font/google";
 import IconAndTitle from "@/app/components/IconAndTitle";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { motion } from "motion/react";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -52,13 +53,24 @@ export default function Contact() {
       >
         <div className="w-full">
           <div className="flex w-full mb-16">
-            <h1 className="text-3xl font-bold w-full text-center md:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="text-3xl font-bold w-full text-center md:text-left"
+            >
               Entre em Contato
-            </h1>
+            </motion.h1>
           </div>
 
           {/* Contact Box */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <div className="bg-primary-accent w-full h-2 rounded-t-2xl"></div>
             <div className="bg-primary-bg rounded-b-lg">
               <form
@@ -67,8 +79,20 @@ export default function Contact() {
                 className="flex px-4 md:px-8 pt-6 md:pt-12 pb-8 flex-col gap-2"
               >
                 {/* email */}
-                <h1 className="text-lg">Nome</h1>
-                <input
+                <motion.h1
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="text-lg"
+                >
+                  Nome
+                </motion.h1>
+                <motion.input
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true, amount: 0.3 }}
                   className="bg-quaternary-bg p-2 w-full h-12"
                   type="text"
                   name="user_name"
@@ -78,8 +102,20 @@ export default function Contact() {
                 />
 
                 {/* email */}
-                <h1 className="text-lg">Email</h1>
-                <input
+                <motion.h1
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="text-lg"
+                >
+                  Email
+                </motion.h1>
+                <motion.input
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true, amount: 0.3 }}
                   className=" bg-quaternary-bg p-2 w-full h-12"
                   type="email"
                   name="email"
@@ -89,8 +125,20 @@ export default function Contact() {
                 />
 
                 {/* assunto */}
-                <h1 className="text-lg">Assunto</h1>
-                <input
+                <motion.h1
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="text-lg"
+                >
+                  Assunto
+                </motion.h1>
+                <motion.input
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true, amount: 0.3 }}
                   className=" bg-quaternary-bg p-2 w-full h-12"
                   type="text"
                   name="subject"
@@ -100,14 +148,26 @@ export default function Contact() {
                 />
 
                 {/* message */}
-                <h1 className="text-lg">Mensagem</h1>
-                <textarea
+                <motion.h1
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="text-lg"
+                >
+                  Mensagem
+                </motion.h1>
+                <motion.textarea
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true, amount: 0.3 }}
                   className="p-2  bg-quaternary-bg w-full h-72"
                   name="message"
                   id="message"
                   required
                   placeholder="Sua mensagem..."
-                ></textarea>
+                ></motion.textarea>
 
                 <button
                   className="w-fit cursor-pointer hover:bg-secondary-accent hover:text-black text-lg bg-primary-accent px-4 py-2 mt-2 rounded-md place-self-end"
@@ -117,11 +177,17 @@ export default function Contact() {
                 </button>
               </form>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Contacts */}
-        <div className="flex lg:flex-col justify-around pt-8 md:pt-0 gap-8 lg:gap-0 lg:justify-normal flex-col sm:flex-row lg:pt-16 flex-wrap md:flex-nowrap">
+        <motion.div
+          initial={{ opacity: 0, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex lg:flex-col justify-around pt-8 md:pt-0 gap-8 lg:gap-0 lg:justify-normal flex-col sm:flex-row lg:pt-16 flex-wrap md:flex-nowrap"
+        >
           <IconAndTitle
             title="Whatsapp"
             linkUrl="https://wa.me/5543984138592"
@@ -139,7 +205,7 @@ export default function Contact() {
             linkUrl="witortena@gmail.com"
             isEmail={true}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

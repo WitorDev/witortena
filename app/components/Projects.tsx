@@ -15,6 +15,7 @@ import {
   HiXMark,
 } from "react-icons/hi2";
 import { SiThreedotjs } from "react-icons/si";
+import { motion } from "motion/react";
 
 export const projectsData = [
   {
@@ -118,10 +119,22 @@ export default function Projects() {
     >
       <div className="w-full max-w-screen-xl mx-auto px-4 md:pt-24">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold w-full text-center md:text-left">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-3xl font-bold w-full text-center md:text-left"
+          >
             Projetos
-          </h1>
-          <div className="hidden md:flex items-center gap-2">
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="hidden md:flex items-center gap-2"
+          >
             <button
               onClick={() => handleScroll(-getScrollAmount())}
               aria-label="Scroll left"
@@ -136,12 +149,16 @@ export default function Projects() {
             >
               <HiArrowRight size={25} />
             </button>
-          </div>
+          </motion.div>
         </div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
           ref={trackRef}
-          className="hidden md:flex flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide"
+          className="hidden md:flex overflow-hidden flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide"
         >
           {projectsData.map((project, index) => (
             <div key={index} className="w-96 max-w-full md:flex-shrink-0">
@@ -154,9 +171,15 @@ export default function Projects() {
               />
             </div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col items-center gap-8 mt-10 md:hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col items-center gap-8 mt-10 md:hidden"
+        >
           {mobileProjects.map((project, index) => (
             <div key={index} className="w-96 max-w-full">
               <ProjectCard
@@ -168,9 +191,13 @@ export default function Projects() {
               />
             </div>
           ))}
-        </div>
+        </motion.div>
 
-        <button
+        <motion.button
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
           onClick={() => setIsOverlayOpen(true)}
           className="flex md:hidden gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer mx-auto"
         >
@@ -178,9 +205,13 @@ export default function Projects() {
           <div className="translate-y-1.5">
             <HiArrowUpRight strokeWidth={1} size={15} />
           </div>
-        </button>
+        </motion.button>
 
-        <button
+        <motion.button
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
           onClick={() => setIsOverlayOpen(true)}
           className="hidden md:flex gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer"
         >
@@ -188,7 +219,7 @@ export default function Projects() {
           <div className="translate-y-1.5">
             <HiArrowUpRight strokeWidth={1} size={15} />
           </div>
-        </button>
+        </motion.button>
       </div>
 
       {/* --- MODIFIED: Fullscreen Project Overlay --- */}
@@ -210,7 +241,14 @@ export default function Projects() {
             </div>
 
             {/* Overlay Grid (Scrollable) */}
-            <div className="flex-1 scrollbar-hide overflow-y-auto p-4 sm:p-8 md:p-12">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
+              onClick={() => setIsOverlayOpen(true)}
+              className="flex-1 scrollbar-hide overflow-y-auto p-4 sm:p-8 md:p-12"
+            >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projectsData.map((project, index) => (
                   <ProjectCard
@@ -223,7 +261,7 @@ export default function Projects() {
                   />
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       )}

@@ -12,11 +12,12 @@ export default function IconAndName({ icon, text }: IconAndNameProps) {
 
   return (
     <motion.div
-      viewport={{ once: true }}
-      initial={{ opacity: 0.1, x: 20 }}
+      viewport={{ once: true, amount: 0.5 }}
+      initial={{ opacity: 0.1, x: 10, y: 50 }}
       whileInView={{
         opacity: 1,
         x: 0,
+        y: 0,
         transition: { duration: 0.3 },
       }}
       className="flex items-center gap-4 my-4 bg-primary-bg p-4 rounded-lg sm:p-0 sm:bg-background"

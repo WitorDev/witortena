@@ -10,6 +10,7 @@ const ubuntuMonoFont = Ubuntu_Mono({
 });
 
 import { Ubuntu_Sans_Mono } from "next/font/google";
+import { motion } from "motion/react";
 
 const UbuntuSansMonoFont = Ubuntu_Sans_Mono({
   subsets: ["latin"],
@@ -27,20 +28,63 @@ export default function Hero() {
         <div className="flex sm:flex-row gap-10 sm:gap-0 flex-col w-full justify-between">
           <div className="flex flex-col">
             <div className="text-6xl font-bold text-primary-accent mb-6">
-              WT_
+              <motion.h1
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                WT_
+              </motion.h1>
             </div>
             <div
               className={`${UbuntuSansMonoFont.className} flex flex-col gap-6 text-terciary-bg`}
             >
-              <h2>Desenvolvedor Fullstack</h2>
-              <h2>Estudante de Ciência da Computação</h2>
-              <h2>Participante do NPI</h2>
-              <h2>Monitor do Pensamento Computacional</h2>
+              <motion.h2
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                Desenvolvedor Fullstack
+              </motion.h2>
+              <motion.h2
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                Estudante de Ciência da Computação
+              </motion.h2>
+              <motion.h2
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                Participante do NPI
+              </motion.h2>
+              <motion.h2
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                Monitor do Pensamento Computacional
+              </motion.h2>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-8 text-lg text-terciary-bg">
             <div className="flex flex-col gap-3 text-lg text-terciary-bg">
-              <h3 className="">Home</h3>
+              <motion.h3
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="text-foreground"
+              >
+                Home
+              </motion.h3>
               {pathname === "/" ? (
                 <>
                   {[
@@ -56,9 +100,16 @@ export default function Hero() {
                       to={link.to}
                       smooth={true}
                       duration={300}
-                      className="text-white cursor-pointer hover:text-terciary-bg"
+                      className="text-terciary-bg cursor-pointer hover:text-primary-accent"
                     >
-                      {link.label}
+                      <motion.p
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                      >
+                        {link.label}
+                      </motion.p>
                     </ScrollLink>
                   ))}
                 </>
@@ -75,16 +126,31 @@ export default function Hero() {
                     <Link
                       key={index}
                       href={`/#${link.to}`}
-                      className="text-white  hover:text-terciary-bg"
+                      className="text-terciary-bg hover:text-primary-accent"
                     >
-                      {link.label}
+                      <motion.p
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                      >
+                        {link.label}
+                      </motion.p>
                     </Link>
                   ))}
                 </>
               )}
             </div>
             <div className="flex flex-col gap-3  text-terciary-bg">
-              <h3 className="">Relatórios</h3>
+              <motion.h3
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="text-foreground"
+              >
+                Relatórios
+              </motion.h3>
               {[
                 { href: "/reports/NPI", label: "NPI" },
                 {
@@ -95,44 +161,85 @@ export default function Hero() {
                 <Link
                   key={index}
                   href={link.href}
-                  className="text-white hover:text-terciary-bg"
+                  className="text-terciary-bg hover:text-primary-accent"
                 >
-                  {link.label}
+                  <motion.p
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                  >
+                    {link.label}
+                  </motion.p>
                 </Link>
               ))}
             </div>
           </div>
         </div>
         {/* Contact */}
-        <div className="flex flex-col gap-4 text-terciary-bg mt-20">
-          <div className="flex flex-col sm:flex-row gap-2">
+        <div className="flex flex-col gap-4 text-foreground-bg mt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col sm:flex-row gap-2"
+          >
             <h3>Email:</h3>
-            <p className="text-white ">witortena@gmail.com</p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-2">
+            <a
+              className="text-terciary-bg hover:text-secondary-accent"
+              href="mailto:witortena@gmail.com"
+            >
+              witortena@gmail.com
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col sm:flex-row gap-2"
+          >
             <h3>Celular:</h3>
-            <p className="text-white ">+55 43 9 8413-8592</p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-2">
+            <a
+              className="text-terciary-bg hover:text-secondary-accent"
+              href="https://wa.me/+5543984138592"
+            >
+              +55 43 9 8413-8592
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col sm:flex-row gap-2"
+          >
             <h3>Linkedin:</h3>
             <Link
               href="https://www.linkedin.com/in/witortena"
               target="_blank"
-              className="text-white "
+              className="text-terciary-bg hover:text-secondary-accent"
             >
               linkedin.com/in/witortena
             </Link>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-2">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col sm:flex-row gap-2"
+          >
             <h3>Github:</h3>
             <Link
               href="https://github.com/witordev"
               target="_blank"
-              className="text-white "
+              className="text-terciary-bg hover:text-secondary-accent"
             >
               github.com/witordev
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
       <h1 className="text-lg sm:mb-0 mb-8 text-terciary-bg">

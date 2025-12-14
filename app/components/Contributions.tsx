@@ -1,5 +1,7 @@
+"use client";
 import { Ubuntu_Mono } from "next/font/google";
 import TextCard from "@/app/components/TextCard";
+import { motion } from "motion/react";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -12,11 +14,17 @@ export default function Contributions() {
       id="contributions"
       className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative  flex flex-col items-center`}
     >
-      <div className="flex w-full mt-20">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex w-full mt-20"
+      >
         <h1 className="text-3xl font-bold mb-10 w-full text-center sm:text-left">
           Participações
         </h1>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 grid-rows-3 sm:grid-cols-2 gap-8 sm:grid-rows-1 mb-20">
         <TextCard
