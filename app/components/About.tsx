@@ -31,7 +31,7 @@ export default function About() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="z-10 mt-20 left-0 sm:mx-0 md:mx-0 md:w-fit mx-auto w-full"
         >
           <Image

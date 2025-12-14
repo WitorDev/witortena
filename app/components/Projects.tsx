@@ -177,7 +177,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           className="flex flex-col items-center gap-8 mt-10 md:hidden"
         >
           {mobileProjects.map((project, index) => (
