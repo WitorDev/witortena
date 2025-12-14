@@ -48,9 +48,10 @@ export default function Hero() {
         />
       </div>
       <motion.div
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.35, ease: "easeInOut" }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="border-3 w-fit mx-auto rounded-2xl border-primary-accent px-4 py-2 text-primary-accent text-lg">
           Desenvolvedor Fullstack
@@ -66,15 +67,22 @@ export default function Hero() {
         </h1>
       </motion.div>
       <motion.h2
-        initial={{ y: +100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.35, ease: "easeInOut" }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
         className="text-xl sm:text-5xl w-50 text-terciary-bg text-shadow-lg mt-4 sm:w-150 text-center relative z-10"
       >
         Estudante de Ciência da Computação
       </motion.h2>
       {/* Arrow down icon */}
-      <div className="absolute sm:block bottom-20 sm:pr-8 animate-bounce">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="absolute sm:block bottom-20 sm:pr-8 animate-bounce"
+      >
         <SlArrowDown
           size={30}
           strokeWidth={25}
@@ -88,7 +96,7 @@ export default function Hero() {
           className="translate-y-4"
         />
         <SlArrowDown size={30} strokeWidth={25} color="2bc133" />
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

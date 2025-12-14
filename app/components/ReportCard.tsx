@@ -34,11 +34,11 @@ export default function ReportCard({
       className="min-w-[300px] max-w-[400px]"
     >
       <motion.div
-        initial={{ opacity: 0.5 }}
-        transition={{ duration: 0.35 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.4 }}
-        className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent transition-all flex flex-col h-[500px]"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent flex flex-col h-[500px]"
       >
         {/* fixed image container height so the layout stays aligned */}
         <div
@@ -50,7 +50,7 @@ export default function ReportCard({
               height={400}
               src={image.url}
               alt={image.name}
-              className="h-full w-full object-cover group-hover:opacity-50 transition-all"
+              className="h-full w-full object-cover group-hover:opacity-50"
             />
           ) : (
             <p className="text-neutral-50 text-2xl">{date.split("_")[1]}</p>
@@ -68,7 +68,7 @@ export default function ReportCard({
                 />
               </div>
               <RiExternalLinkLine
-                className="group-hover:text-green-500 z-10 transition-all"
+                className="group-hover:text-green-500 z-10"
                 size={25}
               />
             </div>
