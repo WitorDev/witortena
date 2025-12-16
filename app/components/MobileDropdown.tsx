@@ -54,7 +54,7 @@ export default function MobileDropdown({
       </div>
 
       {isOpen && (
-        <div className="flex flex-col gap-1 pt-0 w-full items-center justify-between bg-background p-4">
+        <div className="flex flex-col gap-1 pt-0 w-full items-center justify-between bg-background p-4 rounded-b-lg">
           {options.map((option, id) => {
             // in case is not in this page, link to the right page
             if (links && pageUrl !== pathname) {
