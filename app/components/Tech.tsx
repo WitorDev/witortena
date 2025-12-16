@@ -40,12 +40,24 @@ export default function Tech() {
               Frontend
             </motion.h1>
             <div className="justify-center align-middle flex flex-wrap gap-4 sm:gap-0 sm:grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
-              <IconAndName icon="Html5" text="HTML" />
-              <IconAndName icon="React" text="React" />
-              <IconAndName icon="Css3" text="CSS" />
-              <IconAndName icon="Tailwindcss" text="TailwindCSS" />
-              <IconAndName icon="Javascript" text="Javascript" />
-              <IconAndName icon="Nextdotjs" text="Next.js" />
+              <IconAndName style="text-red-400" icon="Html5" text="HTML" />
+              <IconAndName style="text-blue-400" icon="React" text="React" />
+              <IconAndName style="text-blue-400" icon="Css3" text="CSS" />
+              <IconAndName
+                style="text-blue-300"
+                icon="Tailwindcss"
+                text="TailwindCSS"
+              />
+              <IconAndName
+                style="text-yellow-500"
+                icon="Javascript"
+                text="Javascript"
+              />
+              <IconAndName
+                style="text-gray-300"
+                icon="Nextdotjs"
+                text="Next.js"
+              />
             </div>
           </div>
           <div>
@@ -59,10 +71,22 @@ export default function Tech() {
               Backend
             </motion.h1>
             <div className="justify-center align-middle flex flex-wrap gap-4 sm:gap-0 sm:grid sm:grid-cols-2 sm:grid-rows-3 auto-cols-auto">
-              <IconAndName icon="Nodedotjs" text="Node.js" />
-              <IconAndName icon="Postgresql" text="PostgreSQL" />
-              <IconAndName icon="Express" text="Express" />
-              <IconAndName icon="Mongodb" text="MongoDB" />
+              <IconAndName
+                style="text-green-500"
+                icon="Nodedotjs"
+                text="Node.js"
+              />
+              <IconAndName
+                style="text-blue-500"
+                icon="Postgresql"
+                text="PostgreSQL"
+              />
+              <IconAndName style="text-white" icon="Express" text="Express" />
+              <IconAndName
+                style="text-green-400"
+                icon="Mongodb"
+                text="MongoDB"
+              />
             </div>
           </div>
         </div>

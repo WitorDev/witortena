@@ -5,9 +5,10 @@ import { motion } from "motion/react";
 type IconAndNameProps = {
   icon: string;
   text: string;
+  style: string;
 };
 
-export default function IconAndName({ icon, text }: IconAndNameProps) {
+export default function IconAndName({ icon, text, style }: IconAndNameProps) {
   const IconComponent = SiIcons[`Si${icon}` as keyof typeof SiIcons];
 
   return (
@@ -20,10 +21,10 @@ export default function IconAndName({ icon, text }: IconAndNameProps) {
         y: 0,
         transition: { duration: 0.3 },
       }}
-      className="flex items-center gap-4 my-4 bg-primary-bg p-4 rounded-lg sm:p-0 sm:bg-background"
+      className="flex items-center gap-4 my-4 p-4 rounded-lg sm:p-0 sm:bg-background"
     >
       {IconComponent ? (
-        <div style={{ color: getColorForTech(icon) }}>
+        <div className={`${style}`}>
           <IconComponent size={35} />
         </div>
       ) : null}
