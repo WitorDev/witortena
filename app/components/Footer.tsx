@@ -90,6 +90,7 @@ export default function Hero() {
                   {[
                     { to: "hero", label: "Início" },
                     { to: "about", label: "Sobre Mim" },
+                    { to: "education", label: "Graduação" },
                     { to: "contributions", label: "Participações" },
                     { to: "projects", label: "Projetos" },
                     { to: "tech", label: "Tech Stack" },
@@ -118,6 +119,7 @@ export default function Hero() {
                   {[
                     { to: "hero", label: "Início" },
                     { to: "about", label: "Sobre Mim" },
+                    { to: "education", label: "Graduação" },
                     { to: "contributions", label: "Participações" },
                     { to: "projects", label: "Projetos" },
                     { to: "tech", label: "Tech Stack" },
