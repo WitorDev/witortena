@@ -86,6 +86,7 @@ export default function Navbar() {
                   options={[
                     "Início",
                     "Sobre Mim",
+                    "Graduação",
                     "Participações",
                     "Projetos",
                     "Tech Stack",
@@ -94,6 +95,7 @@ export default function Navbar() {
                   links={[
                     "hero",
                     "about",
+                    "education",
                     "contributions",
                     "projects",
                     "tech",
@@ -133,6 +135,7 @@ export default function Navbar() {
             options={[
               "Início",
               "Sobre Mim",
+              "Graduação",
               "Participações",
               "Projetos",
               "Tech Stack",
@@ -141,6 +144,7 @@ export default function Navbar() {
             links={[
               "hero",
               "about",
+              "education",
               "contributions",
               "projects",
               "tech",
