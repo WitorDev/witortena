@@ -189,7 +189,7 @@ export default function Hero() {
           >
             <h3>Email:</h3>
             <a
-              className="text-terciary-bg hover:text-secondary-accent"
+              className="text-terciary-bg w-fit  hover:text-secondary-accent"
               href="mailto:witortena@gmail.com"
             >
               witortena@gmail.com
