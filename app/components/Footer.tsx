@@ -101,7 +101,7 @@ export default function Hero() {
                       to={link.to}
                       smooth={true}
                       duration={300}
-                      className="text-terciary-bg cursor-pointer hover:text-primary-accent"
+                      className="text-terciary-bg w-fit cursor-pointer hover:text-primary-accent"
                     >
                       <motion.p
                         initial={{ opacity: 0, y: 50 }}
@@ -128,7 +128,7 @@ export default function Hero() {
                     <Link
                       key={index}
                       href={`/#${link.to}`}
-                      className="text-terciary-bg hover:text-primary-accent"
+                      className="text-terciary-bg w-fit hover:text-primary-accent"
                     >
                       <motion.p
                         initial={{ opacity: 0, y: 50 }}
@@ -163,7 +163,7 @@ export default function Hero() {
                 <Link
                   key={index}
                   href={link.href}
-                  className="text-terciary-bg hover:text-primary-accent"
+                  className="text-terciary-bg w-fit hover:text-primary-accent"
                 >
                   <motion.p
                     initial={{ opacity: 0, y: 50 }}
@@ -204,7 +204,7 @@ export default function Hero() {
           >
             <h3>Celular:</h3>
             <a
-              className="text-terciary-bg hover:text-secondary-accent"
+              className="text-terciary-bg w-fit hover:text-secondary-accent"
               href="https://wa.me/+5543984138592"
             >
               +55 43 9 8413-8592
@@ -221,7 +221,7 @@ export default function Hero() {
             <Link
               href="https://www.linkedin.com/in/witortena"
               target="_blank"
-              className="text-terciary-bg hover:text-secondary-accent"
+              className="text-terciary-bg w-fit hover:text-secondary-accent"
             >
               linkedin.com/in/witortena
             </Link>
@@ -237,7 +237,7 @@ export default function Hero() {
             <Link
               href="https://github.com/witordev"
               target="_blank"
-              className="text-terciary-bg hover:text-secondary-accent"
+              className="text-terciary-bg w-fit hover:text-secondary-accent"
             >
               github.com/witordev
             </Link>

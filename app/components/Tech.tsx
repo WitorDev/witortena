@@ -24,7 +24,7 @@ export default function Tech() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-3xl font-bold w-full text-center sm:text-left"
         >
-          Tech Stack
+          Tecnologias
         </motion.h1>
       </div>
       <div className="flex flex-col sm:flex-row mb-20 sm:mb-0">
