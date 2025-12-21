@@ -28,63 +28,20 @@ export default function Hero() {
         <div className="flex sm:flex-row gap-10 sm:gap-0 flex-col w-full justify-between">
           <div className="flex flex-col">
             <div className="text-6xl font-bold text-primary-accent mb-6">
-              <motion.h1
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                WT_
-              </motion.h1>
+              <h1>WT_</h1>
             </div>
             <div
               className={`${UbuntuSansMonoFont.className} flex flex-col gap-6 text-terciary-bg`}
             >
-              <motion.h2
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                Desenvolvedor Fullstack
-              </motion.h2>
-              <motion.h2
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                Estudante de Ciência da Computação
-              </motion.h2>
-              <motion.h2
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                Participante do NPI
-              </motion.h2>
-              <motion.h2
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                Monitor do Pensamento Computacional
-              </motion.h2>
+              <h2>Desenvolvedor Fullstack</h2>
+              <h2>Estudante de Ciência da Computação</h2>
+              <h2>Participante do NPI</h2>
+              <h2>Monitor do Pensamento Computacional</h2>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-8 text-lg text-terciary-bg">
             <div className="flex flex-col gap-3 text-lg text-terciary-bg">
-              <motion.h3
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: 0.3 }}
-                className="text-foreground"
-              >
-                Home
-              </motion.h3>
+              <h3 className="text-foreground">Home</h3>
               {pathname === "/" ? (
                 <>
                   {[
@@ -103,14 +60,7 @@ export default function Hero() {
                       duration={300}
                       className="text-terciary-bg w-fit cursor-pointer hover:text-primary-accent"
                     >
-                      <motion.p
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                      >
-                        {link.label}
-                      </motion.p>
+                      <p>{link.label}</p>
                     </ScrollLink>
                   ))}
                 </>
@@ -130,29 +80,14 @@ export default function Hero() {
                       href={`/#${link.to}`}
                       className="text-terciary-bg w-fit hover:text-primary-accent"
                     >
-                      <motion.p
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                      >
-                        {link.label}
-                      </motion.p>
+                      <p>{link.label}</p>
                     </Link>
                   ))}
                 </>
               )}
             </div>
             <div className="flex flex-col gap-3  text-terciary-bg">
-              <motion.h3
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true, amount: 0.3 }}
-                className="text-foreground"
-              >
-                Relatórios
-              </motion.h3>
+              <h3 className="text-foreground">Relatórios</h3>
               {[
                 { href: "/reports/NPI", label: "NPI" },
                 {
@@ -165,14 +100,7 @@ export default function Hero() {
                   href={link.href}
                   className="text-terciary-bg w-fit hover:text-primary-accent"
                 >
-                  <motion.p
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                  >
-                    {link.label}
-                  </motion.p>
+                  <p>{link.label}</p>
                 </Link>
               ))}
             </div>
@@ -180,13 +108,7 @@ export default function Hero() {
         </div>
         {/* Contact */}
         <div className="flex flex-col gap-4 text-foreground-bg mt-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col sm:flex-row gap-2"
-          >
+          <div className="flex flex-col sm:flex-row gap-2">
             <h3>Email:</h3>
             <a
               className="text-terciary-bg w-fit  hover:text-secondary-accent"
@@ -194,14 +116,8 @@ export default function Hero() {
             >
               witortena@gmail.com
             </a>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col sm:flex-row gap-2"
-          >
+          </div>
+          <div className="flex flex-col sm:flex-row gap-2">
             <h3>Celular:</h3>
             <a
               className="text-terciary-bg w-fit hover:text-secondary-accent"
@@ -209,14 +125,8 @@ export default function Hero() {
             >
               +55 43 9 8413-8592
             </a>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col sm:flex-row gap-2"
-          >
+          </div>
+          <div className="flex flex-col sm:flex-row gap-2">
             <h3>Linkedin:</h3>
             <Link
               href="https://www.linkedin.com/in/witortena"
@@ -225,14 +135,8 @@ export default function Hero() {
             >
               linkedin.com/in/witortena
             </Link>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col sm:flex-row gap-2"
-          >
+          </div>
+          <div className="flex flex-col sm:flex-row gap-2">
             <h3>Github:</h3>
             <Link
               href="https://github.com/witordev"
@@ -241,7 +145,7 @@ export default function Hero() {
             >
               github.com/witordev
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
       <h1 className="text-lg sm:mb-0 mb-8 text-terciary-bg">

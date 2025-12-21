@@ -57,7 +57,9 @@ export default function Navbar() {
         <nav className="max-w-screen-xl mx-auto flex justify-between align-middle sm:px-4">
           <div className="w-full flex justify-between border-2 transition rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
             <div className="flex gap-8 sm:justify-start justify-between w-full items-center">
-              <div className="text-3xl font-bold text-primary-accent">WT_</div>
+              <div className="text-3xl font-bold text-primary-accent">
+                <Link href={"/"}>WT_</Link>
+              </div>
 
               {/* Mobile Nav */}
               <div

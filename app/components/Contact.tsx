@@ -89,8 +89,8 @@ export default function Contact() {
                   Nome
                 </motion.h1>
                 <motion.input
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ x: 20 }}
+                  whileInView={{ x: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, amount: 0.3 }}
                   className="bg-quaternary-bg p-2 w-full h-12"
@@ -112,8 +112,8 @@ export default function Contact() {
                   Email
                 </motion.h1>
                 <motion.input
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ x: 20 }}
+                  whileInView={{ x: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, amount: 0.3 }}
                   className=" bg-quaternary-bg p-2 w-full h-12"
@@ -135,8 +135,8 @@ export default function Contact() {
                   Assunto
                 </motion.h1>
                 <motion.input
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ x: 20 }}
+                  whileInView={{ x: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, amount: 0.3 }}
                   className=" bg-quaternary-bg p-2 w-full h-12"
@@ -158,8 +158,8 @@ export default function Contact() {
                   Mensagem
                 </motion.h1>
                 <motion.textarea
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ x: 20 }}
+                  whileInView={{ x: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, amount: 0.3 }}
                   className="p-2  bg-quaternary-bg w-full h-72"
