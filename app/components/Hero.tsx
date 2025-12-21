@@ -83,28 +83,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-      {/* Arrow down icon */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.3 }}
-        className="absolute sm:block bottom-20 sm:pr-8 animate-bounce"
-      >
-        <SlArrowDown
-          size={30}
-          strokeWidth={25}
-          color="2bc133"
-          className="translate-y-8"
-        />
-        <SlArrowDown
-          size={30}
-          strokeWidth={25}
-          color="2bc133"
-          className="translate-y-4"
-        />
-        <SlArrowDown size={30} strokeWidth={25} color="2bc133" />
-      </motion.div>
     </motion.section>
   );
 }
