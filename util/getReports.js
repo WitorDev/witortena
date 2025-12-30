@@ -31,12 +31,19 @@ export function getReports(category) {
   if (category === "NPI") {
     // Adjust path for deployment environment if necessary, but follow initial pattern
     reportsPath = path.join(process.cwd(), "public", "reports", "NPI");
-  } else {
+  } else if (category === "pensamento-computacional") {
     reportsPath = path.join(
       process.cwd(),
       "public",
       "reports",
       "pensamento-computacional"
+    );
+  } else if (category === "blog") {
+    reportsPath = path.join(
+      process.cwd(),
+      "public",
+      "reports",
+      "blog"
     );
   }
 

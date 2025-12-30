@@ -22,7 +22,7 @@ export default function Tech() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="text-3xl font-bold w-full text-center sm:text-left"
+          className="text-3xl font-bold w-full text-center md:text-left"
         >
           Tecnologias
         </motion.h1>

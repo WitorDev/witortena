@@ -4,6 +4,7 @@ import Image from "next/image";
 import { SlArrowDown } from "react-icons/sl";
 import hero_image from "@/public/disk.png";
 import secondary_hero_image from "@/public/laptop.png";
+import tertiary_hero_image from "@/public/post.png";
 import { motion } from "motion/react";
 
 const ubuntuMonoFont = Ubuntu_Mono({
@@ -16,7 +17,7 @@ const ubuntuFont = Ubuntu_Mono({
 });
 
 type ReportHeroSectionProps = {
-  title: string;
+  title: string | boolean;
 };
 
 export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
@@ -32,15 +33,14 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
         viewport={{ once: true, amount: 0.3 }}
         className="hidden sm:block translate-y-8 absolute saturate-100 opacity-25 z-0"
       >
-        <Image
-          alt="Computer Picture"
-          width={900}
-          src={
-            title == "Pensamento Computacional"
-              ? hero_image
-              : secondary_hero_image
-          }
-        />
+        {(() => {
+          const imageSource =
+            (title === "NPI" && hero_image) ||
+            (title === "Pensamento Computacional" && secondary_hero_image) ||
+            (title === "Blog" && tertiary_hero_image) ||
+            hero_image;
+          return <Image alt="Computer Picture" width={900} src={imageSource} />;
+        })()}
       </motion.div>
 
       <div className="relative z-10">
@@ -62,9 +62,9 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
         viewport={{ once: true, amount: 0.3 }}
         className="text-xl sm:text-5xl w-50 text-terciary-bg mt-4 sm:w-150 text-center relative z-10"
       >
-        {title == "Pensamento Computacional"
-          ? "Monitoria de alunos"
-          : "Pesquisas e estudos em grupo"}
+        {(title == "Pensamento Computacional" && "Monitoria de alunos") ||
+          (title == "NPI" && "Pesquisas e estudos em grupo") ||
+          (title == "Blog" && "Postagens e artigos")}
       </motion.h2>
       <motion.div
         initial={{ opacity: 0, y: 50 }}

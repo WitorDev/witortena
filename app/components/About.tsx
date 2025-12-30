@@ -69,7 +69,7 @@ export default function About() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true, amount: 0.3 }}
               id="paragraph"
-              className={`${ubuntuSansMonoFont.className} sm:max-w-140 text-justify leading-loose mb-4 lg:mb-0 w-full mx-auto`}
+              className={`${ubuntuSansMonoFont.className} md:max-w-140 sm:leading-loose leading-7 mb-4 lg:mb-0 w-full mx-auto`}
             >
               Sou um curioso sobre tecnologia que teve o primeiro contato com a
               programação ainda pequeno. Tudo começou com Python, e até hoje me
@@ -86,7 +86,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex gap-4 p-0 m-0 w-full md:mx-0 md:justify-normal max-w-140 flex-row mx-auto sm:translate-0 items-center sm:flex-row md:w-fit"
+            className="flex gap-4 p-0 m-0 w-full md:mx-0 md:justify-normal flex-row mx-auto sm:translate-0 items-center sm:flex-row md:w-fit"
           >
             <a
               id="github"

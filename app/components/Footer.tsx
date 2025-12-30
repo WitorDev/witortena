@@ -24,7 +24,7 @@ export default function Hero() {
       id="footer"
       className={`${ubuntuMonoFont.className} border-t-2 border-primary-bg relative min-h-screen items-center flex flex-col gap-20 sm:gap-80 pt-20`}
     >
-      <div className="max-w-screen-xl px-4 mx-auto flex flex-col w-full">
+      <div className="max-w-screen-xl px-4 mx-auto flex flex-col w-full ">
         <div className="flex sm:flex-row gap-10 sm:gap-0 flex-col w-full justify-between">
           <div className="flex flex-col">
             <div className="text-6xl font-bold text-primary-accent mb-6">
@@ -87,7 +87,7 @@ export default function Hero() {
               )}
             </div>
             <div className="flex flex-col gap-3  text-terciary-bg">
-              <h3 className="text-foreground">Relatórios</h3>
+              <option className="text-foreground">Relatórios</option>
               {[
                 { href: "/reports/NPI", label: "NPI" },
                 {
@@ -147,10 +147,10 @@ export default function Hero() {
             </Link>
           </div>
         </div>
+        <h1 className="text-lg sm:text-center sm:mt-64 mt-12 mb-6 md:mb-0 text-terciary-bg">
+          &copy; Witor Tenã {new Date().getFullYear()}
+        </h1>
       </div>
-      <h1 className="text-lg sm:mb-0 mb-8 text-terciary-bg">
-        &copy; Witor Tenã {new Date().getFullYear()}
-      </h1>
     </footer>
   );
 }

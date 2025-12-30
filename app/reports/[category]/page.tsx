@@ -27,19 +27,19 @@ export default async function Page({
 
   console.log(reportTypeURL);
 
+  let title =
+    (reportTypeURL.category === "NPI" && "Núcleo de Práticas de Informática") ||
+    (reportTypeURL.category === "pensamento-computacional" &&
+      "Pensamento Computacional") ||
+    (reportTypeURL.category === "blog" && "Blog");
+
   return (
     <div className="bg-secondary-bg">
       <div
         id="hero"
         className={`${ubuntuMonoFont.className} mx-auto relative  flex flex-col justify-center items-center`}
       >
-        <ReportHeroSection
-          title={
-            reportTypeURL.category == "NPI"
-              ? "Núcleo de Práticas de Informática"
-              : "Pensamento Computacional"
-          }
-        />
+        <ReportHeroSection title={title} />
 
         <DescriptionSection category={reportTypeURL.category} />
 
