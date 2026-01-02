@@ -47,7 +47,7 @@ export default function About() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               className="text-3xl font-bold w-full text-center md:text-left max-w-screen-xl pt-20 mx-auto"
             >
               Sobre Mim
@@ -57,7 +57,7 @@ export default function About() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               id="name"
               className={`${ubuntuSansMonoFont.className} mt-4 mb-4 text-terciary-bg w-full mx-auto text-lg  sm:text-4xl text-center md:text-left`}
             >
@@ -67,7 +67,7 @@ export default function About() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               id="paragraph"
               className={`${ubuntuSansMonoFont.className} md:max-w-140 sm:leading-loose leading-7 mb-4 lg:mb-0 w-full mx-auto`}
             >
@@ -85,7 +85,7 @@ export default function About() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="flex gap-4 p-0 m-0 w-full md:mx-0 md:justify-normal flex-row mx-auto sm:translate-0 items-center sm:flex-row md:w-fit"
           >
             <a

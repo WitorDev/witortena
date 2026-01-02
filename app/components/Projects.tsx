@@ -123,7 +123,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="text-3xl font-bold w-full text-center md:text-left"
           >
             Projetos
@@ -132,7 +132,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="hidden md:flex items-center gap-2"
           >
             <button
@@ -156,7 +156,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           ref={trackRef}
           className="hidden md:flex overflow-hidden flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide"
         >
@@ -197,7 +197,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           onClick={() => setIsOverlayOpen(true)}
           className="flex md:hidden gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer mx-auto"
         >
@@ -211,7 +211,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           onClick={() => setIsOverlayOpen(true)}
           className="hidden md:flex gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer"
         >
@@ -245,7 +245,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               onClick={() => setIsOverlayOpen(true)}
               className="flex-1 scrollbar-hide overflow-y-auto p-4 sm:p-8 md:p-12"
             >

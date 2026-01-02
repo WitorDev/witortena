@@ -57,7 +57,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               className="text-3xl font-bold w-full text-center md:text-left"
             >
               Entre em Contato
@@ -69,7 +69,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             <div className="bg-primary-accent w-full h-2 rounded-t-2xl"></div>
             <div className="bg-primary-bg rounded-b-lg">
@@ -83,7 +83,7 @@ export default function Contact() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className="text-lg"
                 >
                   Nome
@@ -92,7 +92,7 @@ export default function Contact() {
                   initial={{ x: 20 }}
                   whileInView={{ x: 0 }}
                   transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className="bg-quaternary-bg p-2 w-full h-12"
                   type="text"
                   name="user_name"
@@ -106,7 +106,7 @@ export default function Contact() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className="text-lg"
                 >
                   Email
@@ -115,7 +115,7 @@ export default function Contact() {
                   initial={{ x: 20 }}
                   whileInView={{ x: 0 }}
                   transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className=" bg-quaternary-bg p-2 w-full h-12"
                   type="email"
                   name="email"
@@ -129,7 +129,7 @@ export default function Contact() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className="text-lg"
                 >
                   Assunto
@@ -138,7 +138,7 @@ export default function Contact() {
                   initial={{ x: 20 }}
                   whileInView={{ x: 0 }}
                   transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className=" bg-quaternary-bg p-2 w-full h-12"
                   type="text"
                   name="subject"
@@ -152,7 +152,7 @@ export default function Contact() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className="text-lg"
                 >
                   Mensagem
@@ -161,7 +161,7 @@ export default function Contact() {
                   initial={{ x: 20 }}
                   whileInView={{ x: 0 }}
                   transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   className="p-2  bg-quaternary-bg w-full h-72"
                   name="message"
                   id="message"
@@ -185,7 +185,7 @@ export default function Contact() {
           initial={{ opacity: 0, x: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="flex lg:flex-col justify-around pt-8 md:pt-0 gap-8 lg:gap-0 lg:justify-normal flex-col sm:flex-row lg:pt-16 flex-wrap md:flex-nowrap"
         >
           <IconAndTitle

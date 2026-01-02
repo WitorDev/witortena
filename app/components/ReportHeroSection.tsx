@@ -30,7 +30,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="hidden sm:block translate-y-8 absolute saturate-100 opacity-25 z-0"
       >
         {(() => {
@@ -48,7 +48,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           id="title"
           className={`text-5xl max-w-screen-xl text-center sm:text-7xl font-bold text-primary-accent mt-4`}
         >
@@ -59,7 +59,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="text-xl sm:text-5xl w-50 text-terciary-bg mt-4 sm:w-150 text-center relative z-10"
       >
         {(title == "Pensamento Computacional" && "Monitoria de alunos") ||
@@ -70,7 +70,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="absolute sm:block bottom-20 sm:pr-8 animate-bounce"
       >
         <SlArrowDown

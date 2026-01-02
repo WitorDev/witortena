@@ -25,7 +25,7 @@ export default function About() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="text-3xl font-bold w-full text-center md:text-left max-w-screen-xl pt-20 mx-auto"
       >
         Graduação
@@ -35,7 +35,7 @@ export default function About() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="md:col-span-1 row-span-2 w-full h-full flex items-center justify-center md:items-start md:justify-start"
         >
           <Image src={unifil_logo} className="max-w-30" alt="Logo da UniFil" />
@@ -45,7 +45,7 @@ export default function About() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="text-lg text-center font-bold mb-2 w-full md:text-left"
           >
             Ciência da Computação
@@ -54,7 +54,7 @@ export default function About() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="mb-3 text-center md:text-left"
           >
             Centro Universitário Filadélfia -
@@ -64,7 +64,7 @@ export default function About() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="text-terciary-bg border mx-auto md:mx-0 h-fit text-center sm:text-left w-fit border-terciary-bg rounded-2xl px-4"
           >
             Fevereiro de 2025 até 2029
@@ -73,7 +73,7 @@ export default function About() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="mt-8 text-center md:text-left"
           >
             Graduando em Ciência da Computação (Bacharelado), com foco em
