@@ -74,7 +74,18 @@ export default function About() {
               Sou um curioso sobre tecnologia que teve o primeiro contato com a
               programação ainda pequeno. Tudo começou com Python, e até hoje me
               lembro da animação dos meus primeiros passos no meio da
-              programação. Desde então, nunca mais parei. O que era apenas
+              programação. Desde então, nunca mais parei. 
+            </motion.p>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.1 }}
+              id="paragraph"
+              className={`${ubuntuSansMonoFont.className} md:max-w-140 sm:leading-loose leading-7 mb-4 lg:mb-0 w-full mx-auto`}
+            >
+              O que era apenas
               curiosidade se transformou em um hábito, e agora é minha missão:
               programar, evoluir constantemente e absorver o máximo de
               conhecimento possível nesse universo em constante expansão que é o
