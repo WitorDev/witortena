@@ -19,7 +19,7 @@ export default function IconAndName({ icon, text, style }: IconAndNameProps) {
         opacity: 1,
         x: 0,
         y: 0,
-        transition: { duration: 0.1 },
+        transition: { duration: 1 },
       }}
       className="flex items-center mx-auto md:flex-row flex-col md:mx-0 gap-4 my-4 p-4 rounded-lg sm:p-0 sm:bg-background"
     >

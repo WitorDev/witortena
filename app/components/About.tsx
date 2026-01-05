@@ -28,9 +28,9 @@ export default function About() {
         className={`sm:${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative pb-20 md:flex-row-reverse flex-col-reverse flex gap-8 sm:justify-between`}
       >
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           className="z-10 mt-20 left-0 sm:mx-0 md:mx-0 md:w-fit mx-auto w-full"
         >
@@ -46,7 +46,7 @@ export default function About() {
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }}
               className="text-3xl font-bold w-full text-center md:text-left max-w-screen-xl pt-20 mx-auto"
             >
@@ -56,46 +56,47 @@ export default function About() {
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }}
               id="name"
               className={`${ubuntuSansMonoFont.className} mt-4 mb-4 text-terciary-bg w-full mx-auto text-lg  sm:text-4xl text-center md:text-left`}
             >
               Witor Tenã
             </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, amount: 0.1 }}
-              id="paragraph"
-              className={`${ubuntuSansMonoFont.className} md:max-w-140 sm:leading-loose leading-7 mb-4 lg:mb-0 w-full mx-auto`}
-            >
-              Sou um curioso sobre tecnologia que teve o primeiro contato com a
-              programação ainda pequeno. Tudo começou com Python, e até hoje me
-              lembro da animação dos meus primeiros passos no meio da
-              programação. Desde então, nunca mais parei. 
-            </motion.p>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, amount: 0.1 }}
-              id="paragraph"
-              className={`${ubuntuSansMonoFont.className} md:max-w-140 sm:leading-loose leading-7 mb-4 lg:mb-0 w-full mx-auto`}
-            >
-              O que era apenas
-              curiosidade se transformou em um hábito, e agora é minha missão:
-              programar, evoluir constantemente e absorver o máximo de
-              conhecimento possível nesse universo em constante expansão que é o
-              mundo da tecnologia.
-            </motion.p>
+
+            <div className="flex gap-4 flex-col">
+              <motion.p
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true, amount: 0.1 }}
+                id="paragraph"
+                className={`${ubuntuSansMonoFont.className} md:max-w-140 text-lg w-full mx-auto`}
+              >
+                Sou um curioso sobre tecnologia que teve o primeiro contato com
+                a programação ainda pequeno. Tudo começou com Python, e até hoje
+                me lembro da animação dos meus primeiros passos no meio da
+                programação. Desde então, nunca mais parei.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true, amount: 0.1 }}
+                id="paragraph"
+                className={`${ubuntuSansMonoFont.className} md:max-w-140 text-lg mb-4 lg:mb-0 w-full mx-auto`}
+              >
+                O que era apenas curiosidade se transformou em um hábito, e
+                agora é minha missão: programar, evoluir constantemente e
+                absorver o máximo de conhecimento possível nesse universo em
+                constante expansão que é o mundo da tecnologia.
+              </motion.p>
+            </div>
           </div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true, amount: 0.1 }}
             className="flex gap-4 p-0 m-0 w-full md:mx-0 md:justify-normal flex-row mx-auto sm:translate-0 items-center sm:flex-row md:w-fit"
           >

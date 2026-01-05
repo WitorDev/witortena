@@ -34,7 +34,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           className="md:col-span-1 row-span-2 w-full h-full flex items-center justify-center md:items-start md:justify-start"
         >
@@ -44,7 +44,7 @@ export default function About() {
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true, amount: 0.1 }}
             className="text-lg text-center font-bold mb-2 w-full md:text-left"
           >
@@ -53,7 +53,7 @@ export default function About() {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true, amount: 0.1 }}
             className="mb-3 text-center md:text-left"
           >
@@ -63,7 +63,7 @@ export default function About() {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true, amount: 0.1 }}
             className="text-terciary-bg border mx-auto md:mx-0 h-fit text-center sm:text-left w-fit border-terciary-bg rounded-2xl px-4"
           >
@@ -72,7 +72,7 @@ export default function About() {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true, amount: 0.1 }}
             className="mt-8 text-center md:text-left"
           >

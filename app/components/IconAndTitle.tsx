@@ -30,7 +30,7 @@ export default function IconAndTitle({
       <motion.div
         initial={{ opacity: 0.2, scale: 0.8 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 1 }}
         whileInView={{ opacity: 1, scale: 1 }}
         className="p-4 sm:w-fit w-full md:w-full flex gap-4 rounded-lg hover:bg-terciary-bg cursor-pointer items-center bg-primary-bg lg:mt-8"
       >

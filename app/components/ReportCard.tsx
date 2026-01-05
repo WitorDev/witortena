@@ -36,7 +36,7 @@ export default function ReportCard({
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true, amount: 0.1 }}
         className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent flex flex-col h-[500px]"
       >

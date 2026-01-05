@@ -56,7 +56,7 @@ export default function Contact() {
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }}
               className="text-3xl font-bold w-full text-center md:text-left"
             >
@@ -68,7 +68,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             viewport={{ once: true, amount: 0.1 }}
           >
             <div className="bg-primary-accent w-full h-2 rounded-t-2xl"></div>
@@ -78,21 +78,9 @@ export default function Contact() {
                 onSubmit={sendEmail}
                 className="flex px-4 md:px-8 pt-6 md:pt-12 pb-8 flex-col gap-2"
               >
-                {/* email */}
-                <motion.h1
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true, amount: 0.1 }}
-                  className="text-lg"
-                >
-                  Nome
-                </motion.h1>
-                <motion.input
-                  initial={{ x: 20 }}
-                  whileInView={{ x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.1 }}
+                {/* nome */}
+                <h1 className="text-lg">Nome</h1>
+                <input
                   className="bg-quaternary-bg p-2 w-full h-12"
                   type="text"
                   name="user_name"
@@ -102,20 +90,8 @@ export default function Contact() {
                 />
 
                 {/* email */}
-                <motion.h1
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true, amount: 0.1 }}
-                  className="text-lg"
-                >
-                  Email
-                </motion.h1>
-                <motion.input
-                  initial={{ x: 20 }}
-                  whileInView={{ x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.1 }}
+                <h1 className="text-lg">Email</h1>
+                <input
                   className=" bg-quaternary-bg p-2 w-full h-12"
                   type="email"
                   name="email"
@@ -125,20 +101,8 @@ export default function Contact() {
                 />
 
                 {/* assunto */}
-                <motion.h1
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true, amount: 0.1 }}
-                  className="text-lg"
-                >
-                  Assunto
-                </motion.h1>
-                <motion.input
-                  initial={{ x: 20 }}
-                  whileInView={{ x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.1 }}
+                <h1 className="text-lg">Assunto</h1>
+                <input
                   className=" bg-quaternary-bg p-2 w-full h-12"
                   type="text"
                   name="subject"
@@ -148,29 +112,17 @@ export default function Contact() {
                 />
 
                 {/* message */}
-                <motion.h1
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true, amount: 0.1 }}
-                  className="text-lg"
-                >
-                  Mensagem
-                </motion.h1>
-                <motion.textarea
-                  initial={{ x: 20 }}
-                  whileInView={{ x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.1 }}
+                <h1 className="text-lg">Mensagem</h1>
+                <textarea
                   className="p-2  bg-quaternary-bg w-full h-72"
                   name="message"
                   id="message"
                   required
                   placeholder="Sua mensagem..."
-                ></motion.textarea>
+                ></textarea>
 
                 <button
-                  className="w-fit cursor-pointer hover:bg-secondary-accent hover:text-black text-lg bg-primary-accent px-4 py-2 mt-2 rounded-md place-self-end"
+                  className="cursor-pointer hover:bg-secondary-accent hover:text-black text-lg bg-primary-accent px-4 py-2 mt-4 rounded-md place-self-end"
                   type="submit"
                 >
                   Enviar

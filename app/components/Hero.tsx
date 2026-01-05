@@ -37,7 +37,7 @@ export default function Hero() {
           className="mx-auto text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.1 }}
         >
           <div className="flex flex-col md:flex-row justify-center gap-4 items-center">
@@ -60,7 +60,7 @@ export default function Hero() {
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           className="text-terciary-bg text-center mx-auto text-lg sm:text-xl text-shadow-lg relative z-10"
         >
@@ -70,7 +70,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           className="flex mx-auto gap-4 sm:items-center sm:flex-row flex-col mt-4"
         >

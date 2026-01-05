@@ -20,7 +20,7 @@ export default function Tech() {
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           className="text-3xl font-bold w-full text-center md:text-left"
         >
@@ -33,7 +33,7 @@ export default function Tech() {
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }}
               className="text-lg font-bold mb-2 text-center w-full md:text-left"
             >
@@ -64,7 +64,7 @@ export default function Tech() {
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }}
               className="text-lg font-bold mt-8 sm:mt-0 mb-2 w-full text-center md:text-left"
             >
