@@ -10,6 +10,7 @@ type ProjectCardProps = {
   description: string;
   tag: string;
   link: string;
+  delayValue?: number;
 };
 
 export default function ProjectCard({
@@ -18,9 +19,16 @@ export default function ProjectCard({
   description,
   tag,
   link,
+  delayValue,
 }: ProjectCardProps) {
   return (
-    <div className="flex relative hover:border-secondary-accent max-w-160 hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:min-h-110 bg-primary-bg text-white">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: delayValue || 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      className="flex relative hover:border-secondary-accent max-w-160 hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:min-h-110 bg-primary-bg text-white"
+    >
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
           <Image
@@ -57,6 +65,6 @@ export default function ProjectCard({
           </div>
         </div>
       </a>
-    </div>
+    </motion.div>
   );
 }

@@ -3,7 +3,7 @@
 import old_computer_2 from "@/public/old_computer_2.png";
 import photo from "@/public/photo.jpg";
 // import photo from "@/public/mug_shot.jpg";
-import { motion } from "motion/react";
+import { getValueTransition, motion } from "motion/react";
 import Image from "next/image";
 import { Ubuntu_Mono } from "next/font/google";
 import { FaGithub, FaGithubSquare } from "react-icons/fa";
@@ -30,9 +30,9 @@ export default function About() {
         className={`sm:${ubuntuMonoFont.className} max-w-screen-xl justify-between gap-8 px-4 mx-auto relative pb-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between`}
       >
         <motion.div
-          initial={{ opacity: 0, y: 50, scale: 0.9 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.25 }}
           viewport={{ once: true, amount: 0.1 }}
           className="z-10 md:mt-20 md:min-w-[300px] lg:min-w-[500px] left-0 md:mx-0 md:w-fit mx-auto max-w-[450px]"
         >
@@ -44,38 +44,30 @@ export default function About() {
           />
         </motion.div>
 
-        <div className="border-2 bg-primary-bg border-terciary-accent rounded-lg mt-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          className="border-2 bg-primary-bg border-terciary-accent rounded-lg mt-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between"
+        >
           <div className="mx-auto sm:mx-0 flex flex-col justify-between items-left">
             <div className="">
-              <motion.h1
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true, amount: 0.1 }}
-                className="text-3xl flex align-middle bg-terciary-accent justify-between p-4 border-b-2 border-terciary-accent font-bold w-full text-center md:text-left max-w-screen-xl mx-auto"
-              >
+              <div className="text-3xl flex align-middle bg-terciary-accent justify-between p-4 border-b-2 border-terciary-accent font-bold w-full text-center md:text-left max-w-screen-xl mx-auto">
                 <h1>Sobre Mim</h1>
                 <h2 className="pr-1 pt-1">
                   <BiWorld />
                 </h2>
-              </motion.h1>
-              <motion.h1
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true, amount: 0.1 }}
+              </div>
+              <h1
                 id="name"
                 className={`${ubuntuSansMonoFont.className} bg-primary-bg pt-6 p-4 text-terciary-bg w-full mx-auto text-lg  sm:text-4xl text-left`}
               >
                 Witor Tenã
-              </motion.h1>
+              </h1>
 
               <div className="flex flex-col bg-primary-bg">
-                <motion.p
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1 }}
-                  viewport={{ once: true, amount: 0.1 }}
+                <p
                   id="paragraph"
                   className={`${ubuntuSansMonoFont.className} px-4 text-lg w-full mx-auto`}
                 >
@@ -83,12 +75,8 @@ export default function About() {
                   com a programação ainda pequeno. Tudo começou com Python, e
                   até hoje me lembro da animação dos meus primeiros passos no
                   meio da programação. Desde então, nunca mais parei.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1 }}
-                  viewport={{ once: true, amount: 0.1 }}
+                </p>
+                <p
                   id="paragraph"
                   className={`${ubuntuSansMonoFont.className} p-4 text-lg mb-4 lg:mb-0 w-full mx-auto`}
                 >
@@ -96,16 +84,10 @@ export default function About() {
                   agora é minha missão: programar, evoluir constantemente e
                   absorver o máximo de conhecimento possível nesse universo em
                   constante expansão que é o mundo da tecnologia.
-                </motion.p>
+                </p>
               </div>
             </div>
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-              className="flex p-4 pb-8 gap-4 m-0 w-full md:mx-0 md:justify-normal flex-row mx-auto sm:translate-0 items-center sm:flex-row md:w-fit"
-            >
+            <div className="flex p-4 pb-8 gap-4 m-0 w-full md:mx-0 md:justify-normal flex-row mx-auto sm:translate-0 items-center sm:flex-row md:w-fit">
               <a
                 id="github"
                 href="https://github.com/WitorDev/"
@@ -130,9 +112,9 @@ export default function About() {
                 </div>
                 <p className="py-1 px-2">Currículo</p>
               </a>
-            </motion.div>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

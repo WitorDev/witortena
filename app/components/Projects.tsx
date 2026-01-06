@@ -152,14 +152,7 @@ export default function Projects() {
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
-          ref={trackRef}
-          className="hidden md:flex overflow-hidden flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide"
-        >
+        <motion.div className="hidden md:flex overflow-hidden flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide">
           {projectsData.map((project, index) => (
             <div key={index} className="w-96 max-w-full md:flex-shrink-0">
               <ProjectCard
@@ -168,6 +161,7 @@ export default function Projects() {
                 description={project.description}
                 tag={project.tag}
                 link={project.link}
+                delayValue={index * 0.2}
               />
             </div>
           ))}

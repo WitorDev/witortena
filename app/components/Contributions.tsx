@@ -40,6 +40,7 @@ export default function Contributions() {
           description="Projeto que permite estudantes de escolas públicas estudar tecnologia de forma gratuita na UniFil. Participei como monitor no projeto."
           info="Monitoria de alunos"
           link="/reports/pensamento-computacional"
+          delayValue={0.25}
         />
         <div className="sm:col-span-2">
           <TextCard
@@ -47,6 +48,7 @@ export default function Contributions() {
             status="Integrante ativo"
             description="Grupo voltado ao estudo e compreensão de ferramentas de IA, com foco em aplicações práticas, pesquisa e inovação tecnológica."
             info="Pesquisas e estudos em grupo"
+            delayValue={0.35}
           />
         </div>
       </div>
