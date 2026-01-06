@@ -63,7 +63,7 @@ body {
 .button-fill {
   position: relative;
   background: transparent;
-  color: var(--color-primary-accent);
+  color: white;
   cursor: pointer;
   overflow: hidden;
   transition: color 0.2s ease;
