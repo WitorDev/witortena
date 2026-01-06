@@ -58,3 +58,36 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* Button Fill Animation */
+.button-fill {
+  position: relative;
+  background: transparent;
+  color: var(--color-primary-accent);
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.2s ease;
+  z-index: 0; /* creates stacking context */
+}
+
+/* fill layer */
+.button-fill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-primary-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1; /* stays behind text */
+}
+
+/* hover fill */
+.button-fill:hover::before {
+  transform: scaleX(1);
+}
+
+/* text color change */
+.button-fill:hover {
+  color: white;
+}

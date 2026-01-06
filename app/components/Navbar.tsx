@@ -118,7 +118,7 @@ export default function Navbar() {
             </div>
             <div>
               <Link href="/#contact">
-                <button className="hidden sm:block font-bold hover:cursor-pointer translate-x-4 text-lg py-1 px-5 border-4 rounded-full border-primary-accent hover:bg-primary-accent hover:text-black transition-all">
+                <button className="w-max button-fill hidden sm:block font-bold translate-x-4 text-lg py-1 px-5 border-2 rounded-full border-primary-accent">
                   Contato
                 </button>
               </Link>
