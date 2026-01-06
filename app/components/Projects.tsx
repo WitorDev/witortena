@@ -20,6 +20,7 @@ import { motion } from "motion/react";
 export const projectsData = [
   {
     imageSrc: barrel,
+    title: "Barrel Organization",
     tech: ["Javascript", "Html5", "Css3", "Tailwind", "React", "Framer"],
     description:
       "Uma instalação de ensino de defesa pessoal focada no ensino de sobrevivência urbana e outras habilidades.",
@@ -28,6 +29,7 @@ export const projectsData = [
   },
   {
     imageSrc: symbion,
+    title: "Symbion B2B",
     tech: ["Javascript", "Html5", "Css3", "Tailwind", "React", "Threedotjs"],
     description:
       "Uma empresa B2B especializada em desenvolvimento de software, consultoria de TI e transformação digital.",
@@ -36,6 +38,7 @@ export const projectsData = [
   },
   {
     imageSrc: notetaker,
+    title: "Note-Taker",
     tech: ["Javascript", "Html5", "Css3"],
     description:
       "Um gerenciador de tarefas simples e eficiente construído com Vanilla WEB (JS, HTML e CSS).",
@@ -44,6 +47,7 @@ export const projectsData = [
   },
   {
     imageSrc: portfoliounifil,
+    title: "Portfolio UniFil",
     tech: ["Javascript", "Html5", "Css3", "Express", "Nodedotjs", "Ejs"],
     description:
       "O meu antigo portfolio da UniFil, com relatórios de estudo e informações sobre mim e o curso de Ciência da Computação.",
@@ -52,6 +56,7 @@ export const projectsData = [
   },
   {
     imageSrc: bleedout,
+    title: "BleedOut",
     tech: ["Godotengine"],
     description:
       "Um jogo de tiro 2D top-down onde você deve avançar até o topo do mapa. Desenvolvido usando GDScript na Godot Engine.",
@@ -59,7 +64,6 @@ export const projectsData = [
     link: "https://witordev.github.io/BleedOUT/",
   },
 ];
-
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
   weight: "400",
@@ -152,7 +156,14 @@ export default function Projects() {
           </motion.div>
         </div>
 
-        <motion.div className="hidden md:flex overflow-hidden flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          ref={trackRef}
+          className="hidden md:flex overflow-hidden flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide"
+        >
           {projectsData.map((project, index) => (
             <div key={index} className="w-96 max-w-full md:flex-shrink-0">
               <ProjectCard
@@ -161,7 +172,8 @@ export default function Projects() {
                 description={project.description}
                 tag={project.tag}
                 link={project.link}
-                delayValue={index * 0.2}
+                title={project.title}
+                delayValue={index * 0.1}
               />
             </div>
           ))}
@@ -175,15 +187,24 @@ export default function Projects() {
           className="flex flex-col items-center gap-8 mt-10 md:hidden"
         >
           {mobileProjects.map((project, index) => (
-            <div key={index} className="w-96 max-w-full">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true, amount: 0.1 }}
+              key={index}
+              className="w-96 max-w-full"
+            >
               <ProjectCard
                 imageSrc={project.imageSrc}
                 tech={project.tech}
                 description={project.description}
                 tag={project.tag}
                 link={project.link}
+                title={project.title}
+                delayValue={index * 0.1}
               />
-            </div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -241,9 +262,9 @@ export default function Projects() {
               transition={{ duration: 1 }}
               viewport={{ once: true, amount: 0.1 }}
               onClick={() => setIsOverlayOpen(true)}
-              className="flex-1 scrollbar-hide overflow-y-auto p-4 sm:p-8 md:p-12"
+              className="flex-1 scrollbar-hide overflow-y-auto p-4 sm:p-8 md:p-12 w-full"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                 {projectsData.map((project, index) => (
                   <ProjectCard
                     key={index}
@@ -252,6 +273,8 @@ export default function Projects() {
                     description={project.description}
                     tag={project.tag}
                     link={project.link}
+                    title={project.title}
+                    delayValue={index * 0.1}
                   />
                 ))}
               </div>

@@ -11,6 +11,7 @@ type ProjectCardProps = {
   tag: string;
   link: string;
   delayValue?: number;
+  title: string;
 };
 
 export default function ProjectCard({
@@ -20,14 +21,15 @@ export default function ProjectCard({
   tag,
   link,
   delayValue,
+  title,
 }: ProjectCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       transition={{ duration: 1, delay: delayValue || 0 }}
       viewport={{ once: true, amount: 0.1 }}
-      className="flex relative hover:border-secondary-accent max-w-160 hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:min-h-110 bg-primary-bg text-white"
+      className="flex relative hover:border-secondary-accent w-full sm:w-fit hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:min-h-110 bg-primary-bg text-white"
     >
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
@@ -42,6 +44,7 @@ export default function ProjectCard({
         </div>
 
         <div className="p-4 h-min py-4 sm:p-4">
+          <h1 className="text-lg font-bold pb-1">{title}</h1>
           <div className="mt-2 flex gap-2 overflow-hidden">
             {tech.map((name, index) => {
               const IconComponent =
