@@ -173,7 +173,6 @@ export default function Projects() {
                 tag={project.tag}
                 link={project.link}
                 title={project.title}
-                delayValue={index * 0.1}
               />
             </div>
           ))}
@@ -202,7 +201,6 @@ export default function Projects() {
                 tag={project.tag}
                 link={project.link}
                 title={project.title}
-                delayValue={index * 0.1}
               />
             </motion.div>
           ))}
@@ -274,7 +272,6 @@ export default function Projects() {
                     tag={project.tag}
                     link={project.link}
                     title={project.title}
-                    delayValue={index * 0.1}
                   />
                 ))}
               </div>
