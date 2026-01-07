@@ -39,7 +39,7 @@ export default function DescriptionSection({
           <p>
             Os relatórios do Pensamento Computacional são uma forma de
             documentar os dias da minha extensão de monitoramento dos alunos que
-            vão até a Unifil a fim de assistir as aulas de Pensamento
+            vão até a UniFil a fim de assistir as aulas de Pensamento
             Computacional.
           </p>
           <p className="mt-4">
