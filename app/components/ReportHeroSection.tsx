@@ -32,6 +32,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
           whileInView={{ y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.1 }}
+          className="hidden md:block"
         >
           {(() => {
             const imageSource =
