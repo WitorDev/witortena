@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-62 pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-42 sm:pt-62 pb-22 sm:pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       <div className="w-full h-full absolute -z-1">
         <Image
