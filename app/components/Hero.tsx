@@ -20,12 +20,12 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-62 pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       <div className="w-full h-full absolute -z-1">
         <Image
           alt="Forest background"
-          className="nodrag w-full h-full opacity-35 object-cover"
+          className="nodrag w-full h-full scale-120 opacity-35 object-cover"
           width={900}
           src={bg_photo}
         />

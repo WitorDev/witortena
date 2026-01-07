@@ -32,7 +32,7 @@ export default function Contact() {
             if (form.current) {
               form.current.reset();
             }
-            alert("Mensagem enviada. " + result.text);
+            alert("Mensagem enviada: " + result.text);
           },
           (error) => {
             console.log(error.text);
@@ -111,7 +111,7 @@ export default function Contact() {
                 ></textarea>
 
                 <button
-                  className="cursor-pointer hover:bg-secondary-accent hover:text-black text-lg bg-primary-accent px-4 py-2 mt-4 rounded-md place-self-end"
+                  className="cursor-pointer hover:bg-primary-accent hover:text-black text-lg border-2 button-fill font-bold border-primary-accent px-4 py-2 mt-4 rounded-md place-self-end"
                   type="submit"
                 >
                   Enviar
