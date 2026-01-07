@@ -123,22 +123,10 @@ export default function Projects() {
     >
       <div className="w-full max-w-screen-xl mx-auto px-4 md:pt-24">
         <div className="flex justify-between items-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true, amount: 0.1 }}
-            className="text-3xl font-bold w-full text-center md:text-left"
-          >
+          <motion.h1 className="text-3xl font-bold w-full text-center md:text-left">
             Projetos
           </motion.h1>
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true, amount: 0.1 }}
-            className="hidden md:flex items-center gap-2"
-          >
+          <motion.div className="hidden md:flex items-center gap-2">
             <button
               onClick={() => handleScroll(-getScrollAmount())}
               aria-label="Scroll left"
@@ -157,10 +145,6 @@ export default function Projects() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
           ref={trackRef}
           className="hidden md:flex overflow-hidden flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide"
         >
@@ -178,22 +162,9 @@ export default function Projects() {
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="flex flex-col items-center gap-8 mt-10 md:hidden"
-        >
+        <motion.div className="flex flex-col items-center gap-8 mt-10 md:hidden">
           {mobileProjects.map((project, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-              key={index}
-              className="w-96 max-w-full"
-            >
+            <motion.div key={index} className="w-96 max-w-full">
               <ProjectCard
                 imageSrc={project.imageSrc}
                 tech={project.tech}
@@ -207,10 +178,6 @@ export default function Projects() {
         </motion.div>
 
         <motion.button
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
           onClick={() => setIsOverlayOpen(true)}
           className="flex md:hidden gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer mx-auto"
         >
@@ -221,10 +188,6 @@ export default function Projects() {
         </motion.button>
 
         <motion.button
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
           onClick={() => setIsOverlayOpen(true)}
           className="hidden md:flex gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer"
         >
@@ -255,10 +218,6 @@ export default function Projects() {
 
             {/* Overlay Grid (Scrollable) */}
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
               onClick={() => setIsOverlayOpen(true)}
               className="flex-1 scrollbar-hide overflow-y-auto p-4 sm:p-8 md:p-12 w-full"
             >

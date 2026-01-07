@@ -32,7 +32,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.25 }}
+          transition={{ duration: 0.3, delay: 0.25 }}
           viewport={{ once: true, amount: 0.1 }}
           className="z-10 md:mt-20 md:min-w-[300px] lg:min-w-[500px] left-0 md:mx-0 md:w-fit mx-auto max-w-[450px]"
         >
@@ -47,7 +47,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.3 }}
           viewport={{ once: true, amount: 0.1 }}
           className="border-2 bg-primary-bg border-terciary-accent rounded-lg mt-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between"
         >

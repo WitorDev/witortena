@@ -33,13 +33,7 @@ export default function ReportCard({
       href={type + "/" + date.trim().toLowerCase()}
       className="min-w-[300px] max-w-[400px]"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true, amount: 0.1 }}
-        className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent flex flex-col h-[500px]"
-      >
+      <div className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent flex flex-col h-[500px]">
         {/* fixed image container height so the layout stays aligned */}
         <div
           className={`h-[200px] w-full bg-background flex items-center justify-center overflow-hidden`}
@@ -81,7 +75,7 @@ export default function ReportCard({
             <ReactMarkdown>{paragraph}</ReactMarkdown>
           </div>
         </div>
-      </motion.div>
+      </div>
     </Link>
   );
 }

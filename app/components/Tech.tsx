@@ -3,7 +3,6 @@ import { Ubuntu_Mono } from "next/font/google";
 import IconAndName from "@/app/components/IconAndName";
 import Image from "next/image";
 import cableImage from "@/public/cable.png";
-import { motion } from "framer-motion";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -17,28 +16,16 @@ export default function Tech() {
       className={`${ubuntuMonoFont.className} justify-center max-w-screen-xl px-4 mx-auto relative pt-40 flex flex-col `}
     >
       <div className="flex w-full">
-        <motion.h1
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
-          className="text-3xl font-bold w-full text-center md:text-left"
-        >
+        <h1 className="text-3xl font-bold w-full text-center md:text-left">
           Tecnologias
-        </motion.h1>
+        </h1>
       </div>
       <div className="flex flex-col sm:flex-row mb-20 sm:mb-0">
         <div className="grid w-full justify-items-center gap-10 sm:mb-20 lg:mb-0 sm:justify-items-normal sm:grid-cols-1 sm:grid-rows-2 grid-cols-1 grid-rows-1 pt-20">
           <div className="">
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-              className="text-lg font-bold mb-2 text-center w-full md:text-left"
-            >
+            <h1 className="text-lg font-bold mb-2 text-center w-full md:text-left">
               Frontend
-            </motion.h1>
+            </h1>
             <div className="justify-center align-middle flex flex-wrap gap-4 md:gap-0 md:grid md:grid-cols-2 md:grid-rows-3 sm:gap-0 sm:grid sm:grid-cols-4 sm:grid-rows-3 auto-cols-auto">
               <IconAndName style="text-red-400" icon="Html5" text="HTML" />
               <IconAndName style="text-blue-400" icon="React" text="React" />
@@ -61,15 +48,9 @@ export default function Tech() {
             </div>
           </div>
           <div>
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-              className="text-lg font-bold mt-8 sm:mt-0 mb-2 w-full text-center md:text-left"
-            >
+            <h1 className="text-lg font-bold mt-8 sm:mt-0 mb-2 w-full text-center md:text-left">
               Backend
-            </motion.h1>
+            </h1>
             <div className="justify-center align-middle flex flex-wrap gap-4 md:gap-0 md:grid md:grid-cols-2 md:grid-rows-3 sm:gap-0 sm:grid sm:grid-cols-4 sm:grid-rows-3 auto-cols-auto">
               <IconAndName
                 style="text-green-500"

@@ -5,7 +5,7 @@ import { Ubuntu_Mono } from "next/font/google";
 import IconAndTitle from "@/app/components/IconAndTitle";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import { motion } from "motion/react";
+import {} from "react";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -53,24 +53,13 @@ export default function Contact() {
       >
         <div className="w-full">
           <div className="flex w-full mb-16">
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              viewport={{ once: true, amount: 0.1 }}
-              className="text-3xl font-bold w-full text-center md:text-left"
-            >
+            <h1 className="text-3xl font-bold w-full text-center md:text-left">
               Entre em Contato
-            </motion.h1>
+            </h1>
           </div>
 
           {/* Contact Box */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true, amount: 0.1 }}
-          >
+          <div>
             <div className="bg-primary-accent w-full h-2 rounded-t-2xl"></div>
             <div className="bg-primary-bg rounded-b-lg">
               <form
@@ -129,17 +118,11 @@ export default function Contact() {
                 </button>
               </form>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Contacts */}
-        <motion.div
-          initial={{ opacity: 0, x: 0 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.1 }}
-          className="flex lg:flex-col justify-around pt-8 md:pt-0 gap-8 lg:gap-0 lg:justify-normal flex-col sm:flex-row lg:pt-16 flex-wrap md:flex-nowrap"
-        >
+        <div className="flex lg:flex-col justify-around pt-8 md:pt-0 gap-8 lg:gap-0 lg:justify-normal flex-col sm:flex-row lg:pt-16 flex-wrap md:flex-nowrap">
           <IconAndTitle
             title="Whatsapp"
             linkUrl="https://wa.me/5543984138592"
@@ -157,7 +140,7 @@ export default function Contact() {
             linkUrl="witortena@gmail.com"
             isEmail={true}
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

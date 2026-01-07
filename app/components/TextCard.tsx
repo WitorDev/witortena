@@ -25,8 +25,8 @@ export default function TextCard({
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: delayValue || 0 }}
-      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.3, delay: delayValue || 0 }}
+      viewport={{ once: true, amount: 0.3 }}
       className={`${
         link && "hover:border-secondary-accent hover:bg-secondary-bg"
       } shadow-black/20 shadow-md border relative border-primary-accent rounded-lg bg-primary-bg group`}
