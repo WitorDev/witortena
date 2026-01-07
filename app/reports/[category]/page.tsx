@@ -6,8 +6,6 @@ import Image from "next/image";
 import hero_image from "@/public/disk.png";
 import { SlArrowDown } from "react-icons/sl";
 import ReportHeroSection from "@/app/components/ReportHeroSection";
-import DescriptionSection from "@/app/components/DescriptionSection";
-
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
   weight: "400",
@@ -41,10 +39,8 @@ export default async function Page({
       >
         <ReportHeroSection title={title} />
 
-        <DescriptionSection category={reportTypeURL.category} />
-
         {/* relatorios */}
-        <div className="flex gap-4 mt-20 mb-20 w-full sm:flex-row flex-col max-w-screen-xl px-4">
+        <div className="flex gap-4 mt-12 mb-12 w-full sm:flex-row flex-col max-w-screen-xl px-4">
           <h1 className="text-3xl font-bold">Relatórios </h1>
           <p className={`${ubuntuFont.className} text-3xl text-terciary-bg`}>
             {reportTypeURL.category == "NPI"
@@ -53,7 +49,7 @@ export default async function Page({
           </p>
         </div>
 
-        <section className="flex max-w-screen-xl px-4 sm:px-0 mb-20 flex-row flex-wrap justify-center align-middle gap-6 w-full">
+        <section className="flex max-w-screen-xl px-4 sm:px-0 mb-20 flex-row flex-wrap justify-center align-middle gap-8 w-full">
           {reports.map((reportItem) => (
             <ReportCard
               key={reportItem.folder}

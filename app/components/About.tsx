@@ -24,7 +24,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="sm:bg-gradient-to-br bg-gradient-to-b sm:to-primary-accent/10 to-primary-accent/15 from-secondary-bg border-b-2 border-b-secondary-bg border-t-2 border-primary-bg"
+      className="sm:bg-gradient-to-br bg-gradient-to-b sm:to-primary-accent/10 to-primary-accent/15 from-secondary-bg border-b-2 border-b-primary-bg border-t-2 border-primary-bg"
     >
       <section
         className={`sm:${ubuntuMonoFont.className} max-w-screen-xl justify-between gap-8 px-4 mx-auto relative pb-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between`}

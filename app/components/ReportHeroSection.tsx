@@ -1,9 +1,9 @@
 "use client";
 import { Ubuntu_Mono } from "next/font/google";
-import Image from "next/image";
-import hero_image from "@/public/disk.png";
-import secondary_hero_image from "@/public/laptop.png";
-import tertiary_hero_image from "@/public/post.png";
+import { motion } from "motion/react";
+import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
+import DescriptionSection from "@/app/components/DescriptionSection";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -19,42 +19,50 @@ type ReportHeroSectionProps = {
 };
 
 export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full sm:pt-36 sm:pb-20 pt-32 pb-8`}
+      className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full`}
     >
-      <div className="px-4 max-w-screen-xl mx-auto flex-col md:flex-row flex align-middle">
-        <div className="hidden md:block">
-          {(() => {
-            const imageSource =
-              (title === "NPI" && hero_image) ||
-              (title === "Pensamento Computacional" && secondary_hero_image) ||
-              (title === "Blog" && tertiary_hero_image) ||
-              hero_image;
-            return (
-              <Image
-                alt="Computer Picture"
-                className="sm:w-[200px] w-[140px] border-2 mx-auto"
-                src={imageSource}
-              />
-            );
-          })()}
-        </div>
-
-        <div className="">
-          <h1
-            id="title"
-            className={`text-4xl w-full max-w-screen-xl sm:text-5xl font-bold text-primary-accent mt-4`}
+      <div className="w-full flex items-center justify-center pt-33"></div>
+      <div className="max-w-screen-xl px-4 w-full mx-auto text-left">
+        <h1
+          id="title"
+          className={`text-4xl w-full max-w-screen-xl font-bold text-primary-accent mt-4`}
+        >
+          {title}
+        </h1>
+        <h2 className="text-2xl w-full mt-4 sm:w-150 z-10">
+          {(title == "Pensamento Computacional" &&
+            "Monitoria de alunos - UniFil") ||
+            (title == "Núcleo de Práticas de Informática" &&
+              "Pesquisas e estudos em grupo - UniFil") ||
+            (title == "Blog" && "Postagens e artigos")}
+        </h2>
+      </div>
+      <div className="mt-6 border-t-2 border-primary-bg py-2">
+        <div className="px-4 mx-auto max-w-screen-xl">
+          <button
+            type="button"
+            className="flex items-center gap-2 focus:outline-none cursor-pointer text-left"
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-expanded={isOpen}
           >
-            {title}
-          </h1>
-          <h2 className="text-2xl w-full sm:text-5xl text-terciary-bg mt-4 sm:w-150 z-10">
-            {(title == "Pensamento Computacional" && "Monitoria de alunos") ||
-              (title == "Núcleo de Práticas de Informática" &&
-                "Pesquisas e estudos em grupo") ||
-              (title == "Blog" && "Postagens e artigos")}
-          </h2>
+            <span> O que é o {title}?</span>
+            <motion.span
+              animate={{ rotate: isOpen ? 180 : 0 }}
+              transition={{ duration: 0.2 }}
+              className="inline-block"
+            >
+              <FaChevronDown size={14} />
+            </motion.span>
+          </button>
+          {isOpen && (
+            <div className="mt-4 mb-4 p-4 rounded">
+              <DescriptionSection category={title} />
+            </div>
+          )}
         </div>
       </div>
     </section>

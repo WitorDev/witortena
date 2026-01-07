@@ -52,7 +52,7 @@ export default function Navbar() {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className={`${ubuntuMonoFont.className} my-8 ${
           hidden && "-translate-y-24 "
-        } z-40  mx-auto px-4 w-full`}
+        } z-40  mx-auto px-4 sm:px-0 w-full`}
       >
         <nav className="max-w-screen-xl mx-auto flex justify-between align-middle sm:px-4">
           <div className="w-full flex justify-between border-2 transition rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">

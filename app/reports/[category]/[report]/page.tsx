@@ -39,7 +39,7 @@ export default async function Page({
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} mx-auto relative pt-36 flex flex-col`}
+      className={`${ubuntuMonoFont.className} mx-auto relative pt-33 flex flex-col`}
     >
       {report ? (
         <>
