@@ -24,69 +24,56 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full mx-auto sm:bg-none px-4 relative h-screen overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full sm:pt-36 sm:pb-20 pt-32 pb-8`}
     >
-      <motion.div
-        initial={{ y: 50 }}
-        whileInView={{ y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true, amount: 0.1 }}
-        className="hidden sm:block translate-y-8 absolute saturate-100 opacity-25 z-0"
-      >
-        {(() => {
-          const imageSource =
-            (title === "NPI" && hero_image) ||
-            (title === "Pensamento Computacional" && secondary_hero_image) ||
-            (title === "Blog" && tertiary_hero_image) ||
-            hero_image;
-          return <Image alt="Computer Picture" width={900} src={imageSource} />;
-        })()}
-      </motion.div>
-
-      <div className="relative z-10">
-        <motion.h1
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+      <div className="px-4 max-w-screen-xl mx-auto flex-col md:flex-row flex align-middle">
+        <motion.div
+          initial={{ y: 50 }}
+          whileInView={{ y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true, amount: 0.1 }}
-          id="title"
-          className={`text-5xl max-w-screen-xl text-center sm:text-7xl font-bold text-primary-accent mt-4`}
         >
-          {title}
-        </motion.h1>
+          {(() => {
+            const imageSource =
+              (title === "NPI" && hero_image) ||
+              (title === "Pensamento Computacional" && secondary_hero_image) ||
+              (title === "Blog" && tertiary_hero_image) ||
+              hero_image;
+            return (
+              <Image
+                alt="Computer Picture"
+                className="sm:w-[200px] w-[140px] border-2 mx-auto"
+                src={imageSource}
+              />
+            );
+          })()}
+        </motion.div>
+
+        <div className="">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            id="title"
+            className={`text-4xl w-full max-w-screen-xl sm:text-5xl font-bold text-primary-accent mt-4`}
+          >
+            {title}
+          </motion.h1>
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            className="text-2xl w-full sm:text-5xl text-terciary-bg mt-4 sm:w-150 z-10"
+          >
+            {(title == "Pensamento Computacional" && "Monitoria de alunos") ||
+              (title == "Núcleo de Práticas de Informática" &&
+                "Pesquisas e estudos em grupo") ||
+              (title == "Blog" && "Postagens e artigos")}
+          </motion.h2>
+        </div>
       </div>
-      <motion.h2
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true, amount: 0.1 }}
-        className="text-xl sm:text-5xl w-50 text-terciary-bg mt-4 sm:w-150 text-center relative z-10"
-      >
-        {(title == "Pensamento Computacional" && "Monitoria de alunos") ||
-          (title == "NPI" && "Pesquisas e estudos em grupo") ||
-          (title == "Blog" && "Postagens e artigos")}
-      </motion.h2>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true, amount: 0.1 }}
-        className="absolute sm:block bottom-20 sm:pr-8 animate-bounce"
-      >
-        <SlArrowDown
-          size={30}
-          strokeWidth={25}
-          color="2bc133"
-          className="translate-y-8"
-        />
-        <SlArrowDown
-          size={30}
-          strokeWidth={25}
-          color="2bc133"
-          className="translate-y-4"
-        />
-        <SlArrowDown size={30} strokeWidth={25} color="2bc133" />
-      </motion.div>
     </section>
   );
 }
