@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
           <h1
             id="title"
-            className={`${novaFonte.className} w-full mx-auto text-8xl leading-22 sm:leading-32 mt-4 sm:text-9xl font-bold text-primary-accent`}
+            className={`${novaFonte.className} w-full mx-auto text-5xl leading-22 sm:leading-32 mt-4 sm:text-9xl font-bold text-primary-accent`}
           >
             Witor Tenã
           </h1>
