@@ -1,15 +1,19 @@
 "use client";
+
 import Dropdown from "@/app/components/Dropdown";
 import MobileDropdown from "@/app/components/MobileDropdown";
 import { Ubuntu_Mono } from "next/font/google";
 
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState } from "react";
+
 import { CiMenuBurger } from "react-icons/ci";
 import { CgClose } from "react-icons/cg";
-import { MdArrowCircleUp, MdArrowDropDown } from "react-icons/md";
-import Link from "next/link";
+import { MdArrowCircleUp } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
+
+import Link from "next/link";
+import { animateScroll as scroll } from "react-scroll";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -26,7 +30,6 @@ export default function Navbar() {
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
 
-    // navbar hide / show
     if (previous !== undefined && latest > previous) {
       setHidden(true);
       setMobileNavActive(false);
@@ -34,7 +37,6 @@ export default function Navbar() {
       setHidden(false);
     }
 
-    // scroll-to-top indicator
     setShowScrollTop(latest > 300);
   });
 
@@ -45,7 +47,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* WT_ INDICATOR (SLIDES DOWN) */}
       {hidden && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -59,14 +60,12 @@ export default function Navbar() {
             className={`${ubuntuMonoFont.className} px-1.5 max-w-screen-xl mx-auto flex text-primary-accent`}
           >
             <div className="text-3xl mx-auto font-bold">
-              {/* <p>WT_</p> */}
               <IoMdArrowDropdown size={40} />
             </div>
           </div>
         </motion.div>
       )}
 
-      {/* NAVBAR */}
       <motion.header
         variants={navbarVariants}
         animate={hidden ? "hidden" : "visible"}
@@ -77,12 +76,10 @@ export default function Navbar() {
           <nav className="max-w-screen-xl mx-auto flex justify-between align-middle sm:px-4">
             <div className="w-full flex justify-between border-2 transition rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
               <div className="flex gap-8 sm:justify-start justify-between w-full items-center">
-                {/* LOGO */}
                 <div className="text-3xl font-bold text-primary-accent">
                   <Link href="/">WT_</Link>
                 </div>
 
-                {/* MOBILE TOGGLE */}
                 <div
                   onClick={() => setMobileNavActive(!mobileNavActive)}
                   className="sm:hidden block font-bold hover:cursor-pointer translate-x-8 py-2 px-8"
@@ -98,7 +95,6 @@ export default function Navbar() {
                   )}
                 </div>
 
-                {/* DESKTOP LINKS */}
                 <ul className="gap-4 sm:flex hidden">
                   <Dropdown
                     pageUrl="/"
@@ -135,7 +131,6 @@ export default function Navbar() {
                 </ul>
               </div>
 
-              {/* CONTACT BUTTON */}
               <div>
                 <Link href="/#contact">
                   <button className="w-max button-fill hidden sm:block font-bold translate-x-4 text-lg py-1 px-5 border-2 rounded-full border-primary-accent">
@@ -146,7 +141,6 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {/* MOBILE DROPDOWN */}
           <nav
             className={`border-2 bg-primary-bg rounded-lg border-primary-accent mt-4 max-w-screen-xl mx-auto flex-col justify-between align-middle text-lg sm:px-4 ${
               mobileNavActive ? "flex" : "hidden"
@@ -189,7 +183,6 @@ export default function Navbar() {
         </div>
       </motion.header>
 
-      {/* SCROLL TO TOP BUTTON (BOTTOM RIGHT, LAYOUT SAFE) */}
       {showScrollTop && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -200,9 +193,9 @@ export default function Navbar() {
           <div className="max-w-screen-xl mx-auto px-3 pb-2 sm:pb-10 flex justify-end">
             <button
               onClick={() =>
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
+                scroll.scrollToTop({
+                  duration: 500,
+                  smooth: "easeInOutQuart",
                 })
               }
               className="text-primary-accent cursor-pointer"
