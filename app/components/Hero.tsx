@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-34 sm:pt-62 pb-12 sm:pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-40 sm:pt-62 pb-20 sm:pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       {/* {isAtTop && (
         <motion.div
@@ -73,12 +73,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="flex flex-col-reverse gap-6 sm:gap-4">
+      <div className="flex flex-col sm:flex-col-reverse sm:gap-4">
         <h2 className="text-terciary-bg sm:mx-0 mx-auto text-sm sm:text-xl text-shadow-lg relative z-10">
           <b>Ciência da Computação - UniFil</b>
         </h2>
 
-        <div className="flex sm:mx-0 mx-auto gap-4 sm:items-center flex-row mt-4">
+        <div className="flex sm:mx-0 mx-auto gap-4 sm:items-center sm:flex-row flex-col mt-4">
           <div className="w-fit rounded-xl text-sm sm:text-md flex flex-row gap-2 items-center text-primary-accent border border-primary-accent px-2 py-1">
             <p>Desenvolvedor Backend</p>
           </div>
