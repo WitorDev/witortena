@@ -42,12 +42,24 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [isOpen]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <>
       <div className="mx-auto max-w-screen-xl px-4 w-full mb-8">
         <div
           className="mb-4 overflow-hidden w-full rounded-xl border-4 border-background cursor-zoom-in
-						h-[240px] sm:h-[380px] md:h-[520px] lg:h-[700px]"
+					h-[240px] sm:h-[380px] md:h-[520px] lg:h-[700px]"
           onClick={() => setIsOpen(true)}
         >
           <Image
@@ -87,7 +99,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
         <div className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white hover:opacity-70"
+            className="absolute z-[10000] top-4 right-4 text-white cursor-pointer hover:opacity-70"
           >
             <HiXMark size={32} />
           </button>
@@ -95,7 +107,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           {totalImages > 1 && (
             <button
               onClick={goToPrevious}
-              className="absolute cursor-pointer z-50 left-3 sm:left-6 text-white hover:opacity-70"
+              className="absolute z-[9999] cursor-pointer left-3 sm:left-6 text-white hover:opacity-70"
             >
               <HiArrowLeft size={40} />
             </button>
@@ -113,7 +125,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           {totalImages > 1 && (
             <button
               onClick={goToNext}
-              className="absolute cursor-pointer right-3 sm:right-6 text-white hover:opacity-70"
+              className="absolute z-[9999] cursor-pointer right-3 sm:right-6 text-white hover:opacity-70"
             >
               <HiArrowRight size={40} />
             </button>
