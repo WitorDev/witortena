@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-42 sm:pt-62 pb-22 sm:pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-34 sm:pt-62 pb-12 sm:pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       <div className="w-full h-full absolute -z-1">
         <Image
@@ -35,26 +35,26 @@ export default function Hero() {
           <div className="flex flex-col md:flex-row justify-center gap-4 items-center">
             <div className="border bg-primary-bg w-fit rounded-xl flex flex-row gap-3 items-center border-terciary-bg px-4 py-2">
               <div className="animate-pulse bg-primary-accent max-w-3 max-h-3 min-w-3 min-h-3 rounded-full"></div>
-              <p>Aberto a oportunidades</p>
+              <p className="text-sm sm:text-md">Aberto a oportunidades</p>
             </div>
-            <div className="flex flex-row gap-2 items-center">
+            <div className="flex text-sm sm:text-md flex-row gap-2 items-center">
               <HiLocationMarker />
               <p>Brasil - Paraná, Londrina</p>
             </div>
           </div>
           <h1
             id="title"
-            className={`${novaFonte.className} w-full mx-auto text-6xl mt-4 sm:text-9xl font-bold text-primary-accent`}
+            className={`${novaFonte.className} w-full mx-auto text-8xl leading-22 mt-4 sm:text-9xl font-bold text-primary-accent`}
           >
             Witor Tenã
           </h1>
         </div>
-        <h2 className="text-terciary-bg text-center mx-auto text-lg sm:text-xl text-shadow-lg relative z-10">
+        <h2 className="text-terciary-bg text-center mx-auto text-sm sm:text-xl text-shadow-lg relative z-10">
           Graduando em Ciência da Computação - UniFil
         </h2>
 
         <div className="flex mx-auto gap-4 sm:items-center sm:flex-row flex-col mt-4">
-          <div className="w-fit rounded-xl flex flex-row gap-2 items-center text-primary-accent border border-primary-accent px-2 py-1">
+          <div className="w-fit rounded-xl text-sm sm:text-md flex flex-row gap-2 items-center text-primary-accent border border-primary-accent px-2 py-1">
             <p>Desenvolvedor Backend</p>
           </div>
 
