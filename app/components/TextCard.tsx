@@ -29,7 +29,7 @@ export default function TextCard({
       viewport={{ once: true, amount: 0.3 }}
       className={`${
         link && "hover:border-secondary-accent hover:bg-secondary-bg"
-      } shadow-black/20 shadow-md border relative border-primary-accent rounded-lg bg-primary-bg group`}
+      } shadow-black/20 shadow-md border-2 relative border-primary-accent rounded-lg bg-primary-bg group`}
     >
       {link ? (
         <Link href={link}>
@@ -38,7 +38,7 @@ export default function TextCard({
               link && "hover:cursor-pointer"
             } flex flex-col gap-6 p-8 pb-12 justify-between h-full`}
           >
-            <div>
+            <div className="">
               <div className="flex gap-4 mb-6 flex-col">
                 <h1 className="text-lg pr-8">{title}</h1>
                 <p className="text-terciary-bg">{status}</p>
@@ -47,15 +47,15 @@ export default function TextCard({
                 <p className="text-lg">{description}</p>
               </div>
             </div>
-            <div>
+            <div className="flex flex-col gap-4">
               <p className="text-terciary-bg border w-fit border-terciary-bg rounded-2xl px-4">
                 {info}
               </p>
+              <div className="text-primary-accent flex gap-2 align-middle group-hover:text-green-500">
+                <RiExternalLinkLine size={20} />
+                <p className="">Ver mais...</p>
+              </div>
             </div>
-          </div>
-
-          <div className="absolute top-8 right-8 text-white group-hover:text-green-500">
-            <RiExternalLinkLine size={25} />
           </div>
         </Link>
       ) : (
