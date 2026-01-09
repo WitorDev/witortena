@@ -95,7 +95,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           {totalImages > 1 && (
             <button
               onClick={goToPrevious}
-              className="absolute cursor-pointer left-3 sm:left-6 text-white hover:opacity-70"
+              className="absolute cursor-pointer z-50 left-3 sm:left-6 text-white hover:opacity-70"
             >
               <HiArrowLeft size={40} />
             </button>
