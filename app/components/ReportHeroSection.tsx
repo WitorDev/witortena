@@ -25,7 +25,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
       id="hero"
       className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full`}
     >
-      <div className="w-full flex items-center justify-center pt-33"></div>
+      <div className="w-full flex items-center justify-center pt-32"></div>
       <div className="max-w-screen-xl px-4 w-full mx-auto text-left">
         <h1
           id="title"
@@ -41,8 +41,8 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
             (title == "Blog" && "Postagens e artigos")}
         </h2>
       </div>
-      <div className="mt-6 border-y-2 border-primary-bg max-w-screen-xl mx-auto py-2">
-        <div className="px-4 mx-auto max-w-screen-xl">
+      <div className="mt-6 max-w-screen-xl mx-auto">
+        <div className="px-4 mx-4 border-2 py-2 border-primary-bg">
           <button
             type="button"
             className="flex items-center gap-2 focus:outline-none cursor-pointer text-left"
@@ -65,7 +65,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
           )}
         </div>
       </div>
-      <div className="h-8 w-full"></div>
+      <div className="h-14 w-full"></div>
     </section>
   );
 }
