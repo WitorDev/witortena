@@ -24,7 +24,7 @@ export default function ProjectCard({
   title,
 }: ProjectCardProps) {
   return (
-    <div className="flex relative hover:border-secondary-accent w-full sm:w-fit hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:min-h-110 bg-primary-bg text-white">
+    <div className="flex relative transition-all hover:border-secondary-accent w-full sm:w-fit hover:bg-secondary-bg border-2 border-terciary-accent rounded-lg transiiton-all flex-col sm:min-h-110 bg-primary-bg text-white">
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
           <Image
@@ -33,7 +33,7 @@ export default function ProjectCard({
             src={imageSrc}
           />
         </div>
-        <div className="absolute right-4 top-4 hover:cursor-pointer  group-hover:text-green-500 transition-colors">
+        <div className="absolute right-4 top-4 hover:cursor-pointer transition-all group-hover:text-green-500">
           <RiExternalLinkLine size={25} />
         </div>
 

@@ -33,8 +33,7 @@ export default function ReportCard({
       href={type + "/" + date.trim().toLowerCase()}
       className="min-w-[300px] max-w-[400px]"
     >
-      <div className="bg-primary-bg rounded-lg overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent flex flex-col h-[500px]">
-        {/* fixed image container height so the layout stays aligned */}
+      <div className="bg-primary-bg rounded-lg transition-all overflow-hidden group cursor-pointer border-2 border-terciary-accent hover:border-secondary-accent flex flex-col h-[500px]">
         <div
           className={`h-[200px] w-full bg-background flex items-center justify-center overflow-hidden`}
         >
@@ -53,7 +52,6 @@ export default function ReportCard({
 
         <div className="px-4 py-6 flex flex-col flex-1">
           <div className="flex justify-between items-start mb-3">
-            {/* pushes the button area to bottom to keep same size */}
             <div className="flex justify-between w-full">
               <div className="text-lg leading-relaxed z-1">
                 <MarkdownSection
@@ -62,7 +60,7 @@ export default function ReportCard({
                 />
               </div>
               <RiExternalLinkLine
-                className="group-hover:text-green-500 z-10"
+                className="transition-all group-hover:text-green-500 z-10"
                 size={25}
               />
             </div>
@@ -70,7 +68,6 @@ export default function ReportCard({
 
           <p className="text-terciary-bg mb-3">{date.split("_")[1]}</p>
 
-          {/* pushes the button area to bottom to keep same size */}
           <div className="text-sm leading-relaxed line-clamp-[6]">
             <ReactMarkdown>{paragraph}</ReactMarkdown>
           </div>

@@ -41,7 +41,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
             (title == "Blog" && "Postagens e artigos")}
         </h2>
       </div>
-      <div className="mt-6 border-t-2 border-primary-bg py-2">
+      <div className="mt-6 border-y-2 border-primary-bg max-w-screen-xl mx-auto py-2">
         <div className="px-4 mx-auto max-w-screen-xl">
           <button
             type="button"
@@ -65,6 +65,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
           )}
         </div>
       </div>
+      <div className="h-8 w-full"></div>
     </section>
   );
 }

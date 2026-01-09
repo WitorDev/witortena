@@ -5,7 +5,12 @@ import bg_photo from "@/public/forest.jpg";
 import Image from "next/image";
 import { Quantico, Ubuntu_Mono } from "next/font/google";
 import { HiLocationMarker } from "react-icons/hi";
-import { SiNestjs, SiNextdotjs, SiPostgresql } from "react-icons/si";
+import {
+  SiNestjs,
+  SiNextdotjs,
+  SiPostgresql,
+  SiSpringboot,
+} from "react-icons/si";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -61,7 +66,7 @@ export default function Hero() {
           {/* Tech icons */}
           <div className="flex gap-4 items-center sm:justify-center mx-auto">
             <SiNextdotjs size={32} className="text-primary-accent" />
-            <SiNestjs size={32} className="text-primary-accent" />
+            <SiSpringboot size={32} className="text-primary-accent" />
             <SiPostgresql size={32} className="text-primary-accent" />
           </div>
         </div>
