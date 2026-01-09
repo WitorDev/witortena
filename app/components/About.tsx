@@ -39,7 +39,7 @@ export default function About() {
         >
           <Image
             alt="Witor Tenã"
-            className=" w-full nodrag mx-auto"
+            className="rounded-t-lg w-full nodrag mx-auto"
             width={500}
             src={photo}
           />
