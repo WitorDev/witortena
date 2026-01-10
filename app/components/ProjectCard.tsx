@@ -33,8 +33,9 @@ export default function ProjectCard({
             src={imageSrc}
           />
         </div>
-        <div className="absolute right-4 top-4 hover:cursor-pointer transition-all group-hover:text-green-500">
+        <div className="absolute right-4 flex gap-2 top-4 hover:cursor-pointer transition-all group-hover:text-green-500">
           <RiExternalLinkLine size={25} />
+          <p>Ver mais...</p>
         </div>
 
         <div className="p-4 h-min py-4 sm:p-4">
@@ -46,7 +47,7 @@ export default function ProjectCard({
               return (
                 <div key={index}>
                   {IconComponent ? (
-                    <div className="text-primary-accent">
+                    <div className="text-terciary-accent group-hover:text-primary-accent transition-all">
                       <IconComponent size={30} />
                     </div>
                   ) : null}

@@ -66,18 +66,19 @@ export default function Tech() {
                 <IconAndName icon="Css3" text="CSS" />
               </TechGroup>
 
-              <TechGroup title="Frameworks & Libraries">
+              <TechGroup title="Frameworks & Bibliotecas">
                 <IconAndName icon="React" text="React" />
                 <IconAndName icon="Tailwindcss" text="TailwindCSS" />
+                <IconAndName icon="Framer" text="Motion" />
                 <IconAndName icon="Nodedotjs" text="Node.js" />
                 <IconAndName icon="Express" text="Express" />
               </TechGroup>
 
-              <TechGroup title="Databases">
+              <TechGroup title="Bancos de Dados">
                 <IconAndName icon="Mongodb" text="MongoDB" />
               </TechGroup>
 
-              <TechGroup title="Languages">
+              <TechGroup title="Linguages de Programação">
                 <IconAndName icon="Java" text="Java" />
                 <IconAndName icon="Javascript" text="JavaScript" />
                 <IconAndName icon="Php" text="PHP" />

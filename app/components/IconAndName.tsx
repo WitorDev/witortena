@@ -18,7 +18,7 @@ export default function IconAndName({
   const IconComponent = SiIcon || FaIcon;
 
   return (
-    <div className="flex items-center gap-3 py-2.5 text-nowrap">
+    <div className="flex items-center gap-3 py-2.5">
       {IconComponent && (
         <div className={style}>
           <IconComponent size={35} />
