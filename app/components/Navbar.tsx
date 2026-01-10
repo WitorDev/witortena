@@ -30,6 +30,12 @@ export default function Navbar() {
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
 
+    // ALWAYS show navbar near top
+    if (latest < 50) {
+      setHidden(false);
+      return;
+    }
+
     if (previous !== undefined && latest > previous) {
       setHidden(true);
       setMobileNavActive(false);
@@ -194,7 +200,7 @@ export default function Navbar() {
             <button
               onClick={() =>
                 scroll.scrollToTop({
-                  duration: 500,
+                  duration: 300,
                   smooth: "easeInOutQuart",
                 })
               }

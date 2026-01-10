@@ -28,8 +28,11 @@ export default function TextCard({
       transition={{ duration: 0.3, delay: delayValue || 0 }}
       viewport={{ once: true, amount: 0.3 }}
       className={`${
-        link && "hover:border-secondary-accent hover:bg-secondary-bg"
-      } shadow-black/20 shadow-md border-2 relative border-primary-accent rounded-lg bg-primary-bg group`}
+        link &&
+        "border-primary-accent hover:bg-secondary-bg hover:border-secondary-accent"
+      }  shadow-black/20 ${
+        !link && ""
+      } shadow-md border-primary-accent border relative rounded-lg bg-primary-bg group`}
     >
       {link ? (
         <Link href={link}>

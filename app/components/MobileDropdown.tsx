@@ -24,84 +24,97 @@ export default function MobileDropdown({
 }: MobileDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
+      const target = event.target as HTMLElement;
+      if (target.closest("[data-mobile-dropdown]")) return;
+      setIsOpen(false);
     }
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const pathname = usePathname();
   return (
-    <div ref={containerRef} className="transition-all inline-block w-full">
-      <div
-        className={`flex rounded-lg py-4 w-full bg-background gap-2 text-center hover:cursor-pointer justify-center hover:text-terciary-bg ${
-          isOpen && "text-terciary-bg"
-        }`}
-        onClick={() => {
-          setIsOpen((prev) => !prev);
-        }}
+    <div
+      ref={containerRef}
+      data-mobile-dropdown
+      className={`w-full rounded-lg overflow-hidden bg-background`}
+    >
+      <button
+        type="button"
+        onClick={() => setIsOpen((prev) => !prev)}
+        className={`
+					w-full flex items-center justify-between
+					px-5 py-4 text-base font-medium
+					transition-colors
+					${isOpen ? "text-terciary-bg" : "text-foreground"}
+					hover:text-terciary-bg
+				`}
       >
-        <h1 className="text-center">{title}</h1>
-        <SlArrowDown size={15} strokeWidth={40} className="translate-y-2.5" />
-      </div>
+        <span>{title}</span>
+        <SlArrowDown
+          size={14}
+          className={`
+						transition-transform duration-200
+						${isOpen ? "rotate-180" : "rotate-0"}
+					`}
+        />
+      </button>
 
-      {isOpen && (
-        <div className="flex flex-col gap-1 pt-0 w-full items-center justify-between bg-background p-4 rounded-b-lg">
+      <div
+        className={`
+					grid transition-all duration-300 ease-out
+					${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}
+				`}
+      >
+        <div className="overflow-hidden flex flex-col divide-y divide-primary-bg">
           {options.map((option, id) => {
-            // in case is not in this page, link to the right page
             if (links && pageUrl !== pathname) {
-              if (final) {
-                return (
-                  <Link
-                    href={pageUrl + "/" + links[id] || "/"}
-                    onClick={() => {
-                      setIsOpen(false);
-                      setMobileNavbar(false);
-                    }}
-                    key={id}
-                    className="hover:text-terciary-bg mt-1 text-center hover:cursor-pointer"
-                  >
-                    {option}
-                  </Link>
-                );
-              }
               return (
                 <Link
-                  //href={`/#${link.to}`}
-                  href={pageUrl + "#" + links[id] || "/"}
+                  key={id}
+                  href={
+                    final
+                      ? pageUrl + "/" + links[id]
+                      : pageUrl + "#" + links[id]
+                  }
                   onClick={() => {
                     setIsOpen(false);
                     setMobileNavbar(false);
                   }}
-                  key={id}
-                  className="hover:text-terciary-bg mt-1 hover:cursor-pointer"
+                  className="
+										px-5 py-3 text-sm text-center
+										transition-colors
+										hover:text-terciary-bg
+										active:bg-primary-bg/10
+									"
                 >
                   {option}
                 </Link>
               );
             }
 
-            // in case is in this page, scroll to the right section
             if (links && pageUrl === pathname) {
               return (
                 <ScrollLink
+                  key={id}
+                  to={links[id]}
+                  smooth
+                  duration={600}
                   onClick={() => {
                     setIsOpen(false);
                     setMobileNavbar(false);
                   }}
-                  to={links[id]}
-                  smooth={true}
-                  duration={600}
-                  key={id}
-                  className="hover:text-terciary-bg mt-1 hover:cursor-pointer"
+                  className="
+										px-5 py-3 text-sm text-center
+										cursor-pointer
+										transition-colors
+										hover:text-terciary-bg
+										active:bg-primary-bg/10
+									"
                 >
                   {option}
                 </ScrollLink>
@@ -109,16 +122,19 @@ export default function MobileDropdown({
             }
 
             return (
-              <h1
+              <div
                 key={id}
-                className="hover:text-terciary-bg mt-1 hover:cursor-pointer"
+                className="
+									px-5 py-3 text-sm text-center
+									hover:text-terciary-bg
+								"
               >
                 {option}
-              </h1>
+              </div>
             );
           })}
         </div>
-      )}
+      </div>
     </div>
   );
 }

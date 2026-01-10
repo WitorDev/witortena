@@ -32,11 +32,27 @@ export default function Dropdown({
         setIsOpen(false);
       }
     }
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    function handleScroll() {
+      setIsOpen(false);
+    }
+
+    if (isOpen) {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
+
   const pathname = usePathname();
+
   return (
     <div
       ref={containerRef}
@@ -55,7 +71,6 @@ export default function Dropdown({
       {isOpen && (
         <div className="absolute top-full flex w-max flex-col gap-1 mt-10 border border-terciary-bg rounded-lg bg-background p-4">
           {options.map((option, id) => {
-            // in case is not in this page, link to the right page
             if (links && pageUrl !== pathname) {
               if (final) {
                 return (
@@ -69,9 +84,9 @@ export default function Dropdown({
                   </Link>
                 );
               }
+
               return (
                 <Link
-                  //href={`/#${link.to}`}
                   href={pageUrl + "#" + links[id] || "/"}
                   onClick={() => setIsOpen(false)}
                   key={id}
@@ -82,7 +97,6 @@ export default function Dropdown({
               );
             }
 
-            // in case is in this page, scroll to the right section
             if (links && pageUrl === pathname) {
               return (
                 <ScrollLink

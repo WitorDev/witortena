@@ -35,7 +35,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
           viewport={{ once: true, amount: 0.1 }}
-          className="z-10 rounded-lg border-2 border-terciary-accent h-fit md:mt-20 md:min-w-[300px] lg:min-w-[500px] left-0 md:mx-0 md:w-fit mx-auto max-w-[450px]"
+          className="z-10 rounded-lg border border-terciary-accent h-fit md:mt-20 md:min-w-[300px] lg:min-w-[500px] left-0 md:mx-0 md:w-fit mx-auto max-w-[450px]"
         >
           <Image
             alt="Witor Tenã"
@@ -44,7 +44,7 @@ export default function About() {
             src={photo}
           />
           <Link href="/#contact" className="">
-            <div className="border-t-2 border-t-terciary-accent"></div>
+            <div className="border-t border-t-terciary-accent"></div>
             <div className="text-nowrap bg-primary-bg rounded-lg h-8 sm:h-10 justify-center flex flex-row gap-3 items-center border-b-terciary-accent px-4 py-1 sm:py-2">
               <div className="animate-pulse bg-primary-accent max-w-3 max-h-3 min-w-3 min-h-3 rounded-full"></div>
               <p className="text-sm sm:text-md">Aberto a oportunidades</p>
@@ -57,7 +57,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
           viewport={{ once: true, amount: 0.1 }}
-          className="border-2 bg-primary-bg border-terciary-accent rounded-lg mt-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between"
+          className="border bg-primary-bg border-terciary-accent rounded-lg mt-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between"
         >
           <div className="mx-auto sm:mx-0 flex flex-col justify-between items-left">
             <div className="">

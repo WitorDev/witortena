@@ -20,19 +20,22 @@ type ReportHeroSectionProps = {
 
 export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section
       id="hero"
       className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full`}
     >
       <div className="w-full flex items-center justify-center pt-32"></div>
+
       <div className="max-w-screen-xl px-4 w-full mx-auto text-left">
         <h1
           id="title"
-          className={`text-4xl w-full max-w-screen-xl font-bold text-primary-accent mt-4`}
+          className="text-4xl w-full max-w-screen-xl font-bold text-primary-accent mt-4"
         >
           {title}
         </h1>
+
         <h2 className="text-2xl w-full mt-4 sm:w-150 z-10">
           {(title == "Pensamento Computacional" &&
             "Monitoria de alunos - UniFil") ||
@@ -41,30 +44,40 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
             (title == "Blog" && "Postagens e artigos")}
         </h2>
       </div>
+
       <div className="mt-6 max-w-screen-xl mx-auto">
-        <div className="px-4 mx-4 border-2 py-2 border-primary-bg">
-          <button
-            type="button"
-            className="flex items-center gap-2 focus:outline-none cursor-pointer text-left"
-            onClick={() => setIsOpen((prev) => !prev)}
+        <div
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="px-4 cursor-pointer mx-4 border-2 py-2 w-fit border-primary-bg"
+        >
+          <p
+            className="flex items-center gap-2 focus:outline-none text-left"
             aria-expanded={isOpen}
           >
             <span> O que é o {title}?</span>
+
             <motion.span
               animate={{ rotate: isOpen ? 180 : 0 }}
-              transition={{ duration: 0.2 }}
               className="inline-block"
             >
               <FaChevronDown size={14} />
             </motion.span>
-          </button>
+          </p>
+
           {isOpen && (
-            <div className="mt-4 mb-4 p-4 rounded">
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="overflow-hidden mt-4 mb-4 p-4 rounded"
+            >
               <DescriptionSection category={title} />
-            </div>
+            </motion.div>
           )}
         </div>
       </div>
+
       <div className="h-14 w-full"></div>
     </section>
   );
