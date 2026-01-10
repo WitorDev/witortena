@@ -51,7 +51,7 @@ export default function TextCard({
               </div>
               <div className="text-primary-accent flex gap-2 align-middle group-hover:text-green-500">
                 <RiExternalLinkLine size={20} />
-                <p className="">Ver mais...</p>
+                <p className="">Ver relatórios...</p>
               </div>
             </div>
             <div className="flex flex-col gap-4">

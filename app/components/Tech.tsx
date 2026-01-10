@@ -3,6 +3,7 @@ import { Ubuntu_Mono } from "next/font/google";
 import IconAndName from "@/app/components/IconAndName";
 import Image from "next/image";
 import image from "@/public/cable.png";
+import { SiSqlite } from "react-icons/si";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -12,14 +13,20 @@ const ubuntuMonoFont = Ubuntu_Mono({
 type TechGroupProps = {
   title: string;
   children: React.ReactNode;
+  style?: string;
 };
 
-function TechGroup({ title, children }: TechGroupProps) {
+function TechGroup({ title, children, style }: TechGroupProps) {
   return (
-    <div className="rounded-lg border border-terciary-bg lg:max-w-180 lg:mx-0 p-4">
-      <h2 className="text-lg font-bold ">{title}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-        {children}
+    <div className="flex gap-2 flex-col">
+      <h2 className="text font-bold bg-primary-bg translate-y-4 py-2 w-fit px-4 rounded-lg">
+        {title}
+      </h2>
+      <div
+        className={` rounded-lg px-4 py-4 bg-primary-bg "border-terciary-bg"
+          `}
+      >
+        <div className="flex flex-wrap gap-8 justify-center">{children}</div>
       </div>
     </div>
   );
@@ -37,36 +44,30 @@ export default function Tech() {
             Tecnologias
           </h1>
 
-          <div className="space-y-10">
-            <div className="rounded-lg border text-primary-accent border-terciary-bg lg:max-w-180 mb-6 lg:mx-0 p-4">
-              <h2 className="text-lg font-bold">Core Tech Stack</h2>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-                <IconAndName
-                  style="text-green-500"
-                  icon="Springboot"
-                  text="Spring Boot"
-                />
-                <IconAndName
-                  style="text-green-500"
-                  icon="Postgresql"
-                  text="PostgreSQL"
-                />
-                <IconAndName
-                  style="text-green-500"
-                  icon="Nextdotjs"
-                  text="Next.js"
-                />
+          <div className="">
+            <div className="flex flex-wrap flex-row gap-4">
+              <div className="flex gap-2 flex-col">
+                <h2 className="text font-bold bg-primary-bg translate-y-4 py-2 w-fit px-4 rounded-lg text-secondary-accent">
+                  Core Tech Stack
+                </h2>
+                <div
+                  className={` rounded-lg px-4 py-4 bg-primary-bg border-primary-accent
+                  }`}
+                >
+                  <div className="flex flex-wrap gap-8 ">
+                    <IconAndName icon="Springboot" text="Spring Boot" />
+                    <IconAndName icon="Postgresql" text="PostgreSQL" />
+                    <IconAndName icon="Nextdotjs" text="Next.js" />
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div className="space-y-6">
               <TechGroup title="Web">
                 <IconAndName icon="Html5" text="HTML" />
                 <IconAndName icon="Css3" text="CSS" />
               </TechGroup>
 
-              <TechGroup title="Frameworks & Bibliotecas">
+              <TechGroup title="Outros Frameworks & Bibliotecas">
                 <IconAndName icon="React" text="React" />
                 <IconAndName icon="Tailwindcss" text="TailwindCSS" />
                 <IconAndName icon="Framer" text="Motion" />
@@ -74,26 +75,26 @@ export default function Tech() {
                 <IconAndName icon="Express" text="Express" />
               </TechGroup>
 
-              <TechGroup title="Bancos de Dados">
-                <IconAndName icon="Mongodb" text="MongoDB" />
-              </TechGroup>
-
               <TechGroup title="Linguages de Programação">
                 <IconAndName icon="Java" text="Java" />
                 <IconAndName icon="Javascript" text="JavaScript" />
                 <IconAndName icon="Php" text="PHP" />
+                <IconAndName icon="Database" text="SQL" />
+              </TechGroup>
+              <TechGroup title="Outros Bancos de Dados">
+                <IconAndName icon="Mongodb" text="MongoDB" />
               </TechGroup>
             </div>
           </div>
         </div>
-        <div className="hidden xl:block">
+        {/* <div className="hidden xl:block mt-14">
           <Image
             src={image}
             alt="Cable illustration"
-            width={600}
+            width={420}
             className="object-contain "
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -5,11 +5,13 @@ type IconAndNameProps = {
   icon: string;
   text: string;
   style?: string;
+  highlight?: boolean;
 };
 
 export default function IconAndName({
   icon,
   text,
+  highlight,
   style = "",
 }: IconAndNameProps) {
   const SiIcon = SiIcons[`Si${icon}` as keyof typeof SiIcons];
@@ -18,10 +20,14 @@ export default function IconAndName({
   const IconComponent = SiIcon || FaIcon;
 
   return (
-    <div className="flex items-center gap-3 py-2.5">
+    <div
+      className={`flex items-center border justify-center px-4 rounded-lg  gap-3 py-2.5 min-w-32 ${
+        highlight ? "border-primary-accent" : "border-terciary-bg"
+      }`}
+    >
       {IconComponent && (
         <div className={style}>
-          <IconComponent size={35} />
+          <IconComponent size={28} />
         </div>
       )}
       <span>{text}</span>

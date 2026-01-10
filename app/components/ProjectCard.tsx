@@ -35,7 +35,7 @@ export default function ProjectCard({
         </div>
         <div className="absolute right-4 flex gap-2 top-4 hover:cursor-pointer transition-all group-hover:text-green-500">
           <RiExternalLinkLine size={25} />
-          <p>Ver mais...</p>
+          <p>Ver projeto...</p>
         </div>
 
         <div className="p-4 h-min py-4 sm:p-4">
