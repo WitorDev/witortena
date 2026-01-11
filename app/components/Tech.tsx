@@ -33,7 +33,7 @@ export default function Tech() {
   return (
     <section
       id="tech"
-      className={`${ubuntuMonoFont.className} max-w-screen-lg mb-20 px-4 mx-auto pt-32`}
+      className={`${ubuntuMonoFont.className} max-w-screen-xl mb-20 px-4 mx-auto pt-32`}
     >
       <h1 className="text-3xl font-bold mb-12 text-center md:text-left">
         Tecnologias
