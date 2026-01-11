@@ -130,16 +130,16 @@ export default function Projects() {
             <button
               onClick={() => handleScroll(-getScrollAmount())}
               aria-label="Scroll left"
-              className="p-2 rounded-full cursor-pointer border border-terciary-bg hover:bg-terciary-accent transition-colors"
+              className="p-2 rounded-full cursor-pointer border border-terciary-bg hover:bg-primary-accent transition-colors"
             >
-              <HiArrowLeft size={25} />
+              <HiArrowLeft size={25} strokeWidth={1} />
             </button>
             <button
               onClick={() => handleScroll(getScrollAmount())}
               aria-label="Scroll right"
-              className="p-2 rounded-full cursor-pointer border border-terciary-bg hover:bg-terciary-accent transition-colors"
+              className="p-2 rounded-full cursor-pointer border border-terciary-bg hover:bg-primary-accent transition-colors"
             >
-              <HiArrowRight size={25} />
+              <HiArrowRight size={25} strokeWidth={1} />
             </button>
           </motion.div>
         </div>
@@ -189,7 +189,7 @@ export default function Projects() {
 
         <motion.button
           onClick={() => setIsOverlayOpen(true)}
-          className="hidden md:flex gap-2 mt-8 text-primary-accent hover:text-secondary-accent hover:cursor-pointer"
+          className="hidden md:flex gap-2 mt-8  text-primary-accent hover:text-secondary-accent hover:cursor-pointer"
         >
           <p>Ver mais</p>
           <div className="translate-y-1.5">

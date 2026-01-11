@@ -35,14 +35,14 @@ export default async function Page({
     <div className="bg-secondary-bg">
       <div
         id="hero"
-        className={`${ubuntuMonoFont.className} mx-auto relative  flex flex-col justify-center items-center`}
+        className={`${ubuntuMonoFont.className} mx-auto relative flex flex-col justify-center items-center`}
       >
         <ReportHeroSection title={title} />
 
         {/* relatorios */}
-        <div className="flex gap-4 mt-12 mb-12 w-full sm:flex-row flex-col max-w-screen-xl px-4">
-          <h1 className="text-3xl font-bold">Relatórios </h1>
-          <p className={`${ubuntuFont.className} text-3xl text-terciary-bg`}>
+        <div className="flex gap-4 mt-12 align-middle mb-12 w-full sm:flex-row flex-col max-w-screen-xl px-4">
+          <h1 className="text-xl font-bold">Relatórios </h1>
+          <p className={`${ubuntuFont.className} text-lg text-terciary-bg`}>
             {reportTypeURL.category == "NPI"
               ? "NPI - Núcleo de Práticas de Informática"
               : "Pensamento Computacional"}

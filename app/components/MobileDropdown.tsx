@@ -50,7 +50,7 @@ export default function MobileDropdown({
 					w-full flex items-center justify-between
 					px-5 py-4 text-base font-medium
 					transition-colors
-					${isOpen ? "text-terciary-bg" : "text-foreground"}
+					${isOpen ? "text-terciary-bg border-b border-primary-bg" : "text-foreground"}
 					hover:text-terciary-bg
 				`}
       >
@@ -70,7 +70,7 @@ export default function MobileDropdown({
 					${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}
 				`}
       >
-        <div className="overflow-hidden flex flex-col divide-y divide-primary-bg">
+        <div className="overflow-hidden flex border-b border-primary-bg flex-col divide-y divide-primary-bg">
           {options.map((option, id) => {
             if (links && pageUrl !== pathname) {
               return (

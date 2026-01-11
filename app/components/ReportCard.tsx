@@ -33,7 +33,7 @@ export default function ReportCard({
       href={type + "/" + date.trim().toLowerCase()}
       className="min-w-[300px] max-w-[400px]"
     >
-      <div className="bg-primary-bg rounded-lg transition-all overflow-hidden group cursor-pointer border border-terciary-accent hover:border-secondary-accent flex flex-col h-[500px]">
+      <div className="bg-primary-bg rounded-lg transition-all overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent flex flex-col h-[500px]">
         <div
           className={`h-[200px] w-full bg-background flex items-center justify-center overflow-hidden`}
         >

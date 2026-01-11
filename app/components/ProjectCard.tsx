@@ -33,12 +33,12 @@ export default function ProjectCard({
             src={imageSrc}
           />
         </div>
-        <div className="absolute right-4 text-primary-accent group-hover:text-secondary-accent text-shadow-lg shadow-black flex gap-2 top-4 hover:cursor-pointer transition-all">
-          <RiExternalLinkLine size={25} />
-          <p>Ver projeto...</p>
-        </div>
 
         <div className="p-4 h-min py-4 sm:p-4">
+          <div className="pb-2 text-primary-accent group-hover:text-secondary-accent flex gap-2 hover:cursor-pointer transition-all">
+            <RiExternalLinkLine size={20} />
+            <p>Ver projeto...</p>
+          </div>
           <h1 className="text-lg font-bold pb-1">{title}</h1>
           <div className="mt-2 flex gap-2 overflow-hidden">
             {tech.map((name, index) => {
@@ -47,7 +47,7 @@ export default function ProjectCard({
               return (
                 <div key={index}>
                   {IconComponent ? (
-                    <div className="transition-all">
+                    <div className="transition-all text-primary-accent">
                       <IconComponent size={30} />
                     </div>
                   ) : null}

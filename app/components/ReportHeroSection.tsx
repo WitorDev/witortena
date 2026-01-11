@@ -48,7 +48,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
       <div className="mt-6 max-w-screen-xl mx-auto">
         <div
           onClick={() => setIsOpen((prev) => !prev)}
-          className="px-4 cursor-pointer mx-4 border-2 py-2 w-fit border-primary-bg"
+          className="px-4 cursor-pointer mx-4 border-2 py-2 rounded-lg w-fit border-primary-bg"
         >
           <p
             className="flex items-center gap-2 focus:outline-none text-left"
@@ -57,23 +57,17 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
             <span> O que é o {title}?</span>
 
             <motion.span
-              animate={{ rotate: isOpen ? 180 : 0 }}
-              className="inline-block"
+              className={`inline-block transition-transform duration-200
+						 ${isOpen ? "rotate-180" : "rotate-0"}`}
             >
               <FaChevronDown size={14} />
             </motion.span>
           </p>
 
           {isOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.25, ease: "easeOut" }}
-              className="overflow-hidden mt-4 mb-4 p-4 rounded"
-            >
+            <div className="overflow-hidden mt-4 mb-4 p-4 rounded">
               <DescriptionSection category={title} />
-            </motion.div>
+            </div>
           )}
         </div>
       </div>

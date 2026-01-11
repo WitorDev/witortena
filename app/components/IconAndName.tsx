@@ -30,7 +30,7 @@ export default function IconAndName({
       viewport={{ once: true, amount: 0.1 }}
       className={`${
         description && "cursor-crosshair"
-      } relative group flex items-center border justify-center px-4 rounded-lg gap-3 py-2.5 min-w-32 ${
+      } relative group flex items-center border hover:border-secondary-accent justify-center px-4 rounded-lg gap-3 py-2.5 min-w-32 ${
         highlight ? "border-primary-accent" : "border-terciary-bg"
       }`}
     >
