@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-30 sm:pt-62 pb-8 sm:pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-34 sm:pt-62 pb-12 sm:pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       {/* {isAtTop && (
         <motion.div
