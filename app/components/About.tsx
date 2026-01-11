@@ -45,7 +45,7 @@ export default function About() {
           />
           <Link href="/#contact" className="">
             <div className="border-t border-t-terciary-accent"></div>
-            <div className="text-nowrap bg-primary-bg rounded-lg h-8 sm:h-10 justify-center flex flex-row gap-3 items-center border-b-terciary-accent px-4 py-1 sm:py-2">
+            <div className="text-nowrap bg-primary-bg rounded-lg h-10 sm:h-12 justify-center flex flex-row gap-3 items-center border-b-terciary-accent px-4 py-1 sm:py-2">
               <div className="animate-pulse bg-primary-accent max-w-3 max-h-3 min-w-3 min-h-3 rounded-full"></div>
               <p className="text-sm sm:text-md">Aberto a oportunidades</p>
             </div>
