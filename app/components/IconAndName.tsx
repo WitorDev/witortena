@@ -1,5 +1,6 @@
 import * as SiIcons from "react-icons/si";
 import * as FaIcons from "react-icons/fa";
+import { motion } from "motion/react";
 
 type IconAndNameProps = {
   icon: string;
@@ -22,7 +23,11 @@ export default function IconAndName({
   const IconComponent = SiIcon || FaIcon;
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       className={`${
         description && "cursor-crosshair"
       } relative group flex items-center border justify-center px-4 rounded-lg gap-3 py-2.5 min-w-32 ${
@@ -56,6 +61,6 @@ export default function IconAndName({
           {description}
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }

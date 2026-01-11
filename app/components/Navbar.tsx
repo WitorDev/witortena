@@ -204,7 +204,7 @@ export default function Navbar() {
                   smooth: "easeInOutQuart",
                 })
               }
-              className="text-primary-accent cursor-pointer"
+              className="text-primary-accent hover:text-secondary-accent cursor-pointer"
             >
               <MdArrowCircleUp size={40} />
             </button>
