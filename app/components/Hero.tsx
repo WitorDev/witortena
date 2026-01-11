@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-40 sm:pt-62 pb-20 sm:pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
+      className={`${ubuntuMonoFont.className} mx-auto relative sm:px-4 pt-30 sm:pt-62 pb-8 sm:pb-42 overflow-hidden flex flex-col justify-center items-center text-left`}
     >
       {/* {isAtTop && (
         <motion.div
@@ -66,7 +66,7 @@ export default function Hero() {
         <div className="mx-auto text-center">
           <h1
             id="title"
-            className={`${novaFonte.className} w-full text-5xl mt-4 sm:text-9xl font-bold text-primary-accent`}
+            className={`${novaFonte.className} w-full text-8xl mt-4 sm:text-9xl font-bold text-primary-accent`}
           >
             Witor Tenã
           </h1>
@@ -74,19 +74,19 @@ export default function Hero() {
       </div>
 
       <div className="flex flex-col sm:flex-col-reverse sm:gap-4">
-        <h2 className="text-terciary-bg sm:mx-0 mx-auto text-sm sm:text-xl text-shadow-lg relative z-10">
+        <h2 className="text-terciary-bg sm:mx-0 mx-auto  sm:text-xl text-shadow-lg relative z-10">
           <b>Ciência da Computação - UniFil</b>
         </h2>
 
         <div className="flex sm:mx-0 mx-auto gap-4 sm:items-center sm:flex-row flex-col mt-4">
-          <div className="w-fit rounded-xl text-sm sm:text-md flex flex-row gap-2 items-center text-primary-accent border border-primary-accent px-2 py-1">
+          <div className="w-fit rounded-xl sm:text-md flex flex-row gap-2 items-center text-primary-accent border border-primary-accent px-2 py-1">
             <p>Desenvolvedor Backend</p>
           </div>
 
           <div className="flex gap-4 items-center sm:justify-center sm:mx-0 mx-auto">
-            <SiNextdotjs className="sm:w-8 sm:h-8 w-6 h-6 text-primary-accent" />
-            <SiSpringboot className="sm:w-8 sm:h-8 w-6 h-6 text-primary-accent" />
-            <SiPostgresql className="sm:w-8 sm:h-8 w-6 h-6 text-primary-accent" />
+            <SiNextdotjs className="w-8 h-8 text-primary-accent" />
+            <SiSpringboot className="w-8 h-8 text-primary-accent" />
+            <SiPostgresql className="w-8 h-8 text-primary-accent" />
           </div>
         </div>
       </div>
