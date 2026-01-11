@@ -24,7 +24,7 @@ export default function ProjectCard({
   title,
 }: ProjectCardProps) {
   return (
-    <div className="flex relative transition-all hover:border-secondary-accent w-full sm:w-fit hover:bg-secondary-bg border border-terciary-accent rounded-lg transiiton-all flex-col sm:min-h-110 bg-primary-bg text-white">
+    <div className="flex relative transition-all hover:border-secondary-accent w-full sm:w-fit hover:bg-secondary-bg border border-transparent rounded-lg transiiton-all flex-col sm:min-h-110 bg-primary-bg text-white">
       <a href={link} target="_blank" className="group">
         <div className="group-hover:opacity-50 transition-all">
           <Image
@@ -47,7 +47,7 @@ export default function ProjectCard({
               return (
                 <div key={index}>
                   {IconComponent ? (
-                    <div className="text-terciary-accent group-hover:text-primary-accent transition-all">
+                    <div className="transition-all">
                       <IconComponent size={30} />
                     </div>
                   ) : null}
