@@ -56,8 +56,8 @@ export default function Hero() {
       <div className="w-full h-full absolute -z-1">
         <Image
           alt="Forest background"
-          className="nodrag w-full h-full scale-140 sm:scale-120 opacity-35 object-cover"
-          width={900}
+          className="nodrag w-full h-full scale-140 sm:scale-114 opacity-35 object-cover"
+          width={1800}
           src={bg_photo}
         />
       </div>

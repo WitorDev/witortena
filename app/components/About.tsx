@@ -55,7 +55,7 @@ export default function About() {
         <motion.div className="border bg-primary-bg border-terciary-accent rounded-lg mt-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between">
           <div className="mx-auto sm:mx-0 flex flex-col justify-between items-left">
             <div className="">
-              <div className="text-3xl flex align-middle bg-terciary-accent justify-between p-4 border-b-2 border-terciary-accent font-bold w-full text-center md:text-left max-w-screen-xl mx-auto">
+              <div className="text-3xl flex align-middle bg-terciary-accent justify-between p-4 border-b-2 rounded-t-md border-terciary-accent font-bold w-full text-center md:text-left max-w-screen-xl mx-auto">
                 <h1>Sobre Mim</h1>
                 <h2 className="pr-1 pt-1">
                   <BiWorld />
