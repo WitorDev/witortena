@@ -191,12 +191,12 @@ export default function Navbar() {
 
       {showScrollTop && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="fixed bottom-0 w-full pb-4 z-50"
+          className="fixed bottom-12 right-3 xl:right-[48.55vw] w-fit z-50"
         >
-          <div className="max-w-screen-xl mx-auto px-3 pb-2 sm:pb-10 flex justify-end">
+          <div className="max-w-screen-xl mx-auto flex justify-end">
             <button
               onClick={() =>
                 scroll.scrollToTop({
@@ -204,7 +204,7 @@ export default function Navbar() {
                   smooth: "easeInOutQuart",
                 })
               }
-              className="text-primary-accent hover:text-secondary-accent cursor-pointer"
+              className="fixed bottom-12 -xl:right-3 xl:left-1/2 text-primary-accent cursor-pointer hover:text-secondary-accent xl:-translate-x-1/2  z-50"
             >
               <MdArrowCircleUp size={40} />
             </button>
