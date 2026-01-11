@@ -66,7 +66,7 @@ export default function Hero() {
         <div className="mx-auto text-center">
           <h1
             id="title"
-            className={`${novaFonte.className} w-full text-8xl mt-4 sm:text-9xl font-bold text-primary-accent`}
+            className={`${novaFonte.className} w-full text-8xl mt-4 font-bold text-primary-accent`}
           >
             Witor Tenã
           </h1>
