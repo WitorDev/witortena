@@ -34,7 +34,7 @@ export default function About() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           className="z-10 rounded-lg border border-terciary-accent h-fit md:mt-20 md:min-w-[300px] lg:min-w-[500px] left-0 md:mx-0 md:w-fit mx-auto max-w-[450px]"
         >
           <Image
@@ -52,13 +52,7 @@ export default function About() {
           </Link>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true, amount: 0.1 }}
-          className="border bg-primary-bg border-terciary-accent rounded-lg mt-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between"
-        >
+        <motion.div className="border bg-primary-bg border-terciary-accent rounded-lg mt-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between">
           <div className="mx-auto sm:mx-0 flex flex-col justify-between items-left">
             <div className="">
               <div className="text-3xl flex align-middle bg-terciary-accent justify-between p-4 border-b-2 border-terciary-accent font-bold w-full text-center md:text-left max-w-screen-xl mx-auto">
