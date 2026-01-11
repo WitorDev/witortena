@@ -33,7 +33,7 @@ export default function ProjectCard({
             src={imageSrc}
           />
         </div>
-        <div className="absolute right-4 flex gap-2 top-4 hover:cursor-pointer transition-all group-hover:text-green-500">
+        <div className="absolute right-4 text-primary-accent group-hover:text-secondary-accent text-shadow-lg shadow-black flex gap-2 top-4 hover:cursor-pointer transition-all">
           <RiExternalLinkLine size={25} />
           <p>Ver projeto...</p>
         </div>
