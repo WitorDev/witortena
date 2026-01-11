@@ -30,13 +30,7 @@ export default function About() {
       <section
         className={`sm:${ubuntuMonoFont.className} max-w-screen-xl justify-between gap-8 px-4 mx-auto relative pb-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between`}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          viewport={{ once: true, amount: 0.1 }}
-          className="z-10 rounded-lg border border-terciary-accent h-fit md:mt-20 md:min-w-[300px] lg:min-w-[500px] left-0 md:mx-0 md:w-fit mx-auto max-w-[450px]"
-        >
+        <div className="z-10 rounded-lg border border-terciary-accent h-fit md:mt-20 md:min-w-[300px] lg:min-w-[500px] left-0 md:mx-0 md:w-fit mx-auto max-w-[450px]">
           <Image
             alt="Witor Tenã"
             className="rounded-t-lg w-full nodrag mx-auto"
@@ -50,7 +44,7 @@ export default function About() {
               <p className="text-sm sm:text-md">Aberto a oportunidades</p>
             </div>
           </Link>
-        </motion.div>
+        </div>
 
         <motion.div className="border bg-primary-bg border-terciary-accent rounded-lg mt-20 md:flex-row-reverse flex-col-reverse flex sm:justify-between">
           <div className="mx-auto sm:mx-0 flex flex-col justify-between items-left">
