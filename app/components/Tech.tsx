@@ -16,7 +16,7 @@ type TechGroupProps = {
 function TechGroup({ title, children }: TechGroupProps) {
   return (
     <div className="flex gap-2 flex-col w-full max-w-3xl">
-      <h2 className="font-bold bg-primary-bg translate-y-4 py-2 px-4 rounded-lg w-fit">
+      <h2 className="font-bold text-center sm:text-left bg-primary-bg translate-y-4 py-2 px-4 rounded-lg w-full sm:w-fit">
         {title}
       </h2>
 
@@ -41,7 +41,7 @@ export default function Tech() {
 
       <div className="flex flex-wrap gap-8">
         <div className="flex gap-2 flex-col w-full max-w-3xl">
-          <h2 className="font-bold bg-primary-bg translate-y-4 py-2 px-4 rounded-lg w-fit text-secondary-accent">
+          <h2 className="font-bold bg-primary-bg translate-y-4 py-2 px-4 rounded-lg w-full text-center sm:text-left sm:w-fit text-secondary-accent">
             Core Tech Stack
           </h2>
 
