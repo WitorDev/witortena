@@ -3,6 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import { Ubuntu_Mono } from "next/font/google";
 import { usePathname } from "next/navigation";
+import FunPhysics from "@/app/components/FunPhysics";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ const UbuntuSansMonoFont = Ubuntu_Sans_Mono({
   weight: "400",
 });
 
-export default function Hero() {
+export default function Footer() {
   const pathname = usePathname();
   return (
     <footer
@@ -147,9 +148,12 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <h1 className="text-lg sm:text-center sm:mt-64 mt-12 mb-6 md:mb-0 text-terciary-bg">
+        <h1 className="text-lg sm:text-center mt-8 text-terciary-bg">
           &copy; Witor Tenã {new Date().getFullYear()}
         </h1>
+        <div className="mt-8 h-20">
+          <FunPhysics />
+        </div>
       </div>
     </footer>
   );
