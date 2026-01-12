@@ -103,7 +103,13 @@ export default async function Page({ params }: { params: { id: string } }) {
                   <div key={index}>
                     <IconAndNameServer
                       icon={name}
-                      text={name.replace("dot", ".")}
+                      text={name
+                        .replace("Godotengine", "GODOT Engine")
+                        .replace("Html", "HTML")
+                        .replace("Css", "CSS")
+                        .replace("css", "CSS")
+                        .replace("Ejs", "EJS")
+                        .replace("dot", ".")}
                     />
                   </div>
                 );
