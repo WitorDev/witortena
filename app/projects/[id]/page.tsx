@@ -46,7 +46,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       className={`${ubuntuMonoFont.className} pt-32 max-w-screen-xl mx-auto px-4 mb-20`}
     >
       <div className="flex flex-col gap-10">
-        <div className="items-start flex gap-8 justify-between">
+        <div className="items-start flex flex-col-reverse sm:flex-row gap-2 sm:gap-8 justify-between">
           <div className="flex flex-col gap-4">
             <h1 className="text-3xl font-bold">{project.title}</h1>
             <div className="flex gap-2">
@@ -60,11 +60,15 @@ export default async function Page({ params }: { params: { id: string } }) {
               ))}
             </div>
           </div>
-          <Link href={"/#projects"}>
-            <div className="flex gap-1 hover:text-secondary-accent">
-              <BsArrowLeftShort size={25} />
-              <p>Voltar aos Projetos</p>
-            </div>
+          <Link
+            href="/#projects"
+            className="group flex items-center gap-1 w-fit text-sm text-muted-foreground hover:text-secondary-accent transition-colors"
+          >
+            <BsArrowLeftShort
+              size={22}
+              className="group-hover:-translate-x-1 transition-transform"
+            />
+            <span>Voltar ao início</span>
           </Link>
         </div>
 
