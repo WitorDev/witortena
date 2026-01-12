@@ -88,10 +88,13 @@ export default function About() {
                 id="github"
                 href="https://github.com/WitorDev/"
                 target="_blank"
-                className="text-primary-accent flex items-center justify-between hover:cursor-pointer hover:text-secondary-accent font-bold"
+                className="text-primary-accent group flex items-center justify-between hover:cursor-pointer hover:text-secondary-accent font-bold"
               >
                 <div className="flex justify-center align-middle">
-                  <FaGithub size={30} className="" />
+                  <FaGithub
+                    size={24}
+                    className="group-hover:-translate-y-1 transition-all"
+                  />
                 </div>
                 <p className="py-1 px-2">Github</p>
               </a>
@@ -101,10 +104,13 @@ export default function About() {
                 rel="noopener noreferrer"
                 href="/curriculum.pdf"
                 download={"Curriculum_Witor_Tenã"}
-                className="text-primary-accent flex ml-4 sm:ml-0 items-center justify-between hover:cursor-pointer hover:text-secondary-accent font-bold"
+                className="text-primary-accent flex group ml-4 sm:ml-0 items-center justify-between hover:cursor-pointer hover:text-secondary-accent font-bold"
               >
                 <div className="flex justify-center align-middle">
-                  <HiDocumentDownload size={36} className="" />
+                  <HiDocumentDownload
+                    size={26}
+                    className="group-hover:-translate-y-1 transition-all"
+                  />
                 </div>
                 <p className="py-1 px-2">Currículo</p>
               </a>

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { motion } from "motion/react";
+import { CiTextAlignRight } from "react-icons/ci";
+import { IoDocumentTextSharp } from "react-icons/io5";
 
 type TextCardProps = {
   title: string;
@@ -50,7 +52,10 @@ export default function TextCard({
                 <p className="text-lg">{description}</p>
               </div>
               <div className="text-primary-accent flex gap-2 align-middle group-hover:text-green-500">
-                <RiExternalLinkLine size={20} />
+                <IoDocumentTextSharp
+                  className="group-hover:-translate-y-1 transition-all"
+                  size={20}
+                />
                 <p className="">Ver relatórios...</p>
               </div>
             </div>

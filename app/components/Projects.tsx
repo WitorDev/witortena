@@ -5,6 +5,10 @@ import { useRef } from "react";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi2";
 import { motion } from "motion/react";
 import { projectsData } from "@/app/data/projectsData";
+import Link from "next/link";
+import { BsArrowLeftShort } from "react-icons/bs";
+import { BiBlock } from "react-icons/bi";
+import { LuBlocks } from "react-icons/lu";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -80,6 +84,17 @@ export default function Projects() {
             </motion.div>
           ))}
         </motion.div>
+
+        <Link
+          href="/projects"
+          className="group mt-8 sm:mx-0 mx-auto text-primary-accent flex items-center gap-1 w-fit text-sm text-muted-foreground hover:text-secondary-accent transition-colors"
+        >
+          <LuBlocks
+            size={22}
+            className="mr-1 group-hover:-translate-y-1 transition-transform"
+          />
+          <span>Ver projetos</span>
+        </Link>
       </div>
     </section>
   );
