@@ -31,7 +31,7 @@ export default function Navbar() {
     const previous = scrollY.getPrevious();
 
     // ALWAYS show navbar near top
-    if (latest < 50) {
+    if (latest < 30) {
       setHidden(false);
       return;
     }

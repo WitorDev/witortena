@@ -31,12 +31,12 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
       <div className="max-w-screen-xl px-4 w-full mx-auto text-left">
         <h1
           id="title"
-          className="text-4xl w-full max-w-screen-xl font-bold text-primary-accent mt-4"
+          className="text-3xl w-full max-w-screen-xl font-bold text-primary-accent"
         >
           {title}
         </h1>
 
-        <h2 className="text-2xl w-full mt-4 sm:w-150 z-10">
+        <h2 className="text-xl w-full mt-4 sm:w-150 z-10">
           {(title == "Pensamento Computacional" &&
             "Monitoria de alunos - UniFil") ||
             (title == "Núcleo de Práticas de Informática" &&
@@ -54,7 +54,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
             className="flex items-center gap-2 focus:outline-none text-left"
             aria-expanded={isOpen}
           >
-            <span> O que é o {title}?</span>
+            <span>O que é o {title}?</span>
 
             <motion.span
               className={`inline-block transition-transform duration-200
@@ -72,7 +72,7 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
         </div>
       </div>
 
-      <div className="h-14 w-full"></div>
+      <div className="h-8 w-full"></div>
     </section>
   );
 }

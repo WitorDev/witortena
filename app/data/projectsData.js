@@ -1,51 +1,69 @@
+import project1 from "@/public/project1.png";
+import portfoliounifil from "@/public/projectImg/portfolio-unifil.png";
+import barrel from "@/public/projectImg/barrel.png";
+import notetaker from "@/public/projectImg/notetaker.png";
+import bleedout from "@/public/projectImg/bleedout.png";
+import symbion from "@/public/projectImg/symbion.png";
+
 export const projectsData = [
   {
-    imageSrc: project1,
-    tech: ["Javascript", "React"],
+    id: 1,
+    imageSrc: barrel,
+    title: "Barrel Organization",
+    tech: ["Javascript", "Html5", "Css3", "Tailwindcss", "React", "Framer"],
     description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
-    tag: "Frontend",
-    imgSrc: "/projectImg/barrel.png",
-    link: "https://google.com",
+      "Uma instalação de ensino de defesa pessoal focada no ensino de sobrevivência urbana e outras habilidades.",
+    report:
+      "Este projeto foi desenvolvido como uma landing page moderna utilizando React para componentização e reutilização de UI. O Tailwindcss CSS foi escolhido para acelerar o desenvolvimento e garantir um layout responsivo e consistente. JavaScript foi utilizado para lógica de interação, enquanto o Framer Motion (motion.dev) adiciona animações suaves e micro-interações, melhorando a experiência do usuário. HTML e CSS garantem a base semântica e estrutural da aplicação.",
+    tags: ["Frontend"],
+    link: "https://barrelorganization.netlify.app/home",
   },
   {
-    imageSrc: project1,
-    tech: ["Typescript", "Nextdotjs"],
+    id: 2,
+    imageSrc: symbion,
+    title: "Symbion B2B",
+    tech: ["Javascript", "Html5", "Css3", "Tailwindcss", "React", "Threedotjs"],
     description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
-    tag: "Frontend",
-    link: "https://google.com",
+      "Uma empresa B2B especializada em desenvolvimento de software, consultoria de TI e transformação digital.",
+    report:
+      "O site foi construído com React para facilitar a criação de seções reutilizáveis e escaláveis. Tailwindcss CSS foi utilizado para manter consistência visual e responsividade. Three.js foi integrado para criar elementos 3D interativos, reforçando a identidade visual da marca. JavaScript coordena a lógica de renderização e interação, enquanto HTML e CSS fornecem a base estrutural.",
+    tags: ["Frontend"],
+    link: "https://symbion.netlify.app/",
   },
   {
-    imageSrc: project1,
-    tech: ["Python", "Django"],
+    id: 3,
+    imageSrc: notetaker,
+    title: "Note-Taker",
+    tech: ["Javascript", "Html5", "Css3"],
     description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
-    tag: "Frontend",
-    link: "https://google.com",
+      "Um gerenciador de tarefas simples e eficiente construído com Vanilla WEB (JS, HTML e CSS).",
+    report:
+      "Este projeto foi desenvolvido utilizando apenas JavaScript, HTML e CSS, sem frameworks, com o objetivo de reforçar os fundamentos da web. JavaScript é responsável pela lógica de criação, remoção e persistência das tarefas. HTML fornece a estrutura semântica da aplicação, enquanto CSS é usado para estilização e organização visual.",
+    tags: ["Frontend"],
+    link: "https://witordev.github.io/Note-Taker/",
   },
   {
-    imageSrc: project1,
-    tech: ["Javascript", "Springboot"],
+    id: 4,
+    imageSrc: portfoliounifil,
+    title: "Portfólio UniFil",
+    tech: ["Javascript", "Html5", "Css3", "Express", "Nodedotjs", "Ejs"],
     description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
-    tag: "Frontend",
-    link: "https://google.com",
+      "O meu antigo portfolio da UniFil, com relatórios de estudo e informações sobre mim e o curso de Ciência da Computação.",
+    report:
+      "Este projeto combina frontend e backend. O backend foi desenvolvido com Node.js e Express para gerenciamento de rotas e lógica do servidor. O EJS foi utilizado como template engine para renderizar páginas dinâmicas no servidor. JavaScript coordena a lógica geral da aplicação, enquanto HTML e CSS são responsáveis pela estrutura e estilização.",
+    tags: ["Frontend", "Backend"],
+    link: "https://portfolio-unifil.onrender.com/",
   },
   {
-    imageSrc: project1,
-    tech: ["C", "Dotnet"],
+    id: 5,
+    imageSrc: bleedout,
+    title: "BleedOut",
+    tech: ["Godotengine"],
     description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
-    tag: "Frontend",
-    link: "https://google.com",
-  },
-  {
-    imageSrc: project1,
-    tech: ["Php", "Laravel"],
-    description:
-      "Website de uma organização ficticia com animações dinâmicas e interação do usuário.",
-    tag: "Frontend",
-    link: "https://google.com",
+      "Um jogo de tiro 2D top-down onde você deve avançar até o topo do mapa. Desenvolvido usando GDScript na Godot Engine.",
+    report:
+      "O jogo foi desenvolvido utilizando a Godot Engine, escolhida por sua eficiência em jogos 2D e facilidade de prototipação. A lógica do jogo foi implementada em GDScript, permitindo controle de movimentação, colisões e mecânicas de combate. A engine cuida do sistema de cenas, física e renderização.",
+    tags: ["Game Dev"],
+    link: "https://witordev.github.io/BleedOUT/",
   },
 ];

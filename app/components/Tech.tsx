@@ -153,7 +153,7 @@ export default function Tech() {
           <IconAndName
             icon="Linux"
             text="Linux"
-            description="Gerenciamento de Sistemas, Ambiente Linux, terminal, pacotes e workflow de desenvolvimento..."
+            description="Gerenciamento de Sistemas, Ambiente Linux, terminal. Eu uso Ubuntu (Omakub) Inclusive..."
           />
           <IconAndName
             icon="Postman"

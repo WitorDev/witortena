@@ -40,9 +40,9 @@ export default async function Page({
         <ReportHeroSection title={title} />
 
         {/* relatorios */}
-        <div className="flex gap-4 mt-12 align-middle mb-12 w-full sm:flex-row flex-col max-w-screen-xl px-4">
+        <div className="flex gap-4 mt-8 align-middle mb-8 w-full sm:flex-row flex-col max-w-screen-xl px-4">
           <h1 className="text-xl font-bold">Relatórios </h1>
-          <p className={`${ubuntuFont.className} text-lg text-terciary-bg`}>
+          <p className={`${ubuntuFont.className} text-xl text-terciary-bg`}>
             {reportTypeURL.category == "NPI"
               ? "NPI - Núcleo de Práticas de Informática"
               : "Pensamento Computacional"}

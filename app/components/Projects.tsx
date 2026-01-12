@@ -1,12 +1,6 @@
 "use client";
 import { Ubuntu_Mono } from "next/font/google";
 import ProjectCard from "@/app/components/ProjectCard";
-import project1 from "@/public/project1.png";
-import portfoliounifil from "@/public/projectImg/portfolio-unifil.png";
-import barrel from "@/public/projectImg/barrel.png";
-import notetaker from "@/public/projectImg/notetaker.png";
-import bleedout from "@/public/projectImg/bleedout.png";
-import symbion from "@/public/projectImg/symbion.png";
 import { useRef, useState, useEffect, useCallback } from "react"; // Added useCallback
 import {
   HiArrowUpRight,
@@ -16,54 +10,8 @@ import {
 } from "react-icons/hi2";
 import { SiThreedotjs } from "react-icons/si";
 import { motion } from "motion/react";
+import { projectsData } from "@/app/data/projectsData";
 
-export const projectsData = [
-  {
-    imageSrc: barrel,
-    title: "Barrel Organization",
-    tech: ["Javascript", "Html5", "Css3", "Tailwind", "React", "Framer"],
-    description:
-      "Uma instalação de ensino de defesa pessoal focada no ensino de sobrevivência urbana e outras habilidades.",
-    tag: "Frontend",
-    link: "https://barrelorganization.netlify.app/home",
-  },
-  {
-    imageSrc: symbion,
-    title: "Symbion B2B",
-    tech: ["Javascript", "Html5", "Css3", "Tailwind", "React", "Threedotjs"],
-    description:
-      "Uma empresa B2B especializada em desenvolvimento de software, consultoria de TI e transformação digital.",
-    tag: "Frontend",
-    link: "https://symbion.netlify.app/",
-  },
-  {
-    imageSrc: notetaker,
-    title: "Note-Taker",
-    tech: ["Javascript", "Html5", "Css3"],
-    description:
-      "Um gerenciador de tarefas simples e eficiente construído com Vanilla WEB (JS, HTML e CSS).",
-    tag: "Frontend",
-    link: "https://witordev.github.io/Note-Taker/",
-  },
-  {
-    imageSrc: portfoliounifil,
-    title: "Portfólio UniFil",
-    tech: ["Javascript", "Html5", "Css3", "Express", "Nodedotjs", "Ejs"],
-    description:
-      "O meu antigo portfolio da UniFil, com relatórios de estudo e informações sobre mim e o curso de Ciência da Computação.",
-    tag: "Frontend | Backend",
-    link: "https://portfolio-unifil.onrender.com/",
-  },
-  {
-    imageSrc: bleedout,
-    title: "BleedOut",
-    tech: ["Godotengine"],
-    description:
-      "Um jogo de tiro 2D top-down onde você deve avançar até o topo do mapa. Desenvolvido usando GDScript na Godot Engine.",
-    tag: "Game Dev",
-    link: "https://witordev.github.io/BleedOUT/",
-  },
-];
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
   weight: "400",
@@ -150,14 +98,7 @@ export default function Projects() {
         >
           {projectsData.map((project, index) => (
             <div key={index} className="w-96 max-w-full md:flex-shrink-0">
-              <ProjectCard
-                imageSrc={project.imageSrc}
-                tech={project.tech}
-                description={project.description}
-                tag={project.tag}
-                link={project.link}
-                title={project.title}
-              />
+              <ProjectCard {...project} />
             </div>
           ))}
         </motion.div>
@@ -165,14 +106,7 @@ export default function Projects() {
         <motion.div className="flex flex-col items-center gap-8 mt-10 md:hidden">
           {mobileProjects.map((project, index) => (
             <motion.div key={index} className="w-96 max-w-full">
-              <ProjectCard
-                imageSrc={project.imageSrc}
-                tech={project.tech}
-                description={project.description}
-                tag={project.tag}
-                link={project.link}
-                title={project.title}
-              />
+              <ProjectCard {...project} />
             </motion.div>
           ))}
         </motion.div>
@@ -223,15 +157,7 @@ export default function Projects() {
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                 {projectsData.map((project, index) => (
-                  <ProjectCard
-                    key={index}
-                    imageSrc={project.imageSrc}
-                    tech={project.tech}
-                    description={project.description}
-                    tag={project.tag}
-                    link={project.link}
-                    title={project.title}
-                  />
+                  <ProjectCard key={index} {...project} />
                 ))}
               </div>
             </motion.div>
