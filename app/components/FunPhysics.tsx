@@ -398,7 +398,7 @@ export default function PhysicsSection({
           Physics Playground
         </h2>
         <p className="text-sm text-slate-300 opacity-75">
-          Toss the shapes around!
+          Jogue as formas por aí!
         </p>
       </div>
     </div>
