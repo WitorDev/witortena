@@ -21,6 +21,7 @@ const TECH_COLORS: Record<string, string> = {
   sql: "#7A7A7A",
   mongodb: "#4F8A5F",
   prisma: "#7A7FB0",
+  springboot: "#6DBA4A",
 
   // Languages / Others
   java: "#C25F5F",
@@ -42,6 +43,10 @@ const TECH_COLORS: Record<string, string> = {
 const TECH_ALIASES: Record<string, string> = {
   js: "javascript",
   javascript: "javascript",
+
+  spring: "springboot",
+  springboot: "springboot",
+  "spring-boot": "springboot",
 
   html: "html",
   html5: "html",

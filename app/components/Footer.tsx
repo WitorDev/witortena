@@ -148,12 +148,12 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <h1 className="text-lg sm:text-center mt-8 text-terciary-bg">
+        <h1 className="text-lg sm:text-center mt-8 sm:pt-20 text-terciary-bg">
           &copy; Witor Tenã {new Date().getFullYear()}
         </h1>
-        <div className="mt-8 h-20">
+        {/* <div className="mt-8 h-20">
           <FunPhysics />
-        </div>
+        </div> */}
       </div>
     </footer>
   );
