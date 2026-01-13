@@ -76,13 +76,16 @@ export default function Projects() {
               <ProjectCard {...project} />
             </div>
           ))}
-          <div className="flex group hover:text-secondary-accent gap-4 min-w-96 items-center justify-center transition-all hover:border-secondary-accent h-full w-full sm:w-fit hover:bg-secondary-bg rounded-lg transiiton-all flex-col sm:min-h-110 border-12 bg-secondary-bg/50 border-primary-bg text-white cursor-pointer">
-            <TbBlocks
-              size={100}
-              className="group-hover:-translate-y-4 transition-all"
-            />
-            <p>Ver outros projetos</p>
-          </div>
+
+          <Link href={"/projects"}>
+            <div className="flex group hover:text-secondary-accent gap-4 min-w-96 items-center justify-center transition-all hover:border-secondary-accent h-full w-full sm:w-fit hover:bg-secondary-bg rounded-lg transiiton-all flex-col sm:min-h-110 border-12 bg-secondary-bg/50 border-primary-bg text-white cursor-pointer">
+              <TbBlocks
+                size={100}
+                className="group-hover:-translate-y-4 transition-all"
+              />
+              <p>Ver outros projetos</p>
+            </div>
+          </Link>
         </motion.div>
 
         {/* Mobile list */}

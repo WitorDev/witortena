@@ -43,17 +43,22 @@ export default function ProjectCard({
             {tech.map((name, index) => {
               const IconComponent =
                 SiIcons[`Si${name}` as keyof typeof SiIcons];
+
+              if (!IconComponent) return null;
+
               return (
-                <div key={index}>
-                  {IconComponent ? (
-                    <div className="transition-all text-primary-accent">
-                      <IconComponent size={30} />
-                    </div>
-                  ) : null}
+                <div
+                  key={index}
+                  className="transition-all"
+                  style={{ color: getColorForTech(name) }}
+                  title={name}
+                >
+                  <IconComponent size={30} />
                 </div>
               );
             })}
           </div>
+
           <div className="flex flex-col justify-between">
             <p className="mt-4 ">{description}</p>
             <div className="flex gap-2 overflow-clip max-w-78">

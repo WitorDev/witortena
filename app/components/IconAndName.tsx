@@ -1,6 +1,7 @@
 import * as SiIcons from "react-icons/si";
 import * as FaIcons from "react-icons/fa";
 import { motion } from "motion/react";
+import getColorForTech from "@/util/getColorForTech";
 
 type IconAndNameProps = {
   icon: string;
@@ -15,6 +16,7 @@ export default function IconAndName({
   text,
   description,
   highlight,
+
   style = "",
 }: IconAndNameProps) {
   const SiIcon = SiIcons[`Si${icon}` as keyof typeof SiIcons];
@@ -36,7 +38,7 @@ export default function IconAndName({
     >
       {IconComponent && (
         <div className={style}>
-          <IconComponent size={28} />
+          <IconComponent size={28} style={{ color: getColorForTech(text) }} />
         </div>
       )}
 

@@ -9,6 +9,7 @@ import {
   BsArrowLeftCircle,
   BsArrowLeftShort,
 } from "react-icons/bs";
+import { DiGithub, DiGithubAlt, DiGithubBadge } from "react-icons/di";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ type Project = {
   tags: string[];
   title: string;
   link: string;
+  githubLink: string;
   id: number;
 };
 
@@ -93,6 +95,16 @@ export default async function Page({ params }: { params: { id: string } }) {
                   <div className="flex w-fit gap-2 items-center hover:text-secondary-accent text-primary-accent mb-4">
                     <RiExternalLinkLine size={20} />
                     Ver projeto Live
+                  </div>
+                </Link>
+                <Link
+                  href={project.githubLink}
+                  target="_blank"
+                  className="hover:text-secondary-accent w-fit transition-all"
+                >
+                  <div className="flex w-fit gap-2 items-center hover:text-secondary-accent text-primary-accent mb-4">
+                    <DiGithubBadge size={20} />
+                    Ver repositório do projeto no GitHub
                   </div>
                 </Link>
               </div>
