@@ -1,4 +1,4 @@
-import project1 from "@/public/project1.png";
+import saloon from "@/public/projectImg/saloon-manager.png";
 import portfoliounifil from "@/public/projectImg/portfolio-unifil.png";
 import barrel from "@/public/projectImg/barrel.png";
 import notetaker from "@/public/projectImg/notetaker.png";
@@ -65,5 +65,17 @@ export const projectsData = [
       "O jogo foi desenvolvido utilizando a Godot Engine, escolhida por sua eficiência em jogos 2D e facilidade de prototipação. A lógica do jogo foi implementada em GDScript, permitindo controle de movimentação, colisões e mecânicas de combate. A engine cuida do sistema de cenas, física e renderização.",
     tags: ["Game Dev"],
     link: "https://witordev.github.io/BleedOUT/",
+  },
+  {
+    id: 6,
+    imageSrc: saloon,
+    title: "Saloon Manager",
+    tech: ["Php", "Html5", "Css3", "Mysql"],
+    description:
+      "Um gerenciador de salão simples, onde você pode criar e gerenciar agendamentos de acordo com o seu cliente..",
+    report:
+      "Este projeto foi desenvolvido utilizando PHP para o backend, sendo responsável pela lógica de negócio, criação e gerenciamento de agendamentos e comunicação com o banco de dados. O MySQL (MariaDB) foi utilizado para persistência dos dados, armazenando informações de clientes e horários de forma estruturada. No frontend, HTML fornece a base semântica das páginas e CSS é utilizado para estilização e organização visual. A aplicação integra frontend e backend de forma direta, com o PHP renderizando e processando dados dinamicamente no servidor.",
+    tags: ["Backend", "Frontend"],
+    link: "https://saloonmanager.page.gd/",
   },
 ];

@@ -69,7 +69,7 @@ export default function Projects() {
           ref={trackRef}
           className="hidden md:flex overflow-hidden flex-row items-center gap-8 mt-10 overflow-x-auto snap-always scroll-smooth scrollbar-hide"
         >
-          {projectsData.map((project, index) => (
+          {mobileProjects.map((project, index) => (
             <div key={index} className="w-96 max-w-full md:flex-shrink-0">
               <ProjectCard {...project} />
             </div>
@@ -83,6 +83,18 @@ export default function Projects() {
               <ProjectCard {...project} />
             </motion.div>
           ))}
+          {/* <motion.div className="w-96 max-w-full">
+            <ProjectCard
+              description=""
+              title=""
+              imageSrc={}
+              link=""
+              tags={}
+              tech={}
+              key={}
+              id={}
+            />
+          </motion.div> */}
         </motion.div>
 
         <Link
@@ -93,7 +105,7 @@ export default function Projects() {
             size={22}
             className="mr-1 group-hover:-translate-y-1 transition-transform"
           />
-          <span>Ver projetos</span>
+          <span>Ver todos os projetos</span>
         </Link>
       </div>
     </section>
