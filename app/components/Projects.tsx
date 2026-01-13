@@ -7,8 +7,10 @@ import { motion } from "motion/react";
 import { projectsData } from "@/app/data/projectsData";
 import Link from "next/link";
 import { BsArrowLeftShort } from "react-icons/bs";
-import { BiBlock } from "react-icons/bi";
+import { BiBlock, BiPlusCircle } from "react-icons/bi";
 import { LuBlocks } from "react-icons/lu";
+import { GoProject } from "react-icons/go";
+import { TbBlocks } from "react-icons/tb";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -74,6 +76,13 @@ export default function Projects() {
               <ProjectCard {...project} />
             </div>
           ))}
+          <div className="flex group hover:text-secondary-accent gap-4 min-w-96 items-center justify-center transition-all hover:border-secondary-accent h-full w-full sm:w-fit hover:bg-secondary-bg rounded-lg transiiton-all flex-col sm:min-h-110 border-12 bg-secondary-bg/50 border-primary-bg text-white cursor-pointer">
+            <TbBlocks
+              size={100}
+              className="group-hover:-translate-y-4 transition-all"
+            />
+            <p>Ver outros projetos</p>
+          </div>
         </motion.div>
 
         {/* Mobile list */}
@@ -83,18 +92,6 @@ export default function Projects() {
               <ProjectCard {...project} />
             </motion.div>
           ))}
-          {/* <motion.div className="w-96 max-w-full">
-            <ProjectCard
-              description=""
-              title=""
-              imageSrc={}
-              link=""
-              tags={}
-              tech={}
-              key={}
-              id={}
-            />
-          </motion.div> */}
         </motion.div>
 
         <Link
