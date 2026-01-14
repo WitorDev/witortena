@@ -26,10 +26,10 @@ export default function IconAndName({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      viewport={{ once: true, amount: 0.1 }}
+      // initial={{ opacity: 0, y: 25 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // transition={{ duration: 0.3 }}
+      // viewport={{ once: true, amount: 0.1 }}
       className={`${
         description && "cursor-crosshair"
       } relative group flex items-center border hover:border-secondary-accent justify-center px-4 rounded-lg gap-3 py-2.5 min-w-32 ${
