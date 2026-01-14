@@ -79,9 +79,9 @@ export default function Navbar() {
         className={`${ubuntuMonoFont.className} fixed top-0 w-full z-40`}
       >
         <div className="my-8 px-4 sm:px-0">
-          <nav className="max-w-screen-xl mx-auto flex justify-between align-middle sm:px-4">
+          <div className="max-w-screen-xl mx-auto flex justify-between align-middle sm:px-4">
             <div className="w-full flex justify-between border-2 transition rounded-full border-primary-accent backdrop-blur-3xl py-3 px-8">
-              <div className="flex gap-8 sm:justify-start justify-between w-full items-center">
+              <nav className="flex gap-8 sm:justify-start justify-between w-full items-center">
                 <div className="text-3xl font-bold text-primary-accent">
                   <Link href="/">WT_</Link>
                 </div>
@@ -102,40 +102,44 @@ export default function Navbar() {
                 </div>
 
                 <ul className="gap-4 sm:flex hidden">
-                  <Dropdown
-                    pageUrl="/"
-                    title="Home"
-                    options={[
-                      "Início",
-                      "Sobre Mim",
-                      "Graduação",
-                      "Participações",
-                      "Projetos",
-                      "Tech Stack",
-                      "Contato",
-                    ]}
-                    links={[
-                      "hero",
-                      "about",
-                      "education",
-                      "contributions",
-                      "projects",
-                      "tech",
-                      "contact",
-                    ]}
-                  />
-                  <Dropdown
-                    pageUrl="/reports"
-                    title="Relatórios"
-                    options={[
-                      "NPI - Núcleo de Práticas de Informática",
-                      "Pensamento Computacional",
-                    ]}
-                    links={["NPI", "pensamento-computacional"]}
-                    final
-                  />
+                  <li>
+                    <Dropdown
+                      pageUrl="/"
+                      title="Home"
+                      options={[
+                        "Início",
+                        "Sobre Mim",
+                        "Graduação",
+                        "Participações",
+                        "Projetos",
+                        "Tech Stack",
+                        "Contato",
+                      ]}
+                      links={[
+                        "hero",
+                        "about",
+                        "education",
+                        "contributions",
+                        "projects",
+                        "tech",
+                        "contact",
+                      ]}
+                    />
+                  </li>
+                  <li>
+                    <Dropdown
+                      pageUrl="/reports"
+                      title="Relatórios"
+                      options={[
+                        "NPI - Núcleo de Práticas de Informática",
+                        "Pensamento Computacional",
+                      ]}
+                      links={["NPI", "pensamento-computacional"]}
+                      final
+                    />
+                  </li>
                 </ul>
-              </div>
+              </nav>
 
               <div>
                 <Link href="/#contact">
@@ -145,7 +149,7 @@ export default function Navbar() {
                 </Link>
               </div>
             </div>
-          </nav>
+          </div>
 
           <nav
             className={`border-2 bg-primary-bg rounded-lg border-primary-accent mt-4 max-w-screen-xl mx-auto flex-col justify-between align-middle text-lg sm:px-4 ${

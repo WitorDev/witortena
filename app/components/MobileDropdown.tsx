@@ -50,8 +50,8 @@ export default function MobileDropdown({
 					w-full flex items-center justify-between
 					px-5 py-4 text-base font-medium
 					transition-colors
-					${isOpen ? "text-terciary-bg border-b border-primary-bg" : "text-foreground"}
-					hover:text-terciary-bg
+					${isOpen ? "text-terciary-bg" : "text-foreground"}
+					hover:text-terciary-bg border-primary-bg border-b cursor-pointer
 				`}
       >
         <span>{title}</span>
