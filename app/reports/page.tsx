@@ -29,7 +29,7 @@ export default function Reports() {
         </Link>
         <div className="flex items-center justify-center gap-2">
           <span>/</span>
-          <span className="text-terciary-bg cursor-default">Projetos</span>
+          <span className="text-terciary-bg cursor-default">Relatórios</span>
         </div>
       </div>
       <div className="mb-12">
