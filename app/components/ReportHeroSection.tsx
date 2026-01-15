@@ -5,6 +5,8 @@ import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import DescriptionSection from "@/app/components/DescriptionSection";
 import Link from "next/link";
+import { BsHouse } from "react-icons/bs";
+import { BiHome, BiHomeAlt, BiSolidHome } from "react-icons/bi";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -32,14 +34,14 @@ export default function ReportHeroSection({
       className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full`}
     >
       <div className="w-full flex items-center justify-center pt-32"></div>
-      <div className="px-4 max-w-screen-xl mx-auto ">
+      <div className="px-4 max-w-screen-xl mx-auto">
         <div className="mb-4 flex gap-2 flex-wrap">
           <Link
             href="/#contributions"
             className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
           >
-            <div className="flex items-center justify-center gap-2">
-              <span className="group-hover:text-secondary-accent">Início</span>
+            <div className="flex rounded-lg bg-terciary-accent/30 p-2 items-center justify-center gap-2">
+              <BiSolidHome size={20} />
             </div>
           </Link>
           <Link

@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import { Ubuntu_Mono } from "next/font/google";
 import Link from "next/link";
 import { BsArrowLeftShort } from "react-icons/bs";
+import { BiSolidHome } from "react-icons/bi";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -20,7 +21,9 @@ export default function Page() {
           className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
         >
           <div className="flex items-center justify-center gap-2">
-            <span className="group-hover:text-secondary-accent">Início</span>
+            <div className="flex rounded-lg bg-terciary-accent/30 p-2 items-center justify-center gap-2">
+              <BiSolidHome size={20} />
+            </div>
           </div>
         </Link>
         <div className="flex items-center justify-center gap-2">

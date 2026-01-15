@@ -10,6 +10,7 @@ import {
   BsArrowLeftShort,
 } from "react-icons/bs";
 import { DiGithub, DiGithubAlt, DiGithubBadge } from "react-icons/di";
+import { BiSolidHome } from "react-icons/bi";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -56,9 +57,9 @@ export default async function Page({ params }: { params: { id: string } }) {
                 className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
               >
                 <div className="flex items-center justify-center gap-2">
-                  <span className="group-hover:text-secondary-accent">
-                    Início
-                  </span>
+                  <div className="flex rounded-lg bg-terciary-accent/30 p-2 items-center justify-center gap-2">
+                    <BiSolidHome size={20} />
+                  </div>
                 </div>
               </Link>
               <Link
