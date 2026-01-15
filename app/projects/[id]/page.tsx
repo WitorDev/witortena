@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       <div className="flex flex-col gap-10">
         <div className="items-start flex flex-col-reverse sm:flex-row gap-2 sm:gap-8 justify-between">
           <div className="flex flex-col gap-4">
-            <div className="flex gap-2  whitespace-nowrap overflow-x-auto">
+            <div className="pb-2 flex gap-2  whitespace-nowrap overflow-x-auto">
               <Link
                 href="/#projects"
                 className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"

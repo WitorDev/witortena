@@ -15,13 +15,13 @@ export default function Page() {
     <main
       className={`${ubuntuMonoFont.className} pt-32 max-w-screen-xl mx-auto px-4 mb-24`}
     >
-      <div className="flex gap-2 flex-wrap">
+      <div className="pb-2 flex gap-2 flex-wrap">
         <Link
           href="/#projects"
           className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
         >
           <div className="flex items-center justify-center gap-2  whitespace-nowrap overflow-x-auto">
-            <div className="flex rounded-lg bg-terciary-accent/30 p-2 items-center justify-center gap-2">
+            <div className="flex mb-1  rounded-lg bg-terciary-accent/30 p-2 items-center justify-center gap-2">
               <BiSolidHome size={20} />
             </div>
           </div>

@@ -45,7 +45,7 @@ export default async function Page({
     >
       {report ? (
         <>
-          <div className="px-4 sm:-text-sm flex gap-2 pb-4 whitespace-nowrap overflow-x-auto mx-4">
+          <div className="pb-2 sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto mx-4">
             <Link
               href="/#contributions"
               className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"

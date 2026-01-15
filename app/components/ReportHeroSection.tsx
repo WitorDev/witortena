@@ -35,7 +35,7 @@ export default function ReportHeroSection({
     >
       <div className="w-full flex items-center justify-center pt-32"></div>
       <div className="px-4 max-w-screen-xl mx-auto">
-        <div className="mb-4 flex gap-2  whitespace-nowrap overflow-x-auto">
+        <div className="mb-4 pb-2 flex gap-2  whitespace-nowrap overflow-x-auto">
           <Link
             href="/#contributions"
             className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
