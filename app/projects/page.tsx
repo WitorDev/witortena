@@ -33,8 +33,9 @@ export default function Page() {
       </div>
 
       {/* Header */}
-      <div className="mb-10 mt-4 flex justify-between flex-col sm:flex-row gap-2">
+      <div className="mb-10 mt-4 flex flex-col justify-between gap-2">
         <h1 className="text-3xl font-bold">Projetos</h1>
+        <p className="text-terciary-bg">Projetos pessoais e acadêmicos</p>
       </div>
 
       {/* Projects grid */}
