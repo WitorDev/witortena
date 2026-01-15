@@ -21,7 +21,7 @@ export default function Page() {
           className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
         >
           <div className="flex items-center justify-center gap-2  whitespace-nowrap overflow-x-auto">
-            <div className="flex mb-1  rounded-lg bg-terciary-accent/30 p-2 items-center justify-center gap-2">
+            <div className="flex rounded-lg bg-terciary-accent/50 p-2 items-center justify-center gap-2">
               <BiSolidHome size={20} />
             </div>
           </div>

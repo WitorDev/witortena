@@ -56,7 +56,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
 
   return (
     <>
-      <div className="mx-auto max-w-screen-xl px-4 w-full mb-8">
+      <div className="mx-auto max-w-screen-xl mt-6 px-4 w-full mb-8">
         <div
           className="mb-4 overflow-hidden w-full rounded-xl border-4 border-background cursor-zoom-in
 					h-[240px] sm:h-[380px] md:h-[520px] lg:h-[700px]"

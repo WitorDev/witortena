@@ -57,7 +57,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
               >
                 <div className="flex items-center justify-center gap-2">
-                  <div className="flex rounded-lg bg-terciary-accent/30 p-2 items-center justify-center gap-2">
+                  <div className="flex rounded-lg bg-terciary-accent/50 p-2 items-center justify-center gap-2">
                     <BiSolidHome size={20} />
                   </div>
                 </div>

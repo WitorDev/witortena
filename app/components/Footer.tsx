@@ -25,7 +25,7 @@ export default function Footer() {
       id="footer"
       className={`${ubuntuMonoFont.className} border-t-2 border-primary-bg relative min-h-screen items-center flex flex-col gap-20 sm:gap-80 pt-20`}
     >
-      <div className="max-w-screen-xl px-4 mx-auto flex flex-col w-full ">
+      <div className="max-w-screen-xl px-4 mx-auto flex flex-col w-full">
         <div className="flex sm:flex-row gap-10 sm:gap-0 flex-col w-full justify-between">
           <div className="flex flex-col">
             <div className="text-6xl font-bold text-primary-accent mb-6">
