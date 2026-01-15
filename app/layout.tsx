@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <head>
+        <title>Witor Tenã</title>
+      </head>
       <body className={`antialiased ${ubuntuFont.className}`}>
         <Navbar />
         {children}
