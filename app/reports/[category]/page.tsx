@@ -37,7 +37,16 @@ export default async function Page({
         id="hero"
         className={`${ubuntuMonoFont.className} mx-auto relative flex flex-col justify-center items-center`}
       >
-        <ReportHeroSection title={title} />
+        <ReportHeroSection
+          title={title}
+          category={
+            reportTypeURL.category.charAt(0).toUpperCase() +
+            reportTypeURL.category
+              .slice(1, reportTypeURL.category.length)
+              .replace("-", " ")
+              .replace("c", "C")
+          }
+        />
 
         {/* relatorios */}
         <div className="flex gap-4 mt-8 align-middle mb-8 w-full sm:flex-row flex-col max-w-screen-xl px-4">

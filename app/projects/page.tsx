@@ -14,19 +14,23 @@ export default function Page() {
     <main
       className={`${ubuntuMonoFont.className} pt-32 max-w-screen-xl mx-auto px-4 mb-24`}
     >
-      {/* Header */}
-      <div className="mb-10 flex justify-between flex-col sm:flex-row-reverse gap-2">
+      <div className="flex gap-2 flex-wrap">
         <Link
           href="/#projects"
-          className="group flex items-center gap-1 w-fit text-sm text-muted-foreground hover:text-secondary-accent transition-colors"
+          className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
         >
-          <BsArrowLeftShort
-            size={22}
-            className="group-hover:-translate-x-1 transition-transform"
-          />
-          <span>Voltar ao início</span>
+          <div className="flex items-center justify-center gap-2">
+            <span className="group-hover:text-secondary-accent">Início</span>
+          </div>
         </Link>
+        <div className="flex items-center justify-center gap-2">
+          <span>/</span>
+          <span className="text-terciary-bg cursor-default">Projetos</span>
+        </div>
+      </div>
 
+      {/* Header */}
+      <div className="mb-10 mt-4 flex justify-between flex-col sm:flex-row gap-2">
         <h1 className="text-3xl font-bold">Projetos</h1>
       </div>
 

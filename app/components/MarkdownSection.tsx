@@ -14,7 +14,11 @@ export default function MarkdownSection({ text, style }: MarkdownSectionProps) {
         style && "markdown pb-20"
       } border-b-2 border-primary-bg w-full flex justify-center `}
     >
-      <div className={`${style && "px-4"} max-w-screen-xl  mx-auto w-full`}>
+      <div
+        className={`${
+          style && "px-4"
+        } rounded-lg max-w-screen-xl mx-auto w-full`}
+      >
         <ReactMarkdown>{text}</ReactMarkdown>
       </div>
     </div>

@@ -50,28 +50,50 @@ export default async function Page({ params }: { params: { id: string } }) {
       <div className="flex flex-col gap-10">
         <div className="items-start flex flex-col-reverse sm:flex-row gap-2 sm:gap-8 justify-between">
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl font-bold">{project.title}</h1>
-            <div className="flex gap-2">
-              {project.tags.map((tag) => (
-                <p
-                  key={tag}
-                  className="text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4"
-                >
-                  {tag}
-                </p>
-              ))}
+            <div className="flex gap-2 flex-wrap">
+              <Link
+                href="/#projects"
+                className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <span className="group-hover:text-secondary-accent">
+                    Início
+                  </span>
+                </div>
+              </Link>
+              <Link
+                href="/projects"
+                className="group flex items-center gap-1 w-fit  group transition-colors"
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <span>/</span>
+                  <span className="group-hover:text-secondary-accent">
+                    Projetos
+                  </span>
+                </div>
+              </Link>
+              <div className="flex items-center justify-center gap-2">
+                <span>/</span>
+                <span className="text-terciary-bg cursor-default">
+                  {project.title}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <h1 className="text-3xl font-bold">{project.title}</h1>
+              <div className="flex gap-2">
+                {project.tags.map((tag) => (
+                  <p
+                    key={tag}
+                    className="text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4"
+                  >
+                    {tag}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
-          <Link
-            href="/#projects"
-            className="group flex items-center gap-1 w-fit text-sm text-muted-foreground hover:text-secondary-accent transition-colors"
-          >
-            <BsArrowLeftShort
-              size={22}
-              className="group-hover:-translate-x-1 transition-transform"
-            />
-            <span>Voltar ao início</span>
-          </Link>
         </div>
 
         <div className="flex flex-col gap-8">
@@ -104,7 +126,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 >
                   <div className="flex w-fit gap-2 items-center hover:text-secondary-accent text-primary-accent mb-4">
                     <DiGithubBadge size={20} />
-                    Ver repositório do projeto no GitHub
+                    Ver repositório no GitHub
                   </div>
                 </Link>
               </div>

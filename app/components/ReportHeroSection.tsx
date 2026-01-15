@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import DescriptionSection from "@/app/components/DescriptionSection";
+import Link from "next/link";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -16,9 +17,13 @@ const ubuntuFont = Ubuntu_Mono({
 
 type ReportHeroSectionProps = {
   title: string | boolean;
+  category?: string | undefined;
 };
 
-export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
+export default function ReportHeroSection({
+  title,
+  category,
+}: ReportHeroSectionProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -27,6 +32,33 @@ export default function ReportHeroSection({ title }: ReportHeroSectionProps) {
       className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full`}
     >
       <div className="w-full flex items-center justify-center pt-32"></div>
+      <div className="px-4 max-w-screen-xl mx-auto ">
+        <div className="mb-4 flex gap-2 flex-wrap">
+          <Link
+            href="/#contributions"
+            className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
+          >
+            <div className="flex items-center justify-center gap-2">
+              <span className="group-hover:text-secondary-accent">Início</span>
+            </div>
+          </Link>
+          <Link
+            href="/reports"
+            className="group flex items-center gap-1 w-fit transition-colors"
+          >
+            <div className="flex items-center justify-center gap-2">
+              <span>/</span>
+              <span className="group-hover:text-secondary-accent">
+                Relatórios
+              </span>
+            </div>
+          </Link>
+          <div className="flex items-center justify-center gap-2">
+            <span>/</span>
+            <span className="text-terciary-bg cursor-default">{category}</span>
+          </div>
+        </div>
+      </div>
 
       <div className="max-w-screen-xl px-4 w-full mx-auto text-left">
         <h1
