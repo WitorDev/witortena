@@ -6,6 +6,7 @@ import { BsArrowLeftShort, BsBack } from "react-icons/bs";
 import { BiArrowBack, BiSolidHome } from "react-icons/bi";
 import { FaBackward } from "react-icons/fa6";
 import { RiArrowGoBackFill } from "react-icons/ri";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -17,22 +18,8 @@ export default function Page() {
     <main
       className={`${ubuntuMonoFont.className} pt-32 max-w-screen-xl mx-auto px-4 mb-24`}
     >
-      <div className="pb-2 flex gap-2 flex-wrap">
-        <Link
-          href="/#projects"
-          className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
-        >
-          <div className="flex items-center justify-center gap-2  whitespace-nowrap overflow-x-auto">
-            <div className="flex rounded-lg bg-terciary-accent/50 p-2 items-center justify-center gap-2">
-              <BiSolidHome className="hidden sm:block" size={20} />
-              <BiArrowBack className="block sm:hidden" size={20} />
-            </div>
-          </div>
-        </Link>
-        <div className="sm:flex hidden items-center justify-center gap-2">
-          <span>/</span>
-          <span className="text-terciary-bg cursor-default">Projetos</span>
-        </div>
+      <div className="sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
+        <Breadcrumbs />
       </div>
 
       {/* Header */}

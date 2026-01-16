@@ -8,6 +8,7 @@ import MarkdownSection from "@/app/components/MarkdownSection";
 import ImageGallery from "@/app/components/ImageGallery";
 import Link from "next/link";
 import { BiSolidHome } from "react-icons/bi";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -34,7 +35,7 @@ export default async function Page({
         (file: any) =>
           file.name.endsWith(".jpg") ||
           file.name.endsWith(".jpeg") ||
-          file.name.endsWith(".png")
+          file.name.endsWith(".png"),
       )
     : [];
 
@@ -45,49 +46,8 @@ export default async function Page({
     >
       {report ? (
         <>
-          <div className="pb-2 sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto mx-4">
-            <Link
-              href="/#contributions"
-              className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
-            >
-              <div className="flex items-center justify-center gap-2">
-                <div className="flex rounded-lg bg-terciary-accent/30 p-2 items-center justify-center gap-2">
-                  <BiSolidHome size={20} />
-                </div>
-              </div>
-            </Link>
-            <Link
-              href={`/reports`}
-              className="group flex items-center gap-1 w-fit transition-colors"
-            >
-              <div className="flex items-center justify-center gap-2">
-                <span>/</span>
-                <span className="group-hover:text-secondary-accent">
-                  Relatórios
-                </span>
-              </div>
-            </Link>
-            <Link
-              href={`/reports/${pageParams.category}`}
-              className="group flex items-center gap-1 w-fit transition-colors"
-            >
-              <div className="flex items-center justify-center gap-2">
-                <span>/</span>
-                <span className="group-hover:text-secondary-accent">
-                  {pageParams.category.charAt(0).toUpperCase() +
-                    pageParams.category
-                      .slice(1, pageParams.category.length)
-                      .replace("-", " ")
-                      .replace("c", "C")}
-                </span>
-              </div>
-            </Link>
-            <div className="hidden sm:flex items-center justify-center gap-2">
-              <span>/</span>
-              <span className="text-terciary-bg cursor-default">
-                {pageParams.report}
-              </span>
-            </div>
+          <div className="mx-4 sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
+            <Breadcrumbs />
           </div>
           {reportImages.length > 0 && <ImageGallery images={reportImages} />}
 

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Ubuntu_Mono } from "next/font/google";
 import { motion } from "motion/react";
 import { BiArrowBack, BiSolidHome } from "react-icons/bi";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -16,24 +17,10 @@ export default function Reports() {
       id="reports"
       className={`${ubuntuMonoFont.className} mt-32 max-w-screen-xl px-4 mx-auto relative flex flex-col`}
     >
-      <div className="pb-2 mb-4 flex gap-2 flex-wrap">
-        <Link
-          href="/#projects"
-          className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
-        >
-          <div className="flex items-center justify-center gap-2  whitespace-nowrap overflow-x-auto">
-            <div className="flex rounded-lg bg-terciary-accent/50 p-2 items-center justify-center gap-2">
-              <BiSolidHome className="hidden sm:block" size={20} />
-              <BiArrowBack className="block sm:hidden" size={20} />
-            </div>
-          </div>
-        </Link>
-        <div className="hidden sm:flex items-center justify-center gap-2">
-          <span>/</span>
-          <span className="text-terciary-bg cursor-default">Relatórios</span>
-        </div>
+      <div className="m:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
+        <Breadcrumbs />
       </div>
-      <div className="mb-8">
+      <div className="mb-8 mt-4">
         <h1 className="text-3xl font-bold mb-2">Relatórios</h1>
         <p className="text-terciary-bg">
           Registros acadêmicos e atividades de extensão

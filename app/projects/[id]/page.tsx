@@ -11,6 +11,7 @@ import {
 } from "react-icons/bs";
 import { DiGithub, DiGithubAlt, DiGithubBadge } from "react-icons/di";
 import { BiSolidHome } from "react-icons/bi";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -51,34 +52,8 @@ export default async function Page({ params }: { params: { id: string } }) {
       <div className="flex flex-col gap-10">
         <div className="items-start flex flex-col-reverse sm:flex-row gap-2 sm:gap-8 justify-between">
           <div className="flex flex-col gap-4">
-            <div className="pb-2 flex gap-2  whitespace-nowrap overflow-x-auto">
-              <Link
-                href="/#projects"
-                className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
-              >
-                <div className="flex items-center justify-center gap-2">
-                  <div className="flex rounded-lg bg-terciary-accent/50 p-2 items-center justify-center gap-2">
-                    <BiSolidHome size={20} />
-                  </div>
-                </div>
-              </Link>
-              <Link
-                href="/projects"
-                className="group flex items-center gap-1 w-fit  group transition-colors"
-              >
-                <div className="flex items-center justify-center gap-2">
-                  <span>/</span>
-                  <span className="group-hover:text-secondary-accent">
-                    Projetos
-                  </span>
-                </div>
-              </Link>
-              <div className="hidden md:flex items-center justify-center gap-2">
-                <span>/</span>
-                <span className="text-terciary-bg cursor-default">
-                  {project.title}
-                </span>
-              </div>
+            <div className="pb-2 sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
+              <Breadcrumbs />
             </div>
 
             <div className="flex flex-col gap-4">

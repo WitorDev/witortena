@@ -7,6 +7,7 @@ import DescriptionSection from "@/app/components/DescriptionSection";
 import Link from "next/link";
 import { BsHouse } from "react-icons/bs";
 import { BiHome, BiHomeAlt, BiSolidHome } from "react-icons/bi";
+import Breadcrumbs from "./Breadcrumbs";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -34,35 +35,11 @@ export default function ReportHeroSection({
       className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full`}
     >
       <div className="w-full flex items-center justify-center pt-32"></div>
-      <div className="px-4 max-w-screen-xl mx-auto">
-        <div className="mb-4 pb-2 flex gap-2  whitespace-nowrap overflow-x-auto">
-          <Link
-            href="/#contributions"
-            className="group flex items-center gap-1 w-fit hover:text-secondary-accent transition-colors"
-          >
-            <div className="flex rounded-lg bg-terciary-accent/30 p-2 items-center justify-center gap-2">
-              <BiSolidHome size={20} />
-            </div>
-          </Link>
-          <Link
-            href="/reports"
-            className="group flex items-center gap-1 w-fit transition-colors"
-          >
-            <div className="flex items-center justify-center gap-2">
-              <span>/</span>
-              <span className="group-hover:text-secondary-accent">
-                Relatórios
-              </span>
-            </div>
-          </Link>
-          <div className="sm:flex hidden items-center justify-center gap-2">
-            <span>/</span>
-            <span className="text-terciary-bg cursor-default">{category}</span>
-          </div>
-        </div>
+      <div className="mx-4 sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
+        <Breadcrumbs />
       </div>
 
-      <div className="max-w-screen-xl px-4 w-full mx-auto text-left">
+      <div className="max-w-screen-xl mt-4 px-4 w-full mx-auto text-left">
         <h1
           id="title"
           className="text-3xl w-full max-w-screen-xl font-bold text-primary-accent"
