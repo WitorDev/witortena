@@ -35,8 +35,10 @@ export default function ReportHeroSection({
       className={`${ubuntuMonoFont.className} border-b-2 border-primary-bg bg-background w-full`}
     >
       <div className="w-full flex items-center justify-center pt-32"></div>
-      <div className="mx-4 sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
-        <Breadcrumbs />
+      <div className=" max-w-screen-xl mx-auto sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
+        <div className="mx-4">
+          <Breadcrumbs />
+        </div>
       </div>
 
       <div className="max-w-screen-xl mt-4 px-4 w-full mx-auto text-left">
