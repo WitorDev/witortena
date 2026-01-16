@@ -82,7 +82,7 @@ export default async function Page({
                 </span>
               </div>
             </Link>
-            <div className="flex items-center justify-center gap-2">
+            <div className="hidden sm:flex items-center justify-center gap-2">
               <span>/</span>
               <span className="text-terciary-bg cursor-default">
                 {pageParams.report}

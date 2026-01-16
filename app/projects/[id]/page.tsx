@@ -73,7 +73,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                   </span>
                 </div>
               </Link>
-              <div className="flex items-center justify-center gap-2">
+              <div className="hidden md:flex items-center justify-center gap-2">
                 <span>/</span>
                 <span className="text-terciary-bg cursor-default">
                   {project.title}

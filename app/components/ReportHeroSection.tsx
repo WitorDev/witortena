@@ -55,7 +55,7 @@ export default function ReportHeroSection({
               </span>
             </div>
           </Link>
-          <div className="flex items-center justify-center gap-2">
+          <div className="sm:flex hidden items-center justify-center gap-2">
             <span>/</span>
             <span className="text-terciary-bg cursor-default">{category}</span>
           </div>
