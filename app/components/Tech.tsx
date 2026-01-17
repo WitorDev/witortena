@@ -66,6 +66,34 @@ export default function Tech() {
           </div>
         </div>
 
+        <TechGroup title="Ferramentas">
+          <IconAndName
+            icon="Git"
+            text="Git"
+            description="Controle de versão, branches, commits e colaboração..."
+          />
+          <IconAndName
+            icon="Linux"
+            text="Linux"
+            description="Gerenciamento de Sistemas, Ambiente Linux, terminal. Eu uso Ubuntu (Omakub) Inclusive..."
+          />
+          <IconAndName
+            icon="Postman"
+            text="Postman"
+            description="Testes de APIs, requisições HTTP e depuração REST..."
+          />
+          <IconAndName
+            icon="Insomnia"
+            text="Insomnia"
+            description="Testes e depuração de APIs REST com autenticação..."
+          />
+          <IconAndName
+            icon="Figma"
+            text="Figma"
+            description="Design de interfaces, wireframes e fluxo design..."
+          />
+        </TechGroup>
+
         <TechGroup title="Outros">
           <IconAndName
             icon="Html5"
@@ -141,34 +169,6 @@ export default function Tech() {
             icon="Prisma"
             text="Prisma"
             description="ORM type-safe, schema, migrations e consultas ao banco..."
-          />
-        </TechGroup>
-
-        <TechGroup title="Ferramentas">
-          <IconAndName
-            icon="Git"
-            text="Git"
-            description="Controle de versão, branches, commits e colaboração..."
-          />
-          <IconAndName
-            icon="Linux"
-            text="Linux"
-            description="Gerenciamento de Sistemas, Ambiente Linux, terminal. Eu uso Ubuntu (Omakub) Inclusive..."
-          />
-          <IconAndName
-            icon="Postman"
-            text="Postman"
-            description="Testes de APIs, requisições HTTP e depuração REST..."
-          />
-          <IconAndName
-            icon="Insomnia"
-            text="Insomnia"
-            description="Testes e depuração de APIs REST com autenticação..."
-          />
-          <IconAndName
-            icon="Figma"
-            text="Figma"
-            description="Design de interfaces, wireframes e fluxo design..."
           />
         </TechGroup>
       </div>
