@@ -24,7 +24,7 @@ export default function Contact() {
           "service_808osig",
           "template_cb9ayi3",
           form.current,
-          "3rkGoqHD5pWIP2q3C"
+          "3rkGoqHD5pWIP2q3C",
         )
         .then(
           (result) => {
@@ -37,7 +37,7 @@ export default function Contact() {
           (error) => {
             console.log(error.text);
             alert("Não foi possível enviar a mensagem: " + error.text);
-          }
+          },
         );
     } else {
       console.error("The form reference is not set.");
@@ -52,7 +52,7 @@ export default function Contact() {
         className={`${ubuntuMonoFont.className} pb-20 max-w-screen-xl px-4 mx-auto md:gap-8 relative flex flex-col lg:flex-row pt-20`}
       >
         <div className="w-full">
-          <div className="flex w-full mb-16">
+          <div className="flex w-full mb-12">
             <h1 className="text-3xl font-bold w-full text-center md:text-left">
               Entre em Contato
             </h1>

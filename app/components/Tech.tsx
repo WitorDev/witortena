@@ -35,7 +35,7 @@ export default function Tech() {
       id="tech"
       className={`${ubuntuMonoFont.className} max-w-screen-xl mb-20 px-4 mx-auto pt-32`}
     >
-      <h1 className="text-3xl font-bold mb-12 text-center md:text-left">
+      <h1 className="text-3xl font-bold mb-8 text-center md:text-left">
         Tecnologias
       </h1>
 
