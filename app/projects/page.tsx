@@ -15,24 +15,24 @@ const ubuntuMonoFont = Ubuntu_Mono({
 
 export default function Page() {
   return (
-    <main
-      className={`${ubuntuMonoFont.className} pt-32 max-w-screen-xl mx-auto px-4 mb-24`}
-    >
-      <div className="sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
-        <Breadcrumbs />
-      </div>
+    <main className={`${ubuntuMonoFont.className} bg-secondary-bg pt-32`}>
+      <section className="max-w-screen-xl mx-auto px-4">
+        <div className="sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
+          <Breadcrumbs />
+        </div>
 
-      {/* Header */}
-      <div className="mb-8 mt-4 flex flex-col justify-between gap-2">
-        <h1 className="text-3xl font-bold">Projetos</h1>
-        <p className="text-terciary-bg">Projetos pessoais e acadêmicos</p>
-      </div>
+        {/* Header */}
+        <div className="mb-8 mt-4 flex flex-col justify-between gap-2">
+          <h1 className="text-3xl font-bold">Projetos</h1>
+          <p className="text-terciary-bg">Projetos pessoais e acadêmicos</p>
+        </div>
 
-      {/* Projects grid */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projectsData.map((project) => (
-          <ProjectCard key={project.id} {...project} />
-        ))}
+        {/* Projects grid */}
+        <article className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-24">
+          {projectsData.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+        </article>
       </section>
     </main>
   );

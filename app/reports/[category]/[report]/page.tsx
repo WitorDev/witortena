@@ -42,17 +42,19 @@ export default async function Page({
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} mx-auto max-w-screen-xl relative pt-32 flex flex-col`}
+      className={`${ubuntuMonoFont.className} bg-primary-bg relative flex flex-col`}
     >
       {report ? (
-        <>
-          <div className="mx-4 sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
-            <Breadcrumbs />
+        <article className="">
+          <div className="bg-background pt-32 pb-8 border-b border-primary-bg ">
+            <div className="px-4 max-w-screen-xl mx-auto sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
+              <Breadcrumbs />
+            </div>
           </div>
           {reportImages.length > 0 && <ImageGallery images={reportImages} />}
 
           <MarkdownSection text={report.markdown} style={true} />
-        </>
+        </article>
       ) : (
         <p>No report found</p>
       )}

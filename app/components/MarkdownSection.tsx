@@ -9,9 +9,7 @@ type MarkdownSectionProps = {
 
 export default function MarkdownSection({ text, style }: MarkdownSectionProps) {
   return (
-    <div
-      className={`${style && "markdown pb-20"}  w-full flex justify-center `}
-    >
+    <div className={`${style && "markdown pb-20"} w-full flex justify-center `}>
       <div
         className={`${
           style && "px-4"
