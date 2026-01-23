@@ -57,7 +57,7 @@ export default function About() {
               </div>
               <h1
                 id="name"
-                className={`${ubuntuSansMonoFont.className} bg-primary-bg pt-6 p-4 text-terciary-bg w-full mx-auto text-lg  sm:text-4xl text-left`}
+                className={`${ubuntuSansMonoFont.className} bg-primary-bg p-4 text-terciary-bg w-full mx-auto text-lg  sm:text-4xl text-left`}
               >
                 Witor Tenã
               </h1>
@@ -83,7 +83,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="flex p-4 pb-8 gap-4 m-0 w-full md:mx-0 md:justify-normal flex-row mx-auto sm:translate-0 items-center sm:flex-row md:w-fit">
+            <div className="flex p-4 gap-4 m-0 w-full md:mx-0 md:justify-normal flex-row mx-auto sm:translate-0 items-center sm:flex-row md:w-fit">
               <a
                 id="github"
                 href="https://github.com/WitorDev/"
