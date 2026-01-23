@@ -17,6 +17,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
+        <meta
+          name="google-site-verification"
+          content="7HANDIhzcQhtuxAHk-gHDGzLP9Gm7CyWMsbWvY_fhtk"
+        />
         <title>Witor Tenã</title>
       </head>
       <body className={`antialiased ${ubuntuFont.className}`}>
