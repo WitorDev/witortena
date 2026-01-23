@@ -42,11 +42,11 @@ export default async function Page({
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} bg-primary-bg relative flex flex-col`}
+      className={`${ubuntuMonoFont.className} bg-deep relative flex flex-col`}
     >
       {report ? (
         <article className="">
-          <div className="bg-background pt-32 pb-8 border-b border-primary-bg ">
+          <div className="bg-background pt-32 pb-8 border-b border-primary-bg">
             <div className="px-4 max-w-screen-xl mx-auto sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
               <Breadcrumbs />
             </div>

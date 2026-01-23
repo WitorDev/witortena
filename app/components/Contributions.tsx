@@ -2,6 +2,8 @@
 import { Ubuntu_Mono } from "next/font/google";
 import TextCard from "@/app/components/TextCard";
 import { motion } from "motion/react";
+import Link from "next/link";
+import { LuFolderSearch } from "react-icons/lu";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -42,6 +44,16 @@ export default function Contributions() {
             description="Grupo voltado ao estudo e compreensão de ferramentas de IA, com foco em aplicações práticas, pesquisa e inovação tecnológica."
             info="Pesquisas e estudos em grupo"
           />
+          <Link
+            href="/reports"
+            className="group mt-8 sm:mx-0 mx-auto text-primary-accent flex items-center gap-1 w-fit text-sm text-muted-foreground hover:text-secondary-accent transition-colors"
+          >
+            <LuFolderSearch
+              size={22}
+              className="mr-1 group-hover:-translate-y-1 transition-transform"
+            />
+            <span>Ver todos os relatórios</span>
+          </Link>
         </div>
       </div>
     </section>

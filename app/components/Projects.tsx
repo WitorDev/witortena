@@ -31,7 +31,7 @@ export default function Projects() {
 
   const getScrollAmount = () => {
     if (trackRef.current) {
-      return trackRef.current.clientWidth * 0.8;
+      return trackRef.current.clientWidth * 0.33;
     }
     return 300;
   };

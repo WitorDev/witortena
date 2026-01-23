@@ -21,6 +21,7 @@
   --color-secondary-bg: #122216;
   --color-terciary-bg: #8d8d8d;
   --color-quaternary-bg: #1f1f1f;
+  --color-deep: #00000033;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

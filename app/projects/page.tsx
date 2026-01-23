@@ -15,7 +15,7 @@ const ubuntuMonoFont = Ubuntu_Mono({
 
 export default function Page() {
   return (
-    <main className={`${ubuntuMonoFont.className} bg-secondary-bg pt-32`}>
+    <main className={`${ubuntuMonoFont.className} bg-deep pt-32`}>
       <section className="max-w-screen-xl mx-auto px-4">
         <div className="sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
           <Breadcrumbs />

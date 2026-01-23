@@ -13,7 +13,7 @@ const ubuntuMonoFont = Ubuntu_Mono({
 
 export default function Reports() {
   return (
-    <section className="bg-secondary-bg pt-32">
+    <section className="bg-deep pt-32">
       <main
         id="reports"
         className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative flex flex-col`}

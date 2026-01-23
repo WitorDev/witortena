@@ -32,10 +32,10 @@ export default async function Page({
     (reportTypeURL.category === "blog" && "Blog");
 
   return (
-    <div className="bg-secondary-bg">
+    <div className="bg-deep">
       <div
         id="hero"
-        className={`${ubuntuMonoFont.className} mx-auto relative flex flex-col justify-center items-center`}
+        className={`${ubuntuMonoFont.className} mx-auto  relative flex flex-col justify-center items-center`}
       >
         <ReportHeroSection
           title={title}
@@ -71,7 +71,7 @@ export default async function Page({
                   (file: any) =>
                     file.name.endsWith(".jpg") ||
                     file.name.endsWith(".jpeg") ||
-                    file.name.endsWith(".png")
+                    file.name.endsWith(".png"),
                 )
                   ? reportItem.files[0]
                   : null

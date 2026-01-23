@@ -46,10 +46,8 @@ export default async function Page({ params }: { params: { id: string } }) {
   }
 
   return (
-    <main
-      className={`${ubuntuMonoFont.className} pt-32 max-w-screen-xl mx-auto px-4 mb-20`}
-    >
-      <div className="flex flex-col gap-10">
+    <main className={`${ubuntuMonoFont.className} pt-32 bg-deep pb-20`}>
+      <div className="flex flex-col gap-10  max-w-screen-xl mx-auto px-4">
         <div className="items-start flex flex-col-reverse sm:flex-row gap-2 sm:gap-8 justify-between">
           <div className="flex flex-col gap-4">
             <div className="pb-2 sm:-text-sm flex gap-2 whitespace-nowrap overflow-x-auto">
