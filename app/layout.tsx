@@ -22,6 +22,23 @@ export default function RootLayout({
           content="7HANDIhzcQhtuxAHk-gHDGzLP9Gm7CyWMsbWvY_fhtk"
         />
         <title>Witor Tenã</title>
+        <meta
+          name="description"
+          content="Portifólio de Witor Tena - Desenvolvedor Backend Springboot, com projetos relatórios e acesso a contatos."
+        />
+
+        <meta
+          name="keywords"
+          content="web, relatórios, unifil, portfolio, typescript, react, next.js, springboot, desenvolvedor web, desenvolvedor, java."
+        />
+        <meta name="author" content="Witor Tenã" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Witor Tenã" />
+        <meta
+          property="og:description"
+          content="Portifólio de Witor Tena - Desenvolvedor Backend Springboot, com projetos relatórios e acesso a contatos."
+        />
+        <meta property="og:type" content="website" />
       </head>
       <body className={`antialiased ${ubuntuFont.className}`}>
         <Navbar />
