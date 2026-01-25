@@ -22,6 +22,7 @@ export default function RootLayout({
           content="7HANDIhzcQhtuxAHk-gHDGzLP9Gm7CyWMsbWvY_fhtk"
         />
         <title>Witor Tenã</title>
+        <link rel="shortcut icon" href="disk.png" type="image/x-icon" />
         <meta
           name="description"
           content="Portifólio de Witor Tena - Desenvolvedor Backend Springboot, com projetos relatórios e acesso a contatos."
