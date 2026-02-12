@@ -11,9 +11,10 @@ interface ReportFile {
 
 interface ImageGalleryProps {
   images: ReportFile[];
+  padding?: boolean;
 }
 
-export default function ImageGallery({ images }: ImageGalleryProps) {
+export default function ImageGallery({ images, padding }: ImageGalleryProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -52,7 +53,9 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
   return (
     <>
       {/* Main gallery preview */}
-      <div className="mx-auto max-w-screen-xl mt-6 px-4 w-full mb-8">
+      <div
+        className={`mx-auto max-w-screen-xl w-full ${!padding && "mb-8 mt-6 px-4"}`}
+      >
         <div
           className="mb-4 overflow-hidden w-full rounded-xl border-4 border-background cursor-zoom-in
             h-[180px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px]"

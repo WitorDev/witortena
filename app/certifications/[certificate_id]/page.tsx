@@ -53,7 +53,7 @@ export default function CertificatePage() {
         <section className="flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-2/3 flex justify-center items-center">
             <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[600px]">
-              <ImageGallery images={images} />
+              <ImageGallery images={images} padding={true} />
             </div>
           </div>
 
