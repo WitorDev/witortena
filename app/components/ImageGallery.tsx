@@ -43,12 +43,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
   }, [isOpen]);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
+    document.body.style.overflow = isOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
@@ -56,10 +51,11 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
 
   return (
     <>
+      {/* Main gallery preview */}
       <div className="mx-auto max-w-screen-xl mt-6 px-4 w-full mb-8">
         <div
           className="mb-4 overflow-hidden w-full rounded-xl border-4 border-background cursor-zoom-in
-					h-[240px] sm:h-[380px] md:h-[520px] lg:h-[700px]"
+            h-[180px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px]"
           onClick={() => setIsOpen(true)}
         >
           <Image
@@ -67,36 +63,38 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
             alt={currentImage.name}
             width={1280}
             height={700}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
             priority
           />
         </div>
 
+        {/* Controls */}
         {totalImages > 1 && (
-          <div className="flex justify-end items-center gap-3">
-            <span className="text-sm sm:text-lg border-2 border-terciary-bg py-1 sm:py-2 px-3 sm:px-4 rounded-xl">
+          <div className="flex justify-end items-center gap-2 sm:gap-3">
+            <span className="text-xs sm:text-sm md:text-base border-2 border-terciary-bg py-1 px-2 sm:py-2 sm:px-3 rounded-xl">
               {currentImageIndex + 1} / {totalImages}
             </span>
 
             <button
               onClick={goToPrevious}
-              className="border-2 cursor-pointer border-terciary-bg p-2 rounded-full hover:bg-primary-bg hover:border-foreground"
+              className="border-2 cursor-pointer border-terciary-bg p-1 sm:p-2 rounded-full hover:bg-primary-bg hover:border-foreground"
             >
-              <HiArrowLeft size={22} />
+              <HiArrowLeft size={18} className="sm:text-lg" />
             </button>
 
             <button
               onClick={goToNext}
-              className="border-2 cursor-pointer border-terciary-bg p-2 rounded-full hover:bg-primary-bg hover:border-foreground"
+              className="border-2 cursor-pointer border-terciary-bg p-1 sm:p-2 rounded-full hover:bg-primary-bg hover:border-foreground"
             >
-              <HiArrowRight size={22} />
+              <HiArrowRight size={18} className="sm:text-lg" />
             </button>
           </div>
         )}
       </div>
 
+      {/* Lightbox overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center">
+        <div className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center p-2 sm:p-4">
           <button
             onClick={() => setIsOpen(false)}
             className="absolute z-[10000] top-4 right-4 text-white cursor-pointer hover:opacity-70"
@@ -107,9 +105,9 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           {totalImages > 1 && (
             <button
               onClick={goToPrevious}
-              className="absolute z-[9999] cursor-pointer left-3 sm:left-6 text-white hover:opacity-70"
+              className="absolute z-[9999] cursor-pointer left-2 sm:left-6 text-white hover:opacity-70"
             >
-              <HiArrowLeft size={40} />
+              <HiArrowLeft size={36} className="sm:text-4xl" />
             </button>
           )}
 
@@ -125,9 +123,9 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           {totalImages > 1 && (
             <button
               onClick={goToNext}
-              className="absolute z-[9999] cursor-pointer right-3 sm:right-6 text-white hover:opacity-70"
+              className="absolute z-[9999] cursor-pointer right-2 sm:right-6 text-white hover:opacity-70"
             >
-              <HiArrowRight size={40} />
+              <HiArrowRight size={36} className="sm:text-4xl" />
             </button>
           )}
         </div>

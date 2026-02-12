@@ -24,7 +24,7 @@ export default function About() {
       <motion.h1 className="text-3xl font-bold w-full text-center md:text-left max-w-screen-xl pt-20 mx-auto">
         Graduação
       </motion.h1>
-      <div className="sm:mt-12 mt-4 grid md:grid-cols-5 grid-cols-1 sm:grid-rows-1 grid-rows-5 w-fit">
+      <div className="sm:mt-4 grid md:grid-cols-5 grid-cols-1 sm:grid-rows-1 grid-rows-5 w-fit">
         <motion.div className="md:col-span-1 row-span-2 w-full h-full flex items-center justify-center md:items-start md:justify-start">
           <Image src={unifil_logo} className="max-w-30" alt="Logo da UniFil" />
         </motion.div>

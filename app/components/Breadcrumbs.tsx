@@ -16,6 +16,8 @@ function getHomeHref(firstSegment?: string) {
       return "/#contributions";
     case "projects":
       return "/#projects";
+    case "certifications":
+      return "/#certifications";
     default:
       return "/";
   }

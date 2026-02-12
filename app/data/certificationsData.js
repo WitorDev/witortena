@@ -1,0 +1,36 @@
+export const certificationsData = [
+  {
+    id: 1,
+    title: "Google Cloud Cybersecurity",
+    organization: "Google",
+    year: 2026,
+    link: "https://www.credly.com/badges/0716cdc8-50da-48db-ba53-f49347ecacbb/linked_in_profile",
+    imageSrc: "/certifications/google-cloud-cybersecurity-certificate.png",
+    skills: [
+      "Cibersegurança",
+      "Segurança de rede",
+      "Detecção de ameaças",
+      "Cloud Backup",
+      "Computação em nuvem",
+      "Segurança de nuvem",
+      "Defesa cibernética",
+      "Cybersecurity Compliance",
+      "Segurança dos dados",
+      "Recuperação de desastres",
+      "Google Cloud Platform (GCP)",
+      "Gestão de identidades e acessos (IAM)",
+    ],
+
+    tags: ["Núvem", "Cibersegurança"],
+  },
+  {
+    id: 2,
+    title: "Discover",
+    organization: "Rocketseat",
+    year: 2023,
+    link: "https://app.rocketseat.com.br/certificates/47ba85ae-08c3-4dc4-b342-7eccfb227390",
+    imageSrc: "/certifications/rocketseat-discover.png",
+    skills: ["HTML", "CSS", "Javascript", "GIT", "Github"],
+    tags: ["Desenvolvimento Web", "Frontend", "Versionamento"],
+  },
+];

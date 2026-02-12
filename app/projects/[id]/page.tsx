@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 {project.tags.map((tag) => (
                   <p
                     key={tag}
-                    className="text-terciary-bg border border-terciary-bg rounded-2xl w-max px-4"
+                    className="text-terciary-bg border border-terciary-bg rounded-2xl px-4 py-1 "
                   >
                     {tag}
                   </p>

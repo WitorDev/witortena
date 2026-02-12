@@ -51,6 +51,7 @@ export default function Footer() {
                     { to: "education", label: "Graduação" },
                     { to: "contributions", label: "Participações" },
                     { to: "projects", label: "Projetos" },
+                    { to: "certifications", label: "Certificações" },
                     { to: "tech", label: "Tech Stack" },
                     { to: "contact", label: "Contato" },
                   ].map((link, index) => (
@@ -73,6 +74,7 @@ export default function Footer() {
                     { to: "education", label: "Graduação" },
                     { to: "contributions", label: "Participações" },
                     { to: "projects", label: "Projetos" },
+                    { to: "certifications", label: "Certificações" },
                     { to: "tech", label: "Tech Stack" },
                     { to: "contact", label: "Contato" },
                   ].map((link, index) => (
