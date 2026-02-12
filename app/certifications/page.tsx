@@ -42,8 +42,8 @@ export default function Certificates() {
               key={certification.id}
               href={"/certifications/" + certification.id}
             >
-              <article className="bg-primary-bg min-h-70 flex flex-col justify-around hover:border-secondary-accent border border-transparent hover:bg-secondary-bg group hover:cursor-pointer p-4 rounded-lg">
-                <div className="flex justify-center items-center flex-col w-full h-full">
+              <article className="bg-primary-bg min-h-70 flex flex-col justify-between hover:border-secondary-accent border border-transparent hover:bg-secondary-bg group hover:cursor-pointer p-4 rounded-lg">
+                <div className="flex justify-center h-full items-center flex-col w-full">
                   <Image
                     src={certification.imageSrc}
                     height={180}
@@ -59,7 +59,7 @@ export default function Certificates() {
                   <p className="text-terciary-bg">
                     {certification.organization}
                   </p>
-                </div>{" "}
+                </div>
               </article>
             </a>
           ))}
