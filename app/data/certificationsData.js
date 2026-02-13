@@ -30,7 +30,7 @@ export const certificationsData = [
     year: 2023,
     link: "https://app.rocketseat.com.br/certificates/47ba85ae-08c3-4dc4-b342-7eccfb227390",
     imageSrc: "/certifications/rocketseat-discover.png",
-    skills: ["HTML", "CSS", "Javascript", "GIT", "Github"],
+    skills: ["HTML", "CSS", "Javascript", "Git", "Github"],
     tags: ["Desenvolvimento Web", "Frontend", "Versionamento"],
   },
 ];

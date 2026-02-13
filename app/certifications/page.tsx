@@ -43,13 +43,14 @@ export default function Certificates() {
               href={"/certifications/" + certification.id}
             >
               <article className="bg-primary-bg min-h-70 flex flex-col justify-between hover:border-secondary-accent border border-transparent hover:bg-secondary-bg group hover:cursor-pointer p-4 rounded-lg">
-                <div className="flex justify-center h-full items-center flex-col w-full">
+                <div className="flex justify-center items-center w-full min-h-[200px]">
                   <Image
                     src={certification.imageSrc}
                     height={180}
                     width={180}
                     draggable="false"
                     alt={certification.title + " certification logo"}
+                    className="object-contain"
                   />
                 </div>
                 <div className="pt-4">

@@ -58,7 +58,7 @@ export default function ImageGallery({ images, padding }: ImageGalleryProps) {
       >
         <div
           className="mb-4 overflow-hidden w-full rounded-xl border-4 border-background cursor-zoom-in
-            h-[180px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px]"
+            max-h-[600px] flex justify-center items-center hover:opacity-85 hover:border-secondary-accent transition-all"
           onClick={() => setIsOpen(true)}
         >
           <Image
@@ -100,7 +100,7 @@ export default function ImageGallery({ images, padding }: ImageGalleryProps) {
         <div className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center p-2 sm:p-4">
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute z-[10000] top-4 right-4 text-white cursor-pointer hover:opacity-70"
+            className="absolute z-[10000] top-4 right-4 text-white cursor-pointer hover:text-secondary-accent"
           >
             <HiXMark size={32} />
           </button>
@@ -108,7 +108,7 @@ export default function ImageGallery({ images, padding }: ImageGalleryProps) {
           {totalImages > 1 && (
             <button
               onClick={goToPrevious}
-              className="absolute z-[9999] cursor-pointer left-2 sm:left-6 text-white hover:opacity-70"
+              className="absolute z-[9999] cursor-pointer left-2 sm:left-6 text-white hover:text-secondary-accent"
             >
               <HiArrowLeft size={36} className="sm:text-4xl" />
             </button>
@@ -126,7 +126,7 @@ export default function ImageGallery({ images, padding }: ImageGalleryProps) {
           {totalImages > 1 && (
             <button
               onClick={goToNext}
-              className="absolute z-[9999] cursor-pointer right-2 sm:right-6 text-white hover:opacity-70"
+              className="absolute z-[9999] cursor-pointer right-2 sm:right-6 text-white hover:text-secondary-accent"
             >
               <HiArrowRight size={36} className="sm:text-4xl" />
             </button>

@@ -1,4 +1,4 @@
-"use client"; // only if you use client components
+"use client";
 
 import { certificationsData } from "@/app/data/certificationsData";
 import Image from "next/image";
@@ -45,40 +45,45 @@ export default function CertificatePage() {
 
   return (
     <main className={`${ubuntuMonoFont.className} pt-32 bg-deep pb-20`}>
-      <div className="max-w-screen-xl mx-auto px-4">
-        <div className="flex mb-8 gap-2 whitespace-nowrap overflow-x-auto">
-          <Breadcrumbs />
-        </div>
-
-        <section className="flex flex-col md:flex-row gap-8">
-          <div className="w-full md:w-2/3 flex justify-center items-center">
-            <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[600px]">
-              <ImageGallery images={images} padding={true} />
-            </div>
+      <div className="max-w-screen-xl mx-auto px-4 min-h-[752px] flex flex-col justify-between">
+        <section>
+          {" "}
+          <div className="flex mb-8 gap-2 whitespace-nowrap overflow-x-auto">
+            <Breadcrumbs />
           </div>
+          <article className="flex flex-col md:flex-row gap-8">
+            <div className=" flex justify-start items-start">
+              <div className="max-w-[400px]">
+                <ImageGallery images={images} padding={true} />
+              </div>
+            </div>
 
-          <article className="w-full md:w-1/3 flex flex-col gap-4">
-            <h1 className="text-3xl font-bold">{certification.title}</h1>
+            <article className="w-full flex flex-col">
+              <div className="flex flex-col mb-4 gap-2">
+                <h1 className="text-3xl font-bold">{certification.title}</h1>
 
-            <div className="flex flex-col gap-2 mt-4 pb-8">
-              <p>
-                Certificado por{" "}
-                <span className="font-bold">{certification.organization}</span>{" "}
-                em {certification.year}
-              </p>
+                <p>
+                  Certificado por{" "}
+                  <span className="font-bold">
+                    {certification.organization}
+                  </span>{" "}
+                  em {certification.year}
+                </p>
+              </div>
               {certification.link && (
                 <Link
                   href={certification.link}
                   target="_blank"
-                  className="flex gap-2 items-center text-primary-accent hover:text-secondary-accent transition-all"
+                  className="flex gap-2 items-center w-fit text-primary-accent hover:text-secondary-accent transition-all"
                 >
                   <RiExternalLinkLine size={20} />
                   Ver Certificado
                 </Link>
               )}
-            </div>
-
-            <ul className="flex flex-wrap gap-2">
+            </article>
+          </article>
+          <article>
+            <ul className="flex mt-4 flex-wrap gap-2">
               {certification.skills.map((skill, index) => (
                 <li
                   key={index}
@@ -89,7 +94,19 @@ export default function CertificatePage() {
               ))}
             </ul>
           </article>
-        </section>
+        </section>{" "}
+        {/* <div className="h-34 w-full bg-primary-accent rounded-lg mt-20"></div> */}
+        <div className="cert-bar">
+          <div className="cert-line"></div>
+
+          <div className="cert-icons">
+            <div className="cert-icon"></div>
+            <div className="cert-icon hex"></div>
+            <div className="cert-icon shield"></div>
+            <div className="cert-icon medal"></div>
+            <div className="cert-icon star"></div>
+          </div>
+        </div>
       </div>
     </main>
   );

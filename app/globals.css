@@ -92,3 +92,21 @@ body {
 .button-fill:hover {
   color: white;
 }
+
+.cert-bar {
+  width: 100%;
+  margin: 80px 0;
+  position: relative;
+}
+
+.cert-line {
+  height: 80px;
+  border-radius: 16px;
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary-bg),
+    var(--color-secondary-accent),
+    var(--color-secondary-bg)
+  );
+  box-shadow: 0 0 40px #22c55e40 inset;
+}
