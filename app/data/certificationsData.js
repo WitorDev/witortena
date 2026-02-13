@@ -33,4 +33,14 @@ export const certificationsData = [
     skills: ["HTML", "CSS", "Javascript", "Git", "Github"],
     tags: ["Desenvolvimento Web", "Frontend", "Versionamento"],
   },
+  {
+    id: 3,
+    title: "MongoDB",
+    organization: "Alura",
+    year: 2024,
+    link: "https://cursos.alura.com.br/certificate/f97f159d-9934-4084-a65c-50c5420c086e?lang",
+    imageSrc: "/certifications/alura-mongodb.png",
+    skills: ["MongoDB", "Databases", "JSON"],
+    tags: ["NoSQL"],
+  },
 ];

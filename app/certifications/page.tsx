@@ -27,7 +27,6 @@ export default function Certificates() {
           <Breadcrumbs />
         </div>
 
-        {/* Header */}
         <div className="mb-8 mt-4 flex flex-col justify-between gap-2">
           <h1 className="text-3xl font-bold">Certificações</h1>
           <p className="text-terciary-bg">
@@ -35,7 +34,6 @@ export default function Certificates() {
           </p>
         </div>
 
-        {/* Certifications grid */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-24">
           {certificationsData.map((certification: Certification) => (
             <a
