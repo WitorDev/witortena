@@ -53,13 +53,18 @@ export default function Certificates() {
                     className="object-contain"
                   />
                 </div>
-                <div className="pt-4">
-                  <h3 className="group-hover:text-secondary-accent font-bold">
-                    {certification.title}
-                  </h3>
-                  <p className="text-terciary-bg">
-                    {certification.organization}
-                  </p>
+                <div className="flex gap-2 pt-4 items-start justify-between">
+                  <div className="">
+                    <h3 className="group-hover:text-secondary-accent max-w-52 overflow-clip sm:max-w-[1000px] font-bold">
+                      {certification.title}
+                    </h3>
+                    <p className="text-terciary-bg">
+                      {certification.organization}
+                    </p>
+                  </div>
+                  <div>
+                    <p>{certification.year}</p>
+                  </div>
                 </div>
               </article>
             </a>
