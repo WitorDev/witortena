@@ -58,7 +58,7 @@ export default async function Page({
           </p>
         </div>
 
-        <section className="mx-auto grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-8 px-4">
+        <section className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl gap-8 px-4">
           {reports.map((reportItem) => (
             <ReportCard
               key={reportItem.folder}
