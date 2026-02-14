@@ -58,7 +58,7 @@ export default async function Page({
           </p>
         </div>
 
-        <section className="flex max-w-screen-xl px-4 sm:px-0 mb-20 flex-row flex-wrap justify-center align-middle gap-8 w-full">
+        <section className="mx-auto grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-8 px-4">
           {reports.map((reportItem) => (
             <ReportCard
               key={reportItem.folder}

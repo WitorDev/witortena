@@ -29,7 +29,7 @@ export default function ReportCard({
   type,
 }: ReportCardProps) {
   return (
-    <div className="transition-all min-w-[300px] max-w-[400px] overflow-hidden flex flex-col h-[500px]">
+    <div className="transition-all min-w-[300px] overflow-hidden flex flex-col h-[500px]">
       <Link href={type + "/" + date.trim().toLowerCase()}>
         <div
           className={`h-[200px] cursor-pointer border border-transparent hover:border-secondary-accent w-full bg-background flex items-center justify-center overflow-hidden`}
