@@ -14,7 +14,7 @@ export default function Contributions() {
   return (
     <section
       id="contributions"
-      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative  flex flex-col items-center`}
+      className={`${ubuntuMonoFont.className} max-w-screen-xl px-4 mx-auto relative flex flex-col items-center`}
     >
       <motion.div className="flex w-full mt-20">
         <h1 className="text-3xl font-bold mb-10 w-full text-center md:text-left">
@@ -37,7 +37,7 @@ export default function Contributions() {
           info="Monitoria de alunos"
           link="/reports/pensamento-computacional"
         />
-        <div className="sm:col-span-2">
+        <div className="sm:col-span-2 h-fit pb-0 mb-0 flex flex-col justify-between">
           <TextCard
             title="Grupo de Inteligência Artificial"
             status="Integrante ativo"
