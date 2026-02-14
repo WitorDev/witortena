@@ -3,7 +3,23 @@ import TableRow from "../TableRow";
 import { certificationsData } from "@/app/data/certificationsData";
 import { PiCertificateDuotone } from "react-icons/pi";
 
-export default function Certifications() {
+export default function Certification() {
+  type Certification = {
+    id: number;
+    title: string;
+    organization: string;
+    year: number;
+    link: string;
+    imageSrc: string;
+    skills: string[];
+    tags: string[];
+  };
+
+  const chosenIndexes: number[] = [1, 2, 4];
+  const chosenCertificates = certificationsData.filter((cert) =>
+    chosenIndexes.includes(cert.id),
+  );
+
   return (
     <section
       id="certifications"
@@ -14,7 +30,7 @@ export default function Certifications() {
       </h1>
 
       <section className="w-full overflow-x-auto gap-2 flex flex-col">
-        {certificationsData.slice(0, 3).map((certification) => (
+        {chosenCertificates.map((certification) => (
           <TableRow
             key={certification.id}
             course_id={certification.id}

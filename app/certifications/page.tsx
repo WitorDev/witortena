@@ -40,7 +40,7 @@ export default function Certificates() {
               key={certification.id}
               href={"/certifications/" + certification.id}
             >
-              <article className="bg-primary-bg min-h-70 flex flex-col justify-between hover:border-secondary-accent border border-transparent hover:bg-secondary-bg group hover:cursor-pointer p-4 rounded-lg">
+              <article className="bg-primary-bg min-h-60 flex flex-col justify-between hover:border-secondary-accent border border-transparent hover:bg-secondary-bg group hover:cursor-pointer p-4 rounded-lg">
                 <div className="flex justify-center items-center w-full min-h-[200px]">
                   <Image
                     src={certification.imageSrc}

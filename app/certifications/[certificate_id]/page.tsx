@@ -45,7 +45,7 @@ export default function CertificatePage() {
 
   return (
     <main className={`${ubuntuMonoFont.className} pt-32 bg-deep pb-20`}>
-      <div className="max-w-screen-xl mx-auto px-4 min-h-[752px] flex flex-col justify-between">
+      <div className="max-w-screen-xl mx-auto px-4 flex flex-col justify-between">
         <section>
           {" "}
           <div className="flex mb-8 gap-2 whitespace-nowrap overflow-x-auto">
@@ -94,19 +94,7 @@ export default function CertificatePage() {
               ))}
             </ul>
           </article>
-        </section>{" "}
-        {/* <div className="h-34 w-full bg-primary-accent rounded-lg mt-20"></div> */}
-        <div className="cert-bar">
-          <div className="cert-line"></div>
-
-          <div className="cert-icons">
-            <div className="cert-icon"></div>
-            <div className="cert-icon hex"></div>
-            <div className="cert-icon shield"></div>
-            <div className="cert-icon medal"></div>
-            <div className="cert-icon star"></div>
-          </div>
-        </div>
+        </section>
       </div>
     </main>
   );
