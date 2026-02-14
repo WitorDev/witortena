@@ -59,7 +59,7 @@ export default function CertificatePage() {
             </div>
 
             <article className="w-full flex flex-col">
-              <div className="flex flex-col mb-4 gap-2">
+              <div className="flex flex-col mb-2 gap-2">
                 <h1 className="text-3xl font-bold">{certification.title}</h1>
 
                 <p>
@@ -83,7 +83,7 @@ export default function CertificatePage() {
             </article>
           </article>
           <article>
-            <ul className="flex mt-4 flex-wrap sm:text-md text-xs gap-2">
+            <ul className="flex mt-8 flex-wrap sm:text-md text-xs gap-2">
               {certification.skills.map((skill, index) => (
                 <li
                   key={index}
