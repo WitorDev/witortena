@@ -28,7 +28,6 @@ export default function ReportCard({
   image,
   type,
 }: ReportCardProps) {
-  const cartTitle = paragraph.split("`")[0].substring(0, 37);
   return (
     <div className="transition-all min-w-[300px] max-w-[400px] overflow-hidden flex flex-col h-[500px]">
       <Link href={type + "/" + date.trim().toLowerCase()}>
@@ -48,17 +47,17 @@ export default function ReportCard({
           )}
         </div>
       </Link>
-      <div className="px-4 py-6 flex flex-col flex-1">
+      <div className="pt-6 flex flex-col flex-1">
         <div className="flex justify-between items-start">
           <div className="flex justify-between w-full">
             {/* <Link
               href={type + "/" + date.trim().toLowerCase()}
               className="flex flex-row-reverse justify-between hover:text-secondary-accent w-full"
             >
-            <RiExternalLinkLine className="transition-all z-10" size={25} />
-            <div className="text-lg font-bold z-1">
-            <MarkdownSection style={false} text={cartTitle} />
-            </div>
+              <RiExternalLinkLine className="transition-all z-10" size={25} />
+              <div className="text-lg font-bold z-1">
+                <MarkdownSection style={false} text={cartTitle} />
+              </div>
             </Link> */}
           </div>
         </div>
@@ -74,8 +73,11 @@ export default function ReportCard({
           </Link>
         </div>
 
-        <div className="line-clamp-[6]">
-          <ReactMarkdown>{paragraph}</ReactMarkdown>
+        <div>
+          <MarkdownSection
+            text={paragraph.slice(0, 255) + "..."}
+            style={false}
+          />
         </div>
       </div>
     </div>
