@@ -83,11 +83,11 @@ export default function CertificatePage() {
             </article>
           </article>
           <article>
-            <ul className="flex mt-4 flex-wrap gap-2">
+            <ul className="flex mt-4 flex-wrap sm:text-md text-xs gap-2">
               {certification.skills.map((skill, index) => (
                 <li
                   key={index}
-                  className="border-terciary-bg border px-4 py-2 text-center w-fit rounded-lg"
+                  className="border-terciary-bg border sm:px-4 sm:py-2 px-2 py-1 text-center w-fit rounded-lg"
                 >
                   {skill}
                 </li>
