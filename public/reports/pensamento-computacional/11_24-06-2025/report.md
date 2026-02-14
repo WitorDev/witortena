@@ -1,6 +1,6 @@
 ## CSS Flexbox - Flexbox Froggy
 
-`Professor(a): Mariane`
+`Professor(a): Marianni`
 
 Na aula de hoje os alunos começaram seus estudos em CSS, a professora mostrou a eles como poderiam utilizar estilos em seus arquivos HTML, estilizando o conteúdo e organizando os itens da página.
 Iniciou mostrando a sintaxe do CSS e suas regras, e logo após deu exemplos de como utilizar o CSS no seu site, os alunos implementaram o CSS em suas páginas e com a ajuda dos instrutores estilizaram suas páginas.

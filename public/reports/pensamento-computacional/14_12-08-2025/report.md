@@ -1,6 +1,6 @@
 ## Tabelas em HTML e CSS
 
-`Professor(a): Mariane e Kawan`
+`Professor(a): Marianni e Kawan`
 
 Na aula de hoje os alunos utilizaram o que aprenderam sobre tabelas em HTML para criar a sua própria, de acordo com a atividade passada em sala.
 A atividade consistia em criar uma tabela e inserir dados na página, desde informações na tabela até imagens e vídeos.

@@ -1,6 +1,6 @@
 ## Lógica de Programação com Portugol - Condicionais
 
-`Professor(a): Mariane e Kawan`
+`Professor(a): Marianni e Kawan`
 
 Na aula de hoje os alunos deram seguimento no conteúdo iniciado terça passada, Portugol, uma linguagem de pseudo-código que será utilizada por eles a fim de entender sobre lógica de programação e conceitos de programação em geral.
 Hoje os alunos revisaram sobre condicionais, “if” e “else”, que já têm estudado na aula passada, e hoje também puderam aprender sobre o “else if”, ou o “senao se()” no caso do Portugol, onde fizeram algumas atividades envolvendo diferentes fluxos de código de acordo com as condicionais.

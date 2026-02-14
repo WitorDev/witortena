@@ -1,6 +1,6 @@
 ## Website dos alunos
 
-`Professor(a): Mariane`
+`Professor(a): Marianni`
 
 No início da aula de hoje percebi que alguns dos alunos demoraram um pouquinho para chegar, mas logo os alunos já estavam prontos para a aula em sala.
 Com a aula de hoje os alunos seguiram seus estudos em HTML, o objetivo de hoje era concluir a atividade de criação de um site utilizando as novas tags apresentadas, de forma que estruturasse o site de forma correta, com header, footer entre outras tags.

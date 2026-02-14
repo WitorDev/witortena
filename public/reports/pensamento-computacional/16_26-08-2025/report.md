@@ -1,6 +1,6 @@
 ## Utilizando @keyframes e transições
 
-`Professor(a): Mariane e Kawan`
+`Professor(a): Marianni e Kawan`
 
 Hoje os alunos puderam ver como as animações são usadas no CSS para deixar um site mais interativo e animado, começamos com uma introdução sobre como podemos utilizar transições como “:hover” e logo passamos a entender como as “@keyframes” funcionam.
 Após essa introdução teórica e demonstrativa onde o professor Kawan mostrou aos alunos como utilizamos essas funcionalidades, pudemos passar para as atividades, onde os alunos colocariam na prática aquilo que aprenderam.

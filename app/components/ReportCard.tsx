@@ -29,13 +29,10 @@ export default function ReportCard({
   type,
 }: ReportCardProps) {
   return (
-    <Link
-      href={type + "/" + date.trim().toLowerCase()}
-      className="min-w-[300px] max-w-[400px]"
-    >
-      <div className="bg-primary-bg rounded-lg transition-all overflow-hidden group cursor-pointer border border-transparent hover:border-secondary-accent flex flex-col h-[500px]">
+    <div className="transition-all min-w-[300px] max-w-[400px] overflow-hidden flex flex-col h-[500px]">
+      <Link href={type + "/" + date.trim().toLowerCase()}>
         <div
-          className={`h-[200px] w-full bg-background flex items-center justify-center overflow-hidden`}
+          className={`h-[200px] cursor-pointer border border-transparent hover:border-secondary-accent w-full bg-background flex items-center justify-center overflow-hidden`}
         >
           {image ? (
             <Image
@@ -43,36 +40,37 @@ export default function ReportCard({
               height={400}
               src={image.url}
               alt={image.name}
-              className="h-full w-full object-cover group-hover:opacity-50"
+              className="h-full w-full object-cover"
             />
           ) : (
             <p className="text-neutral-50 text-2xl">{date.split("_")[1]}</p>
           )}
         </div>
-
-        <div className="px-4 py-6 flex flex-col flex-1">
-          <div className="flex justify-between items-start mb-3">
-            <div className="flex justify-between w-full">
-              <div className="text-lg leading-relaxed z-1">
+      </Link>
+      <div className="px-4 py-6 flex flex-col flex-1">
+        <div className="flex justify-between items-start">
+          <div className="flex justify-between w-full">
+            <Link
+              href={type + "/" + date.trim().toLowerCase()}
+              className="flex flex-row-reverse justify-between hover:text-secondary-accent w-full"
+            >
+              <RiExternalLinkLine className="transition-all z-10" size={25} />
+              <div className="text-lg font-bold z-1">
                 <MarkdownSection
                   style={false}
                   text={paragraph.split("`")[0].substring(0, 37)}
                 />
               </div>
-              <RiExternalLinkLine
-                className="transition-all group-hover:text-green-500 z-10"
-                size={25}
-              />
-            </div>
-          </div>
-
-          <p className="text-terciary-bg mb-3">{date.split("_")[1]}</p>
-
-          <div className="text-sm leading-relaxed line-clamp-[6]">
-            <ReactMarkdown>{paragraph}</ReactMarkdown>
+            </Link>
           </div>
         </div>
+
+        <p className="text-terciary-bg mb-4">{date.split("_")[1]}</p>
+
+        <div className="line-clamp-[6]">
+          <ReactMarkdown>{"P" + paragraph.split("`P")[1]}</ReactMarkdown>
+        </div>
       </div>
-    </Link>
+    </div>
   );
 }
