@@ -15,13 +15,6 @@ export default function NotFound() {
               className="text-primary-accent animate-spin -translate-y-2"
             />
           </figure>
-          <article>
-            <h1 className="bg-primary-accent font-bold text-lg mb-4 p-1 w-fit text-background">
-              Carregando
-            </h1>
-            <p>Carregando conteúdo...</p>
-            <p className="mb-4 font-bold">Um momento por favor!</p>
-          </article>
         </main>
       </section>
     </>
