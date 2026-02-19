@@ -37,23 +37,25 @@ export default function Contributions() {
           info="Monitoria de alunos"
           link="/reports/pensamento-computacional"
         />
-        <div className="sm:col-span-2 h-fit pb-0 mb-0 flex flex-col justify-between">
-          <TextCard
-            title="Grupo de Inteligência Artificial"
-            status="Integrante ativo"
-            description="Grupo voltado ao estudo e compreensão de ferramentas de IA, com foco em aplicações práticas, pesquisa e inovação tecnológica."
-            info="Pesquisas e estudos em grupo"
-          />
-          <Link
-            href="/reports"
-            className="group mt-8 sm:mx-0 mx-auto text-primary-accent flex items-center gap-1 w-fit text-sm text-muted-foreground hover:text-secondary-accent transition-colors"
-          >
-            <LuFolderSearch
-              size={22}
-              className="mr-1 group-hover:-translate-y-1 transition-transform"
+        <div className="sm:col-span-2 max-h-130 pb-0 mb-0 flex flex-col justify-between">
+          <div className="">
+            <TextCard
+              title="Grupo de Inteligência Artificial"
+              status="Integrante ativo"
+              description="Grupo voltado ao estudo e compreensão de ferramentas de IA, com foco em aplicações práticas, pesquisa e inovação tecnológica."
+              info="Pesquisas e estudos em grupo"
             />
-            <span>Ver todos os relatórios</span>
-          </Link>
+            <Link
+              href="/reports"
+              className="group mt-8 sm:mx-0 mx-auto text-primary-accent flex items-center gap-1 w-fit text-sm text-muted-foreground hover:text-secondary-accent transition-colors"
+            >
+              <LuFolderSearch
+                size={22}
+                className="mr-1 group-hover:-translate-y-1 transition-transform"
+              />
+              <span>Ver todos os relatórios</span>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
