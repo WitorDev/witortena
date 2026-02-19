@@ -25,7 +25,7 @@ export default function Certification() {
       id="certifications"
       className="w-full max-w-screen-xl mx-auto px-4"
     >
-      <h1 className="text-3xl font-bold w-full text-center md:text-left pt-30 mb-12">
+      <h1 className="text-3xl font-bold w-full text-center md:text-left pt-24 mb-12">
         Certificações
       </h1>
 
