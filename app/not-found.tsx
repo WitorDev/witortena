@@ -23,7 +23,7 @@ export default function NotFound() {
               Tem certeza de que a busca está correta?
             </p>
             <Link
-              className="flex gap-2 hover:bg-secondary-accent transition-all p-1 w-fit hover:text-background text-primary-accent"
+              className="flex gap-2 hover:text-secondary-accent transition-all w-fit text-primary-accent"
               href={"/"}
             >
               <p>Voltar para a página inicial</p>
