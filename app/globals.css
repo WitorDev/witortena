@@ -110,3 +110,33 @@ body {
   );
   box-shadow: 0 0 40px #22c55e40 inset;
 }
+
+/* Scroll Bar Styling */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-accent);
+  border-radius: 8px;
+  border: 2px solid transparent; /* creates floating effect */
+  background-clip: content-box;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in srgb, var(--color-primary-accent), white 20%);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: 15px;
+  scrollbar-color: var(--color-primary-accent) transparent;
+}
