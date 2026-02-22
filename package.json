@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "daisyui": "^5.5.19",
     "emailjs": "^4.0.3",
     "gray-matter": "^4.0.3",
+    "highlight.js": "^11.11.1",
     "motion": "^12.23.22",
     "next": "^16.0.7",
     "react": "19.1.0",
@@ -19,6 +21,7 @@
     "react-markdown": "^10.1.0",
     "react-scroll": "^1.9.3",
     "react-syntax-highlighter": "^16.1.0",
+    "rehype-highlight": "^7.0.2",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1"
   },

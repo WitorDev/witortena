@@ -29,6 +29,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -124,7 +128,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary-accent);
+  background-color: var(--color-terciary-accent);
   border-radius: 8px;
   border: 2px solid transparent; /* creates floating effect */
   background-clip: content-box;
@@ -132,11 +136,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: color-mix(in srgb, var(--color-primary-accent), white 20%);
+  background-color: color-mix(in srgb, var(--color-terciary-accent), white 20%);
 }
 
 /* Firefox */
 * {
   scrollbar-width: 15px;
-  scrollbar-color: var(--color-primary-accent) transparent;
+  scrollbar-color: var(--color-terciary-accent) transparent;
 }

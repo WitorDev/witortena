@@ -4,6 +4,11 @@ import Footer from "@/app/components/Footer";
 import "@/app/globals.css";
 import { Ubuntu } from "next/font/google";
 
+// import "highlight.js/styles/material-dark.css";
+// import "highlight.js/styles/dracula.css";
+// import "highlight.js/styles/solarized-light.css";
+import "highlight.js/styles/atom-one-dark.css";
+
 const ubuntuFont = Ubuntu({
   subsets: ["latin"],
   weight: "400",
@@ -15,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" className="scroll-smooth">
       <head>
         <meta
           name="google-site-verification"

@@ -14,6 +14,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 
 import Link from "next/link";
 import { animateScroll as scroll } from "react-scroll";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
