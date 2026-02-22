@@ -11,7 +11,7 @@ export default function NotFound() {
         <main className="flex gap-4">
           <figure>
             <VscLoading
-              size={40}
+              size={45}
               className="text-primary-accent animate-spin -translate-y-2"
             />
           </figure>

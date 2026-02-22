@@ -1,4 +1,6 @@
-## **Jornada de 7 Semanas - Artigos em IA, Programação em Java e o Hackathon EducaTech**
+---
+title: "Jornada de 7 Semanas - Artigos em IA, Programação em Java e o Hackathon EducaTech"
+---
 
 `Da semana 31 até semana 38`
 

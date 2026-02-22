@@ -1,4 +1,6 @@
-## Lógica de Programação com Portugol - Escolha Caso
+---
+title: "Lógica de Programação com Portugol - Escolha Caso"
+---
 
 `Professor(a): Marianni e Kawan`
 

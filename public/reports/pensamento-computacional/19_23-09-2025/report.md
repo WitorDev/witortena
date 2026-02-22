@@ -1,4 +1,6 @@
-## Lógica de Programação com Portugol - Para e Enquanto
+---
+title: "Lógica de Programação com Portugol - Para e Enquanto"
+---
 
 `Professor(a): Marianni e Kawan`
 

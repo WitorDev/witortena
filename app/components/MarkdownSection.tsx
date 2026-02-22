@@ -5,11 +5,18 @@ import ReactMarkdown from "react-markdown";
 type MarkdownSectionProps = {
   text: string;
   style?: boolean;
+  className?: string;
 };
 
-export default function MarkdownSection({ text, style }: MarkdownSectionProps) {
+export default function MarkdownSection({
+  text,
+  style,
+  className,
+}: MarkdownSectionProps) {
   return (
-    <div className={`${style && "markdown mb-8"} w-full flex justify-center `}>
+    <div
+      className={`${style && "markdown mb-8"} w-full flex justify-center ${className}`}
+    >
       <div
         className={`${
           style && "px-4"

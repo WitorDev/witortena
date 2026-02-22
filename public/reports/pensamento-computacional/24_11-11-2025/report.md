@@ -1,4 +1,6 @@
-## Conclusão e Tira Dúvidas
+---
+title: "Conclusão e Tira Dúvidas"
+---
 
 `Professor(a): Marianni e Kawan`
 

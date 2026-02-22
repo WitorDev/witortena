@@ -1,4 +1,6 @@
-## Funções
+---
+title: "Funções"
+---
 
 `Professor(a): Marianni`
 

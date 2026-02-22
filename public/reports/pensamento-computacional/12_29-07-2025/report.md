@@ -1,4 +1,6 @@
-## De volta às aulas, revendo o que aprendemos
+---
+title: "De volta às aulas, revendo o que aprendemos"
+---
 
 `Professor(a): Marianni`
 

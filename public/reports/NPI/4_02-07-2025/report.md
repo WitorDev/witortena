@@ -1,4 +1,6 @@
-## **Jornada de 4 Semanas - Circuitos, Pensamento Computacional e IA**
+---
+title: "Jornada de 4 Semanas - Circuitos, Pensamento Computacional e IA"
+---
 
 `Da semana 18 até semana 22`
 

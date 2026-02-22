@@ -1,4 +1,6 @@
-## Lógica e seu uso na solução de problemas
+---
+title: "Lógica e seu uso na solução de problemas"
+---
 
 `Professor(a): Marianni`
 

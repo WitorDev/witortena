@@ -1,4 +1,6 @@
-## Jornada de 11 Semanas — Desenvolvimento Web & Participação durante o Curso de CC (Ciência da Computação)
+---
+title: "Jornada de 11 Semanas — Desenvolvimento Web & Participação durante o Curso de CC (Ciência da Computação)"
+---
 
 `Da semana 0 até semana 11`
 

@@ -1,4 +1,6 @@
-## Introdução dos alunos ao Pensamento Computacional
+---
+title: "Introdução dos alunos ao Pensamento Computacional"
+---
 
 `Professor(a): Kawan`
 

@@ -1,4 +1,6 @@
-## Jornada de 6 Semanas - Linux/RedHat e Networking
+---
+title: "Jornada de 6 Semanas - Linux/RedHat e Networking"
+---
 
 `Da semana 12 até semana 18`
 
@@ -7,12 +9,13 @@
 ### RedHat
 
 Iniciei o curso de **Gerenciamento de Sistemas com Red Hat**, com foco no uso do terminal para administração geral do sistema. Estudei:
-  - Gerenciamento de permissões de usuários e grupos;
-  - Processos e serviços;
-  - Conexões SSH com servidores;
-  - Criação, edição e remoção de arquivos e diretórios;
-  - Programas como vim (VI Improved);
-  - Diversos comandos de terminal para administração eficiente.
+
+- Gerenciamento de permissões de usuários e grupos;
+- Processos e serviços;
+- Conexões SSH com servidores;
+- Criação, edição e remoção de arquivos e diretórios;
+- Programas como vim (VI Improved);
+- Diversos comandos de terminal para administração eficiente.
 
 ### Visita EstaCenter
 
@@ -37,8 +40,9 @@ Desenvolvi projetos simples em **Java**, com foco na **Programação Orientada a
 ### Networking
 
 Entendi o funcionamento de **conexões SSH** e aprofundei meus conhecimentos em **redes de computadores**, estudando temas como:
-  - IP, MAC Address e Subnetting;
-  - Conceitos e funcionamento de **roteadores e switches**.
+
+- IP, MAC Address e Subnetting;
+- Conceitos e funcionamento de **roteadores e switches**.
 
 ### Monitoramento
 
@@ -51,9 +55,9 @@ Estudei os princípios de Machine Learning, como **estruturas de dados** e **ár
 ### Ciência da Computação
 
 Acompanhei e estudei os conteúdos das disciplinas do curso, como:
-  - Lógica de programação;
-  - Conjuntos e lógica booleana;
-  - Prototipagem com Appsmith;
-  - Circuitos lógicos e fundamentos de computação.
-  - etc...
 
+- Lógica de programação;
+- Conjuntos e lógica booleana;
+- Prototipagem com Appsmith;
+- Circuitos lógicos e fundamentos de computação.
+- etc...

@@ -1,4 +1,6 @@
-## Hackathon, o Pitch dos alunos!
+---
+title: "Hackathon, o Pitch dos alunos!"
+---
 
 `Professor(a): Marianni e Kawan`
 

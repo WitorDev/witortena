@@ -1,4 +1,6 @@
-## Pixels e Ângulos
+---
+title: "Pixels e Ângulos"
+---
 
 `Professor(a): Marianni`
 

@@ -1,4 +1,6 @@
-## Lógica de Programação com Portugol - Repetição
+---
+title: "Lógica de Programação com Portugol - Repetição"
+---
 
 `Professor(a): Marianni e Kawan`
 

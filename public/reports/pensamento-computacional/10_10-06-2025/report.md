@@ -1,4 +1,6 @@
-## Website dos alunos
+---
+title: "Website dos alunos"
+---
 
 `Professor(a): Marianni`
 

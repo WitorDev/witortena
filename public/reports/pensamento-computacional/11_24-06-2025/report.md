@@ -1,4 +1,6 @@
-## CSS Flexbox - Flexbox Froggy
+---
+title: "CSS Flexbox - Flexbox Froggy"
+---
 
 `Professor(a): Marianni`
 

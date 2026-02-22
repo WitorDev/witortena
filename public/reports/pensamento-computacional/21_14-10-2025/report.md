@@ -1,4 +1,6 @@
-## Hackathon, o que é e como participar?
+---
+title: "Hackathon, o que é e como participar?"
+---
 
 `Professor(a): Marianni e Kawan`
 

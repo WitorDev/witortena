@@ -1,4 +1,6 @@
-## Lógica de Programação com Portugol - Condicionais
+---
+title: "Lógica de Programação com Portugol - Condicionais"
+---
 
 `Professor(a): Marianni e Kawan`
 

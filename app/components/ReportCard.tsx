@@ -7,6 +7,7 @@ import { RiExternalLinkLine } from "react-icons/ri";
 import MarkdownSection from "@/app/components/MarkdownSection";
 import ReactMarkdown from "react-markdown";
 import { motion } from "motion/react";
+import matter from "gray-matter";
 
 import { PiParagraphThin } from "react-icons/pi";
 
@@ -28,6 +29,7 @@ export default function ReportCard({
   image,
   type,
 }: ReportCardProps) {
+  const { data, content } = matter(paragraph);
   return (
     <div className="transition-all overflow-hidden flex flex-col h-[500px]">
       <Link href={type + "/" + date.trim().toLowerCase()}>
@@ -50,34 +52,23 @@ export default function ReportCard({
       <div className="pt-6 flex flex-col flex-1">
         <div className="flex justify-between items-start">
           <div className="flex justify-between w-full">
-            {/* <Link
+            <Link
               href={type + "/" + date.trim().toLowerCase()}
-              className="flex flex-row-reverse justify-between hover:text-secondary-accent w-full"
+              className="flex flex-row group justify-between hover:text-secondary-accent w-full"
             >
-              <RiExternalLinkLine className="transition-all z-10" size={25} />
-              <div className="text-lg font-bold z-1">
-                <MarkdownSection style={false} text={cartTitle} />
+              <div className="text-lg max-h-5 mb-2 overflow-hidden transition-all group-hover:text-secondary-accent font-bold z-1">
+                <MarkdownSection style={false} text={data.title} />
               </div>
-            </Link> */}
+            </Link>
           </div>
         </div>
 
         <div className="flex justify-between">
           <p className="text-terciary-bg mb-4">{date.split("_")[1]}</p>
-          <Link
-            href={type + "/" + date.trim().toLowerCase()}
-            className="flex gap-2 hover:text-secondary-accent text-terciary-bg transition-all"
-          >
-            <p>Ver mais</p>
-            <RiExternalLinkLine className="z-10" size={20} />
-          </Link>
         </div>
 
         <div>
-          <MarkdownSection
-            text={paragraph.slice(0, 255) + "..."}
-            style={false}
-          />
+          <MarkdownSection text={content.slice(0, 255) + "..."} style={false} />
         </div>
       </div>
     </div>

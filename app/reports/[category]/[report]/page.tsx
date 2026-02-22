@@ -1,6 +1,8 @@
 // app/reports/[category]/[report]/page.tsx
 import { Ubuntu_Mono } from "next/font/google";
 
+import matter from "gray-matter";
+
 import { getReports } from "@/util/getReports";
 
 import MarkdownRenderer from "@/app/components/MarkdownRenderer";
@@ -39,10 +41,12 @@ export default async function Page({
       )
     : [];
 
+  const { data, content } = matter(report.markdown);
+
   return (
     <section
       id="hero"
-      className={`${ubuntuMonoFont.className} bg-deep relative flex flex-col`}
+      className={`${ubuntuMonoFont.className} overflow-hidden bg-deep relative flex flex-col`}
     >
       {report ? (
         <article className="">
@@ -53,7 +57,11 @@ export default async function Page({
           </div>
           {reportImages.length > 0 && <ImageGallery images={reportImages} />}
 
-          <MarkdownSection text={report.markdown} style={true} />
+          <MarkdownSection
+            text={data.title}
+            className={"w-fit ml-4 font-bold text-3xl pt-8 pb-1"}
+          />
+          <MarkdownSection text={content} style={true} />
         </article>
       ) : (
         <p>No report found</p>
