@@ -36,7 +36,7 @@ export default async function Blog({
           </div>
 
           {/* Layout */}
-          <div className="flex justify-between mr-4 gap-8">
+          <div className="block md:flex justify-between mr-4 gap-8">
             {/* Blog content */}
             <main className="mt-4 w-full flex flex-col justify-between gap-2 flex-1 max-w-3xl">
               {/* Title */}
