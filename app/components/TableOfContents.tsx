@@ -1,7 +1,13 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { Link } from "react-scroll";
+import { BiRss } from "react-icons/bi";
+import {
+  GoShareAndroid,
+  GoSidebarCollapse,
+  GoSidebarExpand,
+} from "react-icons/go";
+import { Link as ScrollLink } from "react-scroll";
 
 type Heading = {
   text: string;
@@ -11,33 +17,31 @@ type Heading = {
 
 export default function TableOfContents({ headings }: { headings: Heading[] }) {
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [scrollingUp, setScrollingUp] = useState(false);
-  const [y, setY] = useState(0);
+  const [shown, setShown] = useState(true);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      setScrollingUp(currentY < lastScrollY.current);
-      setY(currentY);
-      console.log(currentY);
       lastScrollY.current = currentY;
 
-      // Determine which heading is currently active
-      let currentActiveId: string | null = null;
+      // Find active heading
+      let currentActive: string | null = null;
+
       for (let i = headings.length - 1; i >= 0; i--) {
         const el = document.getElementById(headings[i].id);
-        if (el && el.offsetTop - 120 <= currentY) {
-          currentActiveId = headings[i].id;
+
+        if (el && el.offsetTop - 140 <= currentY) {
+          currentActive = headings[i].id;
           break;
         }
       }
-      setActiveId(currentActiveId);
+
+      setActiveId(currentActive);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 
-    // Initial check
     handleScroll();
 
     return () => {
@@ -46,37 +50,101 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
   }, [headings]);
 
   return (
-    <aside
-      className={`${!scrollingUp && y > 100 && "-translate-y-13"} hidden lg:block w-fit max-w-64 mt-4 sticky top-28 h-fit transition-transform`}
+    <div
+      className={`hidden lg:block ml-8 flex-shrink-0 transition-all ${shown ? "w-80" : "w-fit"}`}
     >
-      <h2
-        className={`text-3xl font-bold pb-2 transition-all leading-relaxed p-2`}
-      >
-        Conteúdo
-      </h2>
+      {/* STICKY CONTAINER */}
+      <div className="sticky top-48 max-h-[calc(100vh-7rem)] flex flex-col">
+        {/* TOC PANEL */}
+        <aside className="overflow-y-auto pr-2">
+          {/* Toggle button */}
+          <div className="flex justify-end mb-2">
+            {shown ? (
+              <GoSidebarCollapse
+                size={22}
+                onClick={() => setShown(false)}
+                className="cursor-pointer  text-primary-accent hover:text-secondary-accent transition-colors"
+              />
+            ) : (
+              <GoSidebarExpand
+                size={22}
+                onClick={() => setShown(true)}
+                className="cursor-pointer text-primary-accent hover:text-secondary-accent transition-colors"
+              />
+            )}
+          </div>
 
-      <hr className="text-primary-accent mb-4" />
+          {/* Content */}
+          {shown && (
+            <>
+              <h2 className="text-3xl font-bold -translate-y-9 w-fit">
+                Conteúdo
+              </h2>
 
-      <ul className="space-y-2 text-sm">
-        {headings.map((heading) => (
-          <li key={heading.id}>
-            <Link
-              to={heading.id}
-              smooth={true}
-              offset={-120}
-              duration={400}
-              spy={false}
-              className={`transition-all cursor-pointer border-l-2 border-transparent block truncate ${
-                activeId === heading.id
-                  ? "text-primary-accent border-l-primary-accent pl-2"
-                  : "hover:text-secondary-accent"
-              }`}
-            >
-              {heading.text}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </aside>
+              <hr className="border-primary-accent mb-4 -translate-y-6" />
+
+              <ul className="space-y-2 text-sm w-fit -translate-y-6">
+                {headings.map((heading) => {
+                  const isActive = activeId === heading.id;
+
+                  return (
+                    <li
+                      key={heading.id}
+                      style={{
+                        paddingLeft: `${(heading.level - 2) * 20}px`,
+                      }}
+                    >
+                      <ScrollLink
+                        to={heading.id}
+                        smooth={true}
+                        offset={-120}
+                        duration={400}
+                        spy={false}
+                        className={`
+                          block cursor-pointer truncate border-l-2 transition-all
+
+                          ${
+                            isActive
+                              ? "text-primary-accent border-l-primary-accent pl-2"
+                              : "border-transparent hover:text-secondary-accent"
+                          }
+                        `}
+                      >
+                        {heading.text}
+                      </ScrollLink>
+                    </li>
+                  );
+                })}
+              </ul>
+            </>
+          )}
+        </aside>
+
+        {/* SHARE BUTTONS */}
+        {/* <div
+          className={`flex gap-4 mt-6 w-fit ${!shown ? "flex-col py-3 px-2 bg-primary-bg rounded-lg" : "flex-row"}`}
+        >
+          <button
+            className="text-primary-accent cursor-pointer hover:text-secondary-accent transition-colors"
+            onClick={() => {
+              navigator.clipboard.writeText(window.location.href);
+              alert("Page URL copied to clipboard");
+            }}
+          >
+            <GoShareAndroid size={20} />
+          </button>
+
+          {/* <a
+            href="/feed.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-accent cursor-pointer hover:text-secondary-accent transition-colors"
+            title="RSS Feed"
+          >
+            <BiRss size={20} />
+          </a> */}
+        {/* </div> */}
+      </div>
+    </div>
   );
 }
