@@ -54,7 +54,9 @@ export default function ReportHeroSection({
             "Monitoria de alunos - UniFil") ||
             (title == "Núcleo de Práticas de Informática" &&
               "Pesquisas e estudos em grupo - UniFil") ||
-            (title == "Blog" && "Postagens e artigos")}
+            (title == "Blog" && "Postagens e artigos") ||
+            (title == "LondriTech - Londrinense Tech" &&
+              "Monitoria de alunos - UniFil")}
         </h2>
       </div>
 
@@ -77,7 +79,7 @@ export default function ReportHeroSection({
             </motion.span>
           </p>
 
-          {isOpen && (
+          {!isOpen && (
             <div className="overflow-hidden mt-4 mb-4 p-4 rounded">
               <DescriptionSection category={title} />
             </div>

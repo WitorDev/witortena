@@ -37,7 +37,7 @@ export default function Reports() {
 
               <p className="mb-4">
                 Projeto de extensão voltado ao ensino de tecnologia para
-                estudantes de escolas públicas feito no Centro Universitário
+                estudantes de escolas públicas, feito no Centro Universitário
                 Filadélfia - UniFil.
               </p>
 
@@ -61,6 +61,24 @@ export default function Reports() {
 
               <span className="text-terciary-bg rounded-3xl border border-terciary-bg py-1 px-3">
                 Práticas em Informática
+              </span>
+            </article>
+          </Link>
+
+          <Link href="/reports/londritech">
+            <article className="group rounded-lg border border-transparent hover:border-secondary-accent p-4 bg-primary-bg transition-colors">
+              <h2 className="text-lg mb-2 font-bold">
+                LondriTech - Londrinense Tech
+              </h2>
+
+              <p className="mb-4">
+                Projeto da atividade complementar voltado ao ensino de
+                tecnologia para estudantes do Colégio Londrinense, feito no
+                Centro Universitário Filadélfia - UniFil.
+              </p>
+
+              <span className="text-terciary-bg rounded-3xl border border-terciary-bg py-1 px-3">
+                Atividade Complementar
               </span>
             </article>
           </Link>

@@ -34,7 +34,7 @@ export default function ReportCard({
     <div className="transition-all overflow-hidden flex flex-col h-[500px]">
       <Link href={type + "/" + date.trim().toLowerCase()}>
         <div
-          className={`h-[200px] cursor-pointer border border-transparent hover:border-secondary-accent w-full bg-background flex items-center justify-center overflow-hidden`}
+          className={`h-[200px] min-w-95 cursor-pointer border border-transparent hover:border-secondary-accent w-full bg-background flex items-center justify-center overflow-hidden`}
         >
           {image ? (
             <Image

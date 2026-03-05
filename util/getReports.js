@@ -36,15 +36,12 @@ export function getReports(category) {
       process.cwd(),
       "public",
       "reports",
-      "pensamento-computacional"
+      "pensamento-computacional",
     );
+  } else if (category === "londritech") {
+    reportsPath = path.join(process.cwd(), "public", "reports", "londritech");
   } else if (category === "blog") {
-    reportsPath = path.join(
-      process.cwd(),
-      "public",
-      "reports",
-      "blog"
-    );
+    reportsPath = path.join(process.cwd(), "public", "reports", "blog");
   }
 
   // Read all subfolders (report folders)

@@ -45,37 +45,37 @@ export default function MarkdownSection({
       >
         <ReactMarkdown
           rehypePlugins={[rehypeHighlight]}
-          components={{
-            h1: ({ children }) => {
-              const id = createId(children);
+          // components={{
+          //   h1: ({ children }) => {
+          //     const id = createId(children);
 
-              return (
-                <h1 id={id} className="scroll-mt-28">
-                  {children}
-                </h1>
-              );
-            },
+          //     return (
+          //       <h1 id={id} className="scroll-mt-28">
+          //         {children}
+          //       </h1>
+          //     );
+          //   },
 
-            h2: ({ children }) => {
-              const id = createId(children);
+          //   h2: ({ children }) => {
+          //     const id = createId(children);
 
-              return (
-                <h2 id={id} className="scroll-mt-28">
-                  {children}
-                </h2>
-              );
-            },
+          //     return (
+          //       <h2 id={id} className="scroll-mt-28">
+          //         {children}
+          //       </h2>
+          //     );
+          //   },
 
-            h3: ({ children }) => {
-              const id = createId(children);
+          //   h3: ({ children }) => {
+          //     const id = createId(children);
 
-              return (
-                <h3 id={id} className="scroll-mt-28">
-                  {children}
-                </h3>
-              );
-            },
-          }}
+          //     return (
+          //       <h3 id={id} className="scroll-mt-28">
+          //         {children}
+          //       </h3>
+          //     );
+          //   },
+          // }}
         >
           {text}
         </ReactMarkdown>

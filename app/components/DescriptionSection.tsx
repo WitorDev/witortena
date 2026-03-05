@@ -13,7 +13,7 @@ export default function DescriptionSection({
       <div className="w-25 sm:w-100">
         <Image alt="Logo UniFil" className="nodrag" src={unifil_logo} />
       </div>
-      {category == "Núcleo de Práticas de Informática" ? (
+      {category == "Núcleo de Práticas de Informática" && (
         <div className="">
           <h1 className="text-lg font-bold mb-4">
             NPI - Núcleo de Práticas de Informática - UniFil
@@ -31,7 +31,8 @@ export default function DescriptionSection({
             relatórios
           </p>
         </div>
-      ) : (
+      )}
+      {category == "Pensamento Computacional" && (
         <div className="">
           <h1 className="text-lg font-bold mb-4">
             Pensamento Computacional - UniFil
@@ -43,7 +44,23 @@ export default function DescriptionSection({
             Computacional.
           </p>
           <p className="mt-4">
-            {" "}
+            Esses relatórios são uma forma de registrar o que foi aprendido e as
+            atividades realizadas durante o curso, além de servir como um guia
+            para futuras referências. Os relatórios são divididos em semanas,
+            cada uma com suas próprias atividades e aprendizados. Abaixo estão
+            os cards para cada um dos relatórios
+          </p>
+        </div>
+      )}
+      {category == "LondriTech - Londrinense Tech" && (
+        <div className="">
+          <h1 className="text-lg font-bold mb-4">Londrinense Tech - UniFil</h1>
+          <p>
+            Os relatórios do Londrinense Tech são uma forma de documentar os
+            dias da minha extensão de monitoramento dos alunos que vão até a
+            UniFil a fim de assistir as aulas do Londrinense Tech.
+          </p>
+          <p className="mt-4">
             Esses relatórios são uma forma de registrar o que foi aprendido e as
             atividades realizadas durante o curso, além de servir como um guia
             para futuras referências. Os relatórios são divididos em semanas,

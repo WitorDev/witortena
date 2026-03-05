@@ -29,7 +29,9 @@ export default async function Page({
     (reportTypeURL.category === "NPI" && "Núcleo de Práticas de Informática") ||
     (reportTypeURL.category === "pensamento-computacional" &&
       "Pensamento Computacional") ||
-    (reportTypeURL.category === "blog" && "Blog");
+    (reportTypeURL.category === "londritech" &&
+      "LondriTech - Londrinense Tech");
+  reportTypeURL.category === "blog" && "Blog";
 
   return (
     <div className="bg-deep">
@@ -52,9 +54,12 @@ export default async function Page({
         <div className="flex gap-4 mt-8 align-middle mb-8 w-full sm:flex-row flex-col max-w-screen-xl px-4">
           <h1 className="text-xl font-bold">Relatórios </h1>
           <p className={`${ubuntuFont.className} text-xl text-terciary-bg`}>
-            {reportTypeURL.category == "NPI"
-              ? "NPI - Núcleo de Práticas de Informática"
-              : "Pensamento Computacional"}
+            {reportTypeURL.category == "NPI" &&
+              "NPI - Núcleo de Práticas de Informática"}
+            {reportTypeURL.category == "pensamento-computacional" &&
+              "Pensamento Computacional"}
+            {reportTypeURL.category == "londritech" &&
+              "Londritech - Londrinense Tech"}
           </p>
         </div>
 
