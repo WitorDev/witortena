@@ -1,5 +1,5 @@
 ---
-title: "Início do LondriTech 2026"
+title: "Disjunção e Conjunção"
 ---
 
 `Professor(a): Luiz Felipe`

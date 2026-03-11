@@ -56,7 +56,7 @@ export default function ReportCard({
               href={type + "/" + date.trim().toLowerCase()}
               className="flex flex-row group justify-between hover:text-secondary-accent w-full"
             >
-              <div className="text-lg max-h-5 mb-2 overflow-hidden transition-all group-hover:text-secondary-accent font-bold z-1">
+              <div className="text-lg max-h-6 mb-2 overflow-hidden transition-all group-hover:text-secondary-accent font-bold z-1">
                 <MarkdownSection style={false} text={data.title} />
               </div>
             </Link>
