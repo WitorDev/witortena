@@ -1,12 +1,12 @@
 ---
-title: "Início do LondriTech 2026"
+title: "Disjunção e Conjunção"
 ---
 
 `Professor(a): Luiz Felipe`
 
-Hoje tivemos o início da monitoria do LondriTech. Recebemos vários alunos para a sua primeira aula e a sala ficou cheia com estudantes do sexto ano do Colégio Londrinense.
-Na primeira aula, eles realizaram uma prova de nivelamento para que pudéssemos identificar em qual nível de conteúdo cada aluno poderá seguir nas próximas aulas.
+Na aula de hoje, os alunos foram direcionados para as salas localizadas no piso inferior da sede da UniFil, onde participaram de uma aula sobre Disjunção e Conjunção.
+Durante a atividade, utilizaram massinhas de modelar para simular as entradas de dados em uma tabela de possíveis resultados, com o objetivo de compreender conceitos de lógica booleana.
 
-Também aproveitamos o momento para apresentar os professores e monitores aos alunos.
+Ao longo da aula, também foram realizadas algumas dinâmicas. Em uma delas, os alunos deveriam responder às perguntas levantando a cor correta da massinha, representando diferentes resultados booleanos.
 
-Os alunos são agitados, mas respeitam a aula. No geral, foi uma ótima introdução ao projeto e uma excelente oportunidade para ensinarmos. Além disso, é uma chance muito boa para que os alunos comecem a aprender mais sobre o mundo da tecnologia e melhorar sua lógica.
+Os alunos estavam sempre ativos e participando da aula, parecem ter gostado das dinâmicas e ficaram impolgados para a próxima aula.
