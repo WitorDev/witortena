@@ -1,5 +1,5 @@
 ---
-title: "Disjunção e Conjunção"
+title: "Disjunção e Conjunção: Massinhas"
 ---
 
 `Professor(a): Luiz Felipe`
