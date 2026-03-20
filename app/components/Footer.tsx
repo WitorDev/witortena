@@ -97,6 +97,10 @@ export default function Footer() {
                   href: "/reports/pensamento-computacional",
                   label: "Pensamento Computacional",
                 },
+                {
+                  href: "/reports/londritech",
+                  label: "LondriTech - Londrinense Tech",
+                },
               ].map((link, index) => (
                 <Link
                   key={index}

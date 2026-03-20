@@ -136,8 +136,9 @@ export default function Navbar() {
                       options={[
                         "NPI - Núcleo de Práticas de Informática",
                         "Pensamento Computacional",
+                        "LondriTech - Londrinense Tech",
                       ]}
-                      links={["NPI", "pensamento-computacional"]}
+                      links={["NPI", "pensamento-computacional", "londritech"]}
                       final
                     />
                   </li>
@@ -190,8 +191,9 @@ export default function Navbar() {
               options={[
                 "NPI - Núcleo de Práticas de Informática",
                 "Pensamento Computacional",
+                "LondriTech - Londrinense Tech",
               ]}
-              links={["NPI", "pensamento-computacional"]}
+              links={["NPI", "pensamento-computacional", "londritech"]}
               final
             />
           </nav>
