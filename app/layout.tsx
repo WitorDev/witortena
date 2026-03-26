@@ -1,5 +1,6 @@
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
+import GradientEffect from "@/app/components/GradientEffect";
 
 import "@/app/globals.css";
 import { Ubuntu } from "next/font/google";
@@ -50,6 +51,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <GradientEffect />
       </body>
     </html>
   );
