@@ -3,7 +3,16 @@ import { Ubuntu_Mono } from "next/font/google";
 import TextCard from "@/app/components/TextCard";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { LuFolderSearch } from "react-icons/lu";
+import {
+  LuFolderSearch,
+  LuImageMinus,
+  LuLink,
+  LuNotebook,
+} from "react-icons/lu";
+import { GiNotebook } from "react-icons/gi";
+import { SlMagnifier } from "react-icons/sl";
+import { FaComputer, FaMagnifyingGlass } from "react-icons/fa6";
+import { FaSchool } from "react-icons/fa";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -29,6 +38,12 @@ export default function Contributions() {
           description="Ambiente de estudos e colaboração entre alunos de Ciência da Computação e Engenharia de Software da UniFil. Promove atividades práticas e troca de conhecimentos na área de tecnologia."
           info="Pesquisas e estudos em grupo"
           link="/reports/NPI"
+          children={
+            <FaComputer
+              className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
+              size={90}
+            />
+          }
         />
         <TextCard
           title="Pensamento Computacional"
@@ -36,6 +51,12 @@ export default function Contributions() {
           description="Projeto que permite estudantes de escolas públicas estudar tecnologia de forma gratuita na UniFil. Participei como monitor no projeto."
           info="Monitoria de alunos"
           link="/reports/pensamento-computacional"
+          children={
+            <GiNotebook
+              className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
+              size={90}
+            />
+          }
         />
         <TextCard
           title="LondriTech - Londrinense Tech"
@@ -43,6 +64,12 @@ export default function Contributions() {
           description="Projeto que permite estudantes do Colégio Londrinense estudar tecnologia de forma gratuita na UniFil. Participei como monitor no projeto."
           info="Monitoria de alunos"
           link="/reports/londritech"
+          children={
+            <FaSchool
+              className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
+              size={90}
+            />
+          }
         />
         <TextCard
           title="Grupo de Inteligência Artificial"

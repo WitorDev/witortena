@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { CiTextAlignRight } from "react-icons/ci";
 import { IoDocumentTextSharp } from "react-icons/io5";
 import { LuGlobeLock, LuLink, LuLink2, LuLink2Off } from "react-icons/lu";
+import { ReactNode } from "react";
 
 type TextCardProps = {
   title: string;
@@ -14,6 +15,7 @@ type TextCardProps = {
   info: string;
   link?: string;
   delayValue?: number;
+  children?: ReactNode;
 };
 
 export default function TextCard({
@@ -23,6 +25,7 @@ export default function TextCard({
   info,
   link,
   delayValue,
+  children,
 }: TextCardProps) {
   return (
     <motion.div
@@ -39,10 +42,7 @@ export default function TextCard({
     >
       {link ? (
         <Link href={link} className="relative overflow-hidden">
-          <LuLink
-            className="text-primary-accent/20 hidden lg:block bottom-4 absolute right-4"
-            size={112}
-          />
+          {children}
           <div
             className={`${
               link && "hover:cursor-pointer"
