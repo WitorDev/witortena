@@ -39,7 +39,7 @@ export default function Contributions() {
           info="Pesquisas e estudos em grupo"
           link="/reports/NPI"
           children={
-            <FaComputer
+            <GiNotebook
               className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
               size={90}
             />
@@ -52,7 +52,7 @@ export default function Contributions() {
           info="Monitoria de alunos"
           link="/reports/pensamento-computacional"
           children={
-            <GiNotebook
+            <FaComputer
               className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
               size={90}
             />
