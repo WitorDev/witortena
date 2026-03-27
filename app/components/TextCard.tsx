@@ -37,7 +37,7 @@ export default function TextCard({
         link &&
         "border-primary-accent hover:bg-secondary-bg hover:border-secondary-accent"
       }  shadow-black/20 ${
-        !link && ""
+        !link && "border-primary-accent/50"
       } shadow-md border-primary-accent border relative rounded-lg bg-primary-bg group`}
     >
       {link ? (
@@ -77,6 +77,8 @@ export default function TextCard({
             link && "hover:cursor-pointer"
           } flex flex-col gap-6 p-8 pb-12 justify-between h-full`}
         >
+          {children}
+
           <div>
             <div className="flex gap-4 mb-6 flex-col">
               <h1 className="text-lg">{title}</h1>

@@ -4,15 +4,23 @@ import TextCard from "@/app/components/TextCard";
 import { motion } from "motion/react";
 import Link from "next/link";
 import {
+  LuBrainCircuit,
   LuFolderSearch,
   LuImageMinus,
   LuLink,
   LuNotebook,
 } from "react-icons/lu";
-import { GiNotebook } from "react-icons/gi";
+import {
+  GiArtificialIntelligence,
+  GiBrain,
+  GiNotebook,
+  GiSchoolBag,
+} from "react-icons/gi";
 import { SlMagnifier } from "react-icons/sl";
 import { FaComputer, FaMagnifyingGlass } from "react-icons/fa6";
 import { FaSchool } from "react-icons/fa";
+import { IoSchool } from "react-icons/io5";
+import { RiComputerLine } from "react-icons/ri";
 
 const ubuntuMonoFont = Ubuntu_Mono({
   subsets: ["latin"],
@@ -65,7 +73,7 @@ export default function Contributions() {
           info="Monitoria de alunos"
           link="/reports/londritech"
           children={
-            <FaSchool
+            <IoSchool
               className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
               size={90}
             />
@@ -76,6 +84,12 @@ export default function Contributions() {
           status="Integrante ativo"
           description="Grupo voltado ao estudo e compreensão de ferramentas de IA, com foco em aplicações práticas, pesquisa e inovação tecnológica."
           info="Pesquisas e estudos em grupo"
+          children={
+            <GiBrain
+              className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
+              size={90}
+            />
+          }
         />
         <Link
           href="/reports"
