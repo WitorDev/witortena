@@ -13,76 +13,78 @@
   margin: 0;
 }
 
-/* 3. Block Element Defaults */
+/* 2. Block Element Defaults */
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote,
 .markdown pre {
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
-  line-height: 1.65;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-wrap: break-word;
 }
 
-/* 4. Headings Styling (H1, H2, H3, etc.) */
+/* 3. Headings Styling */
 .markdown h1,
 .markdown h2,
 .markdown h3,
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  margin-top: 2.4rem;
-  font-weight: 700;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: 800;
   text-wrap: balance;
-  /* padding-inline: 0.4rem;
-  padding-block: 0.1rem;
-  width: fit-content;
-  background: #113e13; */
 }
 
 .markdown h1 {
-  font-size: 2.25rem; /* Large size */
-  border-bottom: 2px solid #e5e7eb; /* Subtle line under H1 */
+  font-size: 2.25rem;
+  border-bottom: 2px solid #e5e7eb;
   padding-bottom: 0.5rem;
 }
+
 .markdown h2 {
   font-size: 1.875rem;
 }
+
 .markdown h3 {
   font-size: 1.5rem;
 }
+
 .markdown h4 {
   font-size: 1.25rem;
 }
 
-/* 5. Links */
+/* 4. Links */
 .markdown a {
-  color: var(--color-primary-accent); /* Bright blue link */
+  color: var(--color-primary-accent);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
 }
 
 .markdown a:hover {
-  color: var(--color-secondary-accent); /* Bright blue link */
+  color: var(--color-secondary-accent);
   text-decoration: underline;
 }
 
-/* 6. Lists */
+/* 5. Lists */
 .markdown ul,
 .markdown ol {
   padding-left: 1.5rem;
 }
+
 .markdown ul li {
   list-style-type: disc;
 }
+
 .markdown ol li {
   list-style-type: decimal;
 }
 
-/* 7. Code Blocks (pre) */
+/* 6. Code Blocks */
 .markdown pre {
   border: 2px solid var(--color-terciary-accent);
   background-color: var(--color-secondary-bg);
@@ -92,62 +94,85 @@
   font-family: monospace;
 }
 
-/* 8. Inline Code (code) */
+/* 7. Inline Code */
 .markdown p code,
 .markdown li code,
 .markdown pre code {
-  background-color: #252525; /* Slightly darker light gray for inline */
+  background-color: #252525;
   padding: 0.4em 0.8em;
   font-family: monospace;
   color: white;
 }
+
 .markdown pre code {
-  padding: 0; /* Remove extra padding inside <pre> */
+  padding: 0;
   background: none;
-  font-size: 100%;
 }
 
-/* 9. Blockquotes */
+/* 8. Blockquotes */
 .markdown blockquote {
-  border-left: 4px solid #9ca3af; /* Medium gray accent border on the left */
+  border-left: 4px solid #9ca3af;
   padding-left: 1rem;
   margin-left: 0;
-  color: #6b7280; /* Subdued text color */
+  color: #6b7280;
   font-style: italic;
 }
 
-/* 10. Horizontal Rule */
+/* 9. Horizontal Rule */
 .markdown hr {
   margin: 2rem 0;
   border: 0;
-  border-top: 1px solid #d1d5db; /* Light separator line */
+  border-top: 1px solid #d1d5db;
 }
 
-/* 11. Media Defaults (Responsiveness and Style) */
+/* 10. Media Elements */
 .markdown img,
 .markdown picture,
 .markdown video,
 .markdown canvas,
 .markdown svg {
   display: block;
-  min-width: 100%;
-
-  image-rendering: pixelated;
-
-  /* Fallbacks for older browsers */
-  image-rendering: -moz-crisp-edges; /* Firefox */
-  image-rendering: crisp-edges; /* Some older browsers */
-
   max-width: 100%;
   height: auto;
-  border-radius: 0.5rem; /* Rounded corners for images/media */
+  min-width: 100%;
+  border-radius: 0.5rem;
   margin: 1.5rem 0;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
 }
 
-/* 12. Inherit fonts for form controls */
+/* 11. Form Controls */
 .markdown input,
 .markdown button,
 .markdown textarea,
 .markdown select {
   font: inherit;
+}
+
+/* 12. Mobile Responsiveness */
+@media (max-width: 768px) {
+  .markdown h1 {
+    font-size: 1.45rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.25rem;
+  }
+
+  .markdown h3 {
+    font-size: 1rem;
+  }
+
+  .markdown h4 {
+    font-size: 0.8rem;
+  }
+
+  .markdown p,
+  .markdown ul,
+  .markdown ol,
+  .markdown blockquote,
+  .markdown pre {
+    font-size: 0.95rem;
+  }
 }
