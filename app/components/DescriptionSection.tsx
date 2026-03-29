@@ -1,5 +1,5 @@
 import Image from "next/image";
-import unifil_logo from "@/public/Unifil.png";
+import unifil_logo from "@/public/images/Unifil.png";
 
 type DescriptionSectionProps = {
   category: string | boolean;

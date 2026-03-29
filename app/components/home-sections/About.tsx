@@ -1,7 +1,7 @@
 "use client";
 
 import old_computer_2 from "@/public/old_computer_2.png";
-import photo from "@/public/photo.jpg";
+import photo from "@/public/images/photo.jpg";
 // import photo from "@/public/mug_shot.jpg";
 import { getValueTransition, motion } from "motion/react";
 import Image from "next/image";

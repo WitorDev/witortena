@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import bg_photo from "@/public/forest.jpg";
+import bg_photo from "@/public/images/forest.jpg";
 import Image from "next/image";
 import { Quantico, Ubuntu_Mono } from "next/font/google";
 import { HiLocationMarker } from "react-icons/hi";

@@ -3,7 +3,7 @@ import { Ubuntu } from "next/font/google";
 import { getReports } from "@/util/getReports";
 import ReportCard from "@/app/components/ReportCard";
 import Image from "next/image";
-import hero_image from "@/public/disk.png";
+import hero_image from "@/public/images/disk.png";
 import { SlArrowDown } from "react-icons/sl";
 import ReportHeroSection from "@/app/components/ReportHeroSection";
 const ubuntuMonoFont = Ubuntu_Mono({

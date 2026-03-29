@@ -1,6 +1,6 @@
 "use client";
 
-import unifil_logo from "@/public/normal_unifil_logo.png";
+import unifil_logo from "@/public/images/normal_unifil_logo.png";
 import Image from "next/image";
 
 import { motion } from "motion/react";
