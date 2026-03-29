@@ -19,8 +19,8 @@
 .markdown ol,
 .markdown blockquote,
 .markdown pre {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   overflow-wrap: break-word;
@@ -33,10 +33,13 @@
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 2.4rem;
   font-weight: 700;
   text-wrap: balance;
+  /* padding-inline: 0.4rem;
+  padding-block: 0.1rem;
+  width: fit-content;
+  background: #113e13; */
 }
 
 .markdown h1 {
@@ -127,6 +130,14 @@
 .markdown canvas,
 .markdown svg {
   display: block;
+  min-height: 100px;
+
+  image-rendering: pixelated;
+
+  /* Fallbacks for older browsers */
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: crisp-edges; /* Some older browsers */
+
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem; /* Rounded corners for images/media */

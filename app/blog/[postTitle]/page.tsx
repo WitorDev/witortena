@@ -36,9 +36,9 @@ export default async function Blog({
           </div>
 
           {/* Layout */}
-          <div className="block md:flex justify-between mr-4">
+          <div className="block md:flex justify-between">
             {/* Blog content */}
-            <main className="mt-4 w-full flex flex-col justify-between gap-2 flex-1">
+            <main className="mt-4 max-w-screen-md flex flex-col justify-between gap-2 flex-1">
               {/* Title */}
               <h1 className="px-4 w-full text-3xl font-bold leading-relaxed">
                 {data.title}
@@ -49,7 +49,7 @@ export default async function Blog({
             </main>
 
             {/* Table of Contents */}
-            <TableOfContents headings={headings} />
+            {/* <TableOfContents headings={headings} /> */}
           </div>
         </section>
       </main>

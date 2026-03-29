@@ -2,7 +2,6 @@ import { Ubuntu_Mono } from "next/font/google";
 import Breadcrumbs from "../components/Breadcrumbs";
 import Link from "next/link";
 import getAllPosts from "@/util/getPosts";
-import { data } from "motion/react-client";
 import matter from "gray-matter";
 
 const ubuntuMonoFont = Ubuntu_Mono({
@@ -28,7 +27,14 @@ export default async function Blog() {
           <ul className="w-full">
             {(await getAllPosts()).map(({ title, postData }, index) => {
               const { data } = matter(postData);
-              return <PostLink link={title} title={data.title} key={index} />;
+              return (
+                <PostLink
+                  link={title}
+                  title={data.title}
+                  date={data.date}
+                  key={index}
+                />
+              );
             })}
           </ul>
         </section>
@@ -37,14 +43,32 @@ export default async function Blog() {
   );
 }
 
-function PostLink({ title, link }: { title: string; link: string }) {
+function PostLink({
+  title,
+  link,
+  date,
+}: {
+  title: string;
+  link: string;
+  date: string;
+}) {
+  const parseDate = (dateString: string) => {
+    const [day, month, year] = dateString.split("/");
+    return new Date(`${day}-${month}-${year}`).toLocaleDateString("pt-br");
+  };
+
   return (
     <li className="border-t border-t-terciary-bg">
       <Link
         href={"/blog/" + link}
-        className="block text-primary-accent hover:text-secondary-accent hover:bg-primary-bg px-2 py-2"
+        className="block text-primary-accent hover:text-secondary-accent hover:bg-primary-bg px-2 py-2 flex justify-between items-center"
       >
         <p>{title}</p>
+        <p>
+          {new Date(
+            `${date.split("/").reverse().join("-")}`,
+          ).toLocaleDateString(navigator.language)}
+        </p>
       </Link>
     </li>
   );
