@@ -34,14 +34,16 @@ O Motivo da minha pesquisa e estudo no tema de pixel art vem do projeto que esta
 
 Pode saber mais sobre o projeto clicando [aqui.](https://witordev.github.io/ecorunner_website/)
 
+![Gameplay](../posts/images/game_gif.gif)
+
 Portanto, tenho feito algumas pixel art, abaixo seguem algumas prints das artes que fiz. :)
 
-#### Personagem do jogador
+### Personagem do jogador
 
 ![Jogador](../posts/images/Leco_idle_animation-sheet.png)
 ![Jogador](../posts/images/Leco_walking_animation-sheet.png)
 
-#### NPCs do jogo
+### NPCs do jogo
 
 ![Jogador](../posts/images/bird.png)
 ![Jogador](../posts/images/capybara.png)
