@@ -38,11 +38,9 @@ export default async function Blog({
           {/* Layout */}
           <div className="block md:flex justify-between">
             {/* Blog content */}
-            <main className="mt-4 max-w-screen-md flex flex-col justify-between gap-2 flex-1">
+            <main className="mt-4 max-w-screen-md flex flex-col justify-between gap- flex-1">
               {/* Title */}
-              <h1 className="px-4 w-full text-3xl font-bold leading-relaxed">
-                {data.title}
-              </h1>
+              <h1 className="px-4 w-full text-3xl font-bold">{data.title}</h1>
 
               {/* Markdown */}
               <MarkdownSection text={content} style={true} className="" />
