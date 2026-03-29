@@ -130,7 +130,7 @@
 .markdown canvas,
 .markdown svg {
   display: block;
-  min-height: 100px;
+  min-width: 100%;
 
   image-rendering: pixelated;
 
