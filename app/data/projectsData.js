@@ -3,14 +3,22 @@ import portfoliounifil from "@/public/projectImg/portfolio-unifil.png";
 import barrel from "@/public/projectImg/barrel.png";
 import notetaker from "@/public/projectImg/notetaker.png";
 import bleedout from "@/public/projectImg/bleedout.png";
-import symbion from "@/public/projectImg/symbion.png";
+import ecorunner from "@/public/projectImg/ecorunner.png";
 
 export const projectsData = [
   {
     id: 1,
     imageSrc: barrel,
     title: "Barrel Organization",
-    tech: ["Javascript", "Html5", "Css3", "Tailwindcss", "React", "Framer"],
+    tech: [
+      "Git",
+      "Javascript",
+      "Html5",
+      "Css3",
+      "Tailwindcss",
+      "React",
+      "Framer",
+    ],
     description:
       "Uma instalação de ensino de defesa pessoal focada no ensino de sobrevivência urbana e outras habilidades.",
     report:
@@ -21,22 +29,22 @@ export const projectsData = [
   },
   {
     id: 2,
-    imageSrc: symbion,
-    title: "Symbion B2B",
-    tech: ["Javascript", "Html5", "Css3", "Tailwindcss", "React", "Threedotjs"],
+    imageSrc: ecorunner,
+    title: "EcoRunner",
+    tech: ["Git", "Javascript", "Html5", "Css3", "Tailwindcss"],
     description:
-      "Uma empresa B2B especializada em desenvolvimento de software, consultoria de TI e transformação digital.",
+      "Um site do jogo EcoRunner, onde você pode encontrar informações sobre o jogo, como jogá-lo e baixa-lo. Feito como projeto de Extensão Universitária para a UniFil.",
     report:
-      "O site foi construído com React para facilitar a criação de seções reutilizáveis e escaláveis. Tailwindcss CSS foi utilizado para manter consistência visual e responsividade. Three.js foi integrado para criar elementos 3D interativos, reforçando a identidade visual da marca. JavaScript coordena a lógica de renderização e interação, enquanto HTML e CSS fornecem a base estrutural.",
+      "O site foi feito com carinho por meio de Vanilla Web e Tailwind para maior facilidade de estilização, o objetivo foi criar uma interface agradável, tendo como inspiração para o frontend o site https://refactoring.guru/.",
     tags: ["Frontend"],
-    link: "https://symbion.netlify.app/",
-    githubLink: "https://github.com/WitorDev/Symbion/tree/master",
+    link: "https://witordev.github.io/ecorunner_website/",
+    githubLink: "https://github.com/WitorDev/ecorunner_website",
   },
   {
     id: 3,
     imageSrc: notetaker,
     title: "Note-Taker",
-    tech: ["Javascript", "Html5", "Css3"],
+    tech: ["Git", "Javascript", "Html5", "Css3"],
     description:
       "Um gerenciador de tarefas simples e eficiente construído com Vanilla WEB (JS, HTML e CSS).",
     report:
@@ -49,7 +57,7 @@ export const projectsData = [
     id: 4,
     imageSrc: portfoliounifil,
     title: "Portfólio UniFil",
-    tech: ["Javascript", "Html5", "Css3", "Express", "Nodedotjs", "Ejs"],
+    tech: ["Git", "Javascript", "Html5", "Css3", "Express", "Nodedotjs", "Ejs"],
     description:
       "O meu antigo portfolio da UniFil, com relatórios de estudo e informações sobre mim e o curso de Ciência da Computação.",
     report:
@@ -62,7 +70,7 @@ export const projectsData = [
     id: 5,
     imageSrc: bleedout,
     title: "BleedOut",
-    tech: ["Godotengine"],
+    tech: ["Git", "Godotengine"],
     description:
       "Um jogo de tiro 2D top-down onde você deve avançar até o topo do mapa. Desenvolvido usando GDScript na Godot Engine.",
     report:
@@ -75,7 +83,7 @@ export const projectsData = [
     id: 6,
     imageSrc: saloon,
     title: "Saloon Manager",
-    tech: ["Javascript", "Html5", "Css3", "Php", "Mysql"],
+    tech: ["Git", "Javascript", "Html5", "Css3", "Php", "Mysql"],
     description:
       "Um gerenciador de salão simples, onde você pode criar e gerenciar agendamentos de acordo com o seu cliente..",
     report:

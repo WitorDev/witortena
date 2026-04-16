@@ -33,7 +33,7 @@ export default function TextCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: delayValue || 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      className={`${
+      className={` ${
         link &&
         "border-primary-accent hover:bg-secondary-bg hover:border-secondary-accent"
       }  shadow-black/20 ${

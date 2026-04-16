@@ -29,7 +29,7 @@ export default function ProjectCard({
         <div className="group-hover:opacity-50 transition-all">
           <Image
             alt="Project Picture"
-            className="rounded-t-lg"
+            className="rounded-t-lg max-h-43 w-full object-cover"
             src={imageSrc}
           />
         </div>

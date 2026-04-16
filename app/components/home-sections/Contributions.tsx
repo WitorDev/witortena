@@ -46,12 +46,12 @@ export default function Contributions() {
           description="Ambiente de estudos e colaboração entre alunos de Ciência da Computação e Engenharia de Software da UniFil. Promove atividades práticas e troca de conhecimentos na área de tecnologia."
           info="Pesquisas e estudos em grupo"
           link="/reports/NPI"
-          children={
-            <GiNotebook
-              className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
-              size={90}
-            />
-          }
+          // children={
+          //   <GiNotebook
+          //     className="text-primary-accent/20 hidden lg:block absolute w-fit h-fit left-124 top-5"
+          //     size={80}
+          //   />
+          // }
         />
         <TextCard
           title="Pensamento Computacional"
@@ -59,12 +59,12 @@ export default function Contributions() {
           description="Projeto que permite estudantes de escolas públicas estudar tecnologia de forma gratuita na UniFil. Participei como monitor no projeto."
           info="Monitoria de alunos"
           link="/reports/pensamento-computacional"
-          children={
-            <FaComputer
-              className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
-              size={90}
-            />
-          }
+          // children={
+          //   <FaComputer
+          //     className="text-primary-accent/20 hidden lg:block absolute w-fit h-fit left-124 top-5"
+          //     size={80}
+          //   />
+          // }
         />
         <TextCard
           title="LondriTech - Londrinense Tech"
@@ -72,24 +72,24 @@ export default function Contributions() {
           description="Projeto que permite estudantes do Colégio Londrinense estudar tecnologia de forma gratuita na UniFil. Participei como monitor no projeto."
           info="Monitoria de alunos"
           link="/reports/londritech"
-          children={
-            <IoSchool
-              className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
-              size={90}
-            />
-          }
+          // children={
+          //   <IoSchool
+          //     className="text-primary-accent/20 hidden lg:block absolute w-fit h-fit left-124 top-5"
+          //     size={80}
+          //   />
+          // }
         />
         <TextCard
           title="Grupo de Inteligência Artificial"
           status="Integrante ativo"
           description="Grupo voltado ao estudo e compreensão de ferramentas de IA, com foco em aplicações práticas, pesquisa e inovação tecnológica."
           info="Pesquisas e estudos em grupo"
-          children={
-            <GiBrain
-              className="text-primary-accent/20 hidden lg:block bottom-6 absolute right-6"
-              size={90}
-            />
-          }
+          // children={
+          //   <GiBrain
+          //     className="text-primary-accent/20 hidden lg:block absolute w-fit h-fit left-124 top-5"
+          //     size={80}
+          //   />
+          // }
         />
         <Link
           href="/reports"
